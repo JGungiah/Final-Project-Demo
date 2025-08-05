@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
 
     public float verticalInput;
     public float horizontalInput;
+
+    public Vector3 Movement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,7 +61,7 @@ public class Player : MonoBehaviour
              verticalInput = Input.GetAxisRaw("Vertical");
              horizontalInput = Input.GetAxisRaw("Horizontal");
 
-            Vector3 Movement = new Vector3(horizontalInput, verticalVelocity, verticalInput ).normalized;
+            Movement = new Vector3(horizontalInput, verticalVelocity, verticalInput ).normalized;
 
             controller.Move(Movement * speed * Time.deltaTime);
 
@@ -67,14 +69,8 @@ public class Player : MonoBehaviour
 
         void Animations()
         {
-            if (verticalInput > 0)
-            {
-                playerAnim.SetBool("isRunningNorth", true);
-            }
-            else
-            {
-                playerAnim.SetBool("isRunningNorth", false);
-            }
+           playerAnim.SetFloat("verticalMovement", Movement.z);
+           playerAnim.SetFloat("horizontalMovement", Movement.x);
         }
        
     }
