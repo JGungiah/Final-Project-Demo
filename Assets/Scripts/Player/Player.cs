@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float horizontalInput;
 
     public Vector3 Movement;
+    public Vector3 lastMovement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,35 +44,48 @@ public class Player : MonoBehaviour
             Animations();
         }
     }
-        
 
-        void ApplyGravity()
-        {
-            verticalVelocity += gravity * Time.deltaTime;
-        }
 
-        void RemoveGravity()
-        {
-            verticalVelocity = -2f;
-        }
-
-        void movement()
-        {
-
-             verticalInput = Input.GetAxisRaw("Vertical");
-             horizontalInput = Input.GetAxisRaw("Horizontal");
-
-            Movement = new Vector3(horizontalInput, verticalVelocity, verticalInput ).normalized;
-
-            controller.Move(Movement * speed * Time.deltaTime);
-
-        }
-
-        void Animations()
-        {
-           playerAnim.SetFloat("verticalMovement", Movement.z);
-           playerAnim.SetFloat("horizontalMovement", Movement.x);
-        }
-       
+    void ApplyGravity()
+    {
+        verticalVelocity += gravity * Time.deltaTime;
     }
+
+    void RemoveGravity()
+    {
+        verticalVelocity = -2f;
+    }
+
+    void movement()
+    {
+
+        verticalInput = Input.GetAxisRaw("Vertical");
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        Vector3 horizontalMovement = new Vector3(horizontalInput, 0f, verticalInput).normalized;
+
+        if ((horizontalInput != 0 || verticalInput != 0) && Movement.x != 0 || Movement.z != 0)
+        {
+            lastMovement = Movement;
+        }
+
+
+        Movement = horizontalMovement;
+        Movement.y = verticalVelocity;
+
+        controller.Move(Movement * speed * Time.deltaTime);
+    }
+
+    void Animations()
+    {
+
+        Vector3 flatMovement = new Vector3(Movement.x, 0f, Movement.z);
+
+        playerAnim.SetFloat("verticalMovement", flatMovement.z);
+        playerAnim.SetFloat("horizontalMovement", flatMovement.x);
+        playerAnim.SetFloat("animMoveMagnitude", flatMovement.magnitude);
+        playerAnim.SetFloat("lastVertical", lastMovement.z);
+        playerAnim.SetFloat("lastHorizontal", lastMovement.x);
+    }
+}
 
