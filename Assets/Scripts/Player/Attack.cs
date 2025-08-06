@@ -51,7 +51,7 @@ public class Attack : MonoBehaviour
             // Normalize to 0-360
             if (angle < 0) angle += 360;
 
-            Vector2 animDir = Get8Direction(angle);
+            Vector2 animDir = GetDirection(angle);
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
             anim.SetTrigger("attack");
@@ -60,8 +60,7 @@ public class Attack : MonoBehaviour
         }
     }
 
-    // Converts angle to nearest 8-direction vector
-    Vector2 Get8Direction(float angle)
+    Vector2 GetDirection(float angle)
     {
         if (angle >= 337.5f || angle < 22.5f) return new Vector2(1, 0);      
         if (angle >= 22.5f && angle < 67.5f) return new Vector2(1, 1);        
