@@ -5,20 +5,33 @@ public class Attack : MonoBehaviour
 {
     [SerializeField] private Camera cam;
 
+    private Player playerScript;
+
     private Animator anim;
     private Transform player;
+    private bool isAttacking = false;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         player = transform;
+        playerScript = GetComponent<Player>();
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
             HandleAttack();
+        }
+
+        if (isAttacking)
+        {
+            playerScript.speed = 0;
+        }
+        else if (!isAttacking)
+        {
+            playerScript.speed = 5;
         }
     }
 
@@ -42,6 +55,8 @@ public class Attack : MonoBehaviour
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
             anim.SetTrigger("attack");
+            isAttacking = true;
+            StartCoroutine(CanAttack());
         }
     }
 
@@ -58,6 +73,12 @@ public class Attack : MonoBehaviour
         if (angle >= 292.5f && angle < 337.5f) return new Vector2(1, -1);     
 
         return Vector2.zero;
+    }
+
+    IEnumerator CanAttack()
+    {
+        yield return new WaitForSeconds(1);
+        isAttacking = false;
     }
 }
     

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    public float speed;
     [SerializeField] private float gravity = -9.81f;
 
     private float verticalVelocity;
