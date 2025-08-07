@@ -2,22 +2,49 @@ using UnityEngine;
 using System.Collections;
 public class Player : MonoBehaviour
 {
-    public float speed;
-    [SerializeField] private float gravity = -9.81f;
+    [Header("Movement")]
 
-    private float verticalVelocity;
-
-    private Animator playerAnim;
     private CharacterController controller;
+   
+    public float speed;
+    public float originalSpeed;
+   
+    public Vector3 Movement;
+    public Vector3 lastMovement;
+
+
+    [Header("Player Input")]
 
     public float verticalInput;
     public float horizontalInput;
 
-    public Vector3 Movement;
-    public Vector3 lastMovement;
+
+    [Header("Dash Controls")]
+    
+    [SerializeField] private float dashForce;
+    [SerializeField] private float dashCoolDown;
+    [SerializeField] private float dashDuration;
+    [SerializeField] private float dashDistance;
+
+    private bool isDashing = false;
+
+
+    [Header("Gravity")]
+   
+    [SerializeField] private float gravity = -9.81f;
+    
+    private float verticalVelocity;
+
+
+    [Header("Animations")]
+    
+    private Animator playerAnim;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        originalSpeed = speed;
         controller = GetComponent<CharacterController>();
         playerAnim = GetComponent<Animator>();
     }
@@ -38,10 +65,14 @@ public class Player : MonoBehaviour
             movement();
         }
 
-
         if (playerAnim != null)
         {
             Animations();
+        }
+
+        if (Input.GetKey(KeyCode.Space) && !isDashing)
+        {
+            StartCoroutine(Dash());
         }
     }
 
@@ -86,6 +117,26 @@ public class Player : MonoBehaviour
         playerAnim.SetFloat("animMoveMagnitude", flatMovement.magnitude);
         playerAnim.SetFloat("lastVertical", lastMovement.z);
         playerAnim.SetFloat("lastHorizontal", lastMovement.x);
+    }
+
+
+    IEnumerator Dash()
+    {
+        isDashing = true;
+
+        dashForce = dashDistance / dashDuration;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < dashDuration)
+        {
+            controller.Move (lastMovement * dashForce * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(dashCoolDown);
+        
+        isDashing = false;
     }
 }
 

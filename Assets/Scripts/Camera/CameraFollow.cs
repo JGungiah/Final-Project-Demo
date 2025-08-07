@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 public class CameraFollow : MonoBehaviour
 {
     public Transform player;
-    private Vector3 Offset = new Vector3 (-5f, 5.5f, -5f);
+    [SerializeField] private Vector3 Offset = new Vector3 (-5f, 5.5f, -5f);
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

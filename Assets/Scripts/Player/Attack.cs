@@ -31,7 +31,7 @@ public class Attack : MonoBehaviour
         }
         else if (!isAttacking)
         {
-            playerScript.speed = 5;
+            playerScript.speed = playerScript.originalSpeed;
         }
 
        
@@ -63,7 +63,7 @@ public class Attack : MonoBehaviour
 
     Vector2 GetDirection(float angle)
     {
-        print(angle);
+      
         if (angle >= 337.5f || angle < 22.5f) return new Vector2(0,1);//North
         if (angle >= 22.5f && angle < 67.5f) return new Vector2(-1,1); //North West
         if (angle >= 67.5f && angle < 112.5f) return new Vector2(-1,0); //West
