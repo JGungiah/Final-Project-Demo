@@ -33,6 +33,8 @@ public class Attack : MonoBehaviour
         {
             playerScript.speed = 5;
         }
+
+       
     }
 
     void HandleAttack()
@@ -47,8 +49,7 @@ public class Attack : MonoBehaviour
 
             Vector2 dir2D = new Vector2(dir.x, dir.z);
             float angle = Mathf.Atan2(dir2D.y, dir2D.x) * Mathf.Rad2Deg;
-
-            // Normalize to 0-360
+            angle -= 45f;       
             if (angle < 0) angle += 360;
 
             Vector2 animDir = GetDirection(angle);
@@ -62,14 +63,18 @@ public class Attack : MonoBehaviour
 
     Vector2 GetDirection(float angle)
     {
-        if (angle >= 337.5f || angle < 22.5f) return new Vector2(1, 0);      
-        if (angle >= 22.5f && angle < 67.5f) return new Vector2(1, 1);        
-        if (angle >= 67.5f && angle < 112.5f) return new Vector2(0, 1);       
-        if (angle >= 112.5f && angle < 157.5f) return new Vector2(-1, 1);     
-        if (angle >= 157.5f && angle < 202.5f) return new Vector2(-1, 0);     
-        if (angle >= 202.5f && angle < 247.5f) return new Vector2(-1, -1);    
-        if (angle >= 247.5f && angle < 292.5f) return new Vector2(0, -1);     
-        if (angle >= 292.5f && angle < 337.5f) return new Vector2(1, -1);     
+        print(angle);
+        if (angle >= 337.5f || angle < 22.5f) return new Vector2(0,1);//North
+        if (angle >= 22.5f && angle < 67.5f) return new Vector2(-1,1); //North West
+        if (angle >= 67.5f && angle < 112.5f) return new Vector2(-1,0); //West
+        if (angle >= 112.5f && angle < 157.5f) return new Vector2(-1, -1); //South West
+        if (angle >= 157.5f && angle < 202.5f) return new Vector2(0, -1); //South
+        if (angle >= 202.5f && angle < 247.5f) return new Vector2(1,-1); //South East
+        if (angle >= 247.5f && angle < 292.5f) return new Vector2(1,0); //East
+        if (angle >= 292.5f && angle < 337.5f) return new Vector2(1, 1); //North East
+
+      
+
 
         return Vector2.zero;
     }

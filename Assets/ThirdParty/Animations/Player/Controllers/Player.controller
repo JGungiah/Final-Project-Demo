@@ -252,8 +252,8 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: verticalMovement
     m_Mirror: 0
-  m_BlendParameter: AttackVertical
-  m_BlendParameterY: AttackHorizontal
+  m_BlendParameter: AttackHorizontal
+  m_BlendParameterY: AttackVertical
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
