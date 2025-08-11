@@ -84,6 +84,11 @@ public class Attack : MonoBehaviour
         yield return new WaitForSeconds(1);
         isAttacking = false;
     }
+
+    public void AttackCollider()
+    {
+
+    }
 }
     
 
