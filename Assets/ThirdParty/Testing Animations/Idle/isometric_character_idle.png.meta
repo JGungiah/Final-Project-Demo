@@ -1,0 +1,1602 @@
+fileFormatVersion: 2
+guid: 31a0c220c56ccb1458d15a0c126efc7b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: isometric_character_idle_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 452
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f300e21641e9b42a186ae6253c23ad
+      internalID: -1976012355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 452
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f525e51456d92fa4a8347b6db242650f
+      internalID: 1463182479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 452
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6208b79f7236efc45961e8e3241b4e6d
+      internalID: 585720546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 452
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69437df31eadae246abcb5aace452cf9
+      internalID: 90082365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 452
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134ddfbf4f717f24297a7394b710b128
+      internalID: 179771584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 452
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f84d014fa68dc40bee377c43d9469f
+      internalID: -591969806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 452
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d50a42efe9e1344b305b8a20e33250
+      internalID: 958565073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 452
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd4b6b02cb88d4489dfe0c189be982f
+      internalID: 589348280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_8
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 387
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c26c61b02e9d9c41966e107b4d29f8b
+      internalID: 622097142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_9
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 387
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8aa1c9c06161541a151e8a8785418c
+      internalID: 1119094707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_10
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 387
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdfa7117027fe4438b7d53148d5ad45
+      internalID: 1764313106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_11
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 387
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1364ac0aac9cf8947aa5e3dea814d95f
+      internalID: 625156470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_12
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 387
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56c6ad3489239e48bc0a76d91c17bf9
+      internalID: 229350263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_13
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 387
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75bc55150264ab4ab74e6e62abf9189
+      internalID: 1089739068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_14
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 387
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5cec195f5ca7af4baeb923b0522562e
+      internalID: 1498987583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_15
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 387
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb8604eefc224a478c2ce032133fc96
+      internalID: -592725287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_16
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 323
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e67672d31cd30a4e8afe4a429f39c74
+      internalID: -696857649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_17
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 323
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a823db77c453842b57ec3bd25e6ec7
+      internalID: -1543435455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_18
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 323
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5788635c5e4a8642af9d8066150ebb2
+      internalID: -883283945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_19
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 323
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd20b9822bcabd4e80e8a7b27d8e6c2
+      internalID: 1168002070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_20
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 323
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6192dda7e71d0144ebdce902fa5ced55
+      internalID: 1097929065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_21
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 323
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c5817ad69de4541b55428e528f9dcb
+      internalID: 1981215413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_22
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 323
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243dacbebdcaa7c40ae84639d4d42a54
+      internalID: 640816644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_23
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 323
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d35b1e8f734c44caad3f60ed9175c1
+      internalID: 1666746836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_24
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 258
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e543dd0981baa49b5eb01c6de2338c
+      internalID: 1974224036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_25
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 258
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74468567e36f814faf1446d6f3d2010
+      internalID: -1266030986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_26
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 258
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5ca92868c7bd845b753c36a996d047
+      internalID: 1361892821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_27
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 258
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b07f7b22b529ab4b9f969868cd054b1
+      internalID: -328398483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_28
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 258
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f554ea41901c24685af21d444f0eb9
+      internalID: -2070628383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_29
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 258
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479aa494d82180441a3574d9cef92824
+      internalID: -1246400248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_30
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 258
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73aca3330ae41cc4d81d43b26356f841
+      internalID: -461202612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_31
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 258
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67463ee559c884948880d168ee275238
+      internalID: 1688431701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_32
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 194
+        width: 19
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7803b20b36b2fd46a9c9b66d5b5eb6d
+      internalID: -890603919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_33
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 194
+        width: 19
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3857e77548b83e4aab7d191ddc6e517
+      internalID: 1209354672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_34
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 194
+        width: 19
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fa87c1eccbdf84283c017ddff55161
+      internalID: 942836910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_35
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 194
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8b2050cd9317843b7f21a2a36ea859
+      internalID: -279651737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_36
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 194
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa78c4c0b2c078a42ba110f1a9dcc03c
+      internalID: -1552471807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_37
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 194
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f399d184d36d24e4da12e21eb30011a4
+      internalID: 844642660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_38
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 194
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0876f66269731354ba0de5e378cec26c
+      internalID: 170452022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_39
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 194
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49f99d0163e41a4383a4b5268978c54
+      internalID: 5973463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_40
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 130
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14be6db1c2920f7479af4d3798df9873
+      internalID: -1991516997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_41
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 130
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80e47b5094a24644840ff7d977dded6
+      internalID: 409390703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_42
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 130
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554ef4877753c074ea69d2f3ac75c81d
+      internalID: 1020110090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_43
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 130
+        width: 26
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cddc26341013248a33cd499960cbe5
+      internalID: -1821331825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_44
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 130
+        width: 26
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a247575f8bcf0849bec9494a9cdd2f9
+      internalID: 2033333344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_45
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 130
+        width: 26
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4d43156ebdbc24c9fd96a2a6306ca6
+      internalID: 1160271423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_46
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 130
+        width: 26
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfca38c6a2ea6b647998469473819168
+      internalID: 540325202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_47
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 130
+        width: 26
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2843af91d8a8c5c429c6418d701ae17a
+      internalID: 310920034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_48
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 66
+        width: 19
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2ed6013e1100144a9807b9aa863470
+      internalID: -927603405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_49
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 66
+        width: 19
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8181a1dfe73f1646a3a388be644aedf
+      internalID: 316986726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_50
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 66
+        width: 19
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917d0b42b03a65e408cfdb4cd7404d25
+      internalID: -100161021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_51
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 66
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6518da337394994d87e0268d10342a1
+      internalID: 1340340080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_52
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 66
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8c0c5f9b920334a858b23126a562d4
+      internalID: 1944321096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_53
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 66
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e939b41fb8c97649a1032bff34638eb
+      internalID: -996643017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_54
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 66
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7062645ad0b7f434487686cacb3c2e04
+      internalID: 239525678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_55
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 66
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffbd9b9453851546afda84c6a3a3946
+      internalID: -1755507821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_56
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 2
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a01837245d44784ea6dd734b2129d2a
+      internalID: 4220216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_57
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 2
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285bfafa95a426140bf9f500f18c0332
+      internalID: 386404980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_58
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266b92fb4b698ea45bba61ef1dd3ee57
+      internalID: -999950794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_59
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 2
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb809c215d1c0f44698afdd697fcba3c
+      internalID: -1577571491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_60
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 2
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea638b3bd45bca646906f5845e815f6e
+      internalID: -330896048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_61
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 2
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618419f0fca755548af8093252b33c60
+      internalID: 1023224980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_62
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 2
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f3917848c94764bbb42d2601f41a04
+      internalID: 1723931720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_idle_63
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 2
+        width: 18
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea4a2893e2469a4baf16855a6f64c52
+      internalID: 50707717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4f232178b22af6c419f0d07d4c2681eb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      isometric_character_idle_0: -1976012355
+      isometric_character_idle_1: 1463182479
+      isometric_character_idle_10: 1764313106
+      isometric_character_idle_11: 625156470
+      isometric_character_idle_12: 229350263
+      isometric_character_idle_13: 1089739068
+      isometric_character_idle_14: 1498987583
+      isometric_character_idle_15: -592725287
+      isometric_character_idle_16: -696857649
+      isometric_character_idle_17: -1543435455
+      isometric_character_idle_18: -883283945
+      isometric_character_idle_19: 1168002070
+      isometric_character_idle_2: 585720546
+      isometric_character_idle_20: 1097929065
+      isometric_character_idle_21: 1981215413
+      isometric_character_idle_22: 640816644
+      isometric_character_idle_23: 1666746836
+      isometric_character_idle_24: 1974224036
+      isometric_character_idle_25: -1266030986
+      isometric_character_idle_26: 1361892821
+      isometric_character_idle_27: -328398483
+      isometric_character_idle_28: -2070628383
+      isometric_character_idle_29: -1246400248
+      isometric_character_idle_3: 90082365
+      isometric_character_idle_30: -461202612
+      isometric_character_idle_31: 1688431701
+      isometric_character_idle_32: -890603919
+      isometric_character_idle_33: 1209354672
+      isometric_character_idle_34: 942836910
+      isometric_character_idle_35: -279651737
+      isometric_character_idle_36: -1552471807
+      isometric_character_idle_37: 844642660
+      isometric_character_idle_38: 170452022
+      isometric_character_idle_39: 5973463
+      isometric_character_idle_4: 179771584
+      isometric_character_idle_40: -1991516997
+      isometric_character_idle_41: 409390703
+      isometric_character_idle_42: 1020110090
+      isometric_character_idle_43: -1821331825
+      isometric_character_idle_44: 2033333344
+      isometric_character_idle_45: 1160271423
+      isometric_character_idle_46: 540325202
+      isometric_character_idle_47: 310920034
+      isometric_character_idle_48: -927603405
+      isometric_character_idle_49: 316986726
+      isometric_character_idle_5: -591969806
+      isometric_character_idle_50: -100161021
+      isometric_character_idle_51: 1340340080
+      isometric_character_idle_52: 1944321096
+      isometric_character_idle_53: -996643017
+      isometric_character_idle_54: 239525678
+      isometric_character_idle_55: -1755507821
+      isometric_character_idle_56: 4220216
+      isometric_character_idle_57: 386404980
+      isometric_character_idle_58: -999950794
+      isometric_character_idle_59: -1577571491
+      isometric_character_idle_6: 958565073
+      isometric_character_idle_60: -330896048
+      isometric_character_idle_61: 1023224980
+      isometric_character_idle_62: 1723931720
+      isometric_character_idle_63: 50707717
+      isometric_character_idle_7: 589348280
+      isometric_character_idle_8: 622097142
+      isometric_character_idle_9: 1119094707
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
