@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,16 +34,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -108,12 +108,716 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: isometric_character_punch_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 452
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a53dd20cb509cc4c924d88f6fffce5f
+      internalID: 186068806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 452
+        width: 29
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c0ea65bd385894ab635095e0413bb7
+      internalID: -1422911387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 452
+        width: 25
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a68c607429bdc040bd9ee859499d524
+      internalID: 1139651872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 452
+        width: 25
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b94fd3fa441bcc4689cd471b280720d
+      internalID: 1858320066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_4
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 387
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9406d31e9ca3f74195a10d9dfb409fa
+      internalID: -993696108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 387
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7882bbffedc41d54d8381fe37bc44133
+      internalID: -278027029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_6
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 388
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4084bb7c6f1f0740bdfc9830de7c6e7
+      internalID: -1170323475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_7
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 388
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bccade7f1333134eb37bc2da2898905
+      internalID: 2026138471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_8
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 323
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8705492fd07554db42b813b7c17324
+      internalID: -1612002271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 323
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b91ed05118e75439f206c1956d27b9
+      internalID: 239711113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 324
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a84e4af870fc341952dcdf187b63eb
+      internalID: 989925765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_11
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 324
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f445b0215694b748bcbe8280ca4fcf7
+      internalID: -1232275275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 260
+        width: 22
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38a28432bda5474881771e710c65413
+      internalID: 1613043287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_13
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 260
+        width: 24
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bfccadd248b6249b89e9390dc5ad1f
+      internalID: 82410156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_14
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 260
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08387e610a5e0141b8d14d2133d2e17
+      internalID: -2078498348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_15
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 260
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99df15494780e94e935fb766c94dd38
+      internalID: 1115770763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 195
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36795d61104ffa4a866c83344a64b10
+      internalID: 764555956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_17
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 195
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3065ca95895b6843a954db5608cfaf6
+      internalID: -852344050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_18
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 195
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24770065abd81f846b1456adbd740293
+      internalID: -1887650299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_19
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 195
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1df5595158782a4cab56163c61c4b6c
+      internalID: 1210602514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_20
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 130
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c74e4376efc2464cadeabf8e64752fd
+      internalID: 1931824692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_21
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 130
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7184f59eb8126c5488559a7e740a9064
+      internalID: 1495493711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_22
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 130
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec383c773c48b034c89886be2aed15f2
+      internalID: 506258235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_23
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 130
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829e13b16a34f6247acec25766351c46
+      internalID: -881672357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_24
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 67
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086cec4086ef7b44a8043ed75eaae2c5
+      internalID: 382316991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_25
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 67
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da589035dce5864f9f9ab6d123f55c9
+      internalID: 482858466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_26
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 67
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ba27349d9245a408f76f81c65c0b94
+      internalID: -569384607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_27
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 67
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a13be06ca9d804a949dc7cecb30da3
+      internalID: -327956392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_28
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 4
+        width: 22
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0035cc2d1c4fdc4418ca924cec6a1b91
+      internalID: -629455726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_29
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 4
+        width: 24
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e344e1f9a45a84e9b65a7c93bb61bf
+      internalID: -480641051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_30
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 4
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf0351c2a3e39b45a1b8c90d540dd65
+      internalID: -23417069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isometric_character_punch_31
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 4
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528b50371d07b1b4db996a036f6d69ec
+      internalID: -970629729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b9d4309e69e53f6478cedcd2991a25a6
     internalID: 0
     vertices: []
     indices: 
@@ -122,7 +826,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      isometric_character_punch_0: 186068806
+      isometric_character_punch_1: -1422911387
+      isometric_character_punch_10: 989925765
+      isometric_character_punch_11: -1232275275
+      isometric_character_punch_12: 1613043287
+      isometric_character_punch_13: 82410156
+      isometric_character_punch_14: -2078498348
+      isometric_character_punch_15: 1115770763
+      isometric_character_punch_16: 764555956
+      isometric_character_punch_17: -852344050
+      isometric_character_punch_18: -1887650299
+      isometric_character_punch_19: 1210602514
+      isometric_character_punch_2: 1139651872
+      isometric_character_punch_20: 1931824692
+      isometric_character_punch_21: 1495493711
+      isometric_character_punch_22: 506258235
+      isometric_character_punch_23: -881672357
+      isometric_character_punch_24: 382316991
+      isometric_character_punch_25: 482858466
+      isometric_character_punch_26: -569384607
+      isometric_character_punch_27: -327956392
+      isometric_character_punch_28: -629455726
+      isometric_character_punch_29: -480641051
+      isometric_character_punch_3: 1858320066
+      isometric_character_punch_30: -23417069
+      isometric_character_punch_31: -970629729
+      isometric_character_punch_4: -993696108
+      isometric_character_punch_5: -278027029
+      isometric_character_punch_6: -1170323475
+      isometric_character_punch_7: 2026138471
+      isometric_character_punch_8: -1612002271
+      isometric_character_punch_9: 239711113
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
