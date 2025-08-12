@@ -97,13 +97,15 @@ public class Player : MonoBehaviour
 
         Vector3 horizontalMovement = new Vector3(horizontalInput, 0f, verticalInput);
 
+        Vector3 localMovement = transform.TransformDirection(horizontalMovement);
+
         if ((horizontalInput != 0 || verticalInput != 0) && Movement.x != 0 || Movement.z != 0)
         {
             lastMovement = Movement;
         }
 
-
-        Movement = horizontalMovement;
+        
+        Movement = localMovement.normalized;
         Movement.y = verticalVelocity;
         
 
