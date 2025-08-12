@@ -4,7 +4,7 @@ using System.Collections;
 public class Attack : MonoBehaviour
 {
     [SerializeField] private Camera cam;
-
+    [SerializeField] private float attackCooldown;
     private Player playerScript;
 
     private Animator anim;
@@ -81,7 +81,7 @@ public class Attack : MonoBehaviour
 
     IEnumerator CanAttack()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
     }
 

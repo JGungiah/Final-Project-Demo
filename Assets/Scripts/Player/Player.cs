@@ -97,19 +97,19 @@ public class Player : MonoBehaviour
 
         Vector3 horizontalMovement = new Vector3(horizontalInput, 0f, verticalInput);
 
-        Vector3 localMovement = transform.TransformDirection(horizontalMovement);
+        Vector3 localMovement = transform.TransformDirection(horizontalMovement).normalized;
+
+      
+
+        
+        Movement = localMovement.normalized;
+        Movement.y = verticalVelocity;
+
 
         if ((horizontalInput != 0 || verticalInput != 0) && Movement.x != 0 || Movement.z != 0)
         {
             lastMovement = Movement;
         }
-
-        
-        Movement = localMovement.normalized;
-        Movement.y = verticalVelocity;
-        
-
-       
 
         controller.Move(Movement * speed * Time.deltaTime);
     }
