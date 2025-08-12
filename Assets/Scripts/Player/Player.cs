@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 public class Player : MonoBehaviour
 {
     [Header("Movement")]
@@ -52,6 +53,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(controller.velocity);
         if (controller != null)
         {
             if (!controller.isGrounded)
@@ -93,7 +95,7 @@ public class Player : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        Vector3 horizontalMovement = new Vector3(horizontalInput, 0f, verticalInput).normalized;
+        Vector3 horizontalMovement = new Vector3(horizontalInput, 0f, verticalInput);
 
         if ((horizontalInput != 0 || verticalInput != 0) && Movement.x != 0 || Movement.z != 0)
         {
@@ -103,6 +105,9 @@ public class Player : MonoBehaviour
 
         Movement = horizontalMovement;
         Movement.y = verticalVelocity;
+        
+
+       
 
         controller.Move(Movement * speed * Time.deltaTime);
     }
