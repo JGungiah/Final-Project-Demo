@@ -85,9 +85,12 @@ public class Attack : MonoBehaviour
         isAttacking = false;
     }
 
-    public void AttackCollider()
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-
+        if (hit.gameObject.CompareTag("Enemy"))
+        {
+            print("1");
+        }
     }
 }
     
