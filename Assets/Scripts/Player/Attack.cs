@@ -9,8 +9,11 @@ public class Attack : MonoBehaviour
 
     private Animator anim;
     private Transform player;
-    private bool isAttacking = false;
+    public bool isAttacking = false;
 
+    public Vector3 knockbackDirection { get; private set; }
+
+  
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -47,12 +50,14 @@ public class Attack : MonoBehaviour
             dir.y = 0;
             dir.Normalize();
 
+            knockbackDirection = dir.normalized;
+
             Vector2 dir2D = new Vector2(dir.x, dir.z);
             float angle = Mathf.Atan2(dir2D.y, dir2D.x) * Mathf.Rad2Deg;
             angle -= 45f;       
             if (angle < 0) angle += 360;
 
-            Vector2 animDir = GetDirection(angle);
+           Vector2  animDir = GetDirection(angle);
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
             anim.SetTrigger("attack");
@@ -85,13 +90,7 @@ public class Attack : MonoBehaviour
         isAttacking = false;
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if (hit.gameObject.CompareTag("Enemy"))
-        {
-            print("1");
-        }
-    }
+  
 }
     
 
