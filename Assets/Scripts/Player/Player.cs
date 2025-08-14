@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashDistance;
 
     private bool isDashing = false;
-
+    private bool isMoving = false;
 
     [Header("Gravity")]
    
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
             Animations();
         }
 
-        if (Input.GetKey(KeyCode.Space) && !isDashing)
+        if (Input.GetKey(KeyCode.Space) && !isDashing && isMoving)
         {
             StartCoroutine(Dash());
         }
@@ -108,7 +108,13 @@ public class Player : MonoBehaviour
 
         if ((horizontalInput != 0 || verticalInput != 0) && Movement.x != 0 || Movement.z != 0)
         {
+            isMoving = true;
             lastMovement = Movement;
+        }
+
+        else if (horizontalInput == 0 || verticalInput == 0)
+        {
+            isMoving = false;
         }
 
         controller.Move(Movement * speed * Time.deltaTime);
