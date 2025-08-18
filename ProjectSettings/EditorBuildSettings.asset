@@ -6,8 +6,35 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game Scene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Maps/LobbyRoom.unity
+    guid: 83166cf72a90b1a469fed0a8b9a9af46
+  - enabled: 1
+    path: Assets/Scenes/Maps/Map1.unity
+    guid: 86ec1a2394527064c880bb2f3c902bf8
+  - enabled: 1
+    path: Assets/Scenes/Maps/Map2.unity
+    guid: 5d73d3cf9a602d041bb517bfc384529c
+  - enabled: 1
+    path: Assets/Scenes/Maps/Map3.unity
+    guid: 8f39e734c5114fa429ffa4f7987bf06e
+  - enabled: 1
+    path: Assets/Scenes/Maps/Map4.unity
+    guid: 303b8ab795c484d48820bb46e646ba61
+  - enabled: 1
+    path: Assets/Scenes/Maps/Map5.unity
+    guid: 4e692071da038ba4b9c1e03ad8bbd660
+  - enabled: 1
+    path: Assets/Scenes/Maps/Map6.unity
+    guid: 78db656ea96c1f54999c6fe9db5f6e8a
+  - enabled: 1
+    path: Assets/Scenes/Maps/Map7.unity
+    guid: 592843488c712384eb94394ef1712a5d
+  - enabled: 1
+    path: Assets/Scenes/Maps/Map8.unity
+    guid: cfdaa09f567073b49a7d1f83d58d713c
+  - enabled: 1
+    path: Assets/Scenes/Maps/Shop.unity
+    guid: aabaaf76b6f6acd4ebbdabdf2bf32c85
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
