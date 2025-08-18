@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(controller.velocity);
+    
         if (controller != null)
         {
             if (!controller.isGrounded)
