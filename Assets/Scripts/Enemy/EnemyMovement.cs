@@ -7,10 +7,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float knockbackPower;
     [SerializeField] private float knockbackDuration;
 
-    [Header("Animation Settings")]
-    [SerializeField] private Animator animator; 
-    [SerializeField] private string animParamX = "horizontalMovement";
-    [SerializeField] private string animParamY = "verticalMovement";
+
 
     private GameObject player;
     private NavMeshAgent agent;
@@ -30,7 +27,7 @@ public class EnemyMovement : MonoBehaviour
         if (player != null && !isBeingKnockedBack)
         {
             Movement();
-            Update8DirectionAnimation();
+  
         }
     }
 
@@ -42,24 +39,30 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    void Update8DirectionAnimation()
-    {
-        Vector3 dir = (player.transform.position - transform.position).normalized;
-    
-        dir.y = 0;
-
-        Vector3 localDir = transform.InverseTransformDirection(dir);
-
-      
-        animator.SetFloat(animParamX, dir.x);
-        animator.SetFloat(animParamY, dir.z);
-    }
+ 
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("PlayerCollider") && attackScript.isAttacking && !isBeingKnockedBack)
         {
             StartCoroutine(KnockBack());
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerCollider"))
+        {
+            agent.enabled = false;
+     
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerCollider"))
+        {
+            agent.enabled = true;
         }
     }
 
