@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float knockbackDuration;
 
     [Header("Animation Settings")]
-    [SerializeField] private Animator animator; // Animator with 8-dir blend tree
+    [SerializeField] private Animator animator; 
     [SerializeField] private string animParamX = "horizontalMovement";
     [SerializeField] private string animParamY = "verticalMovement";
 
@@ -44,16 +44,13 @@ public class EnemyMovement : MonoBehaviour
 
     void Update8DirectionAnimation()
     {
-        // Get movement direction in world space
         Vector3 dir = (player.transform.position - transform.position).normalized;
-
-        // Remove vertical influence (top-down perspective)
+    
         dir.y = 0;
 
-        // Normalize direction for animation
         Vector3 localDir = transform.InverseTransformDirection(dir);
 
-        // Send to animator (works with 8-dir blend tree)
+      
         animator.SetFloat(animParamX, dir.x);
         animator.SetFloat(animParamY, dir.z);
     }
