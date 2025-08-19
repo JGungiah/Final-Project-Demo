@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     private Attack attackScript;
     private bool isBeingKnockedBack = false;
 
+    private bool isAttacking = false;
 
     void Start()
     {
@@ -67,6 +68,14 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerCollider") && attackScript.isAttacking && !isBeingKnockedBack)
         {
             StartCoroutine(KnockBack());
+            
+        }
+        else if (other.gameObject.CompareTag("PlayerCollider") && !isAttacking)
+        {
+            isAttacking = true;
+            anim.SetFloat("AttackHorizontal", animDirection.x);
+            anim.SetFloat("AttackVertical", animDirection.z);
+            anim.SetTrigger("attack");
         }
     }
 
@@ -75,6 +84,8 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerCollider"))
         {
             agent.enabled = false;
+          
+            
         }
     }
 
@@ -83,6 +94,8 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerCollider"))
         {
             agent.enabled = true;
+            isAttacking = false;
+            
         }
     }
 
