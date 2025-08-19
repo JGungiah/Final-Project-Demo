@@ -7,18 +7,24 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float knockbackPower;
     [SerializeField] private float knockbackDuration;
 
-
+    private float horizontalMovement;
+    private float verticalMovement;
+    private Animator anim;
+    private Vector3 animDirection;
 
     private GameObject player;
     private NavMeshAgent agent;
     private Attack attackScript;
     private bool isBeingKnockedBack = false;
 
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         attackScript = player.GetComponent<Attack>();
+      
     }
 
     void Update()
@@ -27,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
         if (player != null && !isBeingKnockedBack)
         {
             Movement();
-  
+            EnemyAnimations();
         }
     }
 
@@ -37,9 +43,24 @@ public class EnemyMovement : MonoBehaviour
         {
             agent.destination = player.transform.position;
         }
+      
     }
 
- 
+    void EnemyAnimations()
+    {
+        
+        animDirection = (player.transform.position - transform.position).normalized;
+        animDirection.y = 0;
+
+        horizontalMovement = animDirection.x;
+        verticalMovement = animDirection.z;
+
+        anim.SetFloat("horizontalMovement", horizontalMovement);
+        anim.SetFloat("verticalMovement", verticalMovement);
+        anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
+
+  
+    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -54,7 +75,6 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerCollider"))
         {
             agent.enabled = false;
-     
         }
     }
 
