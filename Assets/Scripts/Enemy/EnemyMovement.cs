@@ -87,7 +87,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerCollider") && attackScript.isAttacking && !isBeingKnockedBack)
+        if (other.gameObject.CompareTag("PlayerAttack") && attackScript.isAttacking && !isBeingKnockedBack)
         {
             StartCoroutine(KnockBack());
             

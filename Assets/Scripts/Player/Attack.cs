@@ -13,12 +13,14 @@ public class Attack : MonoBehaviour
 
     public Vector3 knockbackDirection { get; private set; }
 
-  
+    [SerializeField] private Transform attackCollider;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         player = transform;
         playerScript = GetComponent<Player>();
+       
     }
 
     void Update()
@@ -51,6 +53,14 @@ public class Attack : MonoBehaviour
             dir.Normalize();
 
             knockbackDirection = dir.normalized;
+
+
+            if (attackCollider != null)
+            {
+                attackCollider.gameObject.SetActive(true);
+
+                attackCollider.rotation = Quaternion.LookRotation(dir, Vector3.up);
+            }
 
             Vector2 dir2D = new Vector2(dir.x, dir.z);
             float angle = Mathf.Atan2(dir2D.y, dir2D.x) * Mathf.Rad2Deg;
@@ -89,7 +99,8 @@ public class Attack : MonoBehaviour
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
     }
-
+        
+    
   
 }
     
