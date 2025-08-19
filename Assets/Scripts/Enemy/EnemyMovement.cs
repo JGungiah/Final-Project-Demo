@@ -6,18 +6,25 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private float knockbackPower;
     [SerializeField] private float knockbackDuration;
-
+    [SerializeField] private float attackCooldown;
+    [SerializeField] private float attackDuration;
+    
     private float horizontalMovement;
     private float verticalMovement;
     private Animator anim;
     private Vector3 animDirection;
+    private Vector3 velocity;
+
+
 
     private GameObject player;
     private NavMeshAgent agent;
     private Attack attackScript;
     private bool isBeingKnockedBack = false;
 
-    private bool isAttacking = false;
+    public bool isAttacking = false;
+    private bool canAttack = true;
+
 
     void Start()
     {
@@ -31,10 +38,25 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         agent.updateRotation = false;
+
         if (player != null && !isBeingKnockedBack)
         {
-            Movement();
-            EnemyAnimations();
+            if (!isAttacking) 
+            {
+                Movement();
+                EnemyAnimations();
+            }
+        }
+
+        if (agent.hasPath)
+        {
+            velocity = agent.desiredVelocity.normalized * agent.speed;
+            agent.Move(velocity * Time.deltaTime);
+        }
+
+        if (isAttacking)
+        {
+            agent.enabled = false;
         }
     }
 
@@ -70,13 +92,36 @@ public class EnemyMovement : MonoBehaviour
             StartCoroutine(KnockBack());
             
         }
-        else if (other.gameObject.CompareTag("PlayerCollider") && !isAttacking)
+        else if (other.gameObject.CompareTag("PlayerCollider") && !isAttacking && canAttack)
         {
-            isAttacking = true;
-            anim.SetFloat("AttackHorizontal", animDirection.x);
-            anim.SetFloat("AttackVertical", animDirection.z);
-            anim.SetTrigger("attack");
+            StartCoroutine(EnemyAttack());
         }
+    }
+
+    private IEnumerator EnemyAttack()
+    {
+        isAttacking = true;
+        canAttack = false;
+
+       
+        agent.enabled = false;
+
+       
+        anim.SetFloat("AttackHorizontal", animDirection.x);
+        anim.SetFloat("AttackVertical", animDirection.z);
+        anim.SetTrigger("attack");
+
+       
+       
+        yield return new WaitForSeconds(attackDuration);
+
+       
+        agent.enabled = true;
+        isAttacking = false;
+
+
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -85,7 +130,6 @@ public class EnemyMovement : MonoBehaviour
         {
             agent.enabled = false;
           
-            
         }
     }
 
@@ -94,8 +138,6 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerCollider"))
         {
             agent.enabled = true;
-            isAttacking = false;
-            
         }
     }
 
