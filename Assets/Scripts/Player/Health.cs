@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,12 +12,14 @@ public class Health : MonoBehaviour
     private float elapsedTime;
     public float currentHealth;
 
+    private AttackMelee attackMeleeScript;
 
     public bool hasBeenAttacked = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHealth = maxHealth;
+        attackMeleeScript = FindAnyObjectByType<AttackMelee>();
     }
 
     // Update is called once per frame
@@ -29,9 +33,24 @@ public class Health : MonoBehaviour
        
         elapsedTime += Time.deltaTime;
         currentHealth -= damage ;
+        attackMeleeScript.hasAttacked = false;
         //if (elapsedTime > healthDecreaseSpeed) ;
-        
+
     }
 
-    
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("JotunnCollider") && attackMeleeScript.hasAttacked &&! hasBeenAttacked)
+        {
+            TakeDamage (10.0f);
+            hasBeenAttacked=true;
+            StartCoroutine(AttackWindow());
+        }
+    }
+
+    IEnumerator AttackWindow()
+    {
+        yield return new WaitForSeconds(0.1f);
+        hasBeenAttacked = false ;
+    }
 }

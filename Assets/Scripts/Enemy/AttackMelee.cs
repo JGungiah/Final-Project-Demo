@@ -44,8 +44,7 @@ public class AttackMelee : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
+       
         if (!isAttacking)
         {
             attackCollider.gameObject.SetActive(false);
@@ -79,7 +78,7 @@ public class AttackMelee : MonoBehaviour
     {
         isAttacking = true;
         canAttack = false;
-
+       
         agent.enabled = false;
 
         anim.SetFloat("AttackHorizontal", movementScript.animDirection.x);
