@@ -18,7 +18,7 @@ public class AttackMelee : MonoBehaviour
     [SerializeField] private float spiritDamage;
 
     private GameObject player;
-    private Health healthScript;
+
     private Attack attackScript;
     private Animator anim;
     private EnemyMovement movementScript;
@@ -27,6 +27,7 @@ public class AttackMelee : MonoBehaviour
     public bool isAttacking = false;
     private bool canAttack = true;
     public bool hasAttacked = false;
+    private bool canBeKnockedBack = true;
 
     [SerializeField] private Transform attackCollider;
 
@@ -37,7 +38,7 @@ public class AttackMelee : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         attackScript = player.GetComponent<Attack>();
-        healthScript = player.GetComponent<Health>();
+       
         movementScript = GetComponent<EnemyMovement>();
     }
 
@@ -53,10 +54,13 @@ public class AttackMelee : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerAttack") && attackScript.isAttacking && !isBeingKnockedBack)
+        if (other.gameObject.CompareTag("PlayerAttack") && attackScript.isAttacking && !isBeingKnockedBack && canBeKnockedBack)
         {
             isBeingKnockedBack = true;
+            canBeKnockedBack = false;
+            StartCoroutine(KnockbackWindow());
             StartCoroutine(KnockBack());
+            
            
 
         }
@@ -110,5 +114,11 @@ public class AttackMelee : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         agent.enabled = true;
         isBeingKnockedBack = false;
+    }
+
+    IEnumerator KnockbackWindow()
+    {
+        yield return new WaitForSeconds(1);
+        canBeKnockedBack = true;
     }
 }

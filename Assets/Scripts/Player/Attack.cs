@@ -10,7 +10,7 @@ public class Attack : MonoBehaviour
     private Animator anim;
     private Transform player;
     public bool isAttacking = false;
-
+    public bool colliderActive = false;
     public Vector3 knockbackDirection { get; private set; }
 
     [SerializeField] private Transform attackCollider;
@@ -39,7 +39,7 @@ public class Attack : MonoBehaviour
             playerScript.speed = playerScript.originalSpeed;
         }
 
-       
+        attackCollider.gameObject.SetActive(colliderActive);
     }
 
     void HandleAttack()
@@ -71,7 +71,8 @@ public class Attack : MonoBehaviour
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
             anim.SetTrigger("attack");
-            attackCollider.gameObject.SetActive(true);
+
+
             isAttacking = true;
             StartCoroutine(CanAttack());
         }
@@ -99,7 +100,7 @@ public class Attack : MonoBehaviour
         
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
-        attackCollider.gameObject.SetActive(false);
+        //attackCollider.gameObject.SetActive(false);
     }
         
     
