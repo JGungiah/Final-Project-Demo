@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - PlayerCollider
   - PlayerAttack
+  - JotunnCollider
   layers:
   - Default
   - TransparentFX
