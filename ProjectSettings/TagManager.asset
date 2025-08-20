@@ -9,6 +9,7 @@ TagManager:
   - PlayerAttack
   - JotunnCollider
   - HealthCollider
+  - InteractDoor
   layers:
   - Default
   - TransparentFX
