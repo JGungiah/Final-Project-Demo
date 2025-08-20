@@ -10,7 +10,7 @@ public class playerSpawn : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
 
         Player.transform.position = spawn.transform.position;
-        Player.transform.rotation = spawn.transform.rotation;   
+      
     }
 
 
