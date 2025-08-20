@@ -56,7 +56,9 @@ public class AttackMelee : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerAttack") && attackScript.isAttacking && !isBeingKnockedBack)
         {
+            isBeingKnockedBack = true;
             StartCoroutine(KnockBack());
+           
 
         }
         else if (other.gameObject.CompareTag("PlayerCollider") && !isAttacking && canAttack)
@@ -71,8 +73,6 @@ public class AttackMelee : MonoBehaviour
             }
         }
 
-
-
     }
 
     private IEnumerator EnemyAttack()
@@ -80,18 +80,13 @@ public class AttackMelee : MonoBehaviour
         isAttacking = true;
         canAttack = false;
 
-
         agent.enabled = false;
-
 
         anim.SetFloat("AttackHorizontal", movementScript.animDirection.x);
         anim.SetFloat("AttackVertical", movementScript.animDirection.z);
         anim.SetTrigger("attack");
 
-
-
         yield return new WaitForSeconds(attackDuration);
-
 
         agent.enabled = true;
         isAttacking = false;
@@ -99,13 +94,10 @@ public class AttackMelee : MonoBehaviour
 
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
-
     }
 
-
     IEnumerator KnockBack()
-    {
-        isBeingKnockedBack = true;
+    {   
         agent.enabled = false;
 
         float elapsedTime = 0f;

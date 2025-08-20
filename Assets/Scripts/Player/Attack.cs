@@ -57,7 +57,7 @@ public class Attack : MonoBehaviour
 
             if (attackCollider != null)
             {
-                attackCollider.gameObject.SetActive(true);
+              
 
                 attackCollider.rotation = Quaternion.LookRotation(dir, Vector3.up);
             }
@@ -71,6 +71,7 @@ public class Attack : MonoBehaviour
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
             anim.SetTrigger("attack");
+            attackCollider.gameObject.SetActive(true);
             isAttacking = true;
             StartCoroutine(CanAttack());
         }
@@ -90,14 +91,15 @@ public class Attack : MonoBehaviour
 
       
 
-
         return Vector2.zero;
     }
 
     IEnumerator CanAttack()
     {
+        
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
+        attackCollider.gameObject.SetActive(false);
     }
         
     
