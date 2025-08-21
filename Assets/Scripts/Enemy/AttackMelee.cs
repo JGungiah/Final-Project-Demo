@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class AttackMelee : MonoBehaviour
 {
@@ -31,6 +32,10 @@ public class AttackMelee : MonoBehaviour
 
     [SerializeField] private Transform attackCollider;
 
+    public float attackRadius;
+    public float attackDistance;
+
+    [SerializeField] private float hitSTopTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -50,21 +55,10 @@ public class AttackMelee : MonoBehaviour
         {
             attackCollider.gameObject.SetActive(false);
         }
-    }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("PlayerAttack") && attackScript.isAttacking && !isBeingKnockedBack && canBeKnockedBack)
-        {
-            isBeingKnockedBack = true;
-            canBeKnockedBack = false;
-            StartCoroutine(KnockbackWindow());
-            StartCoroutine(KnockBack());
-            
-           
+        attackDistance = Vector3.Distance(transform.position, player.transform.position);
 
-        }
-        else if (other.gameObject.CompareTag("PlayerCollider") && !isAttacking && canAttack)
+        if (attackDistance <= attackRadius && !isAttacking && canAttack)
         {
             StartCoroutine(EnemyAttack());
 
@@ -75,7 +69,19 @@ public class AttackMelee : MonoBehaviour
                 attackCollider.rotation = Quaternion.LookRotation(-movementScript.animDirection, Vector3.up);
             }
         }
+    }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerAttack") && attackScript.isAttacking && !isBeingKnockedBack && canBeKnockedBack)
+        {
+            isBeingKnockedBack = true;
+            canBeKnockedBack = false;
+            player.GetComponent <HitStop>().ApplyHitStop(hitSTopTime);
+            StartCoroutine(KnockbackWindow());
+            StartCoroutine(KnockBack());
+        }
+       
     }
 
     private IEnumerator EnemyAttack()
@@ -118,7 +124,13 @@ public class AttackMelee : MonoBehaviour
 
     IEnumerator KnockbackWindow()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0);
         canBeKnockedBack = true;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 }

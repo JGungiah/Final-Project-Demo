@@ -51,6 +51,14 @@ public class EnemyMovement : MonoBehaviour
             agent.enabled = false;
         }
 
+        if ((attackMeleeScript.attackDistance <= attackMeleeScript.attackRadius))
+        {
+            agent.enabled = false;
+        }
+        else if ((attackMeleeScript.attackDistance > attackMeleeScript.attackRadius))
+        {
+            agent.enabled = true;
+        }
     }
 
     void Movement()
@@ -77,24 +85,5 @@ public class EnemyMovement : MonoBehaviour
        
     }
 
-   
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("PlayerCollider"))
-        {
-            agent.enabled = false;
-          
-        }
-        
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("PlayerCollider"))
-        {
-            agent.enabled = true;
-        }
-    }
-
-   
+  
 }

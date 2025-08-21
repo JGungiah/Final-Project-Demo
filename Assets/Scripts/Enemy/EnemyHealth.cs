@@ -8,11 +8,17 @@ public class EnemyHealth : MonoBehaviour
     public float currentHealth;
     [SerializeField]  private float playerDamage;
     private bool canTakeDamage = false;
-
+    
+    private Color enemyHitColour = Color.red;
+    [SerializeField] private float hitDuration;
+    private Color originalColor;
+    private SpriteRenderer spriteRenderer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHealth = maxHealth;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
 
     // Update is called once per frame
@@ -30,6 +36,7 @@ public class EnemyHealth : MonoBehaviour
         {
             currentHealth -= playerDamage;
             canTakeDamage = true;
+            StartCoroutine(HitColour());
             StartCoroutine(DamageWindow());
         }
     }
@@ -40,4 +47,10 @@ public class EnemyHealth : MonoBehaviour
         canTakeDamage = false;
     }
 
+    IEnumerator HitColour()
+    {
+        spriteRenderer.color = enemyHitColour;
+        yield return new WaitForSeconds(hitDuration);
+        spriteRenderer.color = originalColor;
+    }
 }
