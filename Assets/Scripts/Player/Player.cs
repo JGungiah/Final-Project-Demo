@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashCoolDown;
     [SerializeField] private float dashDuration;
     [SerializeField] private float dashDistance;
+    public GameObject dashVFX;
 
     private bool isDashing = false;
     private bool isMoving = false;
@@ -136,7 +137,7 @@ public class Player : MonoBehaviour
     IEnumerator Dash()
     {
         isDashing = true;
-
+        dashVFX.SetActive(true);
         dashForce = dashDistance / dashDuration;
         float elapsedTime = 0f;
 
@@ -144,12 +145,14 @@ public class Player : MonoBehaviour
         {
             controller.Move (lastMovement * dashForce * Time.deltaTime);
             elapsedTime += Time.deltaTime;
+           
             yield return null;
         }
-
+        dashVFX.SetActive(false);
         yield return new WaitForSeconds(dashCoolDown);
-        
+       
         isDashing = false;
+       
     }
 }
 
