@@ -118,7 +118,7 @@ public class AttackMelee : MonoBehaviour
 
     IEnumerator KnockbackWindow()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         canBeKnockedBack = true;
     }
 }
