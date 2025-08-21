@@ -33,7 +33,7 @@ public class playerInteract : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 interactImage.gameObject.SetActive(true);
-                SceneManager.LoadScene("LobbyRoom");
+                SceneGenerator();
             }
         }
 
