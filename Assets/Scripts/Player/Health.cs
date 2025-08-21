@@ -33,18 +33,26 @@ public class Health : MonoBehaviour
        
         elapsedTime += Time.deltaTime;
         currentHealth -= damage ;
-        attackMeleeScript.hasAttacked = false;
+        //attackMeleeScript.hasAttacked = false;
         //if (elapsedTime > healthDecreaseSpeed) ;
 
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("JotunnCollider") && attackMeleeScript.hasAttacked &&! hasBeenAttacked)
+        if (other.gameObject.CompareTag("JotunnCollider"))
         {
-            TakeDamage (10.0f);
-            hasBeenAttacked=true;
-            StartCoroutine(AttackWindow());
+            AttackMelee enemyAttack = other.GetComponentInParent<AttackMelee>();
+
+            if (enemyAttack != null && enemyAttack.hasAttacked && !hasBeenAttacked)
+            {
+                TakeDamage(10.0f);
+                hasBeenAttacked = true;
+                StartCoroutine(AttackWindow());
+
+
+                enemyAttack.hasAttacked = false;
+            }
         }
     }
 

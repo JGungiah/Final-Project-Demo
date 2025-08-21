@@ -16,6 +16,7 @@ public class enemySpawner : MonoBehaviour
     public bool wave2;
     public bool wavescomplete;
 
+    private Quaternion spawnRotation = Quaternion.Euler(0f, 45f, 0f);
     private void Start()
     {
         if (Count == 0 )
@@ -42,7 +43,7 @@ public class enemySpawner : MonoBehaviour
         {
         int randomIndex = Random.Range(0, Enemies.Length);
         GameObject chosenEnemy = Enemies[randomIndex];
-        Instantiate(chosenEnemy, SpawnLocations[i].position, SpawnLocations[i].rotation);
+        Instantiate(chosenEnemy, SpawnLocations[i].position, spawnRotation);
          
         }
         wave1 = true;
@@ -56,7 +57,7 @@ public class enemySpawner : MonoBehaviour
         {
             int randomIndex = Random.Range(0, Enemies.Length);
             GameObject chosenEnemy = Enemies[randomIndex];
-            Instantiate(chosenEnemy, SpawnLocations[i].position, SpawnLocations[i].rotation);
+            Instantiate(chosenEnemy, SpawnLocations[i].position, spawnRotation);
 
         }
        wave2 = true;

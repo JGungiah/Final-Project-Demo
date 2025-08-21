@@ -7,6 +7,7 @@ public class playerInteract : MonoBehaviour
 {
     public List<string> sceneNames;
     public GameObject interactImage;
+    private bool hasBeenPressed;
     void Start()
     {
         
@@ -15,7 +16,10 @@ public class playerInteract : MonoBehaviour
   
     void Update()
     {
-        
+        if (hasBeenPressed)
+        {
+            interactImage.gameObject.SetActive(false);
+        }
     }
     public void SceneGenerator() 
     {
@@ -34,6 +38,7 @@ public class playerInteract : MonoBehaviour
             {
                 interactImage.gameObject.SetActive(true);
                 SceneGenerator();
+                hasBeenPressed = true;
             }
         }
 
