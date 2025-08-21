@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
@@ -15,17 +16,25 @@ public class Health : MonoBehaviour
     private AttackMelee attackMeleeScript;
 
     public bool hasBeenAttacked = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHealth = maxHealth;
-        attackMeleeScript = FindAnyObjectByType<AttackMelee>();
+        //attackMeleeScript = FindAnyObjectByType<AttackMelee>();
     }
 
     // Update is called once per frame
     void Update()
     {
         healthBar.fillAmount = currentHealth / maxHealth;
+
+        if (currentHealth <= 0 )
+        {
+  
+            SceneManager.LoadScene("LobbyRoom");
+            currentHealth = maxHealth;
+        }
     }
 
     public void TakeDamage (float damage)
