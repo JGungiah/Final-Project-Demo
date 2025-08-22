@@ -12,15 +12,18 @@ public class Health : MonoBehaviour
     [SerializeField] private Image healthBar;
     private float elapsedTime;
     public float currentHealth;
-
+    private HitStop hitstopScript;
     private AttackMelee attackMeleeScript;
 
     public bool hasBeenAttacked = false;
-
+    [SerializeField] private float hitStopDuration;
+    private CameraFollow cameraScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHealth = maxHealth;
+        hitstopScript = GetComponent<HitStop>();
+        cameraScript = FindAnyObjectByType<CameraFollow>();
         //attackMeleeScript = FindAnyObjectByType<AttackMelee>();
     }
 
@@ -55,6 +58,9 @@ public class Health : MonoBehaviour
 
             if (enemyAttack != null && enemyAttack.hasAttacked && !hasBeenAttacked)
             {
+               
+               cameraScript.Shake();
+               
                 TakeDamage(10.0f);
                 hasBeenAttacked = true;
                 StartCoroutine(AttackWindow());

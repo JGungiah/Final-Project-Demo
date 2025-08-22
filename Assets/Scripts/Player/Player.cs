@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
    
     public Vector3 Movement;
     public Vector3 lastMovement;
-
+    private AudioSource dashSound;
 
     [Header("Player Input")]
 
@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
         originalSpeed = speed;
         controller = GetComponent<CharacterController>();
         playerAnim = GetComponent<Animator>();
+        dashSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -138,6 +139,7 @@ public class Player : MonoBehaviour
     {
         isDashing = true;
         dashVFX.SetActive(true);
+        dashSound.Play();
         dashForce = dashDistance / dashDuration;
         float elapsedTime = 0f;
 
