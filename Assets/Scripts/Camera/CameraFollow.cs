@@ -4,7 +4,7 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform player;
+    private Player player;
     [SerializeField] private Vector3 offset = new Vector3(-5f, 5.5f, -5f);
 
     [SerializeField] private float shakeDuration = 0.5f;
@@ -13,12 +13,16 @@ public class CameraFollow : MonoBehaviour
     private float elapsedTime;
     private bool isShaking;
 
+    private void Start()
+    {
+        player = FindAnyObjectByType<Player>();
+    }
     private void LateUpdate()
     {
         if (!isShaking && player != null)
         {
             
-            transform.position = player.position + offset;
+            transform.position = player.transform.position + offset;
         }
     }
 
@@ -35,13 +39,13 @@ public class CameraFollow : MonoBehaviour
             float strength = shakeCurve.Evaluate(elapsedTime / shakeDuration);
 
             
-            transform.position = player.position + offset + (Vector3)Random.insideUnitCircle * strength;
+            transform.position = player.transform.position + offset + (Vector3)Random.insideUnitCircle * strength;
 
             yield return null;
         }
 
       
-        transform.position = player.position + offset;
+        transform.position = player.transform.position + offset;
         isShaking = false;
     }
 
