@@ -7,10 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Maps/LobbyRoom.unity
-    guid: 83166cf72a90b1a469fed0a8b9a9af46
+    guid: 0a2524941bf740941ba25862ad29165d
   - enabled: 1
     path: Assets/Scenes/Maps/Map1.unity
-    guid: 86ec1a2394527064c880bb2f3c902bf8
+    guid: fceeeb7d7bbdaec4d8cafb4594c14da2
   - enabled: 1
     path: Assets/Scenes/Maps/Map2.unity
     guid: 5d73d3cf9a602d041bb517bfc384529c
