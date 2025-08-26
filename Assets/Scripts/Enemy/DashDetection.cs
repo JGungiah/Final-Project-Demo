@@ -5,19 +5,20 @@ public class DashDetection : MonoBehaviour
 {
     private GameObject player;
     private Player playerScript;
-    private Collider collider;
+    private Collider objectCollider;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent < Player >();
-        collider = GetComponent< Collider >();
+        objectCollider = GetComponent< Collider >();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerScript.isDashing)
+        if (playerScript.hasDashed)
         {
             StartCoroutine(DisableCollider());
         }
@@ -25,8 +26,8 @@ public class DashDetection : MonoBehaviour
 
     IEnumerator DisableCollider()
     {
-        collider.enabled = false;
+        objectCollider.enabled = false;
         yield return new WaitForSeconds(playerScript.dashDuration);
-        collider.enabled = true;
+        objectCollider.enabled = true;
     }
 }

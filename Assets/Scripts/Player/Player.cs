@@ -6,10 +6,10 @@ public class Player : MonoBehaviour
     [Header("Movement")]
 
     private CharacterController controller;
-   
+
     public float speed;
     public float originalSpeed;
-   
+
     public Vector3 Movement;
     public Vector3 lastMovement;
     private AudioSource dashSound;
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 
 
     [Header("Dash Controls")]
-    
+
     [SerializeField] private float dashForce;
     [SerializeField] private float dashCoolDown;
     public float dashDuration;
@@ -34,18 +34,20 @@ public class Player : MonoBehaviour
     private float allowedDashDistance;
     [SerializeField] private LayerMask dashCollisionMask;
 
+    public bool hasDashed;
+
     public bool isDashing = false;
     private bool isMoving = false;
 
     [Header("Gravity")]
-   
+
     [SerializeField] private float gravity = -9.81f;
-    
+
     private float verticalVelocity;
 
 
     [Header("Animations")]
-    
+
     private Animator playerAnim;
 
 
@@ -56,12 +58,13 @@ public class Player : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerAnim = GetComponent<Animator>();
         dashSound = GetComponent<AudioSource>();
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        DashDistanceCheck();    
+        DashDistanceCheck();
         if (controller != null)
         {
             if (!controller.isGrounded)
@@ -107,9 +110,9 @@ public class Player : MonoBehaviour
 
         Vector3 localMovement = transform.TransformDirection(horizontalMovement).normalized;
 
-      
 
-        
+
+
         Movement = localMovement.normalized;
         Movement.y = verticalVelocity;
 
@@ -148,37 +151,53 @@ public class Player : MonoBehaviour
 
         allowedDashDistance = dashDistance;
 
-       
+
         if (Physics.CapsuleCast(p1, p2, controller.radius, lastMovement, out hit, dashDistance, dashCollisionMask, QueryTriggerInteraction.Ignore))
         {
-            
+
             allowedDashDistance = hit.distance;
-            
+
         }
     }
 
     IEnumerator Dash()
     {
         isDashing = true;
-        dashVFX.SetActive(true);
-        dashSound.Play();
+        hasDashed = true;
 
-        dashForce = allowedDashDistance / dashDuration;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < dashDuration)
+        if (lastMovement.sqrMagnitude > 0.01f)
         {
-            controller.Move(lastMovement * dashForce * Time.deltaTime);
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            dashVFX.SetActive(true);
+          
+
+            Vector3 flatDirection = new Vector3(lastMovement.x, 0f, lastMovement.z);
+
+            if (flatDirection.sqrMagnitude > 0.01f)
+            {
+                Quaternion dashRotation = Quaternion.LookRotation(flatDirection, Vector3.up);
+                dashVFX.transform.rotation = Quaternion.Euler(0f, dashRotation.eulerAngles.y, 0f);
+            }
+
+            dashSound.Play();
+
+            dashForce = allowedDashDistance / dashDuration;
+            float elapsedTime = 0f;
+
+            while (elapsedTime < dashDuration)
+            {
+                controller.Move(lastMovement * dashForce * Time.deltaTime);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+            hasDashed = false;
+            dashVFX.SetActive(false);
+            yield return new WaitForSeconds(dashCoolDown);
+            isDashing = false;
+           
+
         }
 
-        dashVFX.SetActive(false);
-        yield return new WaitForSeconds(dashCoolDown);
-        isDashing = false;
 
     }
-
-  
 }
 

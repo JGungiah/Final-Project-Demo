@@ -12,6 +12,7 @@ public class Attack : MonoBehaviour
     public bool isAttacking = false;
     public bool colliderActive = false;
     public Vector3 knockbackDirection { get; private set; }
+    public Quaternion rotation;
 
     [SerializeField] private Transform attackCollider;
 
@@ -26,6 +27,7 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
+       
         if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
             HandleAttack();
@@ -61,6 +63,7 @@ public class Attack : MonoBehaviour
               
 
                 attackCollider.rotation = Quaternion.LookRotation(dir, Vector3.up);
+               
             }
 
             Vector2 dir2D = new Vector2(dir.x, dir.z);
