@@ -24,11 +24,17 @@ public class Player : MonoBehaviour
     
     [SerializeField] private float dashForce;
     [SerializeField] private float dashCoolDown;
-    [SerializeField] private float dashDuration;
+    public float dashDuration;
     [SerializeField] private float dashDistance;
-    public GameObject dashVFX;
+    private RaycastHit hit;
+    private Vector3 p1;
+    private Vector3 p2;
 
-    private bool isDashing = false;
+    public GameObject dashVFX;
+    private float allowedDashDistance;
+    [SerializeField] private LayerMask dashCollisionMask;
+
+    public bool isDashing = false;
     private bool isMoving = false;
 
     [Header("Gravity")]
@@ -55,7 +61,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+        DashDistanceCheck();    
         if (controller != null)
         {
             if (!controller.isGrounded)
@@ -135,26 +141,44 @@ public class Player : MonoBehaviour
     }
 
 
+    private void DashDistanceCheck()
+    {
+        p1 = transform.position + controller.center + Vector3.up * -controller.height * 0.5f;
+        p2 = p1 + Vector3.up * controller.height;
+
+        allowedDashDistance = dashDistance;
+
+       
+        if (Physics.CapsuleCast(p1, p2, controller.radius, lastMovement, out hit, dashDistance, dashCollisionMask, QueryTriggerInteraction.Ignore))
+        {
+            
+            allowedDashDistance = hit.distance;
+            
+        }
+    }
+
     IEnumerator Dash()
     {
         isDashing = true;
         dashVFX.SetActive(true);
         dashSound.Play();
-        dashForce = dashDistance / dashDuration;
+
+        dashForce = allowedDashDistance / dashDuration;
         float elapsedTime = 0f;
 
         while (elapsedTime < dashDuration)
         {
-            controller.Move (lastMovement * dashForce * Time.deltaTime);
+            controller.Move(lastMovement * dashForce * Time.deltaTime);
             elapsedTime += Time.deltaTime;
-           
             yield return null;
         }
+
         dashVFX.SetActive(false);
         yield return new WaitForSeconds(dashCoolDown);
-       
         isDashing = false;
-       
+
     }
+
+  
 }
 
