@@ -8,7 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public float currentHealth;
     [SerializeField]  private float playerDamage;
     private bool canTakeDamage = false;
-    
+
+    public GameObject bloodVFX;
     private Color enemyHitColour = Color.red;
     [SerializeField] private float hitDuration;
     private Color originalColor;
@@ -28,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -36,8 +38,11 @@ public class EnemyHealth : MonoBehaviour
         {
             currentHealth -= playerDamage;
             canTakeDamage = true;
+            bloodVFX.SetActive(true);
             StartCoroutine(HitColour());
             StartCoroutine(DamageWindow());
+
+
         }
     }
 
@@ -45,12 +50,17 @@ public class EnemyHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         canTakeDamage = false;
+        bloodVFX.SetActive(false);
     }
 
     IEnumerator HitColour()
     {
+      
         spriteRenderer.color = enemyHitColour;
         yield return new WaitForSeconds(hitDuration);
         spriteRenderer.color = originalColor;
+      
     }
+
+    
 }
