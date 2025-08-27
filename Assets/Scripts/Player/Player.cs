@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     private Vector3 p1;
     private Vector3 p2;
 
-    public GameObject dashVFX;
+    public GameObject[] dashVFX;
     private float allowedDashDistance;
     [SerializeField] private LayerMask dashCollisionMask;
 
@@ -167,15 +167,24 @@ public class Player : MonoBehaviour
 
         if (lastMovement.sqrMagnitude > 0.01f)
         {
-            dashVFX.SetActive(true);
+            foreach(GameObject vfx in dashVFX)
+            {
+                vfx.SetActive(true);
+            }
+           
           
 
             Vector3 flatDirection = new Vector3(lastMovement.x, 0f, lastMovement.z);
 
             if (flatDirection.sqrMagnitude > 0.01f)
             {
-                Quaternion dashRotation = Quaternion.LookRotation(flatDirection, Vector3.up);
-                dashVFX.transform.rotation = Quaternion.Euler(0f, dashRotation.eulerAngles.y, 0f);
+                Quaternion dashRotation = Quaternion.LookRotation(-flatDirection, Vector3.up);
+
+                foreach (GameObject vfx in dashVFX)
+                {
+                    vfx.transform.rotation = Quaternion.Euler(0f, dashRotation.eulerAngles.y, 0f);
+                }
+               
             }
 
             dashSound.Play();
@@ -190,7 +199,12 @@ public class Player : MonoBehaviour
                 yield return null;
             }
             hasDashed = false;
-            dashVFX.SetActive(false);
+
+            foreach (GameObject vfx in dashVFX)
+            {
+                vfx.SetActive(false);
+            }
+
             yield return new WaitForSeconds(dashCoolDown);
             isDashing = false;
            
