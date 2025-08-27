@@ -87,6 +87,8 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
+
+
     }
 
 
@@ -97,7 +99,7 @@ public class Player : MonoBehaviour
 
     void RemoveGravity()
     {
-        verticalVelocity = -2f;
+        verticalVelocity = 0f;
     }
 
     void movement()
@@ -164,7 +166,7 @@ public class Player : MonoBehaviour
     {
         isDashing = true;
         hasDashed = true;
-
+        RemoveGravity();
         if (lastMovement.sqrMagnitude > 0.01f)
         {
             foreach(GameObject vfx in dashVFX)

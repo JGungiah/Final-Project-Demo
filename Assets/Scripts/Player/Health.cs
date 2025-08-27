@@ -18,6 +18,7 @@ public class Health : MonoBehaviour
     public bool hasBeenAttacked = false;
     [SerializeField] private float hitStopDuration;
     private CameraFollow cameraScript;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
    
@@ -37,7 +38,6 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0 )
         {
-  
             SceneManager.LoadScene("LobbyRoom");
             currentHealth = maxHealth;
         }

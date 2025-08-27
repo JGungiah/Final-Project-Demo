@@ -105,7 +105,7 @@ public class AttackMelee : MonoBehaviour
         canAttack = true;
     }
 
-    IEnumerator KnockBack()
+   public IEnumerator KnockBack()
     {   
         agent.enabled = false;
 
