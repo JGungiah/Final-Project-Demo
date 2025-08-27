@@ -10,6 +10,7 @@ TagManager:
   - JotunnCollider
   - HealthCollider
   - InteractDoor
+  - Waypoint
   layers:
   - Default
   - TransparentFX

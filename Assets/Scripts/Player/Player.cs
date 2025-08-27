@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
     public Vector3 Movement;
     public Vector3 lastMovement;
-    private AudioSource dashSound;
+   
 
     [Header("Player Input")]
 
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     private RaycastHit hit;
     private Vector3 p1;
     private Vector3 p2;
-
+    private AudioSource dashSound;
     public GameObject[] dashVFX;
     private float allowedDashDistance;
     [SerializeField] private LayerMask dashCollisionMask;
@@ -186,7 +186,7 @@ public class Player : MonoBehaviour
                 }
                
             }
-
+            dashSound.pitch = Random.Range(2f, 3f);
             dashSound.Play();
 
             dashForce = allowedDashDistance / dashDuration;

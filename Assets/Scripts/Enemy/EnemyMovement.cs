@@ -4,15 +4,17 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-   
-    
+       
     private float horizontalMovement;
     private float verticalMovement;
     private Animator anim;
     public Vector3 animDirection;
     private Vector3 velocity;
 
-  
+    private GameObject[] waypoints;
+    private int randomWaypoint;
+    private bool hasWaypoint = false;
+
     private AttackMelee attackMeleeScript;
     private GameObject player;
     private NavMeshAgent agent;
@@ -25,10 +27,12 @@ public class EnemyMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         attackMeleeScript = GetComponent<AttackMelee>();
+        waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
     }
 
     void Update()
     {
+        print(randomWaypoint);
         agent.updateRotation = false;
 
         if (player != null && !attackMeleeScript.isBeingKnockedBack)
@@ -63,9 +67,20 @@ public class EnemyMovement : MonoBehaviour
 
     void Movement()
     {
-        if (agent.isActiveAndEnabled)
+        if (!hasWaypoint)
         {
-            agent.destination = player.transform.position;
+            foreach (GameObject waypoint in waypoints)
+            {
+                randomWaypoint = Random.Range(0, waypoints.Length);
+                hasWaypoint = true;
+            }
+        }
+       
+       
+        if (agent.isActiveAndEnabled) 
+        { 
+           print(randomWaypoint); 
+           agent.destination = waypoints[randomWaypoint].transform.position; 
         }
     }
 
