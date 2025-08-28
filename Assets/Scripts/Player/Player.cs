@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
 
     public float verticalInput;
     public float horizontalInput;
+    public AudioSource footStepsSound;
+    [SerializeField] private float stepInterval = 0.5f; 
+    private float stepTimer;
 
 
     [Header("Dash Controls")]
@@ -58,7 +61,8 @@ public class Player : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerAnim = GetComponent<Animator>();
         dashSound = GetComponent<AudioSource>();
-      
+        stepTimer = stepInterval;
+
     }
 
     // Update is called once per frame
@@ -88,9 +92,10 @@ public class Player : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-
+       
     }
-
+    
+    
 
     void ApplyGravity()
     {
@@ -99,7 +104,7 @@ public class Player : MonoBehaviour
 
     void RemoveGravity()
     {
-        verticalVelocity = 0f;
+        verticalVelocity = -2f;
     }
 
     void movement()
@@ -118,16 +123,28 @@ public class Player : MonoBehaviour
         Movement = localMovement.normalized;
         Movement.y = verticalVelocity;
 
-
-        if ((horizontalInput != 0 || verticalInput != 0) && Movement.x != 0 || Movement.z != 0)
+        if ((horizontalInput != 0 || verticalInput != 0) && (Movement.x != 0 || Movement.z != 0))
         {
             isMoving = true;
             lastMovement = Movement;
-        }
 
-        else if (horizontalInput == 0 || verticalInput == 0)
+            stepTimer -= Time.deltaTime;
+            if (stepTimer <= 0f)
+            {
+                footStepsSound.pitch = Random.Range(1.0f, 1.4f);
+                footStepsSound.PlayOneShot(footStepsSound.clip);
+                stepTimer = stepInterval;
+            }
+        }
+        else if (horizontalInput == 0 || verticalInput == 0 )
         {
+           if (!footStepsSound.isPlaying)
+            {
+                footStepsSound.Stop();
+            }
+            
             isMoving = false;
+            stepTimer = 0f;
         }
 
         controller.Move(Movement * speed * Time.deltaTime);
