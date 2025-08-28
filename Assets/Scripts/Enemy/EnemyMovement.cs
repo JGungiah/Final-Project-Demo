@@ -32,7 +32,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        print(randomWaypoint);
+        
         agent.updateRotation = false;
 
         if (player != null && !attackMeleeScript.isBeingKnockedBack)
@@ -79,7 +79,7 @@ public class EnemyMovement : MonoBehaviour
        
         if (agent.isActiveAndEnabled) 
         { 
-           print(randomWaypoint); 
+         
            agent.destination = waypoints[randomWaypoint].transform.position; 
         }
     }

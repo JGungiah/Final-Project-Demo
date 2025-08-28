@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
    
-    [SerializeField] private float maxHealth;
+    [SerializeField] public float maxHealth;
     [SerializeField] private float healthDecreaseSpeed;
     [SerializeField] private Image healthBar;
     private float elapsedTime;

@@ -3,16 +3,19 @@ using System.Collections;
 
 public class Attack : MonoBehaviour
 {
-    /*[SerializeField]*/ private Camera cam;
+    private Camera cam;
     [SerializeField] private float attackCooldown;
     private Player playerScript;
+   
 
     private Animator anim;
     private Transform player;
     public bool isAttacking = false;
     public bool colliderActive = false;
-    public Vector3 knockbackDirection { get; private set; }
+   
+    public Vector3 knockbackDirection; 
     public Quaternion rotation;
+   
 
     [SerializeField] private Transform attackCollider;
 
@@ -22,6 +25,7 @@ public class Attack : MonoBehaviour
         player = transform;
         playerScript = GetComponent<Player>();
         cam = FindAnyObjectByType<Camera>();
+
        
     }
 
@@ -106,9 +110,11 @@ public class Attack : MonoBehaviour
         isAttacking = false;
         //attackCollider.gameObject.SetActive(false);
     }
-        
-    
-  
+
+
+
+   
+
 }
-    
+
 
