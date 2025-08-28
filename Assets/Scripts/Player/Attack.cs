@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Attack : MonoBehaviour
 {
-    private Camera cam;
+    public Camera cam;
     [SerializeField] private float attackCooldown;
     private Player playerScript;
    
@@ -24,7 +24,6 @@ public class Attack : MonoBehaviour
         anim = GetComponent<Animator>();
         player = transform;
         playerScript = GetComponent<Player>();
-        cam = FindAnyObjectByType<Camera>();
 
        
     }

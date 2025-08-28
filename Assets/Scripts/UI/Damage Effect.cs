@@ -32,9 +32,10 @@ public class DamageEffect : MonoBehaviour
         {
             TriggerDamageFlash();
         }
-        Color c = damageImage.color;
-        c.a = Mathf.Clamp01(currentOpacity);
-        damageImage.color = c;
+
+        Color colour = damageImage.color;
+        colour.a = Mathf.Clamp01(currentOpacity);
+        damageImage.color = colour;
     }
 
     public void TriggerDamageFlash()
