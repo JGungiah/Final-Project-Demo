@@ -24,7 +24,7 @@ public class DamageEffect : MonoBehaviour
 
     void Update()
     {
-        baseOpacity = 1f - (healthScript.currentHealth / healthScript.maxHealth);
+        baseOpacity = 0.8f - (healthScript.currentHealth / healthScript.maxHealth);
 
         currentOpacity = Mathf.Lerp(currentOpacity, baseOpacity, Time.deltaTime * fadeSpeed);
 

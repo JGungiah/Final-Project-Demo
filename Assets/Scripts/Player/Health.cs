@@ -61,10 +61,10 @@ public class Health : MonoBehaviour
 
             if (enemyAttack != null && enemyAttack.hasAttacked && !hasBeenAttacked)
             {
+        
+                cameraScript.Shake();
                
-               cameraScript.Shake();
-               
-                TakeDamage(10.0f);
+                TakeDamage(5);
                 hasBeenAttacked = true;
                 StartCoroutine(AttackWindow());
 
