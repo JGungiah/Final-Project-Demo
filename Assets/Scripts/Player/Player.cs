@@ -132,8 +132,8 @@ public class Player : MonoBehaviour
             if (stepTimer <= 0f)
             {
                 footStepsSound.pitch = Random.Range(1.0f, 1.4f);
-                footStepsSound.PlayOneShot(footStepsSound.clip);
-                stepTimer = stepInterval;
+              footStepsSound.PlayOneShot(footStepsSound.clip);
+               stepTimer = stepInterval;
             }
         }
         else if (horizontalInput == 0 || verticalInput == 0 )
