@@ -20,7 +20,11 @@ public class EnemyMovement : MonoBehaviour
     private NavMeshAgent agent;
    
     private Health healthScript;
-  
+   
+    public AudioSource footStepsSound;
+
+    [SerializeField] private float stepInterval = 0.5f;
+    private float stepTimer;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -41,6 +45,23 @@ public class EnemyMovement : MonoBehaviour
             {
                 Movement();
                 EnemyAnimations();
+               
+                stepTimer -= Time.deltaTime;
+                if (stepTimer <= 0f)
+                {
+                    footStepsSound.pitch = Random.Range(1.0f, 1.4f);
+                    footStepsSound.PlayOneShot(footStepsSound.clip);
+                    stepTimer = stepInterval;
+                }
+                else if (agent.enabled == false)
+                {
+                    if (!footStepsSound.isPlaying)
+                    {
+                        footStepsSound.Stop();
+                    }
+           
+                    stepTimer = 0f;
+                }
             }
         }
 
@@ -65,6 +86,8 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+
+    
     void Movement()
     {
         if (!hasWaypoint)
