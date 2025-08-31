@@ -19,10 +19,14 @@ public class Health : MonoBehaviour
     [SerializeField] private float hitStopDuration;
     private CameraFollow cameraScript;
 
+    [SerializeField] private bool isParrying = false;
+    [SerializeField] private float parryDuration;
+    [SerializeField] private bool canParry = true;
+    [SerializeField] private float parryCoolDown;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-   
-   
+
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -40,6 +44,11 @@ public class Health : MonoBehaviour
         {
             SceneManager.LoadScene("LobbyRoom");
             currentHealth = maxHealth;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1) && canParry)
+        {
+            StartCoroutine(CheckParry());
         }
     }
 
@@ -61,17 +70,31 @@ public class Health : MonoBehaviour
 
             if (enemyAttack != null && enemyAttack.hasAttacked && !hasBeenAttacked)
             {
-        
-                cameraScript.Shake();
-               
-                TakeDamage(5);
-                hasBeenAttacked = true;
-                StartCoroutine(AttackWindow());
 
+                if (!isParrying)
+                {
+                    TakeDamage(5);
+                    hasBeenAttacked = true;
+                    StartCoroutine(AttackWindow());
+                }
+                cameraScript.Shake();   
+              
 
                 enemyAttack.hasAttacked = false;
             }
         }
+    }
+
+    IEnumerator CheckParry()
+    {
+        isParrying = true;
+        canParry = false;
+        yield return new WaitForSeconds(parryDuration);
+
+        isParrying = false;
+
+        yield return new WaitForSeconds(parryCoolDown);
+        canParry = true;
     }
 
     IEnumerator AttackWindow()
