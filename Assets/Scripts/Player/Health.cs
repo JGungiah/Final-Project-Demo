@@ -36,6 +36,11 @@ public class Health : MonoBehaviour
     private Animator anim;
     private bool attemptedParry = false;
     public GameObject parryVFX;
+
+    private Color parryColor = Color.green;
+    private Color missParryColor = Color.red;
+    private Color originalColor;
+    private SpriteRenderer spriteRenderer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -48,6 +53,8 @@ public class Health : MonoBehaviour
         cameraScript = FindAnyObjectByType<CameraFollow>();
         originalDamage = EnemyDamage;
         stunnedDamage = EnemyDamage * 2;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     
     }
 
@@ -70,6 +77,20 @@ public class Health : MonoBehaviour
         
     }
 
+
+    IEnumerator ParryColor()
+    {
+        spriteRenderer.color = parryColor;
+        yield return new WaitForSeconds(parryDuration);
+        spriteRenderer.color = originalColor;   
+    }
+
+    IEnumerator MissParryColor()
+    {
+        spriteRenderer.color = missParryColor;
+        yield return new WaitForSeconds(parryDuration);
+        spriteRenderer.color = originalColor;
+    }
     public void TakeDamage (float damage)
     {
        
@@ -90,7 +111,7 @@ public class Health : MonoBehaviour
                 if (attemptedParry && !isParrying)
                 {
                     StartCoroutine(PunishPlayer());
-                    
+                    StartCoroutine(MissParryColor());
                 }
 
                 if (!isParrying)
@@ -103,7 +124,7 @@ public class Health : MonoBehaviour
                 if (isParrying)
                 {
                    StartCoroutine(ParryKnockBack());
-                   
+                   StartCoroutine(ParryColor());
 
                 }
                 cameraScript.Shake();   
