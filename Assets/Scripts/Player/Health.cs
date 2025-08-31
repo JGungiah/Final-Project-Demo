@@ -23,6 +23,9 @@ public class Health : MonoBehaviour
     [SerializeField] private float parryDuration;
     [SerializeField] private bool canParry = true;
     [SerializeField] private float parryCoolDown;
+
+    private AttackMelee enemyAttack;
+    private EnemyMovement enemyMovement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -32,7 +35,7 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
         hitstopScript = GetComponent<HitStop>();
         cameraScript = FindAnyObjectByType<CameraFollow>();
-        //attackMeleeScript = FindAnyObjectByType<AttackMelee>();
+    
     }
 
     // Update is called once per frame
@@ -57,8 +60,7 @@ public class Health : MonoBehaviour
        
         elapsedTime += Time.deltaTime;
         currentHealth -= damage ;
-        //attackMeleeScript.hasAttacked = false;
-        //if (elapsedTime > healthDecreaseSpeed) ;
+ 
 
     }
 
@@ -66,7 +68,8 @@ public class Health : MonoBehaviour
     {
         if (other.gameObject.CompareTag("JotunnCollider"))
         {
-            AttackMelee enemyAttack = other.GetComponentInParent<AttackMelee>();
+            enemyAttack = other.GetComponentInParent<AttackMelee>();
+            enemyMovement = other.GetComponentInParent<EnemyMovement>();
 
             if (enemyAttack != null && enemyAttack.hasAttacked && !hasBeenAttacked)
             {
@@ -77,6 +80,19 @@ public class Health : MonoBehaviour
                     hasBeenAttacked = true;
                     StartCoroutine(AttackWindow());
                 }
+
+                if (isParrying)
+                {
+                    float elapsedTime = 0f;
+                    while (elapsedTime < 0.5f)
+                    {
+                        enemyMovement.transform.position += -enemyMovement.animDirection * 2 * Time.deltaTime;
+                        elapsedTime += Time.deltaTime;
+                    }
+                    
+
+
+                }
                 cameraScript.Shake();   
               
 
@@ -85,12 +101,14 @@ public class Health : MonoBehaviour
         }
     }
 
+   
+
     IEnumerator CheckParry()
     {
         isParrying = true;
         canParry = false;
         yield return new WaitForSeconds(parryDuration);
-
+        
         isParrying = false;
 
         yield return new WaitForSeconds(parryCoolDown);

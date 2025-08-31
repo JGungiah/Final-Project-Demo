@@ -28,7 +28,7 @@ public class AttackMelee : MonoBehaviour
     public bool isAttacking = false;
     private bool canAttack = true;
     public bool hasAttacked = false;
-    private bool canBeKnockedBack = true;
+    public bool canBeKnockedBack = true;
 
     [SerializeField] private Transform attackCollider;
 
@@ -36,6 +36,7 @@ public class AttackMelee : MonoBehaviour
     public float attackDistance;
 
     [SerializeField] private float hitSTopTime;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -112,7 +113,8 @@ public class AttackMelee : MonoBehaviour
         float elapsedTime = 0f;
         while (elapsedTime < knockbackDuration)
         {
-            transform.position += attackScript.knockbackDirection * knockbackPower * Time.deltaTime;
+           
+           transform.position += attackScript.knockbackDirection * knockbackPower * Time.deltaTime;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
@@ -122,7 +124,7 @@ public class AttackMelee : MonoBehaviour
         isBeingKnockedBack = false;
     }
 
-    IEnumerator KnockbackWindow()
+    public IEnumerator KnockbackWindow()
     {
         yield return new WaitForSeconds(0);
         canBeKnockedBack = true;
