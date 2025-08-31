@@ -35,6 +35,7 @@ public class Health : MonoBehaviour
      private float stunnedDamage;
     private Animator anim;
     private bool attemptedParry = false;
+    public GameObject parryVFX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -102,6 +103,7 @@ public class Health : MonoBehaviour
                 if (isParrying)
                 {
                    StartCoroutine(ParryKnockBack());
+                   
 
                 }
                 cameraScript.Shake();   
@@ -140,6 +142,7 @@ public class Health : MonoBehaviour
         attemptedParry = true;
         isParrying = true;
         canParry = false;
+        parryVFX.SetActive(true);
         yield return new WaitForSeconds(parryDuration);
         
         isParrying = false;
@@ -147,6 +150,7 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(parryCoolDown);
         canParry = true;
         attemptedParry = false;
+        parryVFX.SetActive(false);
     }
 
     IEnumerator AttackWindow()
