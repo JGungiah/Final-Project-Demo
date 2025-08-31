@@ -10,10 +10,9 @@ public class Health : MonoBehaviour
     [SerializeField] public float maxHealth;
     [SerializeField] private float healthDecreaseSpeed;
     [SerializeField] private Image healthBar;
-    private float elapsedTime;
+
     public float currentHealth;
-    private HitStop hitstopScript;
-    private AttackMelee attackMeleeScript;
+    
 
     public bool hasBeenAttacked = false;
     [SerializeField] private float hitStopDuration;
@@ -26,6 +25,16 @@ public class Health : MonoBehaviour
 
     private AttackMelee enemyAttack;
     private EnemyMovement enemyMovement;
+    [SerializeField] private float knockbackDuration;
+    [SerializeField] private float knockbackPower;
+    [SerializeField] private float stunDuration;
+
+    private Player movementScript;
+    private float originalDamage;
+    [SerializeField] private float EnemyDamage;
+     private float stunnedDamage;
+    private Animator anim;
+    private bool attemptedParry = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -33,8 +42,11 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        hitstopScript = GetComponent<HitStop>();
+        movementScript = GetComponent<Player>();
+        anim = GetComponent<Animator>();
         cameraScript = FindAnyObjectByType<CameraFollow>();
+        originalDamage = EnemyDamage;
+        stunnedDamage = EnemyDamage * 2;
     
     }
 
@@ -53,12 +65,13 @@ public class Health : MonoBehaviour
         {
             StartCoroutine(CheckParry());
         }
+
+        
     }
 
     public void TakeDamage (float damage)
     {
        
-        elapsedTime += Time.deltaTime;
         currentHealth -= damage ;
  
 
@@ -73,38 +86,58 @@ public class Health : MonoBehaviour
 
             if (enemyAttack != null && enemyAttack.hasAttacked && !hasBeenAttacked)
             {
+                if (attemptedParry && !isParrying)
+                {
+                    StartCoroutine(PunishPlayer());
+                    
+                }
 
                 if (!isParrying)
                 {
-                    TakeDamage(5);
+                    TakeDamage(EnemyDamage);
                     hasBeenAttacked = true;
                     StartCoroutine(AttackWindow());
                 }
 
                 if (isParrying)
                 {
-                    float elapsedTime = 0f;
-                    while (elapsedTime < 0.5f)
-                    {
-                        enemyMovement.transform.position += -enemyMovement.animDirection * 2 * Time.deltaTime;
-                        elapsedTime += Time.deltaTime;
-                    }
-                    
-
+                   StartCoroutine(ParryKnockBack());
 
                 }
                 cameraScript.Shake();   
               
-
                 enemyAttack.hasAttacked = false;
             }
         }
     }
 
-   
+
+    IEnumerator PunishPlayer()
+    {
+       movementScript.canMove = false;
+       EnemyDamage = stunnedDamage;
+       anim.enabled = false;
+       yield return new WaitForSeconds(stunDuration);
+       movementScript.canMove = true;
+       EnemyDamage = originalDamage;
+       anim.enabled = true;
+    }
+    IEnumerator ParryKnockBack()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < knockbackDuration)
+        {
+            enemyMovement.transform.position += -enemyMovement.animDirection * knockbackPower * Time.deltaTime;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        
+    }
+
 
     IEnumerator CheckParry()
     {
+        attemptedParry = true;
         isParrying = true;
         canParry = false;
         yield return new WaitForSeconds(parryDuration);
@@ -113,6 +146,7 @@ public class Health : MonoBehaviour
 
         yield return new WaitForSeconds(parryCoolDown);
         canParry = true;
+        attemptedParry = false;
     }
 
     IEnumerator AttackWindow()

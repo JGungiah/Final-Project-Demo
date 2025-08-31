@@ -12,7 +12,8 @@ public class Player : MonoBehaviour
 
     public Vector3 Movement;
     public Vector3 lastMovement;
-   
+
+    public bool canMove = true;
 
     [Header("Player Input")]
 
@@ -109,6 +110,12 @@ public class Player : MonoBehaviour
 
     void movement()
     {
+        if (!canMove)
+        {
+            Movement = Vector3.zero;
+            controller.Move(Movement * Time.deltaTime);
+            return;
+        }
 
         verticalInput = Input.GetAxisRaw("Vertical");
         horizontalInput = Input.GetAxisRaw("Horizontal");
