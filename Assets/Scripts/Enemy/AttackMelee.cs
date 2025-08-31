@@ -37,6 +37,7 @@ public class AttackMelee : MonoBehaviour
 
     [SerializeField] private float hitSTopTime;
 
+    public AudioSource attackSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -89,7 +90,12 @@ public class AttackMelee : MonoBehaviour
     {
         isAttacking = true;
         canAttack = false;
-       
+
+
+            attackSound.pitch = Random.Range(0.5f, 0.7f);
+            attackSound.PlayOneShot(attackSound.clip);
+        
+
         agent.enabled = false;
 
         anim.SetFloat("AttackHorizontal", movementScript.animDirection.x);
@@ -97,13 +103,14 @@ public class AttackMelee : MonoBehaviour
         anim.SetTrigger("attack");
 
         yield return new WaitForSeconds(attackDuration);
-
+       
         agent.enabled = true;
         isAttacking = false;
         attackCollider.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
+        
     }
 
    public IEnumerator KnockBack()
