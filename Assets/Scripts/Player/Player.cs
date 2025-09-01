@@ -31,19 +31,24 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashCoolDown;
     public float dashDuration;
     [SerializeField] private float dashDistance;
-    private RaycastHit hit;
-    private Vector3 p1;
-    private Vector3 p2;
+
+    private float[] distX = { 30f, 25f, 20f, 15f, 10f, 5f };
+
+    private float NofRaycasts = 6;
+    private float[][] dashDistanceCheck;
+
     private AudioSource dashSound;
     public GameObject[] dashVFX;
     private float allowedDashDistance;
-    [SerializeField] private LayerMask dashCollisionMask;
+    [SerializeField] private LayerMask wallCollisionMask;
+    [SerializeField] private LayerMask groundCollisionMask;
 
     public bool hasDashed;
 
     public bool isDashing = false;
     private bool isMoving = false;
 
+    private Attack attackScript;
     [Header("Gravity")]
 
     [SerializeField] private float gravity = -9.81f;
@@ -65,6 +70,7 @@ public class Player : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         dashSound = GetComponent<AudioSource>();
         stepTimer = stepInterval;
+        attackScript = GetComponent<Attack>();
 
     }
 
@@ -172,19 +178,25 @@ public class Player : MonoBehaviour
     }
 
 
-    private void DashDistanceCheck()
+    private Vector3 DashDistanceCheck()
     {
-        p1 = transform.position + controller.center + Vector3.up * -controller.height * 0.5f;
-        p2 = p1 + Vector3.up * controller.height;
+        for (int i = 0; i < distX.Length; i++) {
+            RaycastHit hitUp;
 
-        allowedDashDistance = dashDistance;
+            if (!Physics.Raycast(transform.position , attackScript.animDir, out hitUp, distX[i] , wallCollisionMask))
+            {
+                RaycastHit hitDown;
 
-
-        if (Physics.CapsuleCast(p1, p2, controller.radius, lastMovement, out hit, dashDistance, dashCollisionMask, QueryTriggerInteraction.Ignore))
-        {
-            allowedDashDistance = hit.distance;
+                if (Physics.Raycast(hitUp.point, Vector3.down, out hitDown, distX[i], groundCollisionMask))
+                {
+                    Vector2 temp = attackScript.animDir.normalized * distX[i];
+                    return temp;
+                    //dashDistanceCheck
+                }
+            }
 
         }
+        return transform.position;
     }
 
 
@@ -194,7 +206,7 @@ public class Player : MonoBehaviour
     {
         isDashing = true;
         hasDashed = true;
-        RemoveGravity();
+        Vector3 gotoposition = DashDistanceCheck();
         if (lastMovement.sqrMagnitude > 0.01f)
         {
             foreach(GameObject vfx in dashVFX)
@@ -218,16 +230,11 @@ public class Player : MonoBehaviour
             }
             dashSound.pitch = Random.Range(2f, 3f);
             dashSound.Play();
+            print(gotoposition);
 
-            dashForce = allowedDashDistance / dashDuration;
-            float elapsedTime = 0f;
+          transform.position = Vector3.Lerp(transform.position, gotoposition, 2);
 
-            while (elapsedTime < dashDuration)
-            {
-                controller.Move(lastMovement * dashForce * Time.deltaTime);
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
+           
             hasDashed = false;
 
             foreach (GameObject vfx in dashVFX)

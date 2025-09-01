@@ -15,7 +15,8 @@ public class Attack : MonoBehaviour
    
     public Vector3 knockbackDirection; 
     public Quaternion rotation;
-   
+
+    public Vector2 animDir;
 
     [SerializeField] private Transform attackCollider;
 
@@ -46,6 +47,8 @@ public class Attack : MonoBehaviour
         }
 
         attackCollider.gameObject.SetActive(colliderActive);
+
+
     }
 
     void HandleAttack()
@@ -74,7 +77,7 @@ public class Attack : MonoBehaviour
             angle -= 45f;       
             if (angle < 0) angle += 360;
 
-           Vector2  animDir = GetDirection(angle);
+            animDir = GetDirection(angle);
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
             anim.SetTrigger("attack");
