@@ -179,31 +179,12 @@ public class Player : MonoBehaviour
 
         allowedDashDistance = dashDistance;
 
-        // Visualize start capsule
-        DebugDrawCapsule(p1, p2, controller.radius, Color.green);
-
-        // Visualize cast direction
-        Debug.DrawLine((p1 + p2) * 0.5f, (p1 + p2) * 0.5f + lastMovement.normalized * dashDistance, Color.yellow);
 
         if (Physics.CapsuleCast(p1, p2, controller.radius, lastMovement, out hit, dashDistance, dashCollisionMask, QueryTriggerInteraction.Ignore))
         {
             allowedDashDistance = hit.distance;
 
-            // Visualize hit point
-            Debug.DrawLine(hit.point, hit.point + Vector3.up * 0.5f, Color.red);
         }
-    }
-
-    // Helper method for drawing a capsule (approximation)
-    private void DebugDrawCapsule(Vector3 start, Vector3 end, float radius, Color color)
-    {
-        // Draw spheres at ends
-        Debug.DrawRay(start, Vector3.up * 0.01f, color, 0.1f);
-        Debug.DrawRay(end, Vector3.up * 0.01f, color, 0.1f);
-        Debug.DrawLine(start + Vector3.forward * radius, end + Vector3.forward * radius, color);
-        Debug.DrawLine(start - Vector3.forward * radius, end - Vector3.forward * radius, color);
-        Debug.DrawLine(start + Vector3.right * radius, end + Vector3.right * radius, color);
-        Debug.DrawLine(start - Vector3.right * radius, end - Vector3.right * radius, color);
     }
 
 
