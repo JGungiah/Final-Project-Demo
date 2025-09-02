@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
     public AudioSource footStepsSound;
-    [SerializeField] private float stepInterval = 0.5f; 
+    [SerializeField] private float stepInterval = 0.5f;
     private float stepTimer;
 
 
@@ -101,10 +101,10 @@ public class Player : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-       
+
     }
-    
-    
+
+
 
     void ApplyGravity()
     {
@@ -147,17 +147,17 @@ public class Player : MonoBehaviour
             if (stepTimer <= 0f)
             {
                 footStepsSound.pitch = Random.Range(1.0f, 1.4f);
-              footStepsSound.PlayOneShot(footStepsSound.clip);
-               stepTimer = stepInterval;
+                footStepsSound.PlayOneShot(footStepsSound.clip);
+                stepTimer = stepInterval;
             }
         }
-        else if (horizontalInput == 0 || verticalInput == 0 )
+        else if (horizontalInput == 0 || verticalInput == 0)
         {
-           if (!footStepsSound.isPlaying)
+            if (!footStepsSound.isPlaying)
             {
                 footStepsSound.Stop();
             }
-            
+
             isMoving = false;
             stepTimer = 0f;
         }
@@ -180,16 +180,17 @@ public class Player : MonoBehaviour
 
     private Vector3 DashDistanceCheck()
     {
-        for (int i = 0; i < distX.Length; i++) {
+        for (int i = 0; i < distX.Length; i++)
+        {
             RaycastHit hitUp;
 
-            if (!Physics.Raycast(transform.position , attackScript.animDir, out hitUp, distX[i] , wallCollisionMask))
+            if (!Physics.Raycast(transform.position, lastMovement, out hitUp, distX[i], wallCollisionMask))
             {
                 RaycastHit hitDown;
 
                 if (Physics.Raycast(hitUp.point, Vector3.down, out hitDown, distX[i], groundCollisionMask))
                 {
-                    Vector2 temp = attackScript.animDir.normalized * distX[i];
+                    Vector3 temp = lastMovement.normalized * distX[i];
                     return temp;
                     //dashDistanceCheck
                 }
@@ -199,56 +200,52 @@ public class Player : MonoBehaviour
         return transform.position;
     }
 
-
+    
 
 
     IEnumerator Dash()
     {
         isDashing = true;
         hasDashed = true;
-        Vector3 gotoposition = DashDistanceCheck();
+
+        Vector3 targetPos = DashDistanceCheck();
+
         if (lastMovement.sqrMagnitude > 0.01f)
         {
-            foreach(GameObject vfx in dashVFX)
-            {
+            foreach (GameObject vfx in dashVFX)
                 vfx.SetActive(true);
-            }
-           
-          
 
             Vector3 flatDirection = new Vector3(lastMovement.x, 0f, lastMovement.z);
-
             if (flatDirection.sqrMagnitude > 0.01f)
             {
-                Quaternion dashRotation = Quaternion.LookRotation(-flatDirection, Vector3.up);
-
+                Quaternion dashRotation = Quaternion.LookRotation(flatDirection, Vector3.up);
                 foreach (GameObject vfx in dashVFX)
-                {
                     vfx.transform.rotation = Quaternion.Euler(0f, dashRotation.eulerAngles.y, 0f);
-                }
-               
             }
+
             dashSound.pitch = Random.Range(2f, 3f);
             dashSound.Play();
-            print(gotoposition);
 
-          transform.position = Vector3.Lerp(transform.position, gotoposition, 2);
+       
+            float elapsed = 0f;
+            float duration = 0.09f;
+            Vector3 start = transform.position;
 
-           
-            hasDashed = false;
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                
+                controller.Move(transform.position - targetPos);
+                yield return null;
+            }
+            transform.position = targetPos;
 
             foreach (GameObject vfx in dashVFX)
-            {
                 vfx.SetActive(false);
-            }
 
             yield return new WaitForSeconds(dashCoolDown);
+            hasDashed = false;
             isDashing = false;
-           
-
         }
-
-
     }
 }
-
