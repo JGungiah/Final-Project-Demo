@@ -206,7 +206,7 @@ public class Player : MonoBehaviour
         isDashing = true;
         hasDashed = true;
 
-        Vector3 dashDir = new Vector3(lastMovement.x, 0f, lastMovement.z).normalized;
+        Vector3 dashDir = /*new Vector3(lastMovement.x, 0f, lastMovement.z)*/DashDistanceCheck();/*.normalized;*/
         if (dashDir.sqrMagnitude < 0.01f)
             dashDir = transform.forward; 
 
