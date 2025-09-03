@@ -28,14 +28,14 @@ public class Player : MonoBehaviour
     [Header("Dash Controls")]
 
     [SerializeField] private float dashForce;
+    [SerializeField] public float dashDuration;
     [SerializeField] private float dashCoolDown;
-    public float dashDuration;
+
     [SerializeField] private float dashDistance;
 
     private float[] distX = { 30f, 25f, 20f, 15f, 10f, 5f };
 
-    private float NofRaycasts = 6;
-    private float[][] dashDistanceCheck;
+   
 
     private AudioSource dashSound;
     public GameObject[] dashVFX;
@@ -60,8 +60,6 @@ public class Player : MonoBehaviour
 
     private Animator playerAnim;
 
-    public float capsuleRadius = 0.5f;
-    public float capsuleHeight = 2f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -192,7 +190,6 @@ public class Player : MonoBehaviour
                 {
                     Vector3 temp = lastMovement.normalized * distX[i];
                     return temp;
-                    //dashDistanceCheck
                 }
             }
 
@@ -228,17 +225,17 @@ public class Player : MonoBehaviour
 
        
             float elapsed = 0f;
-            float duration = 0.09f;
-            Vector3 start = transform.position;
+            
+            float dashDecrease = dashForce / 10;
 
-            while (elapsed < duration)
+            while (elapsed < dashDuration)
             {
                 elapsed += Time.deltaTime;
                 
-                controller.Move(transform.position - targetPos);
+                controller.Move(targetPos * dashDecrease);
                 yield return null;
             }
-            transform.position = targetPos;
+            
 
             foreach (GameObject vfx in dashVFX)
                 vfx.SetActive(false);
