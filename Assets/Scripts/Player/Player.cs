@@ -179,15 +179,25 @@ public class Player : MonoBehaviour
 
     private Vector3 DashDistanceCheck()
     {
+
+        Vector3 dashDir = new Vector3(lastMovement.x, 0f, lastMovement.z).normalized;
+       
+        if (dashDir.sqrMagnitude < 0.01f)
+        {
+            dashDir = transform.forward;
+        }
+           
+
         for (int i = 0; i < distX.Length; i++)
         {
+
+            float checkDist = distX[i];
             RaycastHit hitUp;
 
-            if (!Physics.Raycast(transform.position, lastMovement, out hitUp, distX[i], wallCollisionMask))
+            if (!Physics.Raycast(transform.position, dashDir, out hitUp, distX[i], wallCollisionMask))
             {
-                RaycastHit hitDown;
-
-                if (Physics.Raycast(hitUp.point, Vector3.down, out hitDown, distX[i], groundCollisionMask))
+                Vector3 forwardPoint = transform.position + dashDir * checkDist;
+                if (Physics.Raycast(forwardPoint + Vector3.up * 2f, Vector3.down, out RaycastHit groundHit, 5f, groundCollisionMask))
                 {
                     Vector3 temp = lastMovement.normalized * distX[i];
                     return temp;
@@ -206,7 +216,7 @@ public class Player : MonoBehaviour
         isDashing = true;
         hasDashed = true;
 
-        Vector3 dashDir = /*new Vector3(lastMovement.x, 0f, lastMovement.z)*/DashDistanceCheck();/*.normalized;*/
+        Vector3 dashDir = new Vector3(lastMovement.x, 0f, lastMovement.z);
         if (dashDir.sqrMagnitude < 0.01f)
             dashDir = transform.forward; 
 
