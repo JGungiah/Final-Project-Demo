@@ -75,6 +75,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         DashDistanceCheck();
         if (controller != null)
         {
@@ -197,7 +198,7 @@ public class Player : MonoBehaviour
         return transform.position;
     }
 
-    
+
 
 
     IEnumerator Dash()
@@ -205,44 +206,33 @@ public class Player : MonoBehaviour
         isDashing = true;
         hasDashed = true;
 
-        Vector3 targetPos = DashDistanceCheck();
+        Vector3 dashDir = new Vector3(lastMovement.x, 0f, lastMovement.z).normalized;
+        if (dashDir.sqrMagnitude < 0.01f)
+            dashDir = transform.forward; 
 
-        if (lastMovement.sqrMagnitude > 0.01f)
+        
+        foreach (GameObject vfx in dashVFX)
         {
-            foreach (GameObject vfx in dashVFX)
-                vfx.SetActive(true);
-
-            Vector3 flatDirection = new Vector3(lastMovement.x, 0f, lastMovement.z);
-            if (flatDirection.sqrMagnitude > 0.01f)
-            {
-                Quaternion dashRotation = Quaternion.LookRotation(flatDirection, Vector3.up);
-                foreach (GameObject vfx in dashVFX)
-                    vfx.transform.rotation = Quaternion.Euler(0f, dashRotation.eulerAngles.y, 0f);
-            }
-
-            dashSound.pitch = Random.Range(2f, 3f);
-            dashSound.Play();
-
-       
-            float elapsed = 0f;
-            
-            float dashDecrease = dashForce / 10;
-
-            while (elapsed < dashDuration)
-            {
-                elapsed += Time.deltaTime;
-                
-                controller.Move(targetPos * dashDecrease);
-                yield return null;
-            }
-            
-
-            foreach (GameObject vfx in dashVFX)
-                vfx.SetActive(false);
-
-            yield return new WaitForSeconds(dashCoolDown);
-            hasDashed = false;
-            isDashing = false;
+            vfx.SetActive(true);
+            vfx.transform.rotation = Quaternion.LookRotation(dashDir, Vector3.up);
         }
+
+        dashSound.pitch = Random.Range(2f, 3f);
+        dashSound.Play();
+
+        float elapsed = 0f;
+        while (elapsed < dashDuration)
+        {
+            elapsed += Time.deltaTime;
+            controller.Move(dashDir * dashForce * Time.deltaTime); 
+            yield return null;
+        }
+
+        foreach (GameObject vfx in dashVFX)
+            vfx.SetActive(false);
+
+        yield return new WaitForSeconds(dashCoolDown);
+        hasDashed = false;
+        isDashing = false;
     }
 }
