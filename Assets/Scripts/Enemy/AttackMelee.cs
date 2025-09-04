@@ -13,10 +13,7 @@ public class AttackMelee : MonoBehaviour
     private NavMeshAgent agent;
 
 
-    [SerializeField] private float draugrDamage;
-    [SerializeField] private float worshiperDamage;
-    [SerializeField] private float jotunnDamage;
-    [SerializeField] private float spiritDamage;
+    public float damage;
 
     private GameObject player;
 

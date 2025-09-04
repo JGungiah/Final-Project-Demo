@@ -116,7 +116,7 @@ public class Health : MonoBehaviour
 
                 if (!isParrying)
                 {
-                    TakeDamage(EnemyDamage);
+                    TakeDamage(enemyAttack.damage);
                     hasBeenAttacked = true;
                     StartCoroutine(AttackWindow());
                 }
