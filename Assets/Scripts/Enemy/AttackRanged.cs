@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 public class AttackRanged : MonoBehaviour
 {
 
@@ -13,6 +14,12 @@ public class AttackRanged : MonoBehaviour
 
     private Animator anim;
     public Vector3 animDirection;
+
+
+    public bool isAttacking = false;
+    private bool canAttack = true;
+    [SerializeField] private float attackCooldown;
+    [SerializeField] private float attackDuration;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,6 +50,11 @@ public class AttackRanged : MonoBehaviour
         {
             agent.destination = distanceToPlayer * 1.5f ;
         }
+
+        else if(other.gameObject.CompareTag("Player") && distanceToPlayer.magnitude < attackRadius)
+        {
+            StartCoroutine(EnemyAttack());
+        }
     }
 
     void CalculateDistanceToPlayer()
@@ -69,9 +81,30 @@ public class AttackRanged : MonoBehaviour
             anim.SetFloat("horizontalMovement", -animDirection.x);
             anim.SetFloat("verticalMovement", -animDirection.z);
         }
-       
-       
 
+    }
+
+    private IEnumerator EnemyAttack()
+    {
+        isAttacking = true;
+        canAttack = false;
+
+
+        //attackSound.pitch = Random.Range(0.5f, 0.7f);
+        //attackSound.PlayOneShot(attackSound.clip);
+
+
+        agent.enabled = false;
+
+        anim.SetTrigger("attack");
+
+        yield return new WaitForSeconds(attackDuration);
+
+        agent.enabled = true;
+        isAttacking = false;
+
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
 
     }
 }
