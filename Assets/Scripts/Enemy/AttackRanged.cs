@@ -21,12 +21,20 @@ public class AttackRanged : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private float attackDuration;
 
+
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private Transform firePoint; 
+    [SerializeField] private float projectileSpeed = 15f;
+
+    private EnemyHealth healthScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         agent =  GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        healthScript = GetComponent<EnemyHealth>();
+        healthScript.isInvunrable = true;
     }
 
     // Update is called once per frame
@@ -51,7 +59,13 @@ public class AttackRanged : MonoBehaviour
             agent.destination = distanceToPlayer * 1.5f ;
         }
 
-        else if(other.gameObject.CompareTag("Player") && distanceToPlayer.magnitude < attackRadius)
+        else if(other.gameObject.CompareTag("Player") && distanceToPlayer.magnitude < attackRadius && canAttack)
+        {
+            healthScript.isInvunrable = false;
+            StartCoroutine(EnemyAttack());
+        }
+
+    else if (canAttack) 
         {
             StartCoroutine(EnemyAttack());
         }
@@ -84,6 +98,27 @@ public class AttackRanged : MonoBehaviour
 
     }
 
+
+    void RangedAttack()
+    {
+        if (projectilePrefab == null || firePoint == null) return;
+
+      
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+
+    
+        Vector3 direction = (player.transform.position - firePoint.position).normalized;
+
+
+        projectile.transform.forward = direction;
+
+        
+        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.linearVelocity = direction * projectileSpeed;
+        }
+    }
     private IEnumerator EnemyAttack()
     {
         isAttacking = true;
@@ -98,6 +133,7 @@ public class AttackRanged : MonoBehaviour
 
         anim.SetTrigger("attack");
 
+        RangedAttack();
         yield return new WaitForSeconds(attackDuration);
 
         agent.enabled = true;

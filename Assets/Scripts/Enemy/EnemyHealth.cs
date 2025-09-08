@@ -7,7 +7,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float maxHealth;
     public float currentHealth;
     [SerializeField]  private float playerDamage;
-    private bool canTakeDamage = false;
+    public bool canTakeDamage = false;
+    public bool isInvunrable = false;
 
     public GameObject bloodVFX;
     private Color enemyHitColour = Color.red;
@@ -34,7 +35,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage)
+        if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
         {
             currentHealth -= playerDamage;
             canTakeDamage = true;
