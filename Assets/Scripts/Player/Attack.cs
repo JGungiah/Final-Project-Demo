@@ -31,7 +31,12 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-       
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            CalculateParry();
+        }
+
         if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
             HandleAttack();
@@ -51,6 +56,38 @@ public class Attack : MonoBehaviour
 
     }
 
+    void CalculateParry()
+    {
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f))
+        {
+            Vector3 targetPoint = hit.point;
+            Vector3 dir = (targetPoint - player.position);
+            dir.y = 0;
+            dir.Normalize();
+
+            knockbackDirection = dir.normalized;
+
+
+            if (attackCollider != null)
+            {
+
+
+                attackCollider.rotation = Quaternion.LookRotation(dir, Vector3.up);
+
+            }
+
+            Vector2 dir2D = new Vector2(dir.x, dir.z);
+            float angle = Mathf.Atan2(dir2D.y, dir2D.x) * Mathf.Rad2Deg;
+            angle -= 45f;
+            if (angle < 0) angle += 360;
+
+            animDir = GetDirection(angle);
+            anim.SetFloat("AttackHorizontal", animDir.x);
+            anim.SetFloat("AttackVertical", animDir.y);
+        }
+
+    }
     void HandleAttack()
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);

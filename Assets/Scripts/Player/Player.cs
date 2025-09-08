@@ -213,6 +213,7 @@ public class Player : MonoBehaviour
 
     IEnumerator Dash()
     {
+        playerAnim.SetTrigger("Dash");
         isDashing = true;
         hasDashed = true;
 

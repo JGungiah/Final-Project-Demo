@@ -71,6 +71,7 @@ public class Health : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && canParry)
         {
+            anim.SetTrigger("Parry");
             StartCoroutine(CheckParry());
         }
 
