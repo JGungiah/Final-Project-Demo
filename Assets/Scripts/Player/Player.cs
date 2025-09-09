@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
 
     private Animator playerAnim;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -69,13 +70,15 @@ public class Player : MonoBehaviour
         dashSound = GetComponent<AudioSource>();
         stepTimer = stepInterval;
         attackScript = GetComponent<Attack>();
-
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+
+
         DashDistanceCheck();
         if (controller != null)
         {
