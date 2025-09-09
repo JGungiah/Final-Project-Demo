@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
 
     private Animator playerAnim;
 
-
+    [SerializeField] private GameObject arrowUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

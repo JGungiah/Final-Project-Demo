@@ -19,8 +19,7 @@ public class Attack : MonoBehaviour
     public Vector2 animDir;
 
     [SerializeField] private Transform attackCollider;
-    [SerializeField] private GameObject arrowUI;
-    private Vector3 arrowDir;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -32,7 +31,7 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-        ArrowDirection();
+
         if (Input.GetMouseButtonDown(1))
         {
             CalculateParry();
@@ -57,19 +56,7 @@ public class Attack : MonoBehaviour
 
     }
 
-    void ArrowDirection()
-    {
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit, 100f))
-        {
-            Vector3 targetPoint = hit.point;
-           arrowDir = (targetPoint - player.position);
-           arrowDir.y = 0;
-           arrowDir.Normalize();
 
-
-        }
-    }
     void CalculateParry()
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
