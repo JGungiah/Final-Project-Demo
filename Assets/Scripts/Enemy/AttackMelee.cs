@@ -35,6 +35,8 @@ public class AttackMelee : MonoBehaviour
     [SerializeField] private float hitSTopTime;
 
     public AudioSource attackSound;
+    [SerializeField] private float minPitch;
+    [SerializeField] private float maxPitch;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -89,7 +91,7 @@ public class AttackMelee : MonoBehaviour
         canAttack = false;
 
 
-            attackSound.pitch = Random.Range(0.5f, 0.7f);
+            attackSound.pitch = Random.Range(minPitch, maxPitch);
             attackSound.PlayOneShot(attackSound.clip);
         
 
