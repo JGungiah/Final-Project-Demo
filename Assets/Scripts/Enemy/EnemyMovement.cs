@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -25,6 +26,14 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private float stepInterval = 0.5f;
     private float stepTimer;
+
+    [SerializeField] private float chaseRadius;
+    [SerializeField] private bool canChase;
+    [SerializeField] private LayerMask playerMask;
+
+    private Vector3 walkPoint;
+    [SerializeField] private float walkPointRange;
+    private bool walkPointSet = false;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -36,16 +45,25 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        
+        DistanceToPlayer();
+      
         agent.updateRotation = false;
 
         if (player != null && !attackMeleeScript.isBeingKnockedBack)
         {
             if (!attackMeleeScript.isAttacking) 
             {
-                Movement();
-                EnemyAnimations();
-               
+                if (canChase)
+                {
+                    EnemyAnimations();
+                    Chase(); 
+                }
+                else if (!canChase)
+                {
+                    PatrolAnimations();
+                    Patrol();
+                }
+
                 stepTimer -= Time.deltaTime;
                 if (stepTimer <= 0f)
                 {
@@ -87,8 +105,42 @@ public class EnemyMovement : MonoBehaviour
     }
 
 
+    void Patrol()
+    {
+        if (!walkPointSet)
+        {
+            RandomWaypoint();
+        }
+
+        if (walkPointSet)
+        {
+            agent.destination = walkPoint;
+        }
+
+       Vector3 distanceToWalkPoint = transform.position - walkPoint;
+
+        if (distanceToWalkPoint.magnitude < 1)
+        {
+            walkPointSet = false;   
+        }
+    }
+
+    void RandomWaypoint()
+    {
+        float RandomX = Random.Range(-walkPointRange, walkPointRange);
+        float RandomZ = Random.Range(-walkPointRange, walkPointRange);
+
+        walkPoint = new Vector3(transform.position.x + RandomX , transform.position.y , transform.position.z + RandomZ);
+
+        walkPointSet = true;
+    }
+
+    void DistanceToPlayer()
+    {
+        canChase = Physics.CheckSphere(transform.position, chaseRadius, playerMask);
+    }
     
-    void Movement()
+    void Chase()
     {
         if (!hasWaypoint)
         {
@@ -123,5 +175,25 @@ public class EnemyMovement : MonoBehaviour
        
     }
 
-  
+    void PatrolAnimations()
+    {
+       
+        Vector3 moveDir = agent.velocity.normalized;
+        moveDir.y = 0;
+
+        horizontalMovement = moveDir.x;
+        verticalMovement = moveDir.z;
+
+        anim.SetFloat("horizontalMovement", horizontalMovement);
+        anim.SetFloat("verticalMovement", verticalMovement);
+        anim.SetFloat("animMoveMagnitude", moveDir.magnitude);
+    }
+
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, chaseRadius);
+    }
+
 }
