@@ -34,6 +34,7 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 walkPoint;
     [SerializeField] private float walkPointRange;
     private bool walkPointSet = false;
+    private bool hasBeenDetected = false;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -53,12 +54,13 @@ public class EnemyMovement : MonoBehaviour
         {
             if (!attackMeleeScript.isAttacking) 
             {
-                if (canChase)
+                if (canChase || hasBeenDetected)
                 {
+                    hasBeenDetected = true;
                     EnemyAnimations();
-                    Chase(); 
+                    Chase();
                 }
-                else if (!canChase)
+                else
                 {
                     PatrolAnimations();
                     Patrol();
