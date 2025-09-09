@@ -32,6 +32,7 @@ public class Health : MonoBehaviour
     private Player movementScript;
     private float originalDamage;
     [SerializeField] private float EnemyDamage;
+    [SerializeField] private float projectileDamage;
      private float stunnedDamage;
     private Animator anim;
     private bool attemptedParry = false;
@@ -132,6 +133,17 @@ public class Health : MonoBehaviour
               
                 enemyAttack.hasAttacked = false;
             }
+        }
+
+   
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Projectile"))
+        {
+            TakeDamage(projectileDamage);
+            Destroy(other.gameObject);
         }
     }
 

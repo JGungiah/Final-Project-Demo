@@ -11,6 +11,7 @@ TagManager:
   - HealthCollider
   - InteractDoor
   - Waypoint
+  - Projectile
   layers:
   - Default
   - TransparentFX
