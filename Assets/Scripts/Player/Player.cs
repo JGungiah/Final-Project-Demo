@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     [Header("Movement")]
 
     private CharacterController controller;
-
+    public Camera cam;
     public float speed;
     public float originalSpeed;
 
@@ -61,6 +61,7 @@ public class Player : MonoBehaviour
     private Animator playerAnim;
 
     [SerializeField] private GameObject arrowUI;
+    private Transform player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -70,6 +71,7 @@ public class Player : MonoBehaviour
         dashSound = GetComponent<AudioSource>();
         stepTimer = stepInterval;
         attackScript = GetComponent<Attack>();
+        player = transform;
  
     }
 
@@ -77,7 +79,7 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-
+        ArrowUI();
 
         DashDistanceCheck();
         if (controller != null)
@@ -106,8 +108,25 @@ public class Player : MonoBehaviour
 
     }
 
+    private void LateUpdate()
+    {
+        Vector3 parentScale = arrowUI.transform.parent.lossyScale;
+        arrowUI.transform.localScale = new Vector3(
+            1f / parentScale.x,
+            1f / parentScale.y,
+            1f / parentScale.z);
+    }
+    void ArrowUI()
+    {
+        
+        Vector3 dir = new Vector3(lastMovement.x, 0f, lastMovement.z);
 
-
+        if (dir.sqrMagnitude > 0.01f)
+        {
+            Quaternion lookRot = Quaternion.LookRotation(dir, Vector3.up);
+            arrowUI.transform.rotation = lookRot;
+        }
+    }
     void ApplyGravity()
     {
         verticalVelocity += gravity * Time.deltaTime;

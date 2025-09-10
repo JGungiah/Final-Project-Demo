@@ -1,21 +1,25 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CursorManager : MonoBehaviour
 {
-    public Texture2D cursorTexture;
-    private Vector2 hotSpot  = Vector2.zero;
-    private CursorMode cursorMode = CursorMode.Auto;
+    public Texture2D tex;
+    public Vector2 size = new Vector2(64, 64);
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnGUI()
     {
-        
-    }
+        Cursor.visible = false;
+        if (tex == null) return;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        Vector2 mousePos = Event.current.mousePosition;
 
+        Rect rect = new Rect(
+            mousePos.x - size.x / 2f,
+            mousePos.y - size.y / 2f,
+            size.x,
+            size.y
+        );
+
+        GUI.DrawTexture(rect, tex);
     }
 }
