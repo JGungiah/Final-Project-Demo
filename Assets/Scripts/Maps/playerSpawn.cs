@@ -4,7 +4,14 @@ using UnityEngine.SceneManagement;
 public class playerSpawn : MonoBehaviour
 {
     public Transform spawn;
+    GameObject player;
 
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = spawn.position;
+    }
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -17,7 +24,7 @@ public class playerSpawn : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
 
         if (player != null && spawn != null)
         {

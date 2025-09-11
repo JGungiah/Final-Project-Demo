@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
@@ -46,6 +47,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+     
         DistanceToPlayer();
       
         agent.updateRotation = false;
@@ -117,6 +119,8 @@ public class EnemyMovement : MonoBehaviour
         if (walkPointSet)
         {
             agent.destination = walkPoint;
+            
+
         }
 
        Vector3 distanceToWalkPoint = transform.position - walkPoint;
@@ -125,7 +129,10 @@ public class EnemyMovement : MonoBehaviour
         {
             walkPointSet = false;   
         }
+
+       
     }
+   
 
     void RandomWaypoint()
     {
