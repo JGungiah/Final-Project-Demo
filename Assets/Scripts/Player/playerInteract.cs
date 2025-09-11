@@ -52,6 +52,10 @@ public class playerInteract : MonoBehaviour
         
     }
 
+    public void LobbyScene()
+    {
+        SceneManager.LoadScene("LobbyRoom");
+    }
     private void CheckScene()
     {
          currentScene = SceneManager.GetActiveScene();
