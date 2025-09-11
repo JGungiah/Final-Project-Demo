@@ -18,6 +18,7 @@ public class AttackRanged : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private float attackDuration;
 
+    private float originalAttackCooldown;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private Transform rotationPivot;
@@ -34,6 +35,7 @@ public class AttackRanged : MonoBehaviour
         anim = GetComponent<Animator>();
         healthScript = GetComponent<EnemyHealth>();
         healthScript.isInvunrable = true;
+        originalAttackCooldown = attackCooldown;
     }
 
     void Update()
@@ -73,6 +75,7 @@ public class AttackRanged : MonoBehaviour
         {
             if (canAttack)
                 StartCoroutine(EnemyAttack()); 
+            attackCooldown = originalAttackCooldown;
         }
 
         else if (distance > attackRadius)
@@ -83,6 +86,7 @@ public class AttackRanged : MonoBehaviour
 
         else if (distance <= attackRadius && canAttack)
         {
+            attackCooldown = 2;
             healthScript.isInvunrable = false;
             StartCoroutine(EnemyAttack());
         }

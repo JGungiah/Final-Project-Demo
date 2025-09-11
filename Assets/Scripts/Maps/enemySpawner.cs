@@ -15,6 +15,7 @@ public class enemySpawner : MonoBehaviour
     public bool wave1;
     public bool wave2;
     public bool wavescomplete;
+    public static float numberOfWavesCompleted = 0;
 
     private Quaternion spawnRotation = Quaternion.Euler(0f, 45f, 0f);
     private void Start()
@@ -34,7 +35,10 @@ public class enemySpawner : MonoBehaviour
         if (wavescomplete) 
         {
             gate.SetActive(true);
+            
         }
+
+        
     }
     public void Wave1Spawn() 
     {
@@ -47,6 +51,7 @@ public class enemySpawner : MonoBehaviour
          
         }
         wave1 = true;
+        numberOfWavesCompleted++;
     }
 
 
@@ -61,6 +66,7 @@ public class enemySpawner : MonoBehaviour
 
         }
        wave2 = true;
+        numberOfWavesCompleted++;
     }
 
 
