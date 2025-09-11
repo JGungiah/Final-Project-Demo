@@ -5,12 +5,14 @@ public class Attack : MonoBehaviour
 {
     public Camera cam;
     [SerializeField] private float attackCooldown;
+    [SerializeField] private float parryCooldown;
     private Player playerScript;
    
 
     private Animator anim;
     private Transform player;
     public bool isAttacking = false;
+    public bool isParrying = false;
     public bool colliderActive = false;
    
     public Vector3 knockbackDirection; 
@@ -46,10 +48,22 @@ public class Attack : MonoBehaviour
         {
             playerScript.speed = 0;
         }
+
         else if (!isAttacking)
         {
             playerScript.speed = playerScript.originalSpeed;
         }
+
+        if (isParrying)
+        {
+            playerScript.speed = 0;
+        }
+        else if (!isParrying)
+        {
+            playerScript.speed = playerScript.originalSpeed;
+        }
+
+       
 
         attackCollider.gameObject.SetActive(colliderActive);
 
@@ -73,19 +87,25 @@ public class Attack : MonoBehaviour
             if (attackCollider != null)
             {
 
-
+    
                 attackCollider.rotation = Quaternion.LookRotation(dir, Vector3.up);
 
             }
 
             Vector2 dir2D = new Vector2(dir.x, dir.z);
             float angle = Mathf.Atan2(dir2D.y, dir2D.x) * Mathf.Rad2Deg;
-            angle -= 45f;
+            angle -= 90f;
             if (angle < 0) angle += 360;
 
             animDir = GetDirection(angle);
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
+
+            playerScript.lastMovement.x = animDir.x;
+            playerScript.lastMovement.z = animDir.y;
+
+            isParrying = true;
+            StartCoroutine(CanParry());
         }
 
     }
@@ -112,7 +132,7 @@ public class Attack : MonoBehaviour
 
             Vector2 dir2D = new Vector2(dir.x, dir.z);
             float angle = Mathf.Atan2(dir2D.y, dir2D.x) * Mathf.Rad2Deg;
-            angle -= 45f;       
+            angle -= 90f;
             if (angle < 0) angle += 360;
 
             animDir = GetDirection(angle);
@@ -120,7 +140,8 @@ public class Attack : MonoBehaviour
             anim.SetFloat("AttackVertical", animDir.y);
             anim.SetTrigger("attack");
 
-
+            playerScript.lastMovement.x = animDir.x;
+            playerScript.lastMovement.z = animDir.y;
             isAttacking = true;
             StartCoroutine(CanAttack());
         }
@@ -148,12 +169,16 @@ public class Attack : MonoBehaviour
         
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
-        //attackCollider.gameObject.SetActive(false);
     }
 
 
 
-   
+    IEnumerator CanParry()
+    {
+
+        yield return new WaitForSeconds(parryCooldown);
+        isParrying = false;
+    }
 
 }
 

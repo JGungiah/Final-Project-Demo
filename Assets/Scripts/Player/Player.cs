@@ -208,7 +208,8 @@ public class Player : MonoBehaviour
         {
             dashDir = transform.forward;
         }
-           
+        Quaternion dashRot = Quaternion.LookRotation(dashDir, Vector3.up);
+        arrowUI.transform.rotation = dashRot;
 
         for (int i = 0; i < distX.Length; i++)
         {
