@@ -42,6 +42,10 @@ public class Health : MonoBehaviour
     private Color missParryColor = Color.red;
     private Color originalColor;
     private SpriteRenderer spriteRenderer;
+
+    public AudioSource parrySuccesful;
+    public AudioSource parryUnsuccesful;
+    public AudioSource block;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -72,6 +76,12 @@ public class Health : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && canParry)
         {
+            if (!isParrying)
+            {
+                block.pitch = Random.Range(1.5f, 1.6f);
+                block.Play();
+            }
+          
             anim.SetTrigger("Parry");
             StartCoroutine(CheckParry());
         }
@@ -112,6 +122,8 @@ public class Health : MonoBehaviour
             {
                 if (attemptedParry && !isParrying)
                 {
+                    parryUnsuccesful.pitch = Random.Range(1.5f, 1.6f);
+                    parryUnsuccesful.Play();
                     StartCoroutine(PunishPlayer());
                     StartCoroutine(MissParryColor());
                 }
@@ -125,7 +137,9 @@ public class Health : MonoBehaviour
 
                 if (isParrying)
                 {
-                   StartCoroutine(ParryKnockBack());
+                    parrySuccesful.pitch = Random.Range(1.5f, 1.6f);
+                    parrySuccesful.Play();
+                    StartCoroutine(ParryKnockBack());
                    StartCoroutine(ParryColor());
 
                 }

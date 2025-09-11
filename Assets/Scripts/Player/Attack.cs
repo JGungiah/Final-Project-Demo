@@ -20,6 +20,7 @@ public class Attack : MonoBehaviour
 
     public Vector2 animDir;
 
+
     [SerializeField] private Transform attackCollider;
 
     void Start()
