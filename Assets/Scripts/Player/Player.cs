@@ -111,22 +111,32 @@ public class Player : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 parentScale = arrowUI.transform.parent.lossyScale;
-        arrowUI.transform.localScale = new Vector3(
-            1f / parentScale.x,
-            1f / parentScale.y,
-            1f / parentScale.z);
+        arrowUI.transform.localScale = new Vector3(1f / parentScale.x, 1f / parentScale.y, 1f / parentScale.z);
     }
     void ArrowUI()
     {
-        
-        Vector3 dir = new Vector3(lastMovement.x, 0f, lastMovement.z);
 
-        if (dir.sqrMagnitude > 0.01f)
-        {
-            Quaternion lookRot = Quaternion.LookRotation(dir, Vector3.up);
-            arrowUI.transform.rotation = lookRot;
+            
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+           
+            Plane groundPlane = new Plane(Vector3.up, player.position);
+
+            if (groundPlane.Raycast(ray, out float enter))
+            {
+                Vector3 hitPoint = ray.GetPoint(enter);
+
+                
+                Vector3 dir = hitPoint - player.position;
+                dir.y = 0f; 
+
+                if (dir.sqrMagnitude > 0.01f)
+                {
+                    Quaternion lookRot = Quaternion.LookRotation(dir, Vector3.up);
+                    arrowUI.transform.rotation = lookRot;
+                }
+            }
         }
-    }
     void ApplyGravity()
     {
         verticalVelocity += gravity * Time.deltaTime;
@@ -208,8 +218,7 @@ public class Player : MonoBehaviour
         {
             dashDir = transform.forward;
         }
-        Quaternion dashRot = Quaternion.LookRotation(dashDir, Vector3.up);
-        arrowUI.transform.rotation = dashRot;
+      
 
         for (int i = 0; i < distX.Length; i++)
         {
