@@ -78,8 +78,8 @@ public class Health : MonoBehaviour
         {
             if (!isParrying)
             {
-                block.pitch = Random.Range(1.5f, 1.6f);
-                block.Play();
+                //block.pitch = Random.Range(1.5f, 1.6f);
+                //block.Play();
             }
           
             anim.SetTrigger("Parry");
