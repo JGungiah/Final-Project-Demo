@@ -29,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
     private float stepTimer;
 
     [SerializeField] private float chaseRadius;
-    [SerializeField] private bool canChase;
+    [SerializeField] public bool canChase;
     [SerializeField] private LayerMask playerMask;
 
     private Vector3 walkPoint;
@@ -47,7 +47,12 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-     
+        if (!canChase)
+        {
+            agent.destination = transform.position;
+        }
+       
+
         DistanceToPlayer();
       
         agent.updateRotation = false;
@@ -93,19 +98,19 @@ public class EnemyMovement : MonoBehaviour
             agent.Move(velocity * Time.deltaTime);
         }
 
-        if (attackMeleeScript.isAttacking)
-        {
-            agent.enabled = false;
-        }
+        //if (attackMeleeScript.isAttacking)
+        //{
+        //    agent.enabled = false;
+        //}
 
-        if ((attackMeleeScript.attackDistance <= attackMeleeScript.attackRadius))
-        {
-            agent.enabled = false;
-        }
-        else if ((attackMeleeScript.attackDistance > attackMeleeScript.attackRadius))
-        {
-            agent.enabled = true;
-        }
+        //if ((attackMeleeScript.attackDistance <= attackMeleeScript.attackRadius))
+        //{
+        //    agent.enabled = false;
+        //}
+        //else if ((attackMeleeScript.attackDistance > attackMeleeScript.attackRadius))
+        //{
+        //    agent.enabled = true;
+        //}
     }
 
 

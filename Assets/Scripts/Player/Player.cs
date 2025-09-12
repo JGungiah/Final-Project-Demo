@@ -92,6 +92,7 @@ public class Player : MonoBehaviour
             {
                 RemoveGravity();
             }
+
             movement();
         }
 

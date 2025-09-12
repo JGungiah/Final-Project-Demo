@@ -37,6 +37,8 @@ public class AttackMelee : MonoBehaviour
     public AudioSource attackSound;
     [SerializeField] private float minPitch;
     [SerializeField] private float maxPitch;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -55,6 +57,7 @@ public class AttackMelee : MonoBehaviour
         if (!isAttacking)
         {
             attackCollider.gameObject.SetActive(false);
+            agent.isStopped = false;
         }
 
         attackDistance = Vector3.Distance(transform.position, player.transform.position);
@@ -68,10 +71,25 @@ public class AttackMelee : MonoBehaviour
                 attackCollider.gameObject.SetActive(true);
 
                 attackCollider.rotation = Quaternion.LookRotation(-movementScript.animDirection, Vector3.up);
+                agent.isStopped = true;
             }
+        }
+
+        if (anim.GetBool("attack"))
+        {
+            StartCoroutine(StopEnemy());
         }
     }
 
+    private IEnumerator StopEnemy()
+    {
+        movementScript.canChase = false;
+        agent.destination = transform.position;
+        yield return new WaitForSeconds(5);
+        movementScript.canChase = true;
+    }
+
+   
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("PlayerAttack") && attackScript.isAttacking && !isBeingKnockedBack && canBeKnockedBack)
@@ -95,15 +113,15 @@ public class AttackMelee : MonoBehaviour
             attackSound.PlayOneShot(attackSound.clip);
         
 
-        agent.enabled = false;
+
 
         anim.SetFloat("AttackHorizontal", movementScript.animDirection.x);
         anim.SetFloat("AttackVertical", movementScript.animDirection.z);
         anim.SetTrigger("attack");
 
         yield return new WaitForSeconds(attackDuration);
-       
-        agent.enabled = true;
+
+
         isAttacking = false;
         attackCollider.gameObject.SetActive(false);
 
