@@ -20,20 +20,34 @@ public class playerInteract : MonoBehaviour
     private Quaternion rotation;
     void Awake()
     {
-
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        gate = GameObject.FindGameObjectWithTag("InteractDoor");
     }
 
   
     void Update()
     {
 
-        if(gate != null)
+        if (gate == null)
         {
             gate = GameObject.FindGameObjectWithTag("InteractDoor");
-            RotateArrow();
         }
 
-        
+        if (gate != null && gate.activeInHierarchy)
+        {
+            if (!uiArrow.gameObject.activeSelf)
+                uiArrow.gameObject.SetActive(true);
+
+            RotateArrow();
+        }
+        else
+        {
+            if (uiArrow.gameObject.activeSelf)
+                uiArrow.gameObject.SetActive(false);
+        }
+
+
+
         waveText.text = " Wave "  +  enemySpawner.numberOfWavesCompleted;
         roomNumber.text = numberOfRoomsCompleted.ToString();
 
@@ -63,7 +77,15 @@ public class playerInteract : MonoBehaviour
 
         
     }
-
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        FindGateInScene();
+    }
+    void FindGateInScene()
+    {
+        gate = GameObject.FindGameObjectWithTag("InteractDoor");
+     
+    }
 
     void RotateArrow()
     {
