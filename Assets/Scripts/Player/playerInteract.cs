@@ -14,6 +14,10 @@ public class playerInteract : MonoBehaviour
     public TextMeshProUGUI roomNumberText;
     public TextMeshProUGUI roomNumber;
     private float numberOfRoomsCompleted = 0;
+
+    public Image uiArrow;
+    private GameObject gate;
+    private Quaternion rotation;
     void Awake()
     {
 
@@ -22,6 +26,14 @@ public class playerInteract : MonoBehaviour
   
     void Update()
     {
+
+        if(gate != null)
+        {
+            gate = GameObject.FindGameObjectWithTag("InteractDoor");
+            RotateArrow();
+        }
+
+        
         waveText.text = " Wave "  +  enemySpawner.numberOfWavesCompleted;
         roomNumber.text = numberOfRoomsCompleted.ToString();
 
@@ -52,6 +64,22 @@ public class playerInteract : MonoBehaviour
         
     }
 
+
+    void RotateArrow()
+    {
+        Vector3 gatePosition = gate.transform.position;
+        Vector3 playerPosition = Camera.main.transform.position;
+   
+        Vector3 direction = gatePosition - playerPosition;
+        direction.y = 0; 
+     
+        Vector3 forward = Camera.main.transform.forward;
+        forward.y = 0;
+  
+        float angle = Vector3.SignedAngle(forward, direction, Vector3.up);
+  
+        uiArrow.rectTransform.localEulerAngles = new Vector3(0, 0, -angle -90);
+    }
     public void LobbyScene()
     {
         SceneManager.LoadScene("LobbyRoom");
@@ -64,9 +92,11 @@ public class playerInteract : MonoBehaviour
     }
     public void SceneGenerator() 
     {
+
         int RandIndex = Random.Range(0, sceneNames.Count);
         
         string scenetoload = sceneNames[RandIndex];
+        
         SceneManager.LoadScene(scenetoload);
         numberOfRoomsCompleted ++;
     }
