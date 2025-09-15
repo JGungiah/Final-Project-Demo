@@ -98,19 +98,7 @@ public class EnemyMovement : MonoBehaviour
             agent.Move(velocity * Time.deltaTime);
         }
 
-        //if (attackMeleeScript.isAttacking)
-        //{
-        //    agent.enabled = false;
-        //}
 
-        //if ((attackMeleeScript.attackDistance <= attackMeleeScript.attackRadius))
-        //{
-        //    agent.enabled = false;
-        //}
-        //else if ((attackMeleeScript.attackDistance > attackMeleeScript.attackRadius))
-        //{
-        //    agent.enabled = true;
-        //}
     }
 
 
