@@ -36,6 +36,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float walkPointRange;
     private bool walkPointSet = false;
     private bool hasBeenDetected = false;
+
+    public float range = 10;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -47,6 +49,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+       
         if (!canChase)
         {
             agent.destination = transform.position;
@@ -125,16 +128,39 @@ public class EnemyMovement : MonoBehaviour
 
        
     }
-   
 
-    void RandomWaypoint()
+    bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
-        float RandomX = Random.Range(-walkPointRange, walkPointRange);
-        float RandomZ = Random.Range(-walkPointRange, walkPointRange);
+        for (int i = 0; i < 30; i++)
+        {
+            Vector3 randomPoint = center + Random.insideUnitSphere * range;
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(randomPoint, out hit, 10.0f, NavMesh.AllAreas))
+            {
+                result = hit.position;
+                return true;
+            }
+        }
+        result = Vector3.zero;
+        return false;
+    }
+        void RandomWaypoint()
+    {
+        Vector3 point;
+        if (RandomPoint(transform.position, range, out point))
+        {
+            
+            walkPoint = new Vector3( point.x, transform.position.y,point.z);
+            walkPointSet = true;
+            Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+        }
 
-        walkPoint = new Vector3(transform.position.x + RandomX , transform.position.y , transform.position.z + RandomZ);
+        //float RandomX = Random.Range(-walkPointRange, walkPointRange);
+        //float RandomZ = Random.Range(-walkPointRange, walkPointRange);
 
-        walkPointSet = true;
+
+
+        //walkPointSet = true;
     }
 
     void DistanceToPlayer()
