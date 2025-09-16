@@ -26,43 +26,31 @@ public class SceneLoadManager : MonoBehaviour
         StartCoroutine(HandleSceneLoad());
     }
 
+  
+
     IEnumerator HandleSceneLoad()
     {
         Time.timeScale = 0f;
         loadingScreenUI.SetActive(true);
 
         player = GameObject.FindWithTag("Player");
-        controller = player.GetComponent<CharacterController>();
 
-        float elapsed = 0f;
-        float minTime = 2f; // <-- always show for at least 2 seconds
-        bool grounded = false;
+        yield return null; // wait 1 frame
 
-        // Place slightly above spawn to allow fall
-        player.transform.position = spawnPoint.position + Vector3.up * 0.5f;
+        GameObject spawnObj = GameObject.FindWithTag("SpawnPoint");
+        Vector3 targetPos = spawnObj != null ? spawnObj.transform.position : Vector3.zero;
 
-        while (elapsed < maxCheckTime)
+        if (Physics.Raycast(targetPos + Vector3.up * 2, Vector3.down, out RaycastHit hit, 20f))
         {
-            if (!controller.isGrounded)
-            {
-                // manually simulate gravity while frozen
-                controller.Move(Vector3.down * 9.81f * Time.unscaledDeltaTime);
-            }
-            else
-            {
-                grounded = true;
-            }
-
-            elapsed += Time.unscaledDeltaTime;
-
-            // If player is grounded AND we've passed minimum time → break early
-            if (grounded && elapsed >= minTime)
-                break;
-
-            yield return null;
+            player.transform.position = hit.point;
+        }
+        else
+        {
+            player.transform.position = targetPos;
         }
 
-        // Clean up
+        yield return new WaitForSecondsRealtime(2f);
+
         loadingScreenUI.SetActive(false);
         Time.timeScale = 1f;
     }

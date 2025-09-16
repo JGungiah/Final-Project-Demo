@@ -12,6 +12,7 @@ TagManager:
   - InteractDoor
   - Waypoint
   - Projectile
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
