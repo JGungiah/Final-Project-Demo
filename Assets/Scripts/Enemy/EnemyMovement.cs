@@ -145,6 +145,7 @@ public class EnemyMovement : MonoBehaviour
     {
         for (int i = 0; i < 30; i++)
         {
+
             
             Vector3 randomPoint = center + Random.insideUnitSphere * range;
             NavMeshHit hit;
