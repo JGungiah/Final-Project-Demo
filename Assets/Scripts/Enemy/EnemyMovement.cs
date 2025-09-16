@@ -37,7 +37,10 @@ public class EnemyMovement : MonoBehaviour
     private bool walkPointSet = false;
     private bool hasBeenDetected = false;
 
-    public float range = 10;
+   [SerializeField] private float range;
+
+    [SerializeField] private float patrolCoolDown;
+    private bool canCheck = true;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -121,18 +124,28 @@ public class EnemyMovement : MonoBehaviour
 
        Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
-        if (distanceToWalkPoint.magnitude < 1)
+        if (distanceToWalkPoint.magnitude < 1 && canCheck)
         {
-            walkPointSet = false;   
+            canCheck = false;
+           StartCoroutine(PatrolCoolDown());
         }
 
        
+    }
+
+    IEnumerator PatrolCoolDown()
+    {
+        patrolCoolDown = Random.Range(1, 3);
+        yield return new WaitForSeconds(patrolCoolDown);
+        walkPointSet = false;
+        canCheck = true;
     }
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
         for (int i = 0; i < 30; i++)
         {
+            
             Vector3 randomPoint = center + Random.insideUnitSphere * range;
             NavMeshHit hit;
             if (NavMesh.SamplePosition(randomPoint, out hit, 10.0f, NavMesh.AllAreas))
@@ -149,18 +162,14 @@ public class EnemyMovement : MonoBehaviour
         Vector3 point;
         if (RandomPoint(transform.position, range, out point))
         {
-            
+            range = Random.Range(30, 40);
+
             walkPoint = new Vector3( point.x, transform.position.y,point.z);
             walkPointSet = true;
-            Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+
         }
 
-        //float RandomX = Random.Range(-walkPointRange, walkPointRange);
-        //float RandomZ = Random.Range(-walkPointRange, walkPointRange);
 
-
-
-        //walkPointSet = true;
     }
 
     void DistanceToPlayer()
