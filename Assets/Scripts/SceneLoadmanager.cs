@@ -39,17 +39,22 @@ public class SceneLoadManager : MonoBehaviour
 
         GameObject spawnObj = GameObject.FindWithTag("SpawnPoint");
         Vector3 targetPos = spawnObj != null ? spawnObj.transform.position : Vector3.zero;
+        yield return null;
+      
 
-        if (Physics.Raycast(targetPos + Vector3.up * 2, Vector3.down, out RaycastHit hit, 20f))
-        {
-            player.transform.position = hit.point;
-        }
-        else
-        {
-            player.transform.position = targetPos;
-        }
+        //if (Physics.Raycast(targetPos + Vector3.up * 2, Vector3.down, out RaycastHit hit, 20f))
+     //   {
+           player.transform.position = targetPos;
+        Debug.Log(targetPos);
+        Debug.Log(player.transform.position);
+      //  }
+     //   else
+     //   {
+      //      
+     //       player.transform.position = hit.point;
+    //    }
 
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(4f);
 
         loadingScreenUI.SetActive(false);
         Time.timeScale = 1f;
