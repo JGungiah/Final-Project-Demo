@@ -13,6 +13,7 @@ public class SceneLoadManager : MonoBehaviour
 
     void OnEnable()
     {
+        controller = FindAnyObjectByType<CharacterController>();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -40,21 +41,19 @@ public class SceneLoadManager : MonoBehaviour
         GameObject spawnObj = GameObject.FindWithTag("SpawnPoint");
         Vector3 targetPos = spawnObj != null ? spawnObj.transform.position : Vector3.zero;
         yield return null;
-      
 
-        //if (Physics.Raycast(targetPos + Vector3.up * 2, Vector3.down, out RaycastHit hit, 20f))
-     //   {
-           player.transform.position = targetPos;
+
+        controller.enabled = false; 
+
+        player.transform.position = targetPos;
+
+        controller.enabled = true;
         Debug.Log(targetPos);
         Debug.Log(player.transform.position);
-      //  }
-     //   else
-     //   {
-      //      
-     //       player.transform.position = hit.point;
-    //    }
+      
 
-        yield return new WaitForSecondsRealtime(4f);
+
+        yield return new WaitForSecondsRealtime(2f);
 
         loadingScreenUI.SetActive(false);
         Time.timeScale = 1f;
