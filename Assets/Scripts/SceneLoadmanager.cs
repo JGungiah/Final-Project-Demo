@@ -4,34 +4,43 @@ using System.Collections;
 
 public class SceneLoadManager : MonoBehaviour
 {
-    [SerializeField] private GameObject loadingScreenUI; 
-    [SerializeField] private GameObject player;         
+    public GameObject loadingScreenUI;
+    public Transform spawnPoint;
+    public float maxCheckTime = 3f;
 
-    public void LoadScene(string sceneName)
+    private GameObject player;
+    private CharacterController controller;
+
+    void OnEnable()
     {
-        StartCoroutine(HandleSceneLoad(sceneName));
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private IEnumerator HandleSceneLoad(string sceneName)
+    void OnDisable()
     {
-       
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        StartCoroutine(HandleSceneLoad());
+    }
+
+  
+
+    IEnumerator HandleSceneLoad()
+    {
         Time.timeScale = 0f;
         loadingScreenUI.SetActive(true);
 
-     
-        AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
-        while (!op.isDone)
-            yield return null;
+        player = GameObject.FindWithTag("Player");
 
-       
-        yield return null;
+        yield return null; // wait 1 frame
 
-      
         GameObject spawnObj = GameObject.FindWithTag("SpawnPoint");
         Vector3 targetPos = spawnObj != null ? spawnObj.transform.position : Vector3.zero;
 
-       
-        if (Physics.Raycast(targetPos + Vector3.up * 2f, Vector3.down, out RaycastHit hit, 20f))
+        if (Physics.Raycast(targetPos + Vector3.up * 2, Vector3.down, out RaycastHit hit, 20f))
         {
             player.transform.position = hit.point;
         }
@@ -40,10 +49,8 @@ public class SceneLoadManager : MonoBehaviour
             player.transform.position = targetPos;
         }
 
-        
         yield return new WaitForSecondsRealtime(2f);
 
-       
         loadingScreenUI.SetActive(false);
         Time.timeScale = 1f;
     }
