@@ -42,15 +42,11 @@ public class SceneLoadManager : MonoBehaviour
         Vector3 targetPos = spawnObj != null ? spawnObj.transform.position : Vector3.zero;
         yield return null;
 
-
         controller.enabled = false; 
 
         player.transform.position = targetPos;
 
         controller.enabled = true;
-        Debug.Log(targetPos);
-        Debug.Log(player.transform.position);
-      
 
 
         yield return new WaitForSecondsRealtime(2f);
