@@ -35,7 +35,7 @@ public class SceneLoadManager : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
 
-        yield return null; // wait 1 frame
+        yield return null;
 
         GameObject spawnObj = GameObject.FindWithTag("SpawnPoint");
         Vector3 targetPos = spawnObj != null ? spawnObj.transform.position : Vector3.zero;
