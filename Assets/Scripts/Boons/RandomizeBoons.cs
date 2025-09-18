@@ -60,11 +60,17 @@ public class RandomizeBoons : MonoBehaviour
             boonNames[i] = chosenBoons[i].GetBoonName();
             boonNamesUI[i].text = boonNames[i];
             boonDescriptions[i] = chosenBoons[i].GetBoonDescription();
-            boonDescriptionsUI[i].text = boonDescriptions[i];   
-            //boonImages[i].sprite = chosenBoons[i].GetBoonImage().sprite;
-            
+            boonDescriptionsUI[i].text = boonDescriptions[i];
+            boonImages[i].sprite = chosenBoons[i].GetBoonImage();
+
         }
     }
 
+    public void SelectBoon(int boonIndex)
+    {
+        UpgradeScriptableObjects selectedBoon = chosenBoons[boonIndex];
+
+        Debug.Log("Player selected boon: " + selectedBoon.GetBoonName());
+    }
    
 }

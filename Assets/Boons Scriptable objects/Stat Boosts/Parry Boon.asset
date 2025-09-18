@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boonName: Parry Window
   boonDescription: Increase the parry window time by 15%
-  boonImage: {fileID: 0}
-  index: 3
+  boonImage: {fileID: 21300000, guid: d1677177772522946a1bfe00dce758e8, type: 3}
   value: 15

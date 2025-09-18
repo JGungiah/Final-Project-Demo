@@ -6,11 +6,11 @@ public class UpgradeScriptableObjects : ScriptableObject
 {
     public string boonName;
     public string boonDescription;
-    public Image boonImage;
+    public Sprite boonImage;
     public float value;
 
     public string GetBoonName() => boonName;
     public string GetBoonDescription() => boonDescription;
-    public Image GetBoonImage() => boonImage;
+    public Sprite GetBoonImage() => boonImage;
     public float GetValue() => value;
 }
