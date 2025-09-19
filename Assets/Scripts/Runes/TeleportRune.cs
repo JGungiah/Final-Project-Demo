@@ -9,8 +9,9 @@ public class TeleportRune : MonoBehaviour
     [SerializeField] private SpriteRenderer[] exitRenderers;
     [SerializeField] private Color[] originalColors;
     [SerializeField] private float teleportChargeTime ;
-    [SerializeField] private float teleportCooldown ; 
+    [SerializeField] private float teleportCooldown ;
 
+    [SerializeField] float teleportTime;
     private GameObject player;
     private CharacterController controller;
 
@@ -41,20 +42,46 @@ public class TeleportRune : MonoBehaviour
  
         controller.enabled = false;
 
+        float elapsedTime = 0;
+        float playerY = player.transform.position.y;
+       
         if (fromEnter)
+        {
+            while (elapsedTime < teleportTime)
+            {
+                elapsedTime += Time.deltaTime;
+                Vector3 teleportedPos = player.transform.position = Vector3.Lerp(player.transform.position, runeExit[index].transform.position, elapsedTime / teleportTime);
+                teleportedPos.y = playerY;
+                player.transform.position = teleportedPos;
+
+
+
+                yield return null;
+            }
+        }
             
-            player.transform.position = runeExit[index].transform.position;
+            
 
         else
+            while (elapsedTime < teleportTime)
+            {
+                elapsedTime += Time.deltaTime;
+                Vector3 teleportedPos2 = Vector3.Lerp(player.transform.position, runeEnter[index].transform.position, elapsedTime / teleportTime);
+                teleportedPos2.y = playerY;
+                player.transform.position = teleportedPos2;
 
-            player.transform.position = runeEnter[index].transform.position;
+                
+
+                yield return null;
+            }
+       
 
         controller.enabled = true;
-
+        isTeleporting = false;
 
         StartCoroutine(TeleportCooldown(index));
+       
 
-        isTeleporting = false;
     }
 
     private IEnumerator TeleportCooldown(int index)
