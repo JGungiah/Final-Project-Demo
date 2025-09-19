@@ -13,6 +13,7 @@ TagManager:
   - Waypoint
   - Projectile
   - SpawnPoint
+  - GameManager
   layers:
   - Default
   - TransparentFX

@@ -23,13 +23,18 @@ public class Attack : MonoBehaviour
 
     [SerializeField] private Transform attackCollider;
 
+    private GameObject gameManager;
+    private RandomizeBoons randomizeBoons;
+    private bool hasAppliedBoon = false;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         player = transform;
         playerScript = GetComponent<Player>();
 
-       
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        randomizeBoons = gameManager.GetComponent<RandomizeBoons>();
     }
 
     void Update()
@@ -71,7 +76,17 @@ public class Attack : MonoBehaviour
 
     }
 
-
+    void SelectedBoon()
+    {
+        if (randomizeBoons.selectedBoon != null)
+        {
+            if (randomizeBoons.selectedBoon.GetBoonName() == "Dodge Cooldown" && !hasAppliedBoon)
+            {
+      
+                hasAppliedBoon = true;
+            }
+        }
+    }
     void CalculateParry()
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);

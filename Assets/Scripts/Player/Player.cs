@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashForce;
     [SerializeField] public float dashDuration;
     [SerializeField] private float dashCoolDown;
-
+    private float originalDashDuration;
     [SerializeField] private float dashDistance;
 
     private float[] distX = { 30f, 25f, 20f, 15f, 10f, 5f };
@@ -62,6 +62,11 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject arrowUI;
     private Transform player;
+
+    private GameObject gameManager;
+    private RandomizeBoons randomizeBoons;
+    private bool hasAppliedBoon = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -72,13 +77,16 @@ public class Player : MonoBehaviour
         stepTimer = stepInterval;
         attackScript = GetComponent<Attack>();
         player = transform;
- 
+        originalDashDuration = dashDuration;
+
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        randomizeBoons = gameManager.GetComponent<RandomizeBoons>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        SelectedBoon();
         ArrowUI();
 
         DashDistanceCheck();
@@ -114,169 +122,183 @@ public class Player : MonoBehaviour
         Vector3 parentScale = arrowUI.transform.parent.lossyScale;
         arrowUI.transform.localScale = new Vector3(1f / parentScale.x, 1f / parentScale.y, 1f / parentScale.z);
     }
-    void ArrowUI()
-    {
+
+        void SelectedBoon()
+        {
+            if (randomizeBoons.selectedBoon != null)
+            {
+                if (randomizeBoons.selectedBoon.GetBoonName() == "Dodge Cooldown" && !hasAppliedBoon)
+                {
+                    dashCoolDown = dashCoolDown * 0.8f;
+                    hasAppliedBoon = true;
+                }
+            }
+        }
+
+
+        void ArrowUI()
+        {
 
             
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
            
-            Plane groundPlane = new Plane(Vector3.up, player.position);
+        Plane groundPlane = new Plane(Vector3.up, player.position);
 
-            if (groundPlane.Raycast(ray, out float enter))
-            {
-                Vector3 hitPoint = ray.GetPoint(enter);
+        if (groundPlane.Raycast(ray, out float enter))
+        {
+            Vector3 hitPoint = ray.GetPoint(enter);
 
                 
-                Vector3 dir = hitPoint - player.position;
-                dir.y = 0f; 
+            Vector3 dir = hitPoint - player.position;
+            dir.y = 0f; 
 
-                if (dir.sqrMagnitude > 0.01f)
+            if (dir.sqrMagnitude > 0.01f)
+            {
+                Quaternion lookRot = Quaternion.LookRotation(dir, Vector3.up);
+                arrowUI.transform.rotation = lookRot;
+            }
+          }
+        }
+        void ApplyGravity()
+        {
+            verticalVelocity += gravity * Time.deltaTime;
+        }
+
+        void RemoveGravity()
+        {
+            verticalVelocity = -2f;
+        }
+
+        void movement()
+        {
+            if (!canMove)
+            {
+                Movement = Vector3.zero;
+                controller.Move(Movement * Time.deltaTime);
+                return;
+            }
+
+            verticalInput = Input.GetAxisRaw("Vertical");
+            horizontalInput = Input.GetAxisRaw("Horizontal");
+
+            Vector3 horizontalMovement = new Vector3(horizontalInput, 0f, verticalInput);
+
+            Vector3 localMovement = transform.TransformDirection(horizontalMovement).normalized;
+
+
+
+
+            Movement = localMovement.normalized;
+            Movement.y = verticalVelocity;
+
+            if ((horizontalInput != 0 || verticalInput != 0) && (Movement.x != 0 || Movement.z != 0))
+            {
+                isMoving = true;
+                lastMovement = Movement;
+
+                stepTimer -= Time.deltaTime;
+                if (stepTimer <= 0f)
                 {
-                    Quaternion lookRot = Quaternion.LookRotation(dir, Vector3.up);
-                    arrowUI.transform.rotation = lookRot;
+                    footStepsSound.pitch = Random.Range(1.0f, 1.4f);
+                    footStepsSound.PlayOneShot(footStepsSound.clip);
+                    stepTimer = stepInterval;
                 }
             }
-        }
-    void ApplyGravity()
-    {
-        verticalVelocity += gravity * Time.deltaTime;
-    }
-
-    void RemoveGravity()
-    {
-        verticalVelocity = -2f;
-    }
-
-    void movement()
-    {
-        if (!canMove)
-        {
-            Movement = Vector3.zero;
-            controller.Move(Movement * Time.deltaTime);
-            return;
-        }
-
-        verticalInput = Input.GetAxisRaw("Vertical");
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-
-        Vector3 horizontalMovement = new Vector3(horizontalInput, 0f, verticalInput);
-
-        Vector3 localMovement = transform.TransformDirection(horizontalMovement).normalized;
-
-
-
-
-        Movement = localMovement.normalized;
-        Movement.y = verticalVelocity;
-
-        if ((horizontalInput != 0 || verticalInput != 0) && (Movement.x != 0 || Movement.z != 0))
-        {
-            isMoving = true;
-            lastMovement = Movement;
-
-            stepTimer -= Time.deltaTime;
-            if (stepTimer <= 0f)
+            else if (horizontalInput == 0 || verticalInput == 0)
             {
-                footStepsSound.pitch = Random.Range(1.0f, 1.4f);
-                footStepsSound.PlayOneShot(footStepsSound.clip);
-                stepTimer = stepInterval;
-            }
-        }
-        else if (horizontalInput == 0 || verticalInput == 0)
-        {
-            if (!footStepsSound.isPlaying)
-            {
-                footStepsSound.Stop();
+                if (!footStepsSound.isPlaying)
+                {
+                    footStepsSound.Stop();
+                }
+
+                isMoving = false;
+                stepTimer = 0f;
             }
 
-            isMoving = false;
-            stepTimer = 0f;
+            controller.Move(Movement * speed * Time.deltaTime);
         }
 
-        controller.Move(Movement * speed * Time.deltaTime);
-    }
+        void Animations()
+        {
 
-    void Animations()
-    {
+            Vector3 flatMovement = new Vector3(Movement.x, 0f, Movement.z);
 
-        Vector3 flatMovement = new Vector3(Movement.x, 0f, Movement.z);
-
-        playerAnim.SetFloat("verticalMovement", flatMovement.z);
-        playerAnim.SetFloat("horizontalMovement", flatMovement.x);
-        playerAnim.SetFloat("animMoveMagnitude", flatMovement.magnitude);
-        playerAnim.SetFloat("lastVertical", lastMovement.z);
-        playerAnim.SetFloat("lastHorizontal", lastMovement.x);
-    }
+            playerAnim.SetFloat("verticalMovement", flatMovement.z);
+            playerAnim.SetFloat("horizontalMovement", flatMovement.x);
+            playerAnim.SetFloat("animMoveMagnitude", flatMovement.magnitude);
+            playerAnim.SetFloat("lastVertical", lastMovement.z);
+            playerAnim.SetFloat("lastHorizontal", lastMovement.x);
+        }
 
 
-    private Vector3 DashDistanceCheck()
-    {
+        private Vector3 DashDistanceCheck()
+        {
 
-        Vector3 dashDir = new Vector3(lastMovement.x, 0f, lastMovement.z).normalized;
+            Vector3 dashDir = new Vector3(lastMovement.x, 0f, lastMovement.z).normalized;
        
-        if (dashDir.sqrMagnitude < 0.01f)
-        {
-            dashDir = transform.forward;
-        }
+            if (dashDir.sqrMagnitude < 0.01f)
+            {
+                dashDir = transform.forward;
+            }
       
 
-        for (int i = 0; i < distX.Length; i++)
-        {
-
-            float checkDist = distX[i];
-            RaycastHit hitUp;
-
-            if (!Physics.Raycast(transform.position, dashDir, out hitUp, distX[i], wallCollisionMask))
+            for (int i = 0; i < distX.Length; i++)
             {
-                Vector3 forwardPoint = transform.position + dashDir * checkDist;
-                if (Physics.Raycast(forwardPoint + Vector3.up * 2f, Vector3.down, out RaycastHit groundHit, 5f, groundCollisionMask))
+
+                float checkDist = distX[i];
+                RaycastHit hitUp;
+
+                if (!Physics.Raycast(transform.position, dashDir, out hitUp, distX[i], wallCollisionMask))
                 {
-                    Vector3 temp = lastMovement.normalized * distX[i];
-                    return temp;
+                    Vector3 forwardPoint = transform.position + dashDir * checkDist;
+                    if (Physics.Raycast(forwardPoint + Vector3.up * 2f, Vector3.down, out RaycastHit groundHit, 5f, groundCollisionMask))
+                    {
+                        Vector3 temp = lastMovement.normalized * distX[i];
+                        return temp;
+                    }
                 }
+
             }
-
+            return transform.position;
         }
-        return transform.position;
-    }
 
 
 
 
-    IEnumerator Dash()
-    {
-        playerAnim.SetTrigger("Dash");
-        isDashing = true;
-        hasDashed = true;
+        IEnumerator Dash()
+        {
+            playerAnim.SetTrigger("Dash");
+            isDashing = true;
+            hasDashed = true;
 
-        Vector3 dashDir = new Vector3(lastMovement.x, 0f, lastMovement.z);
-        if (dashDir.sqrMagnitude < 0.01f)
-            dashDir = transform.forward; 
+            Vector3 dashDir = new Vector3(lastMovement.x, 0f, lastMovement.z);
+            if (dashDir.sqrMagnitude < 0.01f)
+                dashDir = transform.forward; 
 
         
-        foreach (GameObject vfx in dashVFX)
-        {
-            vfx.SetActive(true);
-            vfx.transform.rotation = Quaternion.LookRotation(dashDir, Vector3.up);
+            foreach (GameObject vfx in dashVFX)
+            {
+                vfx.SetActive(true);
+                vfx.transform.rotation = Quaternion.LookRotation(dashDir, Vector3.up);
+            }
+
+            dashSound.pitch = Random.Range(2f, 3f);
+            dashSound.Play();
+
+            float elapsed = 0f;
+            while (elapsed < dashDuration)
+            {
+                elapsed += Time.deltaTime;
+                controller.Move(dashDir * dashForce * Time.deltaTime); 
+                yield return null;
+            }
+
+            foreach (GameObject vfx in dashVFX)
+                vfx.SetActive(false);
+
+            yield return new WaitForSeconds(dashCoolDown);
+            hasDashed = false;
+            isDashing = false;
         }
-
-        dashSound.pitch = Random.Range(2f, 3f);
-        dashSound.Play();
-
-        float elapsed = 0f;
-        while (elapsed < dashDuration)
-        {
-            elapsed += Time.deltaTime;
-            controller.Move(dashDir * dashForce * Time.deltaTime); 
-            yield return null;
-        }
-
-        foreach (GameObject vfx in dashVFX)
-            vfx.SetActive(false);
-
-        yield return new WaitForSeconds(dashCoolDown);
-        hasDashed = false;
-        isDashing = false;
     }
-}

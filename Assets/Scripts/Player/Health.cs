@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] public float maxHealth;
     [SerializeField] private float healthDecreaseSpeed;
     [SerializeField] private Image healthBar;
-
+   
     public float currentHealth;
     
 
@@ -46,6 +46,13 @@ public class Health : MonoBehaviour
     public AudioSource parrySuccesful;
     public AudioSource parryUnsuccesful;
     public AudioSource block;
+
+    private GameObject gameManager;
+    private RandomizeBoons randomizeBoons;
+    private bool hasAppliedBoon = false;
+
+    public float originalMaxHealth;
+    public float originalParryDuration;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -60,12 +67,19 @@ public class Health : MonoBehaviour
         stunnedDamage = EnemyDamage * 2;
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        randomizeBoons = gameManager.GetComponent<RandomizeBoons>();
+        
+        originalMaxHealth = maxHealth;
+        originalParryDuration = parryDuration;
     
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        SelectedBoon();
         healthBar.fillAmount = currentHealth / maxHealth;
 
         if (currentHealth <= 0 )
@@ -89,6 +103,31 @@ public class Health : MonoBehaviour
         
     }
 
+    void SelectedBoon()
+    {
+        if (randomizeBoons.selectedBoon != null)
+        {
+            if (randomizeBoons.selectedBoon.GetBoonName() == "Health Increase" && !hasAppliedBoon)
+            {
+                maxHealth = maxHealth * 1.25f;
+                currentHealth = maxHealth;
+                hasAppliedBoon = true;
+            }
+            else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Window" && !hasAppliedBoon)
+            {
+                parryDuration = parryDuration * 1.15f;
+                hasAppliedBoon = true;
+            }
+        }
+        //if (randomizeBoons.selectedBoon == null)
+        //{
+        //    print(1);
+        //}
+       
+    }
+
+    
+   
 
     IEnumerator ParryColor()
     {

@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class RandomizeBoons : MonoBehaviour
 {
@@ -20,12 +21,23 @@ public class RandomizeBoons : MonoBehaviour
     private string[] boonDescriptions;
 
     [SerializeField] GameObject boonCanvas;
+
+    private GameObject player;
+    private Transform canvas;
+
+    public UpgradeScriptableObjects selectedBoon;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         RandomizeStatBoons();
         AssignUIValues();
+        player = GameObject.FindGameObjectWithTag("Player");
+        canvas = player.transform.Find("Canvas");
 
+        if (boonCanvas.activeSelf)
+        {
+            canvas.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -68,9 +80,20 @@ public class RandomizeBoons : MonoBehaviour
 
     public void SelectBoon(int boonIndex)
     {
-        UpgradeScriptableObjects selectedBoon = chosenBoons[boonIndex];
+         selectedBoon = chosenBoons[boonIndex];
+         boonCanvas.SetActive(false);
+         canvas.gameObject.SetActive(true);
 
-        Debug.Log("Player selected boon: " + selectedBoon.GetBoonName());
+        //StartCoroutine(clearBoons());
+        //selectedBoon = chosenBoons[boonIndex];
+
     }
    
+
+    //private IEnumerator clearBoons()
+    //{
+    //    yield return new WaitForSeconds(0.1f);
+    //    System.Array.Clear(chosenBoons, 0, chosenBoons.Length);
+       
+    //}
 }
