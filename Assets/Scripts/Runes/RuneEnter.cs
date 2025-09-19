@@ -1,17 +1,21 @@
 using UnityEngine;
+using System.Collections;
 
 public class RuneEnter : MonoBehaviour
 {
     public int enterIndex;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private TeleportRune runeScript;
+
     void Start()
     {
-        
+        runeScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<TeleportRune>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            StartCoroutine(runeScript.TeleportCharge(true, enterIndex));
+        }
     }
 }

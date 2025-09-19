@@ -5,85 +5,54 @@ public class TeleportRune : MonoBehaviour
 {
     [SerializeField] private GameObject[] runeEnter;
     [SerializeField] private GameObject[] runeExit;
-    [SerializeField] private int[] runeIndex;
-
-
-    [SerializeField] private float teleportChargeTime;
-
-    private bool isTeleporting = false;
+    [SerializeField] private float teleportChargeTime = 1f;
+    [SerializeField] private float teleportCooldown = 0.5f; 
 
     private GameObject player;
     private CharacterController controller;
 
-    private RuneEnter RuneEnter;
-    private RuneExit RuneExit;
+    private bool isTeleporting = false;
+    private bool isOnCooldown = false;
 
-    private bool canEnter = false;
-    private bool canExit = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         controller = player.GetComponent<CharacterController>();
-
-      
     }
 
-    // Update is called once per frame
-    void Update()
+    public IEnumerator TeleportCharge(bool fromEnter, int index)
     {
-        
-    }
+        if (isTeleporting || isOnCooldown) yield break;
 
-    private void OnTriggerEnter(Collider other)
-    {
-         if (other.CompareTag("Teleport Enter"))
-        {
-            canEnter = true;
-            StartCoroutine(TeleportCharge());
-            
-        } 
-        else if (other.CompareTag("Teleport Exit"))
-        {
-            canExit = true;
-            StartCoroutine(TeleportCharge());
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Teleport Enter"))
-        {
-            canEnter = false;
-            StopCoroutine(TeleportCharge());
-        }
-        else if (other.CompareTag("Teleport Exit"))
-        {
-            canExit= false;
-            StopCoroutine(TeleportCharge());
-        }
-    }
-
-    private IEnumerator TeleportCharge()
-    {
         yield return new WaitForSeconds(teleportChargeTime);
-        controller.enabled = false;
-        isTeleporting = true;
-       
-        if (canEnter)
-        {
-            player.transform.position = runeExit[RuneExit.exitIndex].transform.position;
-            print(1);
-        }
 
-        if (canExit)
-        {
-            player.transform.position = runeEnter[RuneEnter.enterIndex].transform.position;
-            print(2);
-        }
+        if (isTeleporting || isOnCooldown) yield break;
+
+        isTeleporting = true;
+
+ 
+        controller.enabled = false;
+
+        if (fromEnter)
+            
+            player.transform.position = runeExit[index].transform.position;
+
+        else
+
+            player.transform.position = runeEnter[index].transform.position;
 
         controller.enabled = true;
-        isTeleporting = false;
 
+
+        StartCoroutine(TeleportCooldown());
+
+        isTeleporting = false;
+    }
+
+    private IEnumerator TeleportCooldown()
+    {
+        isOnCooldown = true;
+        yield return new WaitForSeconds(teleportCooldown);
+        isOnCooldown = false;
     }
 }
