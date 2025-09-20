@@ -6,7 +6,9 @@ public class EnemyHealth : MonoBehaviour
     private Attack attackScript;
     [SerializeField] private float maxHealth;
     public float currentHealth;
-    [SerializeField]  private float playerDamage;
+
+    private GameObject player;
+    private Attack playerAttack;
     public bool canTakeDamage = false;
     public bool isInvunrable = false;
 
@@ -21,6 +23,8 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth;
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+        player = GameObject.FindWithTag("Player");
+        playerAttack = player.GetComponent<Attack>();
     }
 
     // Update is called once per frame
@@ -37,7 +41,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
         {
-            currentHealth -= playerDamage;
+            currentHealth -= playerAttack.playerDamage;
             canTakeDamage = true;
             bloodVFX.SetActive(true);
             StartCoroutine(HitColour());

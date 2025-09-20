@@ -7,8 +7,9 @@ public class Attack : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private float parryCooldown;
     private Player playerScript;
-   
 
+    public float playerDamage;
+    private float originalDamage;
     private Animator anim;
     private Transform player;
     public bool isAttacking = false;
@@ -39,7 +40,7 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-
+        SelectedBoon();
         if (Input.GetMouseButtonDown(1))
         {
             CalculateParry();
@@ -80,9 +81,9 @@ public class Attack : MonoBehaviour
     {
         if (randomizeBoons.selectedBoon != null)
         {
-            if (randomizeBoons.selectedBoon.GetBoonName() == "Dodge Cooldown" && !hasAppliedBoon)
+            if (randomizeBoons.selectedBoon.GetBoonName() == "Damage Increase" && !hasAppliedBoon)
             {
-      
+                playerDamage = playerDamage * 1.1f;
                 hasAppliedBoon = true;
             }
         }
