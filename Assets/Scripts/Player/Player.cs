@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
 
     private Animator playerAnim;
 
-    [SerializeField] private GameObject arrowUI;
+    public GameObject arrowUI;
     private Transform player;
 
     private GameObject gameManager;
