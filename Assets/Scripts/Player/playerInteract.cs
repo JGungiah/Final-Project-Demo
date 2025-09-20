@@ -18,10 +18,13 @@ public class playerInteract : MonoBehaviour
     public Image uiArrow;
     private GameObject gate;
     private Quaternion rotation;
+
+    private GameObject boonCanvas;
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         gate = GameObject.FindGameObjectWithTag("InteractDoor");
+        boonCanvas = GameObject.FindWithTag("Boon UI");
     }
 
   
@@ -132,7 +135,12 @@ public class playerInteract : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 interactImage.gameObject.SetActive(true);
-                SceneGenerator();
+                boonCanvas.gameObject.SetActive(true);
+                if (boonCanvas.activeSelf)
+                {
+                    SceneGenerator();
+                }
+               
                 hasBeenPressed = true;
             }
         }

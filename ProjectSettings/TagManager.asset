@@ -16,6 +16,7 @@ TagManager:
   - GameManager
   - Teleport Exit
   - Teleport Enter
+  - Boon UI
   layers:
   - Default
   - TransparentFX
