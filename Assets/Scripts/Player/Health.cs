@@ -118,6 +118,11 @@ public class Health : MonoBehaviour
                 parryDuration = parryDuration * 1.15f;
                 hasAppliedBoon = true;
             }
+            else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Knockback" && !hasAppliedBoon)
+            {
+                knockbackPower = knockbackPower * 1.15f;
+                hasAppliedBoon = true;
+            }
         }
         //if (randomizeBoons.selectedBoon == null)
         //{

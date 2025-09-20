@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEditor.PackageManager;
+using UnityEngine.Windows.Speech;
 public class Player : MonoBehaviour
 {
     [Header("Movement")]
@@ -130,6 +131,12 @@ public class Player : MonoBehaviour
                 if (randomizeBoons.selectedBoon.GetBoonName() == "Dodge Cooldown" && !hasAppliedBoon)
                 {
                     dashCoolDown = dashCoolDown * 0.8f;
+                    hasAppliedBoon = true;
+
+                }
+                else if (randomizeBoons.selectedBoon.GetBoonName() == "Movement Speed" && !hasAppliedBoon)
+                {
+                    originalSpeed = originalSpeed * 1.1f;
                     hasAppliedBoon = true;
                 }
             }

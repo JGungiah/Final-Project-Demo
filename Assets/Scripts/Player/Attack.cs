@@ -5,6 +5,7 @@ public class Attack : MonoBehaviour
 {
     public Camera cam;
     [SerializeField] private float attackCooldown;
+    private float attackSpeed = 1f;
     [SerializeField] private float parryCooldown;
     private Player playerScript;
 
@@ -36,6 +37,8 @@ public class Attack : MonoBehaviour
 
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         randomizeBoons = gameManager.GetComponent<RandomizeBoons>();
+        anim.SetFloat("Attack Speed", attackSpeed);
+
     }
 
     void Update()
@@ -84,6 +87,17 @@ public class Attack : MonoBehaviour
             if (randomizeBoons.selectedBoon.GetBoonName() == "Damage Increase" && !hasAppliedBoon)
             {
                 playerDamage = playerDamage * 1.1f;
+                hasAppliedBoon = true;
+            }
+            else if (randomizeBoons.selectedBoon.GetBoonName() == "Attack Cooldown" && !hasAppliedBoon)
+            {
+                attackCooldown = attackCooldown * 0.9f;
+                hasAppliedBoon = true;
+            }
+            else if (randomizeBoons.selectedBoon.GetBoonName() == "Attack Speed" && !hasAppliedBoon)
+            {
+                attackSpeed = attackSpeed * 1.05f;
+                anim.SetFloat("Attack Speed", attackSpeed);
                 hasAppliedBoon = true;
             }
         }
