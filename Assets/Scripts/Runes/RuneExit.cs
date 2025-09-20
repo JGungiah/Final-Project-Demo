@@ -5,7 +5,7 @@ public class RuneExit : MonoBehaviour
 {
     public int exitIndex;
     private TeleportRune runeScript;
-
+    public GameObject VFX;
     void Start()
     {
         runeScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<TeleportRune>();
@@ -16,6 +16,18 @@ public class RuneExit : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StartCoroutine(runeScript.TeleportCharge(false, exitIndex));
+        }
+    }
+
+    private void Update()
+    {
+        if (runeScript.isTeleporting)
+        {
+            VFX.SetActive(false);
+        }
+        else
+        {
+            VFX.SetActive(true);
         }
     }
 }

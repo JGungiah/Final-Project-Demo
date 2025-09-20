@@ -15,7 +15,7 @@ public class TeleportRune : MonoBehaviour
     private GameObject player;
     private CharacterController controller;
 
-    private bool isTeleporting = false;
+    public bool isTeleporting = false;
 
     private SpriteRenderer spriteRenderer;
     private bool[] runeCooldowns;
