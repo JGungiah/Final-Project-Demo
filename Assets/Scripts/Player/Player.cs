@@ -130,13 +130,13 @@ public class Player : MonoBehaviour
             {
                 if (randomizeBoons.selectedBoon.GetBoonName() == "Dodge Cooldown" && !hasAppliedBoon)
                 {
-                    dashCoolDown = dashCoolDown * 0.8f;
+                    dashCoolDown = dashCoolDown * (1 - randomizeBoons.selectedBoon.GetValue());
                     hasAppliedBoon = true;
 
                 }
                 else if (randomizeBoons.selectedBoon.GetBoonName() == "Movement Speed" && !hasAppliedBoon)
                 {
-                    originalSpeed = originalSpeed * 1.1f;
+                    originalSpeed = originalSpeed * (1 + randomizeBoons.selectedBoon.GetValue());
                     hasAppliedBoon = true;
                 }
             }

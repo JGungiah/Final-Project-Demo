@@ -86,17 +86,17 @@ public class Attack : MonoBehaviour
         {
             if (randomizeBoons.selectedBoon.GetBoonName() == "Damage Increase" && !hasAppliedBoon)
             {
-                playerDamage = playerDamage * 1.1f;
+                playerDamage = playerDamage * (1 + randomizeBoons.selectedBoon.GetValue());
                 hasAppliedBoon = true;
             }
             else if (randomizeBoons.selectedBoon.GetBoonName() == "Attack Cooldown" && !hasAppliedBoon)
             {
-                attackCooldown = attackCooldown * 0.9f;
+                attackCooldown = attackCooldown * (1 - randomizeBoons.selectedBoon.GetValue());
                 hasAppliedBoon = true;
             }
             else if (randomizeBoons.selectedBoon.GetBoonName() == "Attack Speed" && !hasAppliedBoon)
             {
-                attackSpeed = attackSpeed * 1.05f;
+                attackSpeed = attackSpeed * (1 + randomizeBoons.selectedBoon.GetValue());
                 anim.SetFloat("Attack Speed", attackSpeed);
                 hasAppliedBoon = true;
             }

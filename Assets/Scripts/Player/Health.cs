@@ -109,18 +109,18 @@ public class Health : MonoBehaviour
         {
             if (randomizeBoons.selectedBoon.GetBoonName() == "Health Increase" && !hasAppliedBoon)
             {
-                maxHealth = maxHealth * 1.25f;
+                maxHealth = maxHealth * (1 + randomizeBoons.selectedBoon.GetValue());
                 currentHealth = maxHealth;
                 hasAppliedBoon = true;
             }
             else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Window" && !hasAppliedBoon)
             {
-                parryDuration = parryDuration * 1.15f;
+                parryDuration = parryDuration * (1 + randomizeBoons.selectedBoon.GetValue());
                 hasAppliedBoon = true;
             }
             else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Knockback" && !hasAppliedBoon)
             {
-                knockbackPower = knockbackPower * 1.15f;
+                knockbackPower = knockbackPower * (1 + randomizeBoons.selectedBoon.GetValue());
                 hasAppliedBoon = true;
             }
         }
