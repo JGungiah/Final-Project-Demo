@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class playerInteract : MonoBehaviour
 {
@@ -20,18 +21,28 @@ public class playerInteract : MonoBehaviour
     private Quaternion rotation;
 
     private GameObject boonCanvas;
+
+
+    private GameObject gameManager;
+    private RandomizeBoons boonScript;
+
+    private bool isChangingScene = false;
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         gate = GameObject.FindGameObjectWithTag("InteractDoor");
         boonCanvas = GameObject.FindWithTag("Boon UI");
-
-    
+        gameManager = GameObject.FindWithTag("GameManager");
+        boonScript = gameManager.GetComponent<RandomizeBoons>();    
     }
 
   
     void Update()
     {
+        if (boonScript.isActive && !isChangingScene)
+        {
+            StartCoroutine(SceneChangeDelay());
+        }
 
         if (gate == null)
         {
@@ -110,7 +121,6 @@ public class playerInteract : MonoBehaviour
     public void LobbyScene()
     {
         SceneManager.LoadScene("LobbyRoom");
-        print(1);
     }
     private void CheckScene()
     {
@@ -142,17 +152,24 @@ public class playerInteract : MonoBehaviour
                 {
                     Transform child = boonCanvas.transform.GetChild(i);
                     child.gameObject.SetActive(true);
+ 
                 }
                
-                {
-                    SceneGenerator();
-                }
                
                 hasBeenPressed = true;
             }
         }
 
        
+    }
+
+    private IEnumerator SceneChangeDelay()
+    {
+        isChangingScene = true;
+        yield return new WaitForSeconds(1);
+        SceneGenerator();
+        isChangingScene = false;
+        boonScript.isActive = false;
     }
 
     private void OnTriggerExit(Collider other)

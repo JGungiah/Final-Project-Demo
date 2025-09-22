@@ -26,6 +26,8 @@ public class RandomizeBoons : MonoBehaviour
     private Transform canvas;
 
     public UpgradeScriptableObjects selectedBoon;
+
+    public bool isActive = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,16 +36,16 @@ public class RandomizeBoons : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         canvas = player.transform.Find("Canvas");
 
-        if (boonCanvas.activeSelf)
-        {
-            canvas.gameObject.SetActive(false);
-        }
+   
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (boonCanvas.activeSelf)
+        {
+            canvas.gameObject.SetActive(false);
+        }
     }
 
 
@@ -83,17 +85,11 @@ public class RandomizeBoons : MonoBehaviour
          selectedBoon = chosenBoons[boonIndex];
          boonCanvas.SetActive(false);
          canvas.gameObject.SetActive(true);
+         isActive = true;
 
-        //StartCoroutine(clearBoons());
-        //selectedBoon = chosenBoons[boonIndex];
 
     }
    
 
-    //private IEnumerator clearBoons()
-    //{
-    //    yield return new WaitForSeconds(0.1f);
-    //    System.Array.Clear(chosenBoons, 0, chosenBoons.Length);
-       
-    //}
+
 }
