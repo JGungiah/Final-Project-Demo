@@ -25,6 +25,8 @@ public class playerInteract : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
         gate = GameObject.FindGameObjectWithTag("InteractDoor");
         boonCanvas = GameObject.FindWithTag("Boon UI");
+
+    
     }
 
   
@@ -135,8 +137,13 @@ public class playerInteract : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 interactImage.gameObject.SetActive(true);
-                boonCanvas.gameObject.SetActive(true);
-                if (boonCanvas.activeSelf)
+              
+                for (int i = 0; i < boonCanvas.transform.childCount; i++)
+                {
+                    Transform child = boonCanvas.transform.GetChild(i);
+                    child.gameObject.SetActive(true);
+                }
+               
                 {
                     SceneGenerator();
                 }
