@@ -27,6 +27,11 @@ public class playerInteract : MonoBehaviour
     private RandomizeBoons boonScript;
 
     private bool isChangingScene = false;
+
+    private Health healthScript;
+    private Player movementScript;
+    private Attack attackScript;
+
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -34,6 +39,10 @@ public class playerInteract : MonoBehaviour
         boonCanvas = GameObject.FindWithTag("Boon UI");
         gameManager = GameObject.FindWithTag("GameManager");
         boonScript = gameManager.GetComponent<RandomizeBoons>();    
+
+        healthScript = GetComponent<Health>();
+        movementScript = GetComponent<Player>();
+        attackScript = GetComponent<Attack>();
     }
 
   
@@ -82,6 +91,10 @@ public class playerInteract : MonoBehaviour
 
             enemySpawner.numberOfWavesCompleted = 0;
             numberOfRoomsCompleted = 0;
+
+            healthScript.ClearHealthBoons();
+            movementScript.ClearPlayerBoons();
+            attackScript.ClearAttackBoons();
         }
         else
         {

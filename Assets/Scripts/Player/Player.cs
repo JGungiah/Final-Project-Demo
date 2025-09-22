@@ -69,7 +69,8 @@ public class Player : MonoBehaviour
     private bool hasAppliedBoon = false;
 
 
-
+    private float originalDashCooldown;
+    private float preBoonSpeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -84,6 +85,9 @@ public class Player : MonoBehaviour
 
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         randomizeBoons = gameManager.GetComponent<RandomizeBoons>();
+
+        originalDashCooldown = dashCoolDown;
+        preBoonSpeed = originalSpeed;
     }
 
     // Update is called once per frame
@@ -126,6 +130,11 @@ public class Player : MonoBehaviour
         arrowUI.transform.localScale = new Vector3(1f / parentScale.x, 1f / parentScale.y, 1f / parentScale.z);
     }
 
+     public void ClearPlayerBoons()
+    {
+        dashCoolDown = originalDashCooldown;
+        originalSpeed = preBoonSpeed;
+    }
         void SelectedBoon()
         {
             if (randomizeBoons.selectedBoon != null)

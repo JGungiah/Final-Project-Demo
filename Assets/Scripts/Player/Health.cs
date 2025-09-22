@@ -53,6 +53,7 @@ public class Health : MonoBehaviour
 
     public float originalMaxHealth;
     public float originalParryDuration;
+    public float originalKnockBackPower;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -72,7 +73,7 @@ public class Health : MonoBehaviour
         
         originalMaxHealth = maxHealth;
         originalParryDuration = parryDuration;
-    
+        originalKnockBackPower = knockbackPower;
     }
 
     // Update is called once per frame
@@ -103,6 +104,14 @@ public class Health : MonoBehaviour
         
     }
 
+    public void ClearHealthBoons()
+    {
+        maxHealth = originalMaxHealth;
+        currentHealth = maxHealth;
+        parryDuration = originalParryDuration;
+        knockbackPower = originalKnockBackPower;
+    }
+
     void SelectedBoon()
     {
         if (randomizeBoons.selectedBoon != null)
@@ -124,11 +133,6 @@ public class Health : MonoBehaviour
                 hasAppliedBoon = true;
             }
         }
-        //if (randomizeBoons.selectedBoon == null)
-        //{
-        //    print(1);
-        //}
-       
     }
 
     

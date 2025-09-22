@@ -29,6 +29,8 @@ public class Attack : MonoBehaviour
     private RandomizeBoons randomizeBoons;
     private bool hasAppliedBoon = false;
 
+    private float originalAttackCooldown;
+    private float originalAttackSpeed;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -39,6 +41,9 @@ public class Attack : MonoBehaviour
         randomizeBoons = gameManager.GetComponent<RandomizeBoons>();
         anim.SetFloat("Attack Speed", attackSpeed);
 
+        originalDamage = playerDamage;
+        originalAttackCooldown = attackCooldown;
+        originalAttackSpeed = attackSpeed;
     }
 
     void Update()
@@ -78,6 +83,14 @@ public class Attack : MonoBehaviour
         attackCollider.gameObject.SetActive(colliderActive);
 
 
+    }
+
+    public void ClearAttackBoons()
+    {
+        playerDamage = originalDamage;
+        attackCooldown = originalAttackCooldown;
+        attackSpeed = originalAttackSpeed;
+        anim.SetFloat("Attack Speed", attackSpeed);
     }
 
     void SelectedBoon()
