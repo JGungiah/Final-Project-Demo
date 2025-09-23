@@ -28,6 +28,8 @@ public class RandomizeBoons : MonoBehaviour
     public UpgradeScriptableObjects selectedBoon;
 
     public bool isActive = false;
+
+    public List<UpgradeScriptableObjects> appliedBoons = new List<UpgradeScriptableObjects>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -89,7 +91,10 @@ public class RandomizeBoons : MonoBehaviour
 
 
     }
-   
 
+    public void ApplyBoon(UpgradeScriptableObjects chosenBoon)
+    {
+        appliedBoons.Add(chosenBoon);
+    }
 
 }

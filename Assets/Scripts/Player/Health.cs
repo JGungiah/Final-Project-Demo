@@ -60,6 +60,7 @@ public class Health : MonoBehaviour
 
     void Start()
     {
+        
         currentHealth = maxHealth;
         movementScript = GetComponent<Player>();
         anim = GetComponent<Animator>();
@@ -74,6 +75,8 @@ public class Health : MonoBehaviour
         originalMaxHealth = maxHealth;
         originalParryDuration = parryDuration;
         originalKnockBackPower = knockbackPower;
+
+        
     }
 
     // Update is called once per frame
@@ -114,27 +117,46 @@ public class Health : MonoBehaviour
 
     void SelectedBoon()
     {
-        if (randomizeBoons.selectedBoon != null)
+            if (randomizeBoons.selectedBoon != null)
         {
-            if (randomizeBoons.selectedBoon.GetBoonName() == "Health Increase" && !hasAppliedBoon)
+            foreach (UpgradeScriptableObjects boon in randomizeBoons.appliedBoons)
             {
-                maxHealth = maxHealth * (1 + randomizeBoons.selectedBoon.GetValue());
-                currentHealth = maxHealth;
-                hasAppliedBoon = true;
-            }
-            else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Window" && !hasAppliedBoon)
-            {
-                parryDuration = parryDuration * (1 + randomizeBoons.selectedBoon.GetValue());
-                hasAppliedBoon = true;
-            }
-            else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Knockback" && !hasAppliedBoon)
-            {
-                knockbackPower = knockbackPower * (1 + randomizeBoons.selectedBoon.GetValue());
-                hasAppliedBoon = true;
+                if (randomizeBoons.selectedBoon.GetBoonName() == "Health Increase" && !hasAppliedBoon)
+                {
+                    print(1);
+                    maxHealth = maxHealth * (1 + boon.GetValue());
+                    currentHealth = maxHealth;
+                    hasAppliedBoon = true;
+                    StartCoroutine(ResetBoolCheck());
+
+                }
+                else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Window" && !hasAppliedBoon)
+                {
+                    print(1);
+                    parryDuration = parryDuration * (1 + boon.GetValue());
+                    hasAppliedBoon = true;
+                    StartCoroutine(ResetBoolCheck());
+                }
+                else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Knockback" && !hasAppliedBoon)
+                {
+                    print(1);
+                    knockbackPower = knockbackPower * (1 + boon.GetValue());
+                    hasAppliedBoon = true;
+                    StartCoroutine(ResetBoolCheck());
+                }
             }
         }
-    }
+            
+            
+        }
+    
 
+    private IEnumerator ResetBoolCheck()
+    {
+        yield return null;
+        hasAppliedBoon = false;
+        randomizeBoons.selectedBoon = null;
+    }
     
    
 
