@@ -12,13 +12,11 @@ public class SceneLoadManager : MonoBehaviour
     private GameObject player;
     private CharacterController controller;
 
-    private void Start()
-    {
-        Loadanim.SetBool("FadeOut", true);
-    }
+    
     void OnEnable()
     {
         controller = FindAnyObjectByType<CharacterController>();
+        
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -55,7 +53,7 @@ public class SceneLoadManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(2f);
 
-        Loadanim.SetBool("FadeOut", true);
+       
         yield return null;
         Time.timeScale = 1f;
     }
