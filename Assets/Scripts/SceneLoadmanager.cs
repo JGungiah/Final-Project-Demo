@@ -5,11 +5,13 @@ using System.Collections;
 public class SceneLoadManager : MonoBehaviour
 {
     public GameObject loadingScreenUI;
+    public Animator Loadanim;
     public Transform spawnPoint;
     public float maxCheckTime = 3f;
 
     private GameObject player;
     private CharacterController controller;
+    
 
     void OnEnable()
     {
@@ -32,8 +34,8 @@ public class SceneLoadManager : MonoBehaviour
     IEnumerator HandleSceneLoad()
     {
         Time.timeScale = 0f;
-        loadingScreenUI.SetActive(true);
-
+        Loadanim.SetBool("FadeIn", true);
+       
         player = GameObject.FindWithTag("Player");
 
         yield return null;
@@ -51,7 +53,8 @@ public class SceneLoadManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(2f);
 
-        loadingScreenUI.SetActive(false);
+        Loadanim.SetBool("FadeOut", true);
+        yield return null;
         Time.timeScale = 1f;
     }
 }
