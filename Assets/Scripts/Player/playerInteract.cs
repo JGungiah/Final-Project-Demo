@@ -131,7 +131,7 @@ public class playerInteract : MonoBehaviour
   
         float angle = Vector3.SignedAngle(forward, direction, Vector3.up);
   
-        uiArrow.rectTransform.localEulerAngles = new Vector3(0, 0, -angle -90);
+        uiArrow.rectTransform.localEulerAngles = new Vector3(0, 0, -angle );
     }
     public void LobbyScene()
     {
