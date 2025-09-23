@@ -11,8 +11,11 @@ public class SceneLoadManager : MonoBehaviour
 
     private GameObject player;
     private CharacterController controller;
-    
 
+    private void Start()
+    {
+        Loadanim.SetBool("FadeOut", true);
+    }
     void OnEnable()
     {
         controller = FindAnyObjectByType<CharacterController>();
@@ -34,7 +37,6 @@ public class SceneLoadManager : MonoBehaviour
     IEnumerator HandleSceneLoad()
     {
         Time.timeScale = 0f;
-        Loadanim.SetBool("FadeIn", true);
        
         player = GameObject.FindWithTag("Player");
 

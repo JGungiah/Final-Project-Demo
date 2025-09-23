@@ -31,6 +31,8 @@ public class playerInteract : MonoBehaviour
     private Health healthScript;
     private Player movementScript;
     private Attack attackScript;
+    private GameObject loadanim;
+    
 
     void Awake()
     {
@@ -48,9 +50,10 @@ public class playerInteract : MonoBehaviour
   
     void Update()
     {
+        loadanim = GameObject.FindWithTag("Load");
         if (boonScript.isActive && !isChangingScene)
         {
-            StartCoroutine(SceneChangeDelay());
+          StartCoroutine(SceneChangeDelay());
         }
 
         if (gate == null)
@@ -177,9 +180,12 @@ public class playerInteract : MonoBehaviour
     }
 
     private IEnumerator SceneChangeDelay()
-    {
-        isChangingScene = true;
-        yield return new WaitForSeconds(1);
+    { 
+        
+        isChangingScene = true; 
+       loadanim.GetComponent<Animator>().SetBool("FadeIn", true);
+        yield return new WaitForSeconds(1.4f);
+       
         SceneGenerator();
         isChangingScene = false;
         boonScript.isActive = false;
