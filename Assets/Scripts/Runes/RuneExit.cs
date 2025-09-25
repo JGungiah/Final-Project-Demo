@@ -8,7 +8,12 @@ public class RuneExit : MonoBehaviour
     public GameObject VFX;
     void Start()
     {
-        runeScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<TeleportRune>();
+        runeScript = GameObject.FindGameObjectWithTag("RuneManager").GetComponent<TeleportRune>();
+
+        if (runeScript == null)
+        {
+            print(1);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,7 +26,7 @@ public class RuneExit : MonoBehaviour
 
     private void Update()
     {
-        if (runeScript.isTeleporting)
+        if (runeScript.runeCooldowns[exitIndex])
         {
             VFX.SetActive(false);
         }

@@ -9,7 +9,7 @@ public class RuneEnter : MonoBehaviour
 
     void Start()
     {
-        runeScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<TeleportRune>();
+        runeScript = GameObject.FindGameObjectWithTag("RuneManager").GetComponent<TeleportRune>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,7 +22,7 @@ public class RuneEnter : MonoBehaviour
     }
     private void Update()
     {
-        if (runeScript.isTeleporting)
+        if (runeScript.runeCooldowns[enterIndex])
         {
             VFX.SetActive(false);
         }

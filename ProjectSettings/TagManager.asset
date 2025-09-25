@@ -18,6 +18,7 @@ TagManager:
   - Teleport Enter
   - Boon UI
   - Load
+  - RuneManager
   layers:
   - Default
   - TransparentFX
