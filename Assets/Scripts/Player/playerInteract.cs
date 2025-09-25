@@ -21,7 +21,7 @@ public class playerInteract : MonoBehaviour
     private Quaternion rotation;
 
     private GameObject boonCanvas;
-
+    public GameObject canvas;
 
     private GameObject gameManager;
     private RandomizeBoons boonScript;
@@ -32,6 +32,10 @@ public class playerInteract : MonoBehaviour
     private Player movementScript;
     private Attack attackScript;
     private GameObject loadanim;
+    
+    private SceneLoadManager sceneLoadManager;
+
+    private GameObject runeManager;
 
     void Awake()
     {
@@ -39,11 +43,14 @@ public class playerInteract : MonoBehaviour
         gate = GameObject.FindGameObjectWithTag("InteractDoor");
         boonCanvas = GameObject.FindWithTag("Boon UI");
         gameManager = GameObject.FindWithTag("GameManager");
+        runeManager = GameObject.FindWithTag("RuneManager");
         boonScript = gameManager.GetComponent<RandomizeBoons>();    
-
+        sceneLoadManager = runeManager.GetComponent<SceneLoadManager>();
         healthScript = GetComponent<Health>();
         movementScript = GetComponent<Player>();
         attackScript = GetComponent<Attack>();
+
+    
     }
 
   
@@ -73,6 +80,16 @@ public class playerInteract : MonoBehaviour
                 uiArrow.gameObject.SetActive(false);
         }
 
+        if (!sceneLoadManager.isLoading)
+        {
+            canvas.SetActive(true);
+        }
+
+        else if (sceneLoadManager.isLoading)
+        {
+            canvas.SetActive(false);
+        }
+
 
 
         waveText.text = " Wave "  +  enemySpawner.numberOfWavesCompleted;
@@ -90,6 +107,7 @@ public class playerInteract : MonoBehaviour
             waveText.gameObject.SetActive(false);
             roomNumberText.gameObject.SetActive(false);
             roomNumber.gameObject.SetActive(false);
+            canvas.SetActive(false);
 
             enemySpawner.numberOfWavesCompleted = 0;
             numberOfRoomsCompleted = 0;
@@ -186,6 +204,7 @@ public class playerInteract : MonoBehaviour
         yield return new WaitForSeconds(2f);
        
         SceneGenerator();
+
         isChangingScene = false;
         boonScript.isActive = false;
     }

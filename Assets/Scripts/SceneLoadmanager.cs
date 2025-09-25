@@ -12,7 +12,7 @@ public class SceneLoadManager : MonoBehaviour
     private GameObject player;
     private CharacterController controller;
 
-    
+    public bool isLoading = false;
     void OnEnable()
     {
         controller = FindAnyObjectByType<CharacterController>();
@@ -30,7 +30,18 @@ public class SceneLoadManager : MonoBehaviour
         StartCoroutine(HandleSceneLoad());
     }
 
+    private void Update()
+    {
+        if (Loadanim.GetBool("FadeIn"))
+        {
+            isLoading = true;
+            StartCoroutine(ResetBool());
+
+        }
   
+  
+    }
+
 
     IEnumerator HandleSceneLoad()
     {
@@ -56,5 +67,12 @@ public class SceneLoadManager : MonoBehaviour
        
         yield return null;
         Time.timeScale = 1f;
+        
+    }
+
+    IEnumerator ResetBool()
+    {
+        yield return new WaitForSeconds(2);
+        isLoading = false;
     }
 }
