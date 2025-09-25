@@ -73,6 +73,12 @@ public class SceneLoadManager : MonoBehaviour
     IEnumerator ResetBool()
     {
         yield return new WaitForSeconds(2);
+        StartCoroutine(ReturnUI());
+    }
+
+    IEnumerator ReturnUI()
+    {
+        yield return new WaitForSeconds(0);
         isLoading = false;
     }
 }
