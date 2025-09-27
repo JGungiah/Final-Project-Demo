@@ -201,7 +201,7 @@ public class playerInteract : MonoBehaviour
         loadanim.GetComponent<Animator>().SetBool("FadeIn", true);
         isChangingScene = true; 
       
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
        
         SceneGenerator();
 

@@ -61,12 +61,12 @@ public class SceneLoadManager : MonoBehaviour
 
         controller.enabled = true;
 
-
-        yield return new WaitForSecondsRealtime(2f);
+        Time.timeScale = 1f;
+        yield return new WaitForSecondsRealtime(4f);
 
        
         yield return null;
-        Time.timeScale = 1f;
+       
         
     }
 
