@@ -19,7 +19,7 @@ public class TutorialText : MonoBehaviour
     void Update()
     {
        
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || !hasMoved)
+        if (Input.GetKey(KeyCode.W) & !hasMoved || Input.GetKey(KeyCode.A) & !hasMoved || Input.GetKey(KeyCode.S) & !hasMoved || Input.GetKey(KeyCode.D) & !hasMoved)
         {
             textAnim.SetTrigger("Dissapear");
             hasMoved = true;
