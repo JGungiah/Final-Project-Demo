@@ -83,7 +83,6 @@ public class Health : MonoBehaviour
     void Update()
     {
 
-        //SelectedBoon();
         healthBar.fillAmount = currentHealth / maxHealth;
 
         if (currentHealth <= 0 )
@@ -115,37 +114,7 @@ public class Health : MonoBehaviour
         knockbackPower = originalKnockBackPower;
     }
 
-    //void SelectedBoon()
-    //{
-    //        if (randomizeBoons.selectedBoon != null)
-    //    {
-
-    //            if (randomizeBoons.selectedBoon.GetBoonName() == "Health Increase" && !hasAppliedBoon)
-    //            {
-    //                print(1);
-    //                maxHealth = maxHealth * (1 + randomizeBoons.selectedBoon.GetValue());
-    //                currentHealth = maxHealth;
-    //                hasAppliedBoon = true;
-    //                StartCoroutine(ResetBoolCheck());
-
-    //            }
-    //            else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Window" && !hasAppliedBoon)
-    //            {
-    //                print(2);
-    //                parryDuration = parryDuration * (1 + randomizeBoons.selectedBoon.GetValue());
-    //                hasAppliedBoon = true;
-    //                StartCoroutine(ResetBoolCheck());
-    //            }
-    //            else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Knockback" && !hasAppliedBoon)
-    //            {
-    //                print(3);
-    //                knockbackPower = knockbackPower * (1 + randomizeBoons.selectedBoon.GetValue());
-    //                hasAppliedBoon = true;
-    //                StartCoroutine(ResetBoolCheck());
-    //            }
-    //        }
-    //    }
-
+    
 
     public void ApplyBoon(UpgradeScriptableObjects boon)
     {
