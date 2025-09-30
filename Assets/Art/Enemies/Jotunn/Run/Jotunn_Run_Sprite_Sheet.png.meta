@@ -1,0 +1,1022 @@
+fileFormatVersion: 2
+guid: 47911c3e06e21794a850d0555ca8388f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 2522
+        width: 391
+        height: 297
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c42c9dcb77100f4ba5a4dbe0862b264
+      internalID: -1649037106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 2517
+        width: 371
+        height: 333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3e5080f4b058649b4ff95c3f18c699
+      internalID: 1104173035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 2491
+        width: 343
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319c0f6aeab073244b4bc4b8316704c2
+      internalID: -551563538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 2553
+        width: 409
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b22a53b95565843ba2563420a7dcbf
+      internalID: 1804516048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 2533
+        width: 371
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b51ae7ecf755ab4ca0c06bc5683c386
+      internalID: 1959145648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 2560
+        width: 420
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50aec09cc484fa2439431a5640cde352
+      internalID: -1059771146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2031
+        width: 411
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2afdb6521ee74242b1a055e889a11bc
+      internalID: -320624949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 2037
+        width: 432
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304ee04ceea25d94490880ad423e77e4
+      internalID: -784082039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 2000
+        width: 426
+        height: 429
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4edd98fd040bf62439c08a618d97c621
+      internalID: -2043982541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 2006
+        width: 415
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6841f8ce08b342a439f1229c632e7bd7
+      internalID: -2124411497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 2016
+        width: 359
+        height: 387
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862008e0cb35d9843b1fe49edd6dcf3f
+      internalID: 524235446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 2006
+        width: 350
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6c1b6081ce8d549a8aec1dcd0b2afc
+      internalID: 1251255934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1536
+        width: 312
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ab923cfa925ff4bb513bdcfb40dcac
+      internalID: -2021051186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2408
+        y: 1526
+        width: 484
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc3dabc79cb6d247b7f9bb89899f267
+      internalID: 784556461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1515
+        width: 413
+        height: 438
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fff80c337566d743a84009128c77b6e
+      internalID: -2138138996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 1545
+        width: 453
+        height: 407
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53c9ae5c1dcf8a4b9aeef8d71ba596e
+      internalID: 270020379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1543
+        width: 359
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b30b79272935f489606424c64aed36
+      internalID: 1857177975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1549
+        width: 362
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629387511d6788d47aa9cae9212e3a1a
+      internalID: -1557219050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1001
+        width: 444
+        height: 497
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ef860348237dd48bd5e04ebbdf254c
+      internalID: 643495831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1011
+        width: 422
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa5d208ed8821944801ee3fd089d022
+      internalID: -776729228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1045
+        width: 356
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298b8398ac3f81841aba8f707d8f78db
+      internalID: -87036198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 1052
+        width: 348
+        height: 407
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b16a19e4a667542bfac34e8c045e23
+      internalID: 526138388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 1045
+        width: 451
+        height: 413
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ad85df3fc0d71409503c565e45bb9c
+      internalID: 1904955625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 1000
+        width: 466
+        height: 482
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd9af54c48550b4499b287044c1f97d
+      internalID: -1177109200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 548
+        width: 494
+        height: 419
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cdfa2e7c266294089b9fe815d19f9b
+      internalID: -331268165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 544
+        width: 410
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d65881a0555064d826c1df5c0a728b
+      internalID: 369727082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 560
+        width: 321
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c64ca41ad63c449a48c6322409bb93
+      internalID: 828026381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 560
+        width: 353
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23358211b9fe4104bac14bfb8824cdcd
+      internalID: 1717161206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 576
+        width: 435
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95845b558cc8e11428d7f3df44ee0617
+      internalID: -1854519893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 549
+        width: 464
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6046632e988d5544db7e5b4bad07ff6a
+      internalID: -893316044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 124
+        width: 416
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f83d913ce885024e82ea8f406dea91d
+      internalID: -528194537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 111
+        width: 470
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d2168d5d34a5d4fbfa66b7585b4315
+      internalID: 2083891500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 114
+        width: 468
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d6b10948caada47a6eadc100805969
+      internalID: -1048100601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 118
+        width: 454
+        height: 369
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3d46ab9416e5a409e380e70cd73e9e
+      internalID: 1042457774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 92
+        width: 432
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03796109016fbd4a8548a8c404fbb3a
+      internalID: 154430380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Run_Sprite_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 77
+        width: 413
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2c58e2ffd0a574e943c8f7e6bab270
+      internalID: -657782581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8aeac61222c68424aa8d992b93e2d05e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jotunn_0: -87036198
+      Jotunn_Run_Sprite_Sheet_0: -1649037106
+      Jotunn_Run_Sprite_Sheet_1: 1104173035
+      Jotunn_Run_Sprite_Sheet_10: 524235446
+      Jotunn_Run_Sprite_Sheet_11: 1251255934
+      Jotunn_Run_Sprite_Sheet_117: -1997481922
+      Jotunn_Run_Sprite_Sheet_12: -2138138996
+      Jotunn_Run_Sprite_Sheet_13: -2021051186
+      Jotunn_Run_Sprite_Sheet_14: 1857177975
+      Jotunn_Run_Sprite_Sheet_15: -1557219050
+      Jotunn_Run_Sprite_Sheet_16: 270020379
+      Jotunn_Run_Sprite_Sheet_17: 784556461
+      Jotunn_Run_Sprite_Sheet_18: 643495831
+      Jotunn_Run_Sprite_Sheet_19: -776729228
+      Jotunn_Run_Sprite_Sheet_2: -551563538
+      Jotunn_Run_Sprite_Sheet_20: -87036198
+      Jotunn_Run_Sprite_Sheet_21: 526138388
+      Jotunn_Run_Sprite_Sheet_22: 1904955625
+      Jotunn_Run_Sprite_Sheet_23: -1177109200
+      Jotunn_Run_Sprite_Sheet_24: -331268165
+      Jotunn_Run_Sprite_Sheet_25: 369727082
+      Jotunn_Run_Sprite_Sheet_26: 828026381
+      Jotunn_Run_Sprite_Sheet_27: 1717161206
+      Jotunn_Run_Sprite_Sheet_28: -1854519893
+      Jotunn_Run_Sprite_Sheet_29: -893316044
+      Jotunn_Run_Sprite_Sheet_3: 1804516048
+      Jotunn_Run_Sprite_Sheet_30: -528194537
+      Jotunn_Run_Sprite_Sheet_31: 2083891500
+      Jotunn_Run_Sprite_Sheet_32: -1048100601
+      Jotunn_Run_Sprite_Sheet_33: 1042457774
+      Jotunn_Run_Sprite_Sheet_34: 154430380
+      Jotunn_Run_Sprite_Sheet_35: -657782581
+      Jotunn_Run_Sprite_Sheet_36: 1582607799
+      Jotunn_Run_Sprite_Sheet_37: 1636114289
+      Jotunn_Run_Sprite_Sheet_38: 1119620677
+      Jotunn_Run_Sprite_Sheet_39: 1806265417
+      Jotunn_Run_Sprite_Sheet_4: 1959145648
+      Jotunn_Run_Sprite_Sheet_40: -524758559
+      Jotunn_Run_Sprite_Sheet_41: 1408494338
+      Jotunn_Run_Sprite_Sheet_42: -921177714
+      Jotunn_Run_Sprite_Sheet_44: 1906900913
+      Jotunn_Run_Sprite_Sheet_45: -1678859203
+      Jotunn_Run_Sprite_Sheet_46: -1692310037
+      Jotunn_Run_Sprite_Sheet_47: 1831626034
+      Jotunn_Run_Sprite_Sheet_48: -759031325
+      Jotunn_Run_Sprite_Sheet_49: 1357199321
+      Jotunn_Run_Sprite_Sheet_5: -1059771146
+      Jotunn_Run_Sprite_Sheet_50: -2070567096
+      Jotunn_Run_Sprite_Sheet_51: 1848963065
+      Jotunn_Run_Sprite_Sheet_52: -1336304214
+      Jotunn_Run_Sprite_Sheet_53: -1231620566
+      Jotunn_Run_Sprite_Sheet_54: -1152907914
+      Jotunn_Run_Sprite_Sheet_55: -785681656
+      Jotunn_Run_Sprite_Sheet_56: 1660457342
+      Jotunn_Run_Sprite_Sheet_57: 2089188235
+      Jotunn_Run_Sprite_Sheet_58: -1547487721
+      Jotunn_Run_Sprite_Sheet_59: 18506249
+      Jotunn_Run_Sprite_Sheet_6: -320624949
+      Jotunn_Run_Sprite_Sheet_60: 2009933024
+      Jotunn_Run_Sprite_Sheet_61: -1794579739
+      Jotunn_Run_Sprite_Sheet_62: -1599772643
+      Jotunn_Run_Sprite_Sheet_63: 753660118
+      Jotunn_Run_Sprite_Sheet_64: 262747017
+      Jotunn_Run_Sprite_Sheet_65: 1843534788
+      Jotunn_Run_Sprite_Sheet_66: -1745492150
+      Jotunn_Run_Sprite_Sheet_67: 140266931
+      Jotunn_Run_Sprite_Sheet_68: -33868589
+      Jotunn_Run_Sprite_Sheet_69: -599659652
+      Jotunn_Run_Sprite_Sheet_7: -784082039
+      Jotunn_Run_Sprite_Sheet_70: -1147894473
+      Jotunn_Run_Sprite_Sheet_71: -1776348513
+      Jotunn_Run_Sprite_Sheet_72: 101702090
+      Jotunn_Run_Sprite_Sheet_73: 2069231665
+      Jotunn_Run_Sprite_Sheet_74: -1000344485
+      Jotunn_Run_Sprite_Sheet_75: 430033721
+      Jotunn_Run_Sprite_Sheet_76: 1091809176
+      Jotunn_Run_Sprite_Sheet_77: 1438001361
+      Jotunn_Run_Sprite_Sheet_78: -119966309
+      Jotunn_Run_Sprite_Sheet_79: 265611095
+      Jotunn_Run_Sprite_Sheet_8: -2043982541
+      Jotunn_Run_Sprite_Sheet_80: 510192743
+      Jotunn_Run_Sprite_Sheet_81: -1820024031
+      Jotunn_Run_Sprite_Sheet_82: 1063657478
+      Jotunn_Run_Sprite_Sheet_83: 574697837
+      Jotunn_Run_Sprite_Sheet_84: -1484844139
+      Jotunn_Run_Sprite_Sheet_85: -55746711
+      Jotunn_Run_Sprite_Sheet_86: -1105778229
+      Jotunn_Run_Sprite_Sheet_87: -725491913
+      Jotunn_Run_Sprite_Sheet_88: 132511499
+      Jotunn_Run_Sprite_Sheet_89: 173394835
+      Jotunn_Run_Sprite_Sheet_9: -2124411497
+      Jotunn_Run_Sprite_Sheet_90: 931252433
+      Jotunn_Run_Sprite_Sheet_91: -2125712597
+      Jotunn_Run_Sprite_Sheet_92: 418119585
+      Jotunn_Run_Sprite_Sheet_93: -1472565008
+      Jotunn_Run_Sprite_Sheet_94: 337718915
+      Jotunn_Run_Sprite_Sheet_95: 1342038114
+      Jotunn_Run_Sprite_Sheet_96: -1606538371
+      Jotunn_Run_Sprite_Sheet_97: -396009068
+      Jotunn_Run_Sprite_Sheet_98: 861460354
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,820 @@
+fileFormatVersion: 2
+guid: 22a56f4b9e2536048a580901a0d51c24
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 2592
+        width: 556
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e1f89aefefe6544aa23ad98cca7902
+      internalID: 169009579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 2607
+        width: 537
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744556f6b734ce642b54433fd1d992bb
+      internalID: -979296713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 2624
+        width: 482
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5956373c358286646a0b76d6fa1d6b2b
+      internalID: 1640666467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 2562
+        width: 366
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81cc422d1b9047468e6fc5c898e33c3
+      internalID: -667631528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 2544
+        width: 399
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b40167b980c3b54d837597ec38b7991
+      internalID: -2090657485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2058
+        width: 501
+        height: 503
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901efe4e55326c34c9e145b7a9175698
+      internalID: 343005974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 2072
+        width: 467
+        height: 496
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b89a013de0bdf7438ce0de2fd6d4dd6
+      internalID: 642950358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 2047
+        width: 448
+        height: 349
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68464b881b436342a767fc76665390a
+      internalID: -1098976168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1918
+        y: 2046
+        width: 346
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927dbe46865802e4d89dbfd2e9163013
+      internalID: 134034266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 2024
+        width: 346
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e7c11bce4442845a52869689c60de9
+      internalID: 1913488188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1585
+        width: 525
+        height: 454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31db7aafca94d340883e9873c3fa257
+      internalID: 1620693766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1565
+        width: 461
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d7c6bc916709e488ea28bc80f916dd
+      internalID: 1147196572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 1575
+        width: 479
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df00c5e65cb98f4d9c6cf3ce742ba49
+      internalID: 401060316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 1551
+        width: 387
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0edc4e845ccc98343a6a54dce7a86863
+      internalID: -125585116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 1546
+        width: 395
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f7c1df6886fa44c96d8d30a5a683fa
+      internalID: -398751313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1067
+        width: 553
+        height: 487
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff07745a87f4c54784e697762467889
+      internalID: -2096568031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1068
+        width: 487
+        height: 445
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a74f9c5e6140b947b8862e4b6b2aba1
+      internalID: 1713746848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1062
+        width: 451
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61263b11f4f05ea4aa6f9df17e51e80e
+      internalID: 1012890284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 1077
+        width: 380
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60029d6179f39f54793681986ef4431a
+      internalID: -628454644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 1062
+        width: 371
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c1341f9afe3e748bd498a149c793ef
+      internalID: 1773110718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 586
+        width: 544
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0eb47a101ae714ea92aebfd6e53f9e
+      internalID: -1454700060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 568
+        width: 487
+        height: 492
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa2a78d2a2a47c4e9584a82b3a9fa70
+      internalID: 911774681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 588
+        width: 468
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313d1a0279fa1c246bf97af114340d9c
+      internalID: -1794551905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 591
+        width: 373
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adda983520593be4183eb3d93a8f78ac
+      internalID: -195248578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 2309
+        y: 594
+        width: 373
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7379f937b8f4648ad892dc9f097017
+      internalID: -954597620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 100
+        width: 449
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c0e2bf1c33ca1458b1e1d7fddc483a
+      internalID: -1302898146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 81
+        width: 462
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7371824839a636b4dbfd4285c8779462
+      internalID: -855508595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 89
+        width: 461
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd26ef0b5430d941bf7936047582a3a
+      internalID: -1814382130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 25
+        width: 397
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc006e4f14978640bbf68e3c63a1ac7
+      internalID: 931705365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jotunn_Attack_Sprite_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 18
+        width: 420
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6e1ea0231374445bc06185a55fd0e2
+      internalID: 1880181711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0aabd59f2bbee744cab85a83a12f3c4a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jotunn_Attack_Sprite_Sheet_0: 169009579
+      Jotunn_Attack_Sprite_Sheet_1: -979296713
+      Jotunn_Attack_Sprite_Sheet_10: 1620693766
+      Jotunn_Attack_Sprite_Sheet_11: 1147196572
+      Jotunn_Attack_Sprite_Sheet_12: 401060316
+      Jotunn_Attack_Sprite_Sheet_13: -125585116
+      Jotunn_Attack_Sprite_Sheet_14: -398751313
+      Jotunn_Attack_Sprite_Sheet_15: -2096568031
+      Jotunn_Attack_Sprite_Sheet_16: 1713746848
+      Jotunn_Attack_Sprite_Sheet_17: 1012890284
+      Jotunn_Attack_Sprite_Sheet_18: -628454644
+      Jotunn_Attack_Sprite_Sheet_19: 1773110718
+      Jotunn_Attack_Sprite_Sheet_2: 1640666467
+      Jotunn_Attack_Sprite_Sheet_20: -1454700060
+      Jotunn_Attack_Sprite_Sheet_21: 911774681
+      Jotunn_Attack_Sprite_Sheet_22: -1794551905
+      Jotunn_Attack_Sprite_Sheet_23: -195248578
+      Jotunn_Attack_Sprite_Sheet_24: -954597620
+      Jotunn_Attack_Sprite_Sheet_25: -1302898146
+      Jotunn_Attack_Sprite_Sheet_26: -855508595
+      Jotunn_Attack_Sprite_Sheet_27: -1814382130
+      Jotunn_Attack_Sprite_Sheet_28: 931705365
+      Jotunn_Attack_Sprite_Sheet_29: 1880181711
+      Jotunn_Attack_Sprite_Sheet_3: -667631528
+      Jotunn_Attack_Sprite_Sheet_4: -2090657485
+      Jotunn_Attack_Sprite_Sheet_5: 343005974
+      Jotunn_Attack_Sprite_Sheet_6: 642950358
+      Jotunn_Attack_Sprite_Sheet_7: -1098976168
+      Jotunn_Attack_Sprite_Sheet_8: 134034266
+      Jotunn_Attack_Sprite_Sheet_9: 1913488188
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
