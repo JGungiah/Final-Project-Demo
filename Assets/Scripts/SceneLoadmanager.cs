@@ -78,7 +78,7 @@ public class SceneLoadManager : MonoBehaviour
 
     IEnumerator ReturnUI()
     {
-        yield return new WaitForSeconds(0);
+        yield return null;
         isLoading = false;
     }
 }

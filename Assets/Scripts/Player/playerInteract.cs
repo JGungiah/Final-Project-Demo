@@ -112,9 +112,9 @@ public class playerInteract : MonoBehaviour
             enemySpawner.numberOfWavesCompleted = 0;
             numberOfRoomsCompleted = 0;
 
-            healthScript.ClearHealthBoons();
-            movementScript.ClearPlayerBoons();
-            attackScript.ClearAttackBoons();
+            //healthScript.ClearHealthBoons();
+            //movementScript.ClearPlayerBoons();
+            //attackScript.ClearAttackBoons();
         }
         else
         {
@@ -166,8 +166,10 @@ public class playerInteract : MonoBehaviour
         int RandIndex = Random.Range(0, sceneNames.Count);
         
         string scenetoload = sceneNames[RandIndex];
+
         
         SceneManager.LoadScene(scenetoload);
+        boonScript.RandomizeStatBoons();
         numberOfRoomsCompleted ++;
     }
 

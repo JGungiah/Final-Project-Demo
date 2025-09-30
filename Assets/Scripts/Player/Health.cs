@@ -83,7 +83,7 @@ public class Health : MonoBehaviour
     void Update()
     {
 
-        SelectedBoon();
+        //SelectedBoon();
         healthBar.fillAmount = currentHealth / maxHealth;
 
         if (currentHealth <= 0 )
@@ -115,48 +115,61 @@ public class Health : MonoBehaviour
         knockbackPower = originalKnockBackPower;
     }
 
-    void SelectedBoon()
+    //void SelectedBoon()
+    //{
+    //        if (randomizeBoons.selectedBoon != null)
+    //    {
+
+    //            if (randomizeBoons.selectedBoon.GetBoonName() == "Health Increase" && !hasAppliedBoon)
+    //            {
+    //                print(1);
+    //                maxHealth = maxHealth * (1 + randomizeBoons.selectedBoon.GetValue());
+    //                currentHealth = maxHealth;
+    //                hasAppliedBoon = true;
+    //                StartCoroutine(ResetBoolCheck());
+
+    //            }
+    //            else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Window" && !hasAppliedBoon)
+    //            {
+    //                print(2);
+    //                parryDuration = parryDuration * (1 + randomizeBoons.selectedBoon.GetValue());
+    //                hasAppliedBoon = true;
+    //                StartCoroutine(ResetBoolCheck());
+    //            }
+    //            else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Knockback" && !hasAppliedBoon)
+    //            {
+    //                print(3);
+    //                knockbackPower = knockbackPower * (1 + randomizeBoons.selectedBoon.GetValue());
+    //                hasAppliedBoon = true;
+    //                StartCoroutine(ResetBoolCheck());
+    //            }
+    //        }
+    //    }
+
+
+    public void ApplyBoon(UpgradeScriptableObjects boon)
     {
-            if (randomizeBoons.selectedBoon != null)
+        if (boon == null) return;
+
+        if (boon.GetBoonName() == "Health Increase")
         {
-            foreach (UpgradeScriptableObjects boon in randomizeBoons.appliedBoons)
-            {
-                if (randomizeBoons.selectedBoon.GetBoonName() == "Health Increase" && !hasAppliedBoon)
-                {
-                    print(1);
-                    maxHealth = maxHealth * (1 + boon.GetValue());
-                    currentHealth = maxHealth;
-                    hasAppliedBoon = true;
-                    StartCoroutine(ResetBoolCheck());
-
-                }
-                else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Window" && !hasAppliedBoon)
-                {
-                    print(1);
-                    parryDuration = parryDuration * (1 + boon.GetValue());
-                    hasAppliedBoon = true;
-                    StartCoroutine(ResetBoolCheck());
-                }
-                else if (randomizeBoons.selectedBoon.GetBoonName() == "Parry Knockback" && !hasAppliedBoon)
-                {
-                    print(1);
-                    knockbackPower = knockbackPower * (1 + boon.GetValue());
-                    hasAppliedBoon = true;
-                    StartCoroutine(ResetBoolCheck());
-                }
-            }
+            maxHealth = maxHealth * (1 + boon.GetValue());
+            currentHealth = maxHealth;
         }
-            
-            
+        else if (boon.GetBoonName() == "Parry Window")
+        {
+            parryDuration = parryDuration * (1 + boon.GetValue());
         }
-    
-
-    private IEnumerator ResetBoolCheck()
-    {
-        yield return null;
-        hasAppliedBoon = false;
-        randomizeBoons.selectedBoon = null;
+        else if (boon.GetBoonName() == "Parry Knockback")
+        {
+            knockbackPower = knockbackPower * (1 + boon.GetValue());
+        }
     }
+
+
+
+
+
     
    
 

@@ -29,7 +29,7 @@ public class RandomizeBoons : MonoBehaviour
 
     public bool isActive = false;
 
-    public List<UpgradeScriptableObjects> appliedBoons = new List<UpgradeScriptableObjects>();
+    public List<UpgradeScriptableObjects> appliedBoons;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -51,7 +51,7 @@ public class RandomizeBoons : MonoBehaviour
     }
 
 
-    void RandomizeStatBoons()
+    public void RandomizeStatBoons()
     {
         availableBoons = new List<UpgradeScriptableObjects> (StatusBoons);
 
@@ -63,7 +63,7 @@ public class RandomizeBoons : MonoBehaviour
         {
             randomBoon = Random.Range(0, availableBoons.Count);
             chosenBoons[i] = availableBoons[randomBoon];
-            availableBoons.RemoveAt(randomBoon);
+            //availableBoons.RemoveAt(randomBoon);
         }
 
 
@@ -84,17 +84,25 @@ public class RandomizeBoons : MonoBehaviour
 
     public void SelectBoon(int boonIndex)
     {
-         selectedBoon = chosenBoons[boonIndex];
-         boonCanvas.SetActive(false);
-         canvas.gameObject.SetActive(true);
-         isActive = true;
+        selectedBoon = chosenBoons[boonIndex];
+        appliedBoons.Add(selectedBoon);
 
+      
+        Health playerHealth = player.GetComponent<Health>();
+        if (playerHealth != null)
+        {
+           
+            playerHealth.ApplyBoon(selectedBoon);
+        }
 
+        boonCanvas.SetActive(false);
+        canvas.gameObject.SetActive(true);
+        isActive = true;
     }
 
-    public void ApplyBoon(UpgradeScriptableObjects chosenBoon)
-    {
-        appliedBoons.Add(chosenBoon);
-    }
+    //public void ApplyBoon()
+    //{
+    //    appliedBoons.Add(selectedBoon);
+    //}
 
 }
