@@ -16,3 +16,4 @@ MonoBehaviour:
   boonDescription: Increase attack speed by 5%
   boonImage: {fileID: 21300000, guid: b6c26db6149b62a4e8e508bde895a0c1, type: 3}
   value: 0.05
+  weighting: 1

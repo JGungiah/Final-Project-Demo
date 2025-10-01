@@ -6,7 +6,7 @@ using System.Collections;
 
 public class RandomizeBoons : MonoBehaviour
 {
-    public UpgradeScriptableObjects[] StatusBoons;
+    public UpgradeScriptableObjects[] Boons;
     public UpgradeScriptableObjects[] chosenBoons = new UpgradeScriptableObjects[3];
 
     private List<UpgradeScriptableObjects> availableBoons;
@@ -51,9 +51,33 @@ public class RandomizeBoons : MonoBehaviour
     }
 
 
+    private UpgradeScriptableObjects WeightedBoon( List<UpgradeScriptableObjects> boons)
+    {
+        float totalChance = 0;
+
+        foreach (var boon in boons)
+        {
+            totalChance += boon.GetWeighting();
+        }
+
+        float randomChance = Random.Range(0, totalChance);
+        float cummulativeChance = 0;
+
+        foreach (var boon in boons)
+        {
+            cummulativeChance += boon.GetWeighting();
+
+            if (randomChance <= cummulativeChance)
+            {
+                return boon;
+            }
+        }
+        return boons[0];
+    }
+
     public void RandomizeStatBoons()
     {
-        availableBoons = new List<UpgradeScriptableObjects> (StatusBoons);
+        availableBoons = new List<UpgradeScriptableObjects> (Boons);
 
         boonNames = new string[chosenBoons.Length];
         boonDescriptions = new string[chosenBoons.Length];
@@ -61,16 +85,20 @@ public class RandomizeBoons : MonoBehaviour
         for (int i = 0; i < chosenBoons.Length; i++)
       
         {
-            randomBoon = Random.Range(0, availableBoons.Count);
-            chosenBoons[i] = availableBoons[randomBoon];
+            //randomBoon = Random.Range(0, availableBoons.Count);
+            //chosenBoons[i] = availableBoons[randomBoon];
             //availableBoons.RemoveAt(randomBoon);
-            //print(chosenBoons[i]);
+
+            UpgradeScriptableObjects weightedBoons = WeightedBoon(availableBoons);
+            chosenBoons[i] = weightedBoons;
+            availableBoons.Remove(weightedBoons);  
+            
         }
 
 
     }
 
-    void AssignUIValues()
+    public void AssignUIValues()
     {
         for (int i = 0; i < chosenBoons.Length; i++)
         {
@@ -88,13 +116,16 @@ public class RandomizeBoons : MonoBehaviour
         selectedBoon = chosenBoons[boonIndex];
         appliedBoons.Add(selectedBoon);
 
-      
+        print(selectedBoon);
+
         Health playerHealth = player.GetComponent<Health>();
-        if (playerHealth != null)
-        {
-           
-            playerHealth.ApplyBoon(selectedBoon);
-        }
+        Player playerMovement = player.GetComponent<Player>();
+        Attack playerAttack = player.GetComponent<Attack>();
+
+        playerHealth.ApplyHealthBoon(selectedBoon);
+        playerMovement.ApplyMovementBoon(selectedBoon); 
+        playerAttack.ApplyAttackBoon(selectedBoon); 
+     
 
         boonCanvas.SetActive(false);
         canvas.gameObject.SetActive(true);

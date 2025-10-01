@@ -16,3 +16,4 @@ MonoBehaviour:
   boonDescription: Increase health by 25%
   boonImage: {fileID: 21300000, guid: f700e6023476e04488f28b4f6f260ee7, type: 3}
   value: 0.25
+  weighting: 1

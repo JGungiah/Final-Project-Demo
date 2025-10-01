@@ -65,8 +65,7 @@ public class Player : MonoBehaviour
     private Transform player;
 
     private GameObject gameManager;
-    private RandomizeBoons randomizeBoons;
-    private bool hasAppliedBoon = false;
+
 
 
     private float originalDashCooldown;
@@ -84,7 +83,6 @@ public class Player : MonoBehaviour
         originalDashDuration = dashDuration;
 
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        randomizeBoons = gameManager.GetComponent<RandomizeBoons>();
 
         originalDashCooldown = dashCoolDown;
         preBoonSpeed = originalSpeed;
@@ -93,7 +91,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SelectedBoon();
         ArrowUI();
 
         DashDistanceCheck();
@@ -135,23 +132,23 @@ public class Player : MonoBehaviour
         dashCoolDown = originalDashCooldown;
         originalSpeed = preBoonSpeed;
     }
-        void SelectedBoon()
-        {
-            if (randomizeBoons.selectedBoon != null)
-            {
-                if (randomizeBoons.selectedBoon.GetBoonName() == "Dodge Cooldown" && !hasAppliedBoon)
-                {
-                    dashCoolDown = dashCoolDown * (1 - randomizeBoons.selectedBoon.GetValue());
-                    hasAppliedBoon = true;
 
-                }
-                else if (randomizeBoons.selectedBoon.GetBoonName() == "Movement Speed" && !hasAppliedBoon)
-                {
-                    originalSpeed = originalSpeed * (1 + randomizeBoons.selectedBoon.GetValue());
-                    hasAppliedBoon = true;
-                }
-            }
+    public void ApplyMovementBoon(UpgradeScriptableObjects boon)
+    {
+        if (boon == null) return;
+
+        if (boon.GetBoonName() == "Dodge Cooldown")
+        {
+            dashCoolDown = dashCoolDown * (1 - boon.GetValue());
+           
         }
+        else if (boon.GetBoonName() == "Movement Speed")
+        {
+            originalSpeed = originalSpeed * (1 + boon.GetValue());
+        }
+       
+    }
+
 
 
         void ArrowUI()

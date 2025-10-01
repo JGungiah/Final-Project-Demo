@@ -16,3 +16,4 @@ MonoBehaviour:
   boonDescription: Decrease the dodge cooldown by 20%
   boonImage: {fileID: 21300000, guid: 40b50ae8c4f590745bf2301ac06c3dae, type: 3}
   value: 0.2
+  weighting: 1

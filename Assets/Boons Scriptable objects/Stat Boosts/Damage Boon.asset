@@ -16,3 +16,4 @@ MonoBehaviour:
   boonDescription: Increase damage by 10%
   boonImage: {fileID: 21300000, guid: eca0aa6f2aab3074bb6cfd65e1b86abc, type: 3}
   value: 0.1
+  weighting: 1

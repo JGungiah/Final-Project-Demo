@@ -26,8 +26,7 @@ public class Attack : MonoBehaviour
     [SerializeField] private Transform attackCollider;
 
     private GameObject gameManager;
-    private RandomizeBoons randomizeBoons;
-    private bool hasAppliedBoon = false;
+
 
     private float originalAttackCooldown;
     private float originalAttackSpeed;
@@ -38,7 +37,7 @@ public class Attack : MonoBehaviour
         playerScript = GetComponent<Player>();
 
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        randomizeBoons = gameManager.GetComponent<RandomizeBoons>();
+
         anim.SetFloat("Attack Speed", attackSpeed);
 
         originalDamage = playerDamage;
@@ -48,7 +47,6 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-        SelectedBoon();
         if (Input.GetMouseButtonDown(1))
         {
             CalculateParry();
@@ -93,28 +91,27 @@ public class Attack : MonoBehaviour
         anim.SetFloat("Attack Speed", attackSpeed);
     }
 
-    void SelectedBoon()
+    public void ApplyAttackBoon(UpgradeScriptableObjects boon)
     {
-        if (randomizeBoons.selectedBoon != null)
+        if (boon == null) return;
+
+        if (boon.GetBoonName() == "Damage Increase")
         {
-            if (randomizeBoons.selectedBoon.GetBoonName() == "Damage Increase" && !hasAppliedBoon)
-            {
-                playerDamage = playerDamage * (1 + randomizeBoons.selectedBoon.GetValue());
-                hasAppliedBoon = true;
-            }
-            else if (randomizeBoons.selectedBoon.GetBoonName() == "Attack Cooldown" && !hasAppliedBoon)
-            {
-                attackCooldown = attackCooldown * (1 - randomizeBoons.selectedBoon.GetValue());
-                hasAppliedBoon = true;
-            }
-            else if (randomizeBoons.selectedBoon.GetBoonName() == "Attack Speed" && !hasAppliedBoon)
-            {
-                attackSpeed = attackSpeed * (1 + randomizeBoons.selectedBoon.GetValue());
-                anim.SetFloat("Attack Speed", attackSpeed);
-                hasAppliedBoon = true;
-            }
+            playerDamage = playerDamage * (1 - boon.GetValue());
+
         }
+        else if (boon.GetBoonName() == "Attack Cooldown")
+        {
+            attackCooldown = attackCooldown * (1 - boon.GetValue());
+        }
+        else if (boon.GetBoonName() == "Attack Speed")
+        {
+            attackSpeed = attackSpeed * (1 + boon.GetValue());
+            anim.SetFloat("Attack Speed", attackSpeed);
+        }
+
     }
+  
     void CalculateParry()
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);

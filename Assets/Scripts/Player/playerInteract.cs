@@ -21,7 +21,7 @@ public class playerInteract : MonoBehaviour
     public Image uiArrow;
     private GameObject gate;
     private Quaternion rotation;
-    private int count;
+    private int count = 0;
 
     private GameObject boonCanvas;
     public GameObject canvas;
@@ -53,18 +53,19 @@ public class playerInteract : MonoBehaviour
         movementScript = GetComponent<Player>();
         attackScript = GetComponent<Attack>();
 
-    
+        NormRooms = true;
     }
 
   
     void Update()
     {
-        if (count == 4) 
+        if (count == 4)
         {
             NormRooms = false;
             YggdrasilRooms = true;
         }
         loadanim = GameObject.FindWithTag("Load");
+        
         if (boonScript.isActive && !isChangingScene && NormRooms)
         {
             StartCoroutine(SceneChangeDelay());
@@ -122,10 +123,10 @@ public class playerInteract : MonoBehaviour
 
             enemySpawner.numberOfWavesCompleted = 0;
             numberOfRoomsCompleted = 0;
-
-            //healthScript.ClearHealthBoons();
-            //movementScript.ClearPlayerBoons();
-            //attackScript.ClearAttackBoons();
+            count = 0;
+            healthScript.ClearHealthBoons();
+            movementScript.ClearPlayerBoons();
+            attackScript.ClearAttackBoons();
         }
         else
         {
@@ -174,25 +175,27 @@ public class playerInteract : MonoBehaviour
     public void SceneGenerator() 
     {
 
-        int RandIndex = Random.Range(0, YggdrasilScenes.Count);
+        int RandIndex = Random.Range(0, sceneNames.Count);
         
-        string scenetoload = YggdrasilScenes[RandIndex];
+        string scenetoload = sceneNames[RandIndex];
 
         
         SceneManager.LoadScene(scenetoload);
         boonScript.RandomizeStatBoons();
+        boonScript.AssignUIValues();
         numberOfRoomsCompleted ++;
     }
     public void SceneGeneratorYggdrasil()
     {
 
-        int RandIndex = Random.Range(0, sceneNames.Count);
+        int RandIndex = Random.Range(0, YggdrasilScenes.Count);
 
-        string scenetoload = sceneNames[RandIndex];
+        string scenetoload = YggdrasilScenes[RandIndex];
 
 
         SceneManager.LoadScene(scenetoload);
         boonScript.RandomizeStatBoons();
+        boonScript.AssignUIValues();
         numberOfRoomsCompleted++;
     }
 
@@ -223,6 +226,7 @@ public class playerInteract : MonoBehaviour
 
     private IEnumerator SceneChangeDelay()
     {
+
         loadanim.GetComponent<Animator>().SetBool("FadeIn", true);
         isChangingScene = true; 
       
@@ -232,6 +236,7 @@ public class playerInteract : MonoBehaviour
         count++;
         isChangingScene = false;
         boonScript.isActive = false;
+        print(count);
     }
     private IEnumerator SceneChangeDelayYggdrasil()
     {

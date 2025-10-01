@@ -48,8 +48,7 @@ public class Health : MonoBehaviour
     public AudioSource block;
 
     private GameObject gameManager;
-    private RandomizeBoons randomizeBoons;
-    private bool hasAppliedBoon = false;
+
 
     public float originalMaxHealth;
     public float originalParryDuration;
@@ -70,7 +69,7 @@ public class Health : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        randomizeBoons = gameManager.GetComponent<RandomizeBoons>();
+
         
         originalMaxHealth = maxHealth;
         originalParryDuration = parryDuration;
@@ -116,7 +115,7 @@ public class Health : MonoBehaviour
 
     
 
-    public void ApplyBoon(UpgradeScriptableObjects boon)
+    public void ApplyHealthBoon(UpgradeScriptableObjects boon)
     {
         if (boon == null) return;
 
