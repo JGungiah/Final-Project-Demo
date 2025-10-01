@@ -41,6 +41,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maps/Tutorial.unity
     guid: 40381f1772cfab649be1e8a7d42a2543
+  - enabled: 1
+    path: Assets/Scenes/Maps/Yggdrasil Levels/YGG LVL 1.unity
+    guid: 1afb4423f68788d4fb07da950ce51cd4
+  - enabled: 1
+    path: Assets/Scenes/Maps/Yggdrasil Levels/YGG LVL 2.unity
+    guid: 1187afc888a7fcc42a13fdf0c95ee646
+  - enabled: 1
+    path: Assets/Scenes/Maps/Yggdrasil Levels/YGG LVL 3.unity
+    guid: d001a23c01d8cd7418adcd9b9f95bc8b
+  - enabled: 1
+    path: Assets/Scenes/Maps/Yggdrasil Levels/YGG LVL 4.unity
+    guid: b02d3da93f53f4f419d6f17811a875f4
+  - enabled: 1
+    path: Assets/Scenes/Maps/Yggdrasil Levels/YGG LVL 5.unity
+    guid: c998266fa42968f41abfce5eaafb7114
+  - enabled: 1
+    path: Assets/Scenes/Maps/Yggdrasil Levels/YGG LVL 6.unity
+    guid: 971aaaf89be90c345a8722881601a9a2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

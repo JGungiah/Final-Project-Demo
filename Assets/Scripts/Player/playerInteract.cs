@@ -16,7 +16,7 @@ public class playerInteract : MonoBehaviour
     public TextMeshProUGUI roomNumberText;
     public TextMeshProUGUI roomNumber;
     private float numberOfRoomsCompleted = 0;
-    public bool NormRooms;
+    public bool NormRooms  = true;
     public bool YggdrasilRooms;
     public Image uiArrow;
     private GameObject gate;
