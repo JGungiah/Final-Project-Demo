@@ -64,7 +64,7 @@ public class RandomizeBoons : MonoBehaviour
             randomBoon = Random.Range(0, availableBoons.Count);
             chosenBoons[i] = availableBoons[randomBoon];
             //availableBoons.RemoveAt(randomBoon);
-            print(chosenBoons[i]);
+            //print(chosenBoons[i]);
         }
 
 
