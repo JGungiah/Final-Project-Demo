@@ -8,6 +8,7 @@ using System.Collections;
 public class playerInteract : MonoBehaviour
 {
     public List<string> sceneNames;
+    public List<string> YggdrasilScenes;
     public GameObject interactImage;
     private bool hasBeenPressed;
     private Scene currentScene;
@@ -15,10 +16,12 @@ public class playerInteract : MonoBehaviour
     public TextMeshProUGUI roomNumberText;
     public TextMeshProUGUI roomNumber;
     private float numberOfRoomsCompleted = 0;
-
+    public bool NormRooms;
+    public bool YggdrasilRooms;
     public Image uiArrow;
     private GameObject gate;
     private Quaternion rotation;
+    private int count;
 
     private GameObject boonCanvas;
     public GameObject canvas;
@@ -56,12 +59,20 @@ public class playerInteract : MonoBehaviour
   
     void Update()
     {
-        loadanim = GameObject.FindWithTag("Load");
-        if (boonScript.isActive && !isChangingScene)
+        if (count == 4) 
         {
-          StartCoroutine(SceneChangeDelay());
+            NormRooms = false;
+            YggdrasilRooms = true;
         }
-
+        loadanim = GameObject.FindWithTag("Load");
+        if (boonScript.isActive && !isChangingScene && NormRooms)
+        {
+            StartCoroutine(SceneChangeDelay());
+        }
+        else if (boonScript.isActive && !isChangingScene && YggdrasilRooms) 
+        {
+            StartCoroutine (SceneChangeDelayYggdrasil());
+        }
         if (gate == null)
         {
             gate = GameObject.FindGameObjectWithTag("InteractDoor");
@@ -163,14 +174,26 @@ public class playerInteract : MonoBehaviour
     public void SceneGenerator() 
     {
 
-        int RandIndex = Random.Range(0, sceneNames.Count);
+        int RandIndex = Random.Range(0, YggdrasilScenes.Count);
         
-        string scenetoload = sceneNames[RandIndex];
+        string scenetoload = YggdrasilScenes[RandIndex];
 
         
         SceneManager.LoadScene(scenetoload);
         boonScript.RandomizeStatBoons();
         numberOfRoomsCompleted ++;
+    }
+    public void SceneGeneratorYggdrasil()
+    {
+
+        int RandIndex = Random.Range(0, sceneNames.Count);
+
+        string scenetoload = sceneNames[RandIndex];
+
+
+        SceneManager.LoadScene(scenetoload);
+        boonScript.RandomizeStatBoons();
+        numberOfRoomsCompleted++;
     }
 
     private void OnTriggerStay(Collider other)
@@ -206,6 +229,18 @@ public class playerInteract : MonoBehaviour
         yield return new WaitForSeconds(4f);
        
         SceneGenerator();
+        count++;
+        isChangingScene = false;
+        boonScript.isActive = false;
+    }
+    private IEnumerator SceneChangeDelayYggdrasil()
+    {
+        loadanim.GetComponent<Animator>().SetBool("FadeIn", true);
+        isChangingScene = true;
+
+        yield return new WaitForSeconds(4f);
+
+        SceneGeneratorYggdrasil();
 
         isChangingScene = false;
         boonScript.isActive = false;
