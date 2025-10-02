@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
     public bool hasDashed;
 
     public bool isDashing = false;
-    private bool isMoving = false;
+    public bool isMoving = false;
 
     private Attack attackScript;
     [Header("Gravity")]

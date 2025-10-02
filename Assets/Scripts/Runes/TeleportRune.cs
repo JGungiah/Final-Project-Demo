@@ -8,7 +8,7 @@ public class TeleportRune : MonoBehaviour
     [SerializeField] private SpriteRenderer[] enterRenderers;
     [SerializeField] private SpriteRenderer[] exitRenderers;
     [SerializeField] private Color[] originalColors;
-    [SerializeField] private float teleportChargeTime ;
+    public float teleportChargeTime ;
     [SerializeField] private float teleportCooldown ;
 
     [SerializeField] float teleportTime;
@@ -16,10 +16,14 @@ public class TeleportRune : MonoBehaviour
     private CharacterController controller;
 
     public bool isTeleporting = false;
+    public bool canTeleport = false;
+    public float[] chargeTimers;
 
     private SpriteRenderer spriteRenderer;
     public bool[] runeCooldowns;
     private Player playerScript;
+
+    public Coroutine[] activeChargeCoroutines;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -28,19 +32,48 @@ public class TeleportRune : MonoBehaviour
 
         playerScript = player.GetComponent<Player>();
         runeCooldowns = new bool[runeEnter.Length];
+        chargeTimers = new float[runeEnter.Length];
+        activeChargeCoroutines = new Coroutine[runeEnter.Length];
     }
+
+
 
     public IEnumerator TeleportCharge(bool fromEnter, int index)
     {
-        if (isTeleporting || runeCooldowns[index]) yield break;
+        if (isTeleporting && !playerScript.isMoving|| runeCooldowns[index]) yield break;
 
-        yield return new WaitForSeconds(teleportChargeTime);
+        chargeTimers[index] = 0f;
+
+
+        while (chargeTimers[index]  < teleportChargeTime )
+        {
+            if (playerScript.isMoving) 
+            {
+                chargeTimers[index] = 0f;
+
+            }
+            else
+            {
+                if (canTeleport)
+                {
+                    chargeTimers[index] += Time.deltaTime;
+                }
+                
+               
+            }
+
+          
+            if (runeCooldowns[index]) yield break;
+
+            yield return null;
+        }
 
         if (isTeleporting || runeCooldowns[index]) yield break;
 
         isTeleporting = true;
+        playerScript.canMove = false;
+        playerScript.enabled = false;
 
- 
         controller.enabled = false;
 
         float elapsedTime = 0;
@@ -49,6 +82,7 @@ public class TeleportRune : MonoBehaviour
        
         if (fromEnter)
         {
+            
             while (elapsedTime < teleportTime)
             {
                 playerScript.arrowUI.SetActive(false);
@@ -81,9 +115,10 @@ public class TeleportRune : MonoBehaviour
                 yield return null;
             }
         }
-           
-       
 
+        playerScript.enabled = true;
+        chargeTimers[index] = 0f;
+        playerScript.canMove = true;
         controller.enabled = true;
         isTeleporting = false;
 
