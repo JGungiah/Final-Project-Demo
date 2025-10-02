@@ -76,19 +76,24 @@ public class AttackRanged : MonoBehaviour
             if (canAttack)
                 StartCoroutine(EnemyAttack()); 
             attackCooldown = originalAttackCooldown;
+            healthScript.isInvunrable = true;
         }
 
         else if (distance > attackRadius)
         {
 
             agent.destination = transform.position + distanceToPlayer.normalized * 1.5f;
+            healthScript.isInvunrable = true;
         }
 
-        else if (distance <= attackRadius && canAttack)
+        else if (distance <= attackRadius )
         {
-            attackCooldown = 2;
             healthScript.isInvunrable = false;
-            StartCoroutine(EnemyAttack());
+            if (canAttack)
+            {
+                attackCooldown = 2;
+                StartCoroutine(EnemyAttack());
+            }
         }
     }
 
