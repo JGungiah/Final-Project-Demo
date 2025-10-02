@@ -16,4 +16,4 @@ MonoBehaviour:
   boonDescription: Increase the amount of knockback from parrying by 15%
   boonImage: {fileID: 21300000, guid: 0c447f05b03ab5348babae40788f34e4, type: 3}
   value: 0.15
-  weighting: 1
+  weighting: 3

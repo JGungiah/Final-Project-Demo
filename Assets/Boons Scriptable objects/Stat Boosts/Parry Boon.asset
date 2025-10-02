@@ -16,4 +16,4 @@ MonoBehaviour:
   boonDescription: Increase the parry window time by 15%
   boonImage: {fileID: 21300000, guid: d1677177772522946a1bfe00dce758e8, type: 3}
   value: 0.15
-  weighting: 1
+  weighting: 3

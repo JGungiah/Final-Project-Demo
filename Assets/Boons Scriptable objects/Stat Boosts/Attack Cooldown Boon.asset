@@ -16,4 +16,4 @@ MonoBehaviour:
   boonDescription: Decrease attack cooldown by 10%
   boonImage: {fileID: 21300000, guid: 1288af6a7cd6a1040986426b32243301, type: 3}
   value: 0.1
-  weighting: 1
+  weighting: 3
