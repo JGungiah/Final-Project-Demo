@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    private Attack attackScript;
+    
     [SerializeField] private float maxHealth;
     public float currentHealth;
 
@@ -30,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
         originalColor = spriteRenderer.color;
         player = GameObject.FindWithTag("Player");
         playerAttack = player.GetComponent<Attack>();
+        agent = GetComponent<NavMeshAgent>();
         originalSpeed = agent.speed;
     }
 
@@ -41,6 +42,7 @@ public class EnemyHealth : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+       
     }
 
     private void OnTriggerStay(Collider other)
@@ -53,9 +55,9 @@ public class EnemyHealth : MonoBehaviour
             StartCoroutine(HitColour());
             StartCoroutine(DamageWindow());
 
-            if (attackScript.isSlowed && !slowed)
+            if (playerAttack.isSlowed && !slowed)
             {
-                agent.speed = agent.speed * (1 - attackScript.slowedSpeed); 
+                agent.speed = agent.speed * (1 - playerAttack.slowedSpeed); 
                 slowed = true;
                 StartCoroutine(ResetSpeed());
             }
