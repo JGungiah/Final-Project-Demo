@@ -188,12 +188,12 @@ public class Attack : MonoBehaviour
             animDir = GetDirection(angle);
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
-            anim.SetTrigger("attack");
+            //anim.SetTrigger("attack");
 
             playerScript.lastMovement.x = animDir.x;
             playerScript.lastMovement.z = animDir.y;
             isAttacking = true;
-            StartCoroutine(CanAttack());
+            //StartCoroutine(CanAttack());
         }
     }
 
@@ -214,12 +214,12 @@ public class Attack : MonoBehaviour
         return Vector2.zero;
     }
 
-    IEnumerator CanAttack()
-    {
+    //IEnumerator CanAttack()
+    //{
         
-        yield return new WaitForSeconds(attackCooldown);
-        isAttacking = false;
-    }
+    //    yield return new WaitForSeconds(attackCooldown);
+    //    isAttacking = false;
+    //}
 
 
 
