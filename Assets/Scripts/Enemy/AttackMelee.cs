@@ -132,7 +132,7 @@ public class AttackMelee : MonoBehaviour
 
    public IEnumerator KnockBack()
     {   
-        agent.enabled = false;
+        agent.isStopped = true;
 
         float elapsedTime = 0f;
         while (elapsedTime < knockbackDuration)
@@ -144,7 +144,7 @@ public class AttackMelee : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.1f);
-        agent.enabled = true;
+        agent.isStopped = false;
         isBeingKnockedBack = false;
     }
 
