@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float hitDuration;
     private Color originalColor;
     private SpriteRenderer spriteRenderer;
+    private NavMeshAgent agent;
+
+    private float originalSpeed;
+    private bool slowed = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
         originalColor = spriteRenderer.color;
         player = GameObject.FindWithTag("Player");
         playerAttack = player.GetComponent<Attack>();
+        originalSpeed = agent.speed;
     }
 
     // Update is called once per frame
@@ -47,8 +53,20 @@ public class EnemyHealth : MonoBehaviour
             StartCoroutine(HitColour());
             StartCoroutine(DamageWindow());
 
-
+            if (attackScript.isSlowed && !slowed)
+            {
+                agent.speed = agent.speed * (1 - attackScript.slowedSpeed); 
+                slowed = true;
+                StartCoroutine(ResetSpeed());
+            }
         }
+    }
+
+    IEnumerator ResetSpeed()
+    {
+        yield return new WaitForSeconds(5f);
+        agent.speed = originalSpeed;
+        slowed = false;
     }
 
     IEnumerator DamageWindow()
@@ -66,6 +84,7 @@ public class EnemyHealth : MonoBehaviour
         spriteRenderer.color = originalColor;
       
     }
+
 
     
 }

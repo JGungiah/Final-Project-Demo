@@ -124,9 +124,9 @@ public class playerInteract : MonoBehaviour
             enemySpawner.numberOfWavesCompleted = 0;
             numberOfRoomsCompleted = 0;
             count = 0;
-            healthScript.ClearHealthBoons();
-            movementScript.ClearPlayerBoons();
-            attackScript.ClearAttackBoons();
+            //healthScript.ClearHealthBoons();
+            //movementScript.ClearPlayerBoons();
+            //attackScript.ClearAttackBoons();
         }
         else
         {

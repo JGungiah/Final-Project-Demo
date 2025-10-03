@@ -30,6 +30,9 @@ public class Attack : MonoBehaviour
 
     private float originalAttackCooldown;
     private float originalAttackSpeed;
+
+    public bool isSlowed = false;
+    public float slowedSpeed;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -43,6 +46,7 @@ public class Attack : MonoBehaviour
         originalDamage = playerDamage;
         originalAttackCooldown = attackCooldown;
         originalAttackSpeed = attackSpeed;
+        
     }
 
     void Update()
@@ -89,6 +93,7 @@ public class Attack : MonoBehaviour
         attackCooldown = originalAttackCooldown;
         attackSpeed = originalAttackSpeed;
         anim.SetFloat("Attack Speed", attackSpeed);
+        isSlowed = false;
     }
 
     public void ApplyAttackBoon(UpgradeScriptableObjects boon)
@@ -109,7 +114,11 @@ public class Attack : MonoBehaviour
             attackSpeed = attackSpeed * (1 + boon.GetValue());
             anim.SetFloat("Attack Speed", attackSpeed);
         }
-
+        else if (boon.GetBoonName() == "Slowness")
+        {
+            isSlowed = true;
+            slowedSpeed = boon.GetValue();
+        }
     }
   
     void CalculateParry()

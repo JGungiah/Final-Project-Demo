@@ -10,8 +10,7 @@ public class RandomizeBoons : MonoBehaviour
     public UpgradeScriptableObjects[] chosenBoons = new UpgradeScriptableObjects[3];
 
     private List<UpgradeScriptableObjects> availableBoons;
-   
-    private int randomBoon;
+
 
     [SerializeField] private TextMeshProUGUI[] boonNamesUI = new TextMeshProUGUI[3];
     [SerializeField] private Image[] boonImages = new Image[3]; 
@@ -29,16 +28,21 @@ public class RandomizeBoons : MonoBehaviour
 
     public bool isActive = false;
 
-    public List<UpgradeScriptableObjects> appliedBoons;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+       
+        player = GameObject.FindGameObjectWithTag("Player");
+     
+        if (player != null)
+        {
+            canvas = player.transform.Find("Canvas");
+        }
+
         RandomizeStatBoons();
         AssignUIValues();
-        player = GameObject.FindGameObjectWithTag("Player");
-        canvas = player.transform.Find("Canvas");
 
-   
     }
 
     // Update is called once per frame
@@ -85,9 +89,6 @@ public class RandomizeBoons : MonoBehaviour
         for (int i = 0; i < chosenBoons.Length; i++)
       
         {
-            //randomBoon = Random.Range(0, availableBoons.Count);
-            //chosenBoons[i] = availableBoons[randomBoon];
-            //availableBoons.RemoveAt(randomBoon);
 
             UpgradeScriptableObjects weightedBoons = WeightedBoon(availableBoons);
             chosenBoons[i] = weightedBoons;
@@ -114,7 +115,6 @@ public class RandomizeBoons : MonoBehaviour
     public void SelectBoon(int boonIndex)
     {
         selectedBoon = chosenBoons[boonIndex];
-        appliedBoons.Add(selectedBoon);
 
         print(selectedBoon);
 
@@ -132,9 +132,6 @@ public class RandomizeBoons : MonoBehaviour
         isActive = true;
     }
 
-    //public void ApplyBoon()
-    //{
-    //    appliedBoons.Add(selectedBoon);
-    //}
+    
 
 }
