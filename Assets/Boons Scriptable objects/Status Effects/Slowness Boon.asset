@@ -16,4 +16,4 @@ MonoBehaviour:
   boonDescription: Attacks slow enemies by 30% for 5s
   boonImage: {fileID: 0}
   value: 0.3
-  weighting: 100
+  weighting: 1

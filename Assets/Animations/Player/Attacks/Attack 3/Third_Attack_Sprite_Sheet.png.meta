@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: 92bafd18381b50f43b8a36cb4c159772
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2305
+        width: 173
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4f8feaf61f6434c8e2c263c48ff859
+      internalID: 533577670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 2295
+        width: 137
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726469f7d0acdb847b73d9d99abb20eb
+      internalID: 505726364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 2272
+        width: 135
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a93c24d653d174f80dc557482ae97e
+      internalID: 1748448306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 2288
+        width: 184
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e5ae4cbd682cf47ba4eb744adb1e3a
+      internalID: 975897448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 2293
+        width: 125
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3395b9825f1e05e449530a4b83a3d018
+      internalID: 1772312878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1953
+        width: 143
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e756c210d8da0f459bfe26b2792fcf4
+      internalID: 1632867732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1974
+        width: 132
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b98596372d16e429f3b5fce8a267d7
+      internalID: -1044468667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1948
+        width: 153
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c06c21b0e3fee44b082389350f53b5
+      internalID: 287011793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 1957
+        width: 159
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3ce234d8eb4b64aad7258ade83d4d1
+      internalID: -2021334927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1983
+        width: 215
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f0af878b4c0c24f9a0de63bbccf3b0
+      internalID: 1263763356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1296
+        width: 316
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a41b03aeb096e41a19dbebaa897763
+      internalID: -37535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1628
+        width: 192
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc898af8c958a60409fa112201a7ad61
+      internalID: -1592264777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1660
+        width: 259
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e2383fb36a59a49baa796e1ce0645c
+      internalID: 1425482095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 1641
+        width: 203
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af02f67db4c95ee408967abdba3ff02a
+      internalID: -1021388726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1642
+        width: 178
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad4f3b6fc18ccf429cfa16b8ff2fd49
+      internalID: -1587585651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 1669
+        width: 303
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d793bf10cc5b51b469ac5654f944f762
+      internalID: 1818330948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1310
+        width: 265
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94582259cb0767544ab0d8f374f6af31
+      internalID: 217926234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1328
+        width: 219
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910eda82fb77ffb43a8ee5c5ebe9d307
+      internalID: -745548701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 1330
+        width: 205
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c570b8852dd82543b5cce13e98dc137
+      internalID: 72038900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 1349
+        width: 176
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e30609e336d494d8888967c7266837
+      internalID: -1471342986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 968
+        width: 288
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e347361a49e22340a658bfbc937871a
+      internalID: 1184741349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 983
+        width: 226
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1d1faeb60fb7b45ac5bdc0952ca976
+      internalID: 1218981596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 983
+        width: 218
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6fda3d1d024c74d8a389632c0a59a5
+      internalID: 625034307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1012
+        width: 226
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ceada3af4a691499b5400337886b67
+      internalID: 680628291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 1025
+        width: 165
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00504cb43b330354d8be2e3b25f93f3c
+      internalID: -1425288448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 638
+        width: 164
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 512507cab8a8f2b42811a85d2766a167
+      internalID: 1263534562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 644
+        width: 153
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf1ac7d5bf9f8241acf4eba95fb471f
+      internalID: -187279022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 667
+        width: 168
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fea8a5a08f2854e96c9662f446de5f
+      internalID: 1738026021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 670
+        width: 201
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd4d7027fd20a84f88bfa9e3e2861a4
+      internalID: 694748051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 701
+        width: 219
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067a59a153e997f469a8c0cd424b7d1c
+      internalID: -1919333953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 345
+        width: 335
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8482deb2b8f60ca439a0c6bd536bbb68
+      internalID: -1432098063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 352
+        width: 238
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7182104783a1554d943664206ea9e15
+      internalID: -2033205942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 375
+        width: 208
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef301749bc4775042a811762530a2a48
+      internalID: -1195052326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 342
+        width: 117
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f158603f2c07f478ef5cbe9398e397
+      internalID: 1912584790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 347
+        width: 270
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180e3c4591b823942a49d4fee89b4558
+      internalID: 1396798176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 54
+        width: 204
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6dfefbf796be44a93dc850e50c31aa
+      internalID: 91643362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 68
+        width: 214
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9355713804df9249aee0f696fa378a5
+      internalID: -1181213070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 74
+        width: 191
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b7ae01be6bb4249a1cd11a28368a0d
+      internalID: 1827611484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 60
+        width: 175
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f802d29c75359294fb9a3b901e5d9cf3
+      internalID: -1989799778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Sprite_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 51
+        width: 198
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea19b1b32ca620b44a1fc77645228579
+      internalID: -2104513420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 04b17db6c6d830545a1dd6d8f3e0d629
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Third_Attack_Sprite_Sheet_0: 533577670
+      Third_Attack_Sprite_Sheet_1: 505726364
+      Third_Attack_Sprite_Sheet_10: -1592264777
+      Third_Attack_Sprite_Sheet_11: 1425482095
+      Third_Attack_Sprite_Sheet_12: -1021388726
+      Third_Attack_Sprite_Sheet_13: -1587585651
+      Third_Attack_Sprite_Sheet_14: 1818330948
+      Third_Attack_Sprite_Sheet_15: -37535
+      Third_Attack_Sprite_Sheet_16: 217926234
+      Third_Attack_Sprite_Sheet_17: -745548701
+      Third_Attack_Sprite_Sheet_18: 72038900
+      Third_Attack_Sprite_Sheet_19: -1471342986
+      Third_Attack_Sprite_Sheet_2: 1748448306
+      Third_Attack_Sprite_Sheet_20: 1184741349
+      Third_Attack_Sprite_Sheet_21: 1218981596
+      Third_Attack_Sprite_Sheet_22: 625034307
+      Third_Attack_Sprite_Sheet_23: 680628291
+      Third_Attack_Sprite_Sheet_24: -1425288448
+      Third_Attack_Sprite_Sheet_25: 1263534562
+      Third_Attack_Sprite_Sheet_26: -187279022
+      Third_Attack_Sprite_Sheet_27: 1738026021
+      Third_Attack_Sprite_Sheet_28: 694748051
+      Third_Attack_Sprite_Sheet_29: -1919333953
+      Third_Attack_Sprite_Sheet_3: 975897448
+      Third_Attack_Sprite_Sheet_30: -1432098063
+      Third_Attack_Sprite_Sheet_31: -2033205942
+      Third_Attack_Sprite_Sheet_32: -1195052326
+      Third_Attack_Sprite_Sheet_33: 1912584790
+      Third_Attack_Sprite_Sheet_34: 1396798176
+      Third_Attack_Sprite_Sheet_35: 91643362
+      Third_Attack_Sprite_Sheet_36: -1181213070
+      Third_Attack_Sprite_Sheet_37: 1827611484
+      Third_Attack_Sprite_Sheet_38: -1989799778
+      Third_Attack_Sprite_Sheet_39: -2104513420
+      Third_Attack_Sprite_Sheet_4: 1772312878
+      Third_Attack_Sprite_Sheet_5: 1632867732
+      Third_Attack_Sprite_Sheet_6: -1044468667
+      Third_Attack_Sprite_Sheet_7: 287011793
+      Third_Attack_Sprite_Sheet_8: -2021334927
+      Third_Attack_Sprite_Sheet_9: 1263763356
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

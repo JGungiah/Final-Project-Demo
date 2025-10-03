@@ -17,4 +17,4 @@ MonoBehaviour:
     is critical
   boonImage: {fileID: 0}
   value: 0.5
-  weighting: 2
+  weighting: 1
