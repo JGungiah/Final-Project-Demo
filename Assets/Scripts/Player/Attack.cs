@@ -33,6 +33,13 @@ public class Attack : MonoBehaviour
 
     public bool isSlowed = false;
     public float slowedSpeed;
+
+    //public float cooldownTime;
+    private float nextFireTime = 0f;
+    private static int nOfClicks = 0;
+    private float lastClickedTime = 0f;
+    private float maxComboDelay = 0.5f;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -51,14 +58,21 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
+        ComboCheck();   
+
         if (Input.GetMouseButtonDown(1))
         {
             CalculateParry();
         }
 
-        if (Input.GetMouseButtonDown(0) && !isAttacking)
+        if (Input.GetMouseButtonDown(0) /*&& !isAttacking*/)
         {
-            HandleAttack();
+            if (Time.time > nextFireTime)
+            {
+                HandleAttack();
+                print(nOfClicks);
+            }
+            
         }
 
         if (isAttacking)
@@ -161,6 +175,8 @@ public class Attack : MonoBehaviour
     }
     void HandleAttack()
     {
+        lastClickedTime = Time.time;
+        nOfClicks++;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
@@ -188,12 +204,62 @@ public class Attack : MonoBehaviour
             animDir = GetDirection(angle);
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
-            //anim.SetTrigger("attack");
+
+
+            AttackCombo();
+          
+
+            
 
             playerScript.lastMovement.x = animDir.x;
             playerScript.lastMovement.z = animDir.y;
             isAttacking = true;
-            //StartCoroutine(CanAttack());
+            StartCoroutine(CanAttack());
+        }
+    }
+
+    void AttackCombo()
+    {
+        if (nOfClicks == 1)
+        {
+            anim.SetTrigger("Hit1");
+        }
+        else if (nOfClicks == 2)
+        {
+            anim.SetTrigger("Hit2");
+        }
+        else if (nOfClicks == 3)
+        {
+            anim.SetTrigger("Hit3");
+        }
+
+        nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);
+    }
+
+    void ComboCheck()
+    {
+        var state = anim.GetCurrentAnimatorStateInfo(0);
+
+        if (state.IsName("Hit1") && state.normalizedTime >= 1f)
+        {
+            isAttacking = false;
+            nOfClicks = 0;
+        }
+        else if (state.IsName("Hit2") && state.normalizedTime >= 1f)
+        {
+            isAttacking = false;
+            nOfClicks = 0;
+        }
+        else if (state.IsName("Hit3") && state.normalizedTime >= 1f)
+        {
+            isAttacking = false;
+            nOfClicks = 0;
+        }
+
+
+        if (Time.time - lastClickedTime > maxComboDelay)
+        {
+            nOfClicks = 0;
         }
     }
 
@@ -214,12 +280,12 @@ public class Attack : MonoBehaviour
         return Vector2.zero;
     }
 
-    //IEnumerator CanAttack()
-    //{
-        
-    //    yield return new WaitForSeconds(attackCooldown);
-    //    isAttacking = false;
-    //}
+    IEnumerator CanAttack()
+    {
+
+        yield return new WaitForSeconds(attackCooldown);
+        isAttacking = false;
+    }
 
 
 
