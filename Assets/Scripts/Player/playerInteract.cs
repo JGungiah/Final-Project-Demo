@@ -64,6 +64,7 @@ public class playerInteract : MonoBehaviour
             NormRooms = false;
             YggdrasilRooms = true;
         }
+      
         loadanim = GameObject.FindWithTag("Load");
         
         if (boonScript.isActive && !isChangingScene && NormRooms)
