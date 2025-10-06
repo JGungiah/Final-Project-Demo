@@ -15,9 +15,14 @@ public class SceneLoadManager : MonoBehaviour
     public bool isLoading = false;
     void OnEnable()
     {
-        controller = FindAnyObjectByType<CharacterController>();
+      
         
         SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void Start()
+    {
+        controller = player.GetComponent<CharacterController>();
     }
 
     void OnDisable()
