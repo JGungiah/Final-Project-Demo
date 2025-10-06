@@ -16,8 +16,8 @@ public class playerInteract : MonoBehaviour
     public TextMeshProUGUI roomNumberText;
     public TextMeshProUGUI roomNumber;
     private float numberOfRoomsCompleted = 0;
-    public bool NormRooms  = true;
-    public bool YggdrasilRooms;
+    public bool NormRooms  = false;
+    public bool YggdrasilRooms = false;
     public Image uiArrow;
     private GameObject gate;
     private Quaternion rotation;
