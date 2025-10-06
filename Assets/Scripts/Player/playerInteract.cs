@@ -9,6 +9,7 @@ public class playerInteract : MonoBehaviour
 {
     public List<string> sceneNames;
     public List<string> YggdrasilScenes;
+   
     public GameObject interactImage;
     private bool hasBeenPressed;
     private Scene currentScene;
@@ -16,6 +17,7 @@ public class playerInteract : MonoBehaviour
     public TextMeshProUGUI roomNumberText;
     public TextMeshProUGUI roomNumber;
     private float numberOfRoomsCompleted = 0;
+   
     public bool NormRooms  = false;
     public bool YggdrasilRooms = false;
     public Image uiArrow;
