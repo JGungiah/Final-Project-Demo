@@ -41,7 +41,7 @@ public class playerInteract : MonoBehaviour
     private SceneLoadManager sceneLoadManager;
 
     private GameObject runeManager;
-
+    private bool isTutorial;
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -58,7 +58,7 @@ public class playerInteract : MonoBehaviour
         NormRooms = true;
     }
 
-  
+
     void Update()
     {
         if (count == 4)
@@ -66,16 +66,16 @@ public class playerInteract : MonoBehaviour
             NormRooms = false;
             YggdrasilRooms = true;
         }
-      
+
         loadanim = GameObject.FindWithTag("Load");
-        
-        if (boonScript.isActive && !isChangingScene && NormRooms)
+
+        if (boonScript.isActive && !isChangingScene && NormRooms && !isTutorial)
         {
             StartCoroutine(SceneChangeDelay());
         }
-        else if (boonScript.isActive && !isChangingScene && YggdrasilRooms) 
+        else if (boonScript.isActive && !isChangingScene && YggdrasilRooms)
         {
-            StartCoroutine (SceneChangeDelayYggdrasil());
+            StartCoroutine(SceneChangeDelayYggdrasil());
         }
         if (gate == null)
         {
@@ -107,7 +107,7 @@ public class playerInteract : MonoBehaviour
 
 
 
-        waveText.text = " Wave "  +  enemySpawner.numberOfWavesCompleted;
+        waveText.text = " Wave " + enemySpawner.numberOfWavesCompleted;
         roomNumber.text = numberOfRoomsCompleted.ToString();
 
         if (hasBeenPressed)
@@ -116,7 +116,7 @@ public class playerInteract : MonoBehaviour
         }
 
         CheckScene();
-        
+
         if (currentScene.name == "LobbyRoom")
         {
             waveText.gameObject.SetActive(false);
@@ -139,7 +139,12 @@ public class playerInteract : MonoBehaviour
 
         }
 
-        
+
+
+        if (currentScene.name == "Tutorial")
+        {
+            isTutorial = true;
+        }
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
