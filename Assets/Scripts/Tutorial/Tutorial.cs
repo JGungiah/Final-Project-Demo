@@ -32,29 +32,31 @@ public class Tutorial : MonoBehaviour
     {
        WASD.enabled = true;
         count++;
-       yield return new WaitForSecondsRealtime(2f);
+       yield return new WaitForSecondsRealtime(5f);
        Combo.enabled = true;
        WASD.enabled = false;
         count++;    
-       yield return new WaitForSecondsRealtime(2f);
+       yield return new WaitForSecondsRealtime(5f);
        Combo.enabled = false;
        Dash.enabled = true;
         count++;
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(5f);
        Dash.enabled = false;
        Parry.enabled = true;
         count++;
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(5f);
         Teleport.enabled = true;
         Parry.enabled = false;
         count++;
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(5f);
         Enemy.enabled = true;
-        Parry.enabled= false;
+        Teleport.enabled= false;
         count++;
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(5f);
         Leave.enabled = true;
         Enemy.enabled = false;
+        yield return new WaitForSecondsRealtime(5f);
+        Leave.enabled = false;
         count++;
         yield return null;
 
