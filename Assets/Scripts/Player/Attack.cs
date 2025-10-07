@@ -38,8 +38,10 @@ public class Attack : MonoBehaviour
     private float nextFireTime = 0f;
     private static int nOfClicks = 0;
     private float lastClickedTime = 0f;
-    private float maxComboDelay = 0.5f;
+    private float maxComboDelay = 0.3f;
 
+
+  
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -69,6 +71,7 @@ public class Attack : MonoBehaviour
         {
             if (Time.time > nextFireTime)
             {
+               
                 HandleAttack();
                 print(nOfClicks);
             }
