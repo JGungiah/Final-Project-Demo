@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float hitStopDuration;
     private CameraFollow cameraScript;
 
-    [SerializeField] private bool isParrying = false;
+     public bool isParrying = false;
     [SerializeField] private float parryDuration;
     [SerializeField] private bool canParry = true;
     [SerializeField] private float parryCoolDown;

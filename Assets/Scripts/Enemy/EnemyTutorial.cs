@@ -21,6 +21,7 @@ public class EnemyTutorial : MonoBehaviour
     private float verticalMovement;
     private Animator anim;
     public Vector3 animDirection;
+    public bool isHit = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -73,12 +74,14 @@ public class EnemyTutorial : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         canTakeDamage = false;
         bloodVFX.SetActive(false);
+        
     }
 
     IEnumerator HitColour()
     {
 
         spriteRenderer.color = enemyHitColour;
+        isHit = true;
         yield return new WaitForSeconds(hitDuration);
         spriteRenderer.color = originalColor;
 

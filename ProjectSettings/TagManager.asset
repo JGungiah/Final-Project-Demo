@@ -19,6 +19,7 @@ TagManager:
   - Boon UI
   - Load
   - RuneManager
+  - TutorialDoor
   layers:
   - Default
   - TransparentFX

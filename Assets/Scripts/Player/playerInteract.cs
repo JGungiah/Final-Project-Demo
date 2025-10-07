@@ -209,7 +209,17 @@ public class playerInteract : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "InteractDoor")
+        if (other.tag == "TutorialDoor") 
+        {
+            if (Input.GetKey(KeyCode.E)) 
+            {
+                SceneManager.LoadScene("LobbyRoom");
+            }
+        }
+
+
+
+            if (other.tag == "InteractDoor")
         {
             interactImage.gameObject.SetActive(true);
 

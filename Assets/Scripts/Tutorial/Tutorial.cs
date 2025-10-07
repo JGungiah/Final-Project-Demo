@@ -2,20 +2,32 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
+
 public class Tutorial : MonoBehaviour
 {
 
     public TextMeshProUGUI tutorialText;
+    public TeleportRune teleportRune;
+    public EnemyTutorial enemyTutorial;
+    public GameObject enemy;
+   
    
     public int count;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
           StartCoroutine(DisplayTutorial());
+        
+    }
+    public void Update()
+    {
+        teleportRune = GetComponent<TeleportRune>();
+        enemyTutorial = enemy.GetComponent<EnemyTutorial>();
+      
     }
 
     // Update is called once per frame
-  
+
     IEnumerator DisplayTutorial() 
     {
         tutorialText.text = "Press WASD to move";
@@ -27,16 +39,19 @@ public class Tutorial : MonoBehaviour
         tutorialText.text = "Press Right Click to Parry";
         yield return StartCoroutine(WaitForParryInput());
 
+        tutorialText.text = "Use runes to teleport";
+        yield return StartCoroutine(WaitForteleportInput());
 
+        tutorialText.text = "Go attack the Enemy";
+        yield return StartCoroutine(WaitForEnemyInput());
+
+        tutorialText.text = "Follow the arrow and press E on the gate to leave";
     }
     IEnumerator WaitForMovementInput()
     {
        
-        yield return new WaitUntil(() =>
-            Input.GetKeyDown(KeyCode.W) ||
-            Input.GetKeyDown(KeyCode.A) ||
-            Input.GetKeyDown(KeyCode.S) ||
-            Input.GetKeyDown(KeyCode.D)
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) ||
+            Input.GetKeyDown(KeyCode.S) ||Input.GetKeyDown(KeyCode.D)
         );
     }
 
@@ -49,6 +64,17 @@ public class Tutorial : MonoBehaviour
     {
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse1));
+    }
+    IEnumerator WaitForteleportInput()
+    {
+
+        yield return new WaitUntil(() => teleportRune.isTeleporting is true);
+    }
+    IEnumerator WaitForEnemyInput()
+    {
+       
+        yield return new WaitUntil(() => enemyTutorial.isHit is true);
+       
     }
 }
 
