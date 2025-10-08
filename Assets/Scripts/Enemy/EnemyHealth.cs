@@ -73,7 +73,7 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator DamageWindow()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         canTakeDamage = false;
         bloodVFX.SetActive(false);
     }

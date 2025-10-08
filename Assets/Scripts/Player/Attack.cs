@@ -40,7 +40,7 @@ public class Attack : MonoBehaviour
     private float lastClickedTime = 0f;
     private float maxComboDelay = 0.3f;
 
-
+    public bool Hit3;
   
     void Start()
     {
@@ -73,7 +73,7 @@ public class Attack : MonoBehaviour
             {
                
                 HandleAttack();
-                print(nOfClicks);
+
             }
             
         }
@@ -226,14 +226,17 @@ public class Attack : MonoBehaviour
         if (nOfClicks == 1)
         {
             anim.SetTrigger("Hit1");
+            Hit3 = false;
         }
         else if (nOfClicks == 2)
         {
             anim.SetTrigger("Hit2");
+            Hit3 = false;
         }
         else if (nOfClicks == 3)
         {
             anim.SetTrigger("Hit3");
+            
         }
 
         nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);
@@ -243,21 +246,14 @@ public class Attack : MonoBehaviour
     {
         var state = anim.GetCurrentAnimatorStateInfo(0);
 
-        if (state.IsName("Hit1") && state.normalizedTime >= 1f)
+        if (isAttacking && !state.IsName("Hit1") && !state.IsName("Hit2") && !state.IsName("Hit3") && Time.time - lastClickedTime > maxComboDelay)
         {
             isAttacking = false;
             nOfClicks = 0;
+            Hit3 = false;
+            
         }
-        else if (state.IsName("Hit2") && state.normalizedTime >= 1f)
-        {
-            isAttacking = false;
-            nOfClicks = 0;
-        }
-        else if (state.IsName("Hit3") && state.normalizedTime >= 1f)
-        {
-            isAttacking = false;
-            nOfClicks = 0;
-        }
+
 
 
         if (Time.time - lastClickedTime > maxComboDelay)
@@ -287,7 +283,7 @@ public class Attack : MonoBehaviour
     {
 
         yield return new WaitForSeconds(attackCooldown);
-        isAttacking = false;
+        nextFireTime = Time.time + attackCooldown;
     }
 
 

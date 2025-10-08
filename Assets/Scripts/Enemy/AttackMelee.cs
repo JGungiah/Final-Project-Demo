@@ -92,8 +92,9 @@ public class AttackMelee : MonoBehaviour
    
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerAttack") && attackScript.isAttacking && !isBeingKnockedBack && canBeKnockedBack)
+        if (other.gameObject.CompareTag("PlayerAttack") && attackScript.isAttacking && !isBeingKnockedBack && canBeKnockedBack && attackScript.Hit3)
         {
+            print(1);
             isBeingKnockedBack = true;
             canBeKnockedBack = false;
             player.GetComponent <HitStop>().ApplyHitStop(hitSTopTime);
