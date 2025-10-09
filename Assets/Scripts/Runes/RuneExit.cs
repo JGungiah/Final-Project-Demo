@@ -8,6 +8,8 @@ public class RuneExit : MonoBehaviour
     private TeleportRune runeScript;
     public GameObject VFX;
     public Image chargeRing;
+
+    public AudioSource chargeSound;
     void Start()
     {
         runeScript = GameObject.FindGameObjectWithTag("RuneManager").GetComponent<TeleportRune>();
@@ -29,7 +31,11 @@ public class RuneExit : MonoBehaviour
 
 
             runeScript.activeChargeCoroutines[exitIndex] = StartCoroutine(runeScript.TeleportCharge(false, exitIndex));
+
+            chargeSound.Play();
         }
+
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -46,6 +52,8 @@ public class RuneExit : MonoBehaviour
             }
 
             runeScript.chargeTimers[exitIndex] = 0f;
+
+            chargeSound.Stop();
         }
     }
 
@@ -56,6 +64,7 @@ public class RuneExit : MonoBehaviour
         if (runeScript.runeCooldowns[exitIndex])
         {
             VFX.SetActive(false);
+            chargeSound.Stop();
         }
         else
         {

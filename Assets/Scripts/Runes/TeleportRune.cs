@@ -24,6 +24,8 @@ public class TeleportRune : MonoBehaviour
     private Player playerScript;
 
     public Coroutine[] activeChargeCoroutines;
+
+    public AudioSource teleportSound;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -70,6 +72,8 @@ public class TeleportRune : MonoBehaviour
 
         if (isTeleporting || runeCooldowns[index]) yield break;
 
+        teleportSound.time = 1f;
+        teleportSound.Play();
         isTeleporting = true;
         playerScript.canMove = false;
         playerScript.enabled = false;

@@ -14,6 +14,9 @@ public class Tutorial : MonoBehaviour
     private GameObject player;
     private Attack attackScript;
     public int count;
+
+    public AudioSource completeSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,24 +38,31 @@ public class Tutorial : MonoBehaviour
     {
         tutorialText.text = "Press WASD to move";
         yield return StartCoroutine(WaitForMovementInput());
+        completeSound.Play();
 
         tutorialText.text = "Dash with space";
         yield return StartCoroutine(WaitForDashInput());
+        completeSound.Play();
 
         tutorialText.text = "Press Right Click to Parry";
         yield return StartCoroutine(WaitForParryInput());
+        completeSound.Play();
 
         tutorialText.text = "Use runes to teleport";
         yield return StartCoroutine(WaitForteleportInput());
+        completeSound.Play();
 
         tutorialText.text = "Press left click to attack";
         yield return StartCoroutine(WaitForAttackInput());
+        completeSound.Play();
 
         tutorialText.text = "Press left click in quick succession to chain attacks";
         yield return StartCoroutine(WaitForComboInput());
+        completeSound.Play();
 
         tutorialText.text = "Go attack the Enemy";
         yield return StartCoroutine(WaitForEnemyInput());
+        completeSound.Play();
 
         tutorialText.text = "Follow the arrow and press E on the gate to leave";
     }

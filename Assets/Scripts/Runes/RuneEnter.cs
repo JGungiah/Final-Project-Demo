@@ -9,6 +9,9 @@ public class RuneEnter : MonoBehaviour
     private TeleportRune runeScript;
     public GameObject VFX;
     public Image chargeRing;
+
+    public AudioSource chargeSound;
+
     void Start()
     {
         runeScript = GameObject.FindGameObjectWithTag("RuneManager").GetComponent<TeleportRune>();
@@ -30,6 +33,8 @@ public class RuneEnter : MonoBehaviour
 
            
             runeScript.activeChargeCoroutines[enterIndex] = StartCoroutine(runeScript.TeleportCharge(true, enterIndex));
+
+            chargeSound.Play();
         }
     }
 
@@ -47,7 +52,11 @@ public class RuneEnter : MonoBehaviour
             }
 
             runeScript.chargeTimers[enterIndex] = 0f;
+
+            chargeSound.Stop();
         }
+
+        
     }
 
     private void Update()
@@ -56,6 +65,7 @@ public class RuneEnter : MonoBehaviour
         if (runeScript.runeCooldowns[enterIndex])
         {
             VFX.SetActive(false);
+            chargeSound.Stop();
         }
         else
         {

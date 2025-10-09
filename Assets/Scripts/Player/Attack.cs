@@ -41,7 +41,10 @@ public class Attack : MonoBehaviour
     private float maxComboDelay = 0.3f;
 
     public bool Hit3;
-  
+
+    public AudioSource hitnoise;
+    //public bool attackSound;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -100,6 +103,8 @@ public class Attack : MonoBehaviour
        
 
         attackCollider.gameObject.SetActive(colliderActive);
+
+  
 
 
     }
@@ -221,21 +226,34 @@ public class Attack : MonoBehaviour
         }
     }
 
+    void RandomPitchAttack()
+    {
+        hitnoise.pitch = Random.Range(1.2f, 1.3f);
+        hitnoise.Play();
+    }
+
     void AttackCombo()
     {
         if (nOfClicks == 1)
         {
+            RandomPitchAttack();
             anim.SetTrigger("Hit1");
+
+     
             Hit3 = false;
         }
         else if (nOfClicks == 2)
         {
+            RandomPitchAttack();
             anim.SetTrigger("Hit2");
+
             Hit3 = false;
         }
         else if (nOfClicks == 3)
         {
+            RandomPitchAttack();
             anim.SetTrigger("Hit3");
+
 
         }
 
