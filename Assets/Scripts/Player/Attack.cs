@@ -83,12 +83,12 @@ public class Attack : MonoBehaviour
 
         if (isAttacking)
         {
-            playerScript.speed = 0;
+            playerScript.originalSpeed = 0;
         }
 
         else if (!isAttacking)
         {
-            playerScript.speed = playerScript.originalSpeed;
+            playerScript.originalSpeed = 25;
         }
 
         if (isParrying)
