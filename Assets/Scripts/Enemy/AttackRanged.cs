@@ -28,6 +28,7 @@ public class AttackRanged : MonoBehaviour
 
     private bool playerInsideTrigger = false;
 
+    public bool attack;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -40,6 +41,7 @@ public class AttackRanged : MonoBehaviour
 
     void Update()
     {
+      
         agent.updateRotation = false;
 
         CalculateDistanceToPlayer();
@@ -47,6 +49,8 @@ public class AttackRanged : MonoBehaviour
         EnemyAnimations();
 
         rotationPivot.rotation = Quaternion.LookRotation(animDirection, Vector3.up);
+
+        
     }
 
     private void OnDrawGizmosSelected()
@@ -114,6 +118,7 @@ public class AttackRanged : MonoBehaviour
             anim.SetTrigger("Idle");
             anim.SetFloat("horizontalMovement", animDirection.x);
             anim.SetFloat("verticalMovement", animDirection.z);
+            //anim.SetTrigger("attack");
         }
         else if (agent.remainingDistance > agent.stoppingDistance)
         {
@@ -125,7 +130,7 @@ public class AttackRanged : MonoBehaviour
 
     void RangedAttack()
     {
-
+       
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
         Vector3 direction = (player.transform.position - firePoint.position).normalized;
@@ -142,9 +147,10 @@ public class AttackRanged : MonoBehaviour
         canAttack = false;
 
         agent.destination = transform.position;
-        anim.SetTrigger("attack");
 
+        
         RangedAttack();
+
         yield return new WaitForSeconds(attackDuration);
 
  
