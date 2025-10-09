@@ -86,7 +86,7 @@ public class EnemyMovement : MonoBehaviour
                     footStepsSound.PlayOneShot(footStepsSound.clip);
                     stepTimer = stepInterval;
                 }
-                else if (agent.enabled == false)
+                else if (agent.isStopped)
                 {
                     if (!footStepsSound.isPlaying)
                     {

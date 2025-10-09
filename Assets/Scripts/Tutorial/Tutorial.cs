@@ -10,13 +10,16 @@ public class Tutorial : MonoBehaviour
     public TeleportRune teleportRune;
     public EnemyTutorial enemyTutorial;
     public GameObject enemy;
-   
-   
+
+    private GameObject player;
+    private Attack attackScript;
     public int count;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
           StartCoroutine(DisplayTutorial());
+          player = GameObject.FindWithTag("Player");
+          attackScript = player.GetComponent<Attack>();
         
     }
     public void Update()
@@ -41,6 +44,12 @@ public class Tutorial : MonoBehaviour
 
         tutorialText.text = "Use runes to teleport";
         yield return StartCoroutine(WaitForteleportInput());
+
+        tutorialText.text = "Press left click to attack";
+        yield return StartCoroutine(WaitForAttackInput());
+
+        tutorialText.text = "Press left click in quick succession to chain attacks";
+        yield return StartCoroutine(WaitForComboInput());
 
         tutorialText.text = "Go attack the Enemy";
         yield return StartCoroutine(WaitForEnemyInput());
@@ -75,6 +84,18 @@ public class Tutorial : MonoBehaviour
        
         yield return new WaitUntil(() => enemyTutorial.isHit is true);
        
+    }
+
+    IEnumerator WaitForAttackInput()
+    {
+
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+    }
+
+    IEnumerator WaitForComboInput()
+    {
+
+        yield return new WaitUntil(() => attackScript.Hit3 is true);
     }
 }
 

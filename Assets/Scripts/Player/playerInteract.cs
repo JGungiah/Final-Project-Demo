@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class playerInteract : MonoBehaviour
 {
@@ -41,7 +42,16 @@ public class playerInteract : MonoBehaviour
     private SceneLoadManager sceneLoadManager;
 
     private GameObject runeManager;
-    private bool isTutorial;
+     private bool isTutorial;
+
+    public AudioSource midgardCombat;
+    public AudioSource midgardNoCombat;
+
+    private bool combatMusicPlaying = false;
+    private bool noCombatMusicPlaying = false;
+
+    public float fadeDuration = 2f; 
+    private Coroutine fadeCoroutine;
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -61,6 +71,22 @@ public class playerInteract : MonoBehaviour
 
     void Update()
     {
+        if (!sceneLoadManager.isLoading)
+        {
+            canvas.SetActive(true);
+        }
+
+        else if (sceneLoadManager.isLoading)
+        {
+            canvas.SetActive(false);
+        }
+
+        if (currentScene.name == "LobbyRoom")
+        {
+            midgardCombat.Stop();
+            midgardNoCombat.Stop();
+        }
+
         if (count == 4)
         {
             NormRooms = false;
@@ -95,15 +121,7 @@ public class playerInteract : MonoBehaviour
                 uiArrow.gameObject.SetActive(false);
         }
 
-        if (!sceneLoadManager.isLoading)
-        {
-            canvas.SetActive(true);
-        }
-
-        else if (sceneLoadManager.isLoading)
-        {
-            canvas.SetActive(false);
-        }
+      
 
 
 
@@ -127,9 +145,9 @@ public class playerInteract : MonoBehaviour
             enemySpawner.numberOfWavesCompleted = 0;
             numberOfRoomsCompleted = 0;
             count = 0;
-            //healthScript.ClearHealthBoons();
-            //movementScript.ClearPlayerBoons();
-            //attackScript.ClearAttackBoons();
+            healthScript.ClearHealthBoons();
+            movementScript.ClearPlayerBoons();
+            attackScript.ClearAttackBoons();
         }
         else
         {
@@ -145,10 +163,108 @@ public class playerInteract : MonoBehaviour
         {
             isTutorial = true;
         }
+        else
+        {
+            isTutorial = false;
+        }
+
+        if (currentScene.name != "Tutorial" && currentScene.name != "LobbyRoom")
+        {
+            if (!combatMusicPlaying)
+            {
+                if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+                fadeCoroutine = StartCoroutine(FadeToCombat());
+                combatMusicPlaying = true;
+            }
+           
+        }
+       
+        
+        else
+        {
+            combatMusicPlaying = false;
+        }
+
+        if (gate != null)
+        {
+            if (gate.activeSelf && currentScene.name != "LobbyRoom" && currentScene.name != "Tutorial")
+            {
+                if (!noCombatMusicPlaying)
+                {
+                    if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+                    fadeCoroutine = StartCoroutine(FadeToNoCombat());
+                    noCombatMusicPlaying = true;
+                }
+
+            }
+
+            else if (gate == null)
+            {
+                print("no gate");
+                noCombatMusicPlaying = false;
+            }
+        }
+
+      
     }
+
+    private IEnumerator FadeToNoCombat()
+    {
+        float elapsed = 0f;
+        float startCombatVol = midgardCombat.volume;
+        float startNoCombatVol = midgardNoCombat.volume;
+
+        midgardNoCombat.volume = 0f;
+        midgardNoCombat.Play();
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeDuration;
+
+            midgardCombat.volume = Mathf.Lerp(startCombatVol, 0f, t);
+            midgardNoCombat.volume = Mathf.Lerp(startNoCombatVol, 1f, t);
+
+            yield return null;
+        }
+
+        midgardCombat.volume = 0f;
+        midgardNoCombat.volume = 1f;
+
+        midgardCombat.Stop();
+    }
+
+    private IEnumerator FadeToCombat()
+    {
+        float elapsed = 0f;
+        float startCombatVol = midgardCombat.volume;
+        float startNoCombatVol = midgardNoCombat.volume;
+
+        midgardCombat.volume = 0f;
+        midgardCombat.Play();
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeDuration;
+
+            midgardCombat.volume = Mathf.Lerp(startCombatVol, 1f, t);
+            midgardNoCombat.volume = Mathf.Lerp(startNoCombatVol, 0f, t);
+
+            yield return null;
+        }
+
+        midgardCombat.volume = 1f;
+        midgardNoCombat.volume = 0f;
+
+        midgardNoCombat.Stop();
+    }
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         FindGateInScene();
+        combatMusicPlaying = false;
+        noCombatMusicPlaying = false;
     }
     void FindGateInScene()
     {
@@ -254,7 +370,7 @@ public class playerInteract : MonoBehaviour
         count++;
         isChangingScene = false;
         boonScript.isActive = false;
-        print(count);
+
     }
     private IEnumerator SceneChangeDelayYggdrasil()
     {

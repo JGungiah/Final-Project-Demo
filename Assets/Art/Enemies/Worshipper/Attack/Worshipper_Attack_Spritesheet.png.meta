@@ -1,0 +1,1234 @@
+fileFormatVersion: 2
+guid: fc33e843ce3c567449368e4bcea0ccf0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 4129
+        width: 373
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9730915583e7674ba6b39ab8ec0848e
+      internalID: 1507530835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 4123
+        width: 404
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b610e333702eb41a6e97f4378b971a
+      internalID: -528348766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 4127
+        width: 308
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4e8c6c5901e86489b8ec6f14991dab
+      internalID: 728268523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 4118
+        width: 263
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132bef49d8912d14cbd46c0f6d5e8f34
+      internalID: 1483793226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 4120
+        width: 457
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fdf7610e32f114eb8122ccfc11da08
+      internalID: -1958950356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 4138
+        width: 456
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41c7ff95d47e8242a76a01a62294def
+      internalID: -1068790573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 3563
+        width: 361
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb8b53a145fbc247a0e3e6c2c007993
+      internalID: -1070822453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 3584
+        width: 393
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da98f3b1e4fcc764a8925ed4dd4d86cf
+      internalID: 1936770624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3617
+        width: 298
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64fe2bf298e26343a0d39c69cbe6d79
+      internalID: 1504299259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 3609
+        width: 256
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8388f41657c9246a5d09fe13a3ac9c
+      internalID: 1463216918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 3602
+        width: 444
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed31f627946f8142a8a02aa5a424ae4
+      internalID: -1795727581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 3611
+        width: 442
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeaaf3460f03ab14e9b1a9777c6db50d
+      internalID: -1468011337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 3034
+        width: 256
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07161551de007544daab9046669b36fd
+      internalID: -1030429470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 3006
+        width: 366
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8546538ae4266e244a17bdd9642d4bd8
+      internalID: -28442092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 3024
+        width: 341
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb6da17ca76ed7468e968119dba57b7
+      internalID: -112412270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 3042
+        width: 285
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829fa86ac4119fe4098c22c0f595a452
+      internalID: -1706755637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 3069
+        width: 362
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3af24eae3ed3224ea067508c1e9db33
+      internalID: 2133673627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 3078
+        width: 364
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deec9ec4245d7d644b8e63bfc8e2dbb2
+      internalID: 1994602035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 2443
+        width: 263
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8bf59ff8f15fa7469e367fda9ca7d3f
+      internalID: 910014415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 2425
+        width: 375
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f482991baa2da04fa282f89bc080995
+      internalID: -286091913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 2447
+        width: 350
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949c16551c7aeec47a65e5cac4daebda
+      internalID: 594404907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 2494
+        width: 294
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbd34bdb68f3e44b9128e94878b6e28
+      internalID: 936646528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 2531
+        width: 372
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7a5364833ca844e83535c8c0b292e5
+      internalID: 251632423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 2548
+        width: 373
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34ae826c6afc694e99d23ef2f905c2b
+      internalID: 1523498407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1872
+        width: 397
+        height: 546
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd97e2631322744468eea7d57568d1c7
+      internalID: 1361166151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1897
+        width: 393
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a4d3bbe5f56b345a12a59f056f22ed
+      internalID: -1370426770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 1899
+        width: 397
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74e95cc729c60d4e8cf77a5f0618930
+      internalID: -1474822073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1908
+        width: 273
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50140b3e6c2099e43925617b42815168
+      internalID: -774899316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 1942
+        width: 521
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a07db527ba2cf42acc18cb1c2f2524
+      internalID: 458443862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 1948
+        width: 521
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9604ad39680434642aee1092ca2ab715
+      internalID: -1834891715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1333
+        width: 398
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf87d2c0074ee34eb8c5808745e1a36
+      internalID: 1190924795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1333
+        width: 392
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99141460f04c1604fa646008a0310e86
+      internalID: -777929725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 1322
+        width: 395
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9483aa5a799d37f4292ef86638bf380d
+      internalID: -1517034997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 1313
+        width: 272
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4122f6e1b5a06264eb7f0f9ad94a0ea7
+      internalID: 933538836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 1316
+        width: 521
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4134a73c5a8415740a6ab16aa0a9cb02
+      internalID: -1248537821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 1317
+        width: 521
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b5ce0cb2395b74d9cc8f7f191b01d5
+      internalID: -389100336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 661
+        width: 389
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbee8cc40f47ef24cb5d89c8df15ec39
+      internalID: 394619790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 673
+        width: 352
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e12c00a1e94d24680cc44dae3d40b0
+      internalID: -962677742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 703
+        width: 322
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc6939f087d39c4fb4ea4cb939b8afb
+      internalID: -905370438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 702
+        width: 263
+        height: 546
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f811bb357d470448b2e5aee4a8a27a
+      internalID: -191019063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 754
+        width: 273
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06ffed5fcb5fd34ca3717fb52f99203
+      internalID: 2029961936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 2125
+        y: 745
+        width: 274
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5613eb76b85bfb441a9076c763b3dfbb
+      internalID: -1240755183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 45
+        width: 386
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9900cc2ad8ab79f4a80aaab4869b499c
+      internalID: 834056530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 56
+        width: 398
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4501a3fcb1f2cb04a9bef3e9eb23350c
+      internalID: 1670357003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 66
+        width: 332
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09772eed1539b0f4189a9e9eb6c60b2b
+      internalID: -3884553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 47
+        width: 264
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7230fda83e24724fadd726ea6d43c53
+      internalID: 908812938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 30
+        width: 252
+        height: 652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdbce91bd6bf634da504c6550d59c75
+      internalID: -1866390539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper_Attack_Spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 28
+        width: 251
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e735ca59aa182fc479933c66d1a390bb
+      internalID: -1407144238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 97e70f847497a7b4abd5fb95e10f7b3c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Worshipper_Attack_Spritesheet_0: 1507530835
+      Worshipper_Attack_Spritesheet_1: -528348766
+      Worshipper_Attack_Spritesheet_10: -1795727581
+      Worshipper_Attack_Spritesheet_11: -1468011337
+      Worshipper_Attack_Spritesheet_12: -1030429470
+      Worshipper_Attack_Spritesheet_13: -28442092
+      Worshipper_Attack_Spritesheet_14: -112412270
+      Worshipper_Attack_Spritesheet_15: -1706755637
+      Worshipper_Attack_Spritesheet_16: 2133673627
+      Worshipper_Attack_Spritesheet_17: 1994602035
+      Worshipper_Attack_Spritesheet_18: 910014415
+      Worshipper_Attack_Spritesheet_19: -286091913
+      Worshipper_Attack_Spritesheet_2: 728268523
+      Worshipper_Attack_Spritesheet_20: 594404907
+      Worshipper_Attack_Spritesheet_21: 936646528
+      Worshipper_Attack_Spritesheet_22: 251632423
+      Worshipper_Attack_Spritesheet_23: 1523498407
+      Worshipper_Attack_Spritesheet_24: 1361166151
+      Worshipper_Attack_Spritesheet_25: -1370426770
+      Worshipper_Attack_Spritesheet_26: -1474822073
+      Worshipper_Attack_Spritesheet_27: -774899316
+      Worshipper_Attack_Spritesheet_28: 458443862
+      Worshipper_Attack_Spritesheet_29: -1834891715
+      Worshipper_Attack_Spritesheet_3: 1483793226
+      Worshipper_Attack_Spritesheet_30: 1190924795
+      Worshipper_Attack_Spritesheet_31: -777929725
+      Worshipper_Attack_Spritesheet_32: -1517034997
+      Worshipper_Attack_Spritesheet_33: 933538836
+      Worshipper_Attack_Spritesheet_34: -1248537821
+      Worshipper_Attack_Spritesheet_35: -389100336
+      Worshipper_Attack_Spritesheet_36: 394619790
+      Worshipper_Attack_Spritesheet_37: -962677742
+      Worshipper_Attack_Spritesheet_38: -905370438
+      Worshipper_Attack_Spritesheet_39: -191019063
+      Worshipper_Attack_Spritesheet_4: -1958950356
+      Worshipper_Attack_Spritesheet_40: 2029961936
+      Worshipper_Attack_Spritesheet_41: -1240755183
+      Worshipper_Attack_Spritesheet_42: 834056530
+      Worshipper_Attack_Spritesheet_43: 1670357003
+      Worshipper_Attack_Spritesheet_44: -3884553
+      Worshipper_Attack_Spritesheet_45: 908812938
+      Worshipper_Attack_Spritesheet_46: -1866390539
+      Worshipper_Attack_Spritesheet_47: -1407144238
+      Worshipper_Attack_Spritesheet_5: -1068790573
+      Worshipper_Attack_Spritesheet_6: -1070822453
+      Worshipper_Attack_Spritesheet_7: 1936770624
+      Worshipper_Attack_Spritesheet_8: 1504299259
+      Worshipper_Attack_Spritesheet_9: 1463216918
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

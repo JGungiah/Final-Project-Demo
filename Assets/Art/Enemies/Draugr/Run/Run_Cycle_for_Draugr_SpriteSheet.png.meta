@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: a3b43883c7f26aa45bbd03933fffda04
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 3237
+        width: 308
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd777a6ba78191418e61ea009fc2ce8
+      internalID: 777301265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 3244
+        width: 264
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1312ae09b3e0847953892f4d48f94f
+      internalID: 1742678441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 3228
+        width: 230
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd2c2d09611ac44191b72486b556a0e
+      internalID: 328373294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 3220
+        width: 260
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: addf6019846109446b55c7664cc745c1
+      internalID: 1926596624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 3266
+        width: 236
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e18e8a9fe6902479918322abd92048
+      internalID: -2130461656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2823
+        width: 221
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d790e3d01a1a252479939a6e9473978a
+      internalID: -1128808822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 2852
+        width: 224
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1d60db0079f324f8014b728a4d29fd
+      internalID: -1505763670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 2836
+        width: 381
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b35ff9a7696f34c925f831b3b87d96
+      internalID: 1158741540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 2837
+        width: 246
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7739a60d7f49a664296b71f113e6ddec
+      internalID: 1548067703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 2854
+        width: 204
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0278d31489c2f4d96b6f8d123a3acc
+      internalID: 1764278303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2348
+        width: 286
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93a325dd8bd52c4dbded1061a83ffff
+      internalID: 1781197348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 2447
+        width: 213
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf91baf94bce5c47bc1b49f0330b2db
+      internalID: -48801562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 2445
+        width: 242
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4895d62a3e22854aaa00ed17c644f21
+      internalID: 930272755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 2447
+        width: 327
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b48c50f6f966a2468ae82134264bafa
+      internalID: 1570551193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 2483
+        width: 195
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8c65ff513823a42be9c2cfd9167d55
+      internalID: -1423303017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1907
+        width: 235
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177ed07f271b17c4187728621c695e28
+      internalID: -1781821477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 1968
+        width: 204
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0351fbedfba910c4aa740dea6e22bd6c
+      internalID: 1214847475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 1944
+        width: 258
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b907849de6324004b8e14bb280e90cc7
+      internalID: 951430390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 1950
+        width: 227
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1c8f054e83d624fad2c1c4f186351a
+      internalID: 816347066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 1958
+        width: 257
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eea343c008d7074ea37b1f57b831db2
+      internalID: 1877325973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1390
+        width: 297
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894902c394cae414cb6452492e36c6ab
+      internalID: -304828305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 1430
+        width: 239
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f745ecc78e90044e8248adecfbd111f
+      internalID: -1567522228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1455
+        width: 287
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e493af10261db48b6f42f489cb4a1d
+      internalID: -1999995800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1466
+        width: 390
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89dc0398058163545bf2f7df344ac5a7
+      internalID: 489429402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1448
+        width: 342
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2649aa0f347a341bb0dfce9acc5a87
+      internalID: -64736712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 917
+        width: 262
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5254b5effcd34ea45b38199d380285fb
+      internalID: -1773230076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 942
+        width: 212
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110a786e01b7bdf40a5fd52a8460ab09
+      internalID: 1834595069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 942
+        width: 276
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a8ce24805704347a3603fbc24ff5be
+      internalID: -1382052224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 944
+        width: 352
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dac0a4dae433541bacbd5ecfe85bb9
+      internalID: 1143470104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 944
+        width: 338
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae614840318ae64983453d3bc2d4218
+      internalID: 401778134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 471
+        width: 322
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3479624f74f6e49b4aefab467ca70f
+      internalID: 2080476779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 510
+        width: 358
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db9a7ba7be2c7846aea3615d2eb75b4
+      internalID: -559431092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 523
+        width: 312
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cc57655ce5eba4cadd039e72fc3fb3
+      internalID: -850206184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 496
+        width: 224
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb3a98e3dc61694cab3c8c92eead3fd
+      internalID: 1188131067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 478
+        width: 182
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525918611db27e84e8cea3a05b99e592
+      internalID: 517683667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 70
+        width: 401
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f131a38770f53cc4f9f14b483238f4b9
+      internalID: 1174600572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 53
+        width: 387
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f47a2db0c01b644bcec31597b8acce
+      internalID: -534981182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 57
+        width: 293
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a0200bf67e18f4e9f06d4f3d44b246
+      internalID: 1635472160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 8
+        width: 228
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8536198bbd23d4fac129ced0bd6309
+      internalID: 145563670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Cycle_for_Draugr_SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 33
+        width: 416
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec501d7f4b7f0ac4f93b9c6145d8386a
+      internalID: -827616683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 995de40f3cafb534da35d8281eed4487
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Run_Cycle_for_Draugr_SpriteSheet_0: 777301265
+      Run_Cycle_for_Draugr_SpriteSheet_1: 1742678441
+      Run_Cycle_for_Draugr_SpriteSheet_10: 1781197348
+      Run_Cycle_for_Draugr_SpriteSheet_11: -48801562
+      Run_Cycle_for_Draugr_SpriteSheet_12: 930272755
+      Run_Cycle_for_Draugr_SpriteSheet_13: 1570551193
+      Run_Cycle_for_Draugr_SpriteSheet_14: -1423303017
+      Run_Cycle_for_Draugr_SpriteSheet_15: -1781821477
+      Run_Cycle_for_Draugr_SpriteSheet_16: 1214847475
+      Run_Cycle_for_Draugr_SpriteSheet_17: 951430390
+      Run_Cycle_for_Draugr_SpriteSheet_18: 816347066
+      Run_Cycle_for_Draugr_SpriteSheet_19: 1877325973
+      Run_Cycle_for_Draugr_SpriteSheet_2: 328373294
+      Run_Cycle_for_Draugr_SpriteSheet_20: -304828305
+      Run_Cycle_for_Draugr_SpriteSheet_21: -1567522228
+      Run_Cycle_for_Draugr_SpriteSheet_22: -1999995800
+      Run_Cycle_for_Draugr_SpriteSheet_23: 489429402
+      Run_Cycle_for_Draugr_SpriteSheet_24: -64736712
+      Run_Cycle_for_Draugr_SpriteSheet_25: -1773230076
+      Run_Cycle_for_Draugr_SpriteSheet_26: 1834595069
+      Run_Cycle_for_Draugr_SpriteSheet_27: -1382052224
+      Run_Cycle_for_Draugr_SpriteSheet_28: 1143470104
+      Run_Cycle_for_Draugr_SpriteSheet_29: 401778134
+      Run_Cycle_for_Draugr_SpriteSheet_3: 1926596624
+      Run_Cycle_for_Draugr_SpriteSheet_30: 2080476779
+      Run_Cycle_for_Draugr_SpriteSheet_31: -559431092
+      Run_Cycle_for_Draugr_SpriteSheet_32: -850206184
+      Run_Cycle_for_Draugr_SpriteSheet_33: 1188131067
+      Run_Cycle_for_Draugr_SpriteSheet_34: 517683667
+      Run_Cycle_for_Draugr_SpriteSheet_35: 1174600572
+      Run_Cycle_for_Draugr_SpriteSheet_36: -534981182
+      Run_Cycle_for_Draugr_SpriteSheet_37: 1635472160
+      Run_Cycle_for_Draugr_SpriteSheet_38: 145563670
+      Run_Cycle_for_Draugr_SpriteSheet_39: -827616683
+      Run_Cycle_for_Draugr_SpriteSheet_4: -2130461656
+      Run_Cycle_for_Draugr_SpriteSheet_5: -1128808822
+      Run_Cycle_for_Draugr_SpriteSheet_6: -1505763670
+      Run_Cycle_for_Draugr_SpriteSheet_7: 1158741540
+      Run_Cycle_for_Draugr_SpriteSheet_8: 1548067703
+      Run_Cycle_for_Draugr_SpriteSheet_9: 1764278303
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

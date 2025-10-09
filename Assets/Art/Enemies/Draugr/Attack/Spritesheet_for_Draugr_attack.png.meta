@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: 689ca18abe7f9924d9115482c6da7785
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_0
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3287
+        width: 218
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79d6c4c4fc1ebd459eb5e2be50ce62f
+      internalID: 831554349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_1
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 3274
+        width: 236
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c8ab21d00501047800ef279287449d
+      internalID: 580193418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_2
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 3317
+        width: 234
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde5a74ba66e68542a2e4c3b06a91e89
+      internalID: 1567382641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_3
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 3311
+        width: 245
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e1d1737df30d144a73d08648fe975f
+      internalID: 833671529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_4
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 3311
+        width: 302
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8412120ac143c3349b94efa6c46c6d1e
+      internalID: 1293489973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_5
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 2823
+        width: 307
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ff3364e382cde40afc618450049174
+      internalID: -103254345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_6
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 2819
+        width: 324
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7adc525e94e2a43b4572598cc3b009
+      internalID: -473097715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_7
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 2845
+        width: 334
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a68400db2e15424c8d4d5bb806822e4
+      internalID: 1165027861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_8
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 2858
+        width: 230
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65766d4d9b9ae61438371a557a64155d
+      internalID: -1094253569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_9
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 2856
+        width: 297
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f196a17d88252a43aaf3f812b5b52fe
+      internalID: -441474939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2357
+        width: 300
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3eb1a4855260541a2f2e8c7356d789
+      internalID: -1673064724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_11
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 2378
+        width: 350
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc2f132025dbbc489791fc760c5dcda
+      internalID: 701948135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_12
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 2383
+        width: 362
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe40842d6ad4b7f47b78113c50133c24
+      internalID: 1633698555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_13
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 2374
+        width: 291
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b69ae5a8ea1354faba300bde997314
+      internalID: 1178227831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_14
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 2363
+        width: 299
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f223b5dda378444879271fc944c998
+      internalID: 899749121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_15
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1962
+        width: 310
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089e713ab89e34640a42b8655b59c6ed
+      internalID: 652253142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_16
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1968
+        width: 353
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad7e8953356b3a419390427c12a54db
+      internalID: 714903870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_17
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1964
+        width: 262
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4cb9373c519d2469a312f8edbc5ffc
+      internalID: 759387846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_18
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1945
+        width: 258
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28675dad1427a6f4c8db42e1e86bd452
+      internalID: -507333383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_19
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1949
+        width: 336
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1950eb41d6bcfd941bcbac4955b121d5
+      internalID: 609599896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_20
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1541
+        width: 310
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b60e914151470438c61a6a7129af63
+      internalID: -1519447795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_21
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1539
+        width: 352
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f3d173650213d43b71259edef09b40
+      internalID: 516348282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_22
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1519
+        width: 261
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c722d63d283e234e818bc57b098fd10
+      internalID: -771781125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_23
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1508
+        width: 256
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef67143be6b4e3946a5c9c6fa39c640a
+      internalID: -1759826228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_24
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1511
+        width: 336
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae6915128cc10541afe094d3a85d32c
+      internalID: 514384767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_25
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1072
+        width: 304
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9358509a11398b54e986e806f2f1978a
+      internalID: 999876893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_26
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1086
+        width: 306
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374594e654c3a144ebd597eb7ccb081d
+      internalID: -1765851517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_27
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1077
+        width: 295
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d76d83d7274194e81353bb3f671eb2
+      internalID: 899505729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_28
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1040
+        width: 221
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf3d49d5ef0c9b44a0157161b2dff7c
+      internalID: 2065335678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_29
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 1045
+        width: 266
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72797a0789ef8104e88da87ffea5e81a
+      internalID: -937035878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 563
+        width: 293
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2265f87196a73fd41afdf50a6d3158dc
+      internalID: -334795960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_31
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 593
+        width: 278
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4c07ca6b726554a85dea230b9f46c5
+      internalID: 1976273827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_32
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 597
+        width: 265
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb34d2f85d20759458aeadfa6da9458d
+      internalID: -672897962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_33
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 595
+        width: 230
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdae94ff33049244287df8c09c646815
+      internalID: 1726896879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_34
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 554
+        width: 292
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933dbc1fe27233040a3d587812cbae82
+      internalID: 994109826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_35
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 112
+        width: 289
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da58ca9d37f30664d89c8578ba6443ee
+      internalID: -105389992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_36
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 96
+        width: 221
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52764339456057b459e8cfc78655d263
+      internalID: -2114142916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_37
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 118
+        width: 249
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c4c8cd5f05a8e489701b9c23387ebd
+      internalID: -1468855512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_38
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 107
+        width: 250
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6460b792fd37b2c45bfb1697f8c6c0b2
+      internalID: -1867740281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_for_Draugr_attack_39
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 73
+        width: 276
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1f7bc4026945a4fb03e5e16d05c429
+      internalID: 877996679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ed896823f0d69444f99946c9eb466281
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Spritesheet_for_Draugr_attack_0: 831554349
+      Spritesheet_for_Draugr_attack_1: 580193418
+      Spritesheet_for_Draugr_attack_10: -1673064724
+      Spritesheet_for_Draugr_attack_11: 701948135
+      Spritesheet_for_Draugr_attack_12: 1633698555
+      Spritesheet_for_Draugr_attack_13: 1178227831
+      Spritesheet_for_Draugr_attack_14: 899749121
+      Spritesheet_for_Draugr_attack_15: 652253142
+      Spritesheet_for_Draugr_attack_16: 714903870
+      Spritesheet_for_Draugr_attack_17: 759387846
+      Spritesheet_for_Draugr_attack_18: -507333383
+      Spritesheet_for_Draugr_attack_19: 609599896
+      Spritesheet_for_Draugr_attack_2: 1567382641
+      Spritesheet_for_Draugr_attack_20: -1519447795
+      Spritesheet_for_Draugr_attack_21: 516348282
+      Spritesheet_for_Draugr_attack_22: -771781125
+      Spritesheet_for_Draugr_attack_23: -1759826228
+      Spritesheet_for_Draugr_attack_24: 514384767
+      Spritesheet_for_Draugr_attack_25: 999876893
+      Spritesheet_for_Draugr_attack_26: -1765851517
+      Spritesheet_for_Draugr_attack_27: 899505729
+      Spritesheet_for_Draugr_attack_28: 2065335678
+      Spritesheet_for_Draugr_attack_29: -937035878
+      Spritesheet_for_Draugr_attack_3: 833671529
+      Spritesheet_for_Draugr_attack_30: -334795960
+      Spritesheet_for_Draugr_attack_31: 1976273827
+      Spritesheet_for_Draugr_attack_32: -672897962
+      Spritesheet_for_Draugr_attack_33: 1726896879
+      Spritesheet_for_Draugr_attack_34: 994109826
+      Spritesheet_for_Draugr_attack_35: -105389992
+      Spritesheet_for_Draugr_attack_36: -2114142916
+      Spritesheet_for_Draugr_attack_37: -1468855512
+      Spritesheet_for_Draugr_attack_38: -1867740281
+      Spritesheet_for_Draugr_attack_39: 877996679
+      Spritesheet_for_Draugr_attack_4: 1293489973
+      Spritesheet_for_Draugr_attack_5: -103254345
+      Spritesheet_for_Draugr_attack_6: -473097715
+      Spritesheet_for_Draugr_attack_7: 1165027861
+      Spritesheet_for_Draugr_attack_8: -1094253569
+      Spritesheet_for_Draugr_attack_9: -441474939
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

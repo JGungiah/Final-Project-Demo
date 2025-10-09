@@ -236,7 +236,7 @@ public class Attack : MonoBehaviour
         else if (nOfClicks == 3)
         {
             anim.SetTrigger("Hit3");
-            
+
         }
 
         nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);

@@ -92,9 +92,9 @@ public class AttackMelee : MonoBehaviour
    
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerAttack") && attackScript.isAttacking && !isBeingKnockedBack && canBeKnockedBack && attackScript.Hit3)
+        if (other.gameObject.CompareTag("PlayerAttack") /*&& attackScript.isAttacking*/ && !isBeingKnockedBack && canBeKnockedBack && attackScript.Hit3 )
         {
-            print(1);
+            
             isBeingKnockedBack = true;
             canBeKnockedBack = false;
             player.GetComponent <HitStop>().ApplyHitStop(hitSTopTime);
@@ -135,6 +135,7 @@ public class AttackMelee : MonoBehaviour
     {   
         agent.isStopped = true;
 
+
         float elapsedTime = 0f;
         while (elapsedTime < knockbackDuration)
         {
@@ -146,6 +147,7 @@ public class AttackMelee : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
         agent.isStopped = false;
+
         isBeingKnockedBack = false;
     }
 
