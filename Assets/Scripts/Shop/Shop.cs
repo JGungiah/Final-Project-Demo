@@ -56,4 +56,6 @@ public class Shop : MonoBehaviour
             print("You do not have enough currency");
         }
     }
+
+  
 }
