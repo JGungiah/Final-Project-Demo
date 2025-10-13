@@ -22,6 +22,9 @@ public class EnemyHealth : MonoBehaviour
 
     private float originalSpeed;
     private bool slowed = false;
+
+    public GameObject enemyDrop;
+    private bool hasDropped;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,17 +35,26 @@ public class EnemyHealth : MonoBehaviour
         playerAttack = player.GetComponent<Attack>();
         agent = GetComponent<NavMeshAgent>();
         originalSpeed = agent.speed;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentHealth <= 0)
+        if (currentHealth == 0)
         {
-            Destroy(this.gameObject);
+            if (!hasDropped)
+            {
+                EnemyDrop();
+                hasDropped = true;
+            }
+        
+            Destroy(this.gameObject, 0.5f);
         }
 
        
+
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -50,7 +62,9 @@ public class EnemyHealth : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
         {
             currentHealth -= playerAttack.playerDamage;
+            currentHealth = Mathf.Clamp(currentHealth, 0 , maxHealth);
             canTakeDamage = true;
+            
             bloodVFX.SetActive(true);
             StartCoroutine(HitColour());
             StartCoroutine(DamageWindow());
@@ -87,6 +101,9 @@ public class EnemyHealth : MonoBehaviour
       
     }
 
-
+    public void EnemyDrop()
+    {
+        Instantiate(enemyDrop, this.transform.position, Quaternion.identity);   
+    }
     
 }
