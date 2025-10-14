@@ -88,7 +88,7 @@ public class Attack : MonoBehaviour
 
         else if (!isAttacking)
         {
-            playerScript.originalSpeed = 25;
+            StartCoroutine(returnSpeed());
         }
 
         if (isParrying)
@@ -237,6 +237,7 @@ public class Attack : MonoBehaviour
         if (nOfClicks == 1)
         {
             RandomPitchAttack();
+            playerScript.originalSpeed = 0;
             anim.SetTrigger("Hit1");
 
      
@@ -245,6 +246,7 @@ public class Attack : MonoBehaviour
         else if (nOfClicks == 2)
         {
             RandomPitchAttack();
+            playerScript.originalSpeed = 0;
             anim.SetTrigger("Hit2");
 
             Hit3 = false;
@@ -252,14 +254,21 @@ public class Attack : MonoBehaviour
         else if (nOfClicks == 3)
         {
             RandomPitchAttack();
+            playerScript.originalSpeed = 0;
             anim.SetTrigger("Hit3");
 
 
         }
-
+        
+       
         nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);
     }
 
+    private IEnumerator returnSpeed ()
+    {
+        yield return new WaitForSeconds(0.5f);
+        playerScript.originalSpeed = 25f;
+    }
     void ComboCheck()
     {
         var state = anim.GetCurrentAnimatorStateInfo(0);
