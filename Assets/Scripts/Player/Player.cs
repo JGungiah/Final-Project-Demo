@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting;
-using UnityEditor.PackageManager;
-using UnityEngine.Windows.Speech;
+
 public class Player : MonoBehaviour
 {
     [Header("Movement")]
