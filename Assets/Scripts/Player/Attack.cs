@@ -34,11 +34,12 @@ public class Attack : MonoBehaviour
     public bool isSlowed = false;
     public float slowedSpeed;
 
-    //public float cooldownTime;
+    public float cooldownTime;
     private float nextFireTime = 0f;
+
     private static int nOfClicks = 0;
-    private float lastClickedTime = 0f;
-    private float maxComboDelay = 0.3f;
+
+   [SerializeField] private float maxComboDelay;
 
     public bool Hit3;
 
@@ -63,7 +64,7 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-        ComboCheck();   
+
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -183,7 +184,7 @@ public class Attack : MonoBehaviour
     }
     void HandleAttack()
     {
-        lastClickedTime = Time.time;
+   
         nOfClicks++;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
@@ -234,59 +235,27 @@ public class Attack : MonoBehaviour
 
     void AttackCombo()
     {
-        if (nOfClicks == 1)
+        float elapsedTime = 0;
+
+         if (nOfClicks == 1)
         {
-            RandomPitchAttack();
-            playerScript.originalSpeed = 0;
+            elapsedTime += Time.deltaTime;
             anim.SetTrigger("Hit1");
 
-     
-            Hit3 = false;
+            if (elapsedTime < maxComboDelay && nOfClicks == 2)
+            {
+                anim.SetTrigger("Hit2");
+            }
         }
-        else if (nOfClicks == 2)
-        {
-            RandomPitchAttack();
-            playerScript.originalSpeed = 0;
-            anim.SetTrigger("Hit2");
-
-            Hit3 = false;
-        }
-        else if (nOfClicks == 3)
-        {
-            RandomPitchAttack();
-            playerScript.originalSpeed = 0;
-            anim.SetTrigger("Hit3");
-
-
-        }
-        
-       
-        nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);
+         
     }
+
+
 
     private IEnumerator returnSpeed ()
     {
         yield return new WaitForSeconds(0.5f);
         playerScript.originalSpeed = 25f;
-    }
-    void ComboCheck()
-    {
-        var state = anim.GetCurrentAnimatorStateInfo(0);
-
-        if (isAttacking && !state.IsName("Hit1") && !state.IsName("Hit2") && !state.IsName("Hit3") && Time.time - lastClickedTime > maxComboDelay)
-        {
-            isAttacking = false;
-            nOfClicks = 0;
-            Hit3 = false;
-            
-        }
-
-
-
-        if (Time.time - lastClickedTime > maxComboDelay)
-        {
-            nOfClicks = 0;
-        }
     }
 
     Vector2 GetDirection(float angle)
