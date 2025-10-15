@@ -10,7 +10,8 @@ public class Health : MonoBehaviour
     [SerializeField] public float maxHealth;
     [SerializeField] private float healthDecreaseSpeed;
     [SerializeField] private Image healthBar;
-   
+      public bool canTakeDamage;
+
     public float currentHealth;
     
 
@@ -46,6 +47,7 @@ public class Health : MonoBehaviour
     public AudioSource parrySuccesful;
     public AudioSource parryUnsuccesful;
     public AudioSource block;
+
 
     private GameObject gameManager;
 
@@ -210,8 +212,30 @@ public class Health : MonoBehaviour
             TakeDamage(projectileDamage);
             Destroy(other.gameObject);
         }
+        if (other.tag == "Poison")
+        {
+            canTakeDamage = true;
+            StartCoroutine(TakeWorldDamage(5f));
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Poison")
+        {
+            canTakeDamage = false;
+          
+        }
     }
 
+    public IEnumerator TakeWorldDamage(float damagePerSecond)
+    {
+        while (canTakeDamage)
+        {
+          currentHealth -= damagePerSecond;
+            yield return new WaitForSeconds(0.7f);
+           
+        }
+    }
 
     IEnumerator PunishPlayer()
     {

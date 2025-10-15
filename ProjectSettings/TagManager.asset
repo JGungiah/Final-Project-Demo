@@ -21,6 +21,8 @@ TagManager:
   - RuneManager
   - TutorialDoor
   - EnemyDrop
+  - Ground
+  - Poison
   layers:
   - Default
   - TransparentFX
