@@ -37,9 +37,14 @@ public class Attack : MonoBehaviour
     public float cooldownTime;
     private float nextFireTime = 0f;
 
-    private static int nOfClicks = 0;
+    private float lastClickedTime = 0f;
+    private int nOfClicks = 0;
 
-   [SerializeField] private float maxComboDelay;
+    private bool bufferedInput = false;
+    [SerializeField] private float inputBufferTime = 0.3f; 
+    private Coroutine bufferCoroutine;
+
+    [SerializeField] private float maxComboDelay;
 
     public bool Hit3;
 
@@ -64,6 +69,12 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
+        if (Time.time - lastClickedTime > maxComboDelay)
+        {
+            nOfClicks = 0;
+            isAttacking = false;
+            
+        }
 
 
         if (Input.GetMouseButtonDown(1))
@@ -75,22 +86,36 @@ public class Attack : MonoBehaviour
         {
             if (Time.time > nextFireTime)
             {
+              
+                bufferedInput = true;
+
+                
+                if (bufferCoroutine != null)
+                {
+                    StopCoroutine(bufferCoroutine);
+                    bufferCoroutine = StartCoroutine(ClearBufferedInput());
+                }
+
                
-                HandleAttack();
-
+                if (!isAttacking)
+                {
+                    HandleAttack();
+                }
+                 
             }
-            
+
         }
 
-        if (isAttacking)
-        {
-            playerScript.originalSpeed = 0;
-        }
+        //if (isAttacking)
+        //{
+        //    playerScript.originalSpeed = 0;
+        //}
 
-        else if (!isAttacking)
-        {
-            StartCoroutine(returnSpeed());
-        }
+        //else if (!isAttacking)
+        //{
+        //    //StartCoroutine(returnSpeed());
+        //    playerScript.originalSpeed = 25f;
+        //}
 
         if (isParrying)
         {
@@ -185,7 +210,6 @@ public class Attack : MonoBehaviour
     void HandleAttack()
     {
    
-        nOfClicks++;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
@@ -213,12 +237,17 @@ public class Attack : MonoBehaviour
             animDir = GetDirection(angle);
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
-
-
-            AttackCombo();
-          
-
             
+            lastClickedTime = Time.time;
+            nOfClicks++;
+
+            if (nOfClicks == 1)
+            {
+                RandomPitchAttack();
+                anim.SetTrigger("Hit1");
+            }
+
+            nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);
 
             playerScript.lastMovement.x = animDir.x;
             playerScript.lastMovement.z = animDir.y;
@@ -226,37 +255,52 @@ public class Attack : MonoBehaviour
             StartCoroutine(CanAttack());
         }
     }
-
+    private IEnumerator ClearBufferedInput()
+    {
+        yield return new WaitForSeconds(inputBufferTime);
+        bufferedInput = false;
+    }
     void RandomPitchAttack()
     {
         hitnoise.pitch = Random.Range(1.2f, 1.3f);
         hitnoise.Play();
     }
 
-    void AttackCombo()
+     public void ComboTransition1()
+{
+    if (bufferedInput)
     {
-        float elapsedTime = 0;
-
-         if (nOfClicks == 1)
-        {
-            elapsedTime += Time.deltaTime;
-            anim.SetTrigger("Hit1");
-
-            if (elapsedTime < maxComboDelay && nOfClicks == 2)
-            {
-                anim.SetTrigger("Hit2");
-            }
-        }
-         
+        bufferedInput = false;
+        RandomPitchAttack();
+        anim.SetTrigger("Hit2");
     }
-
-
-
-    private IEnumerator returnSpeed ()
+    else
     {
-        yield return new WaitForSeconds(0.5f);
-        playerScript.originalSpeed = 25f;
+        isAttacking = false;
     }
+}
+
+public void ComboTransition2()
+{
+    if (bufferedInput)
+    {
+        bufferedInput = false;
+        RandomPitchAttack();
+        anim.SetTrigger("Hit3");
+    }
+    else
+    {
+        isAttacking = false;
+    }
+}
+
+
+
+    //private IEnumerator returnSpeed ()
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+    //    playerScript.originalSpeed = 25f;
+    //}
 
     Vector2 GetDirection(float angle)
     {
