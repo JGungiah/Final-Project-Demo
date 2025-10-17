@@ -14,7 +14,7 @@ public class PlayerTooFar : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) 
         {
-            FireProj.FireAtPlayer();
+            FireProj.RangedAttack();
         }
     }
 }

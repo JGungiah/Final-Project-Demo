@@ -4,16 +4,27 @@ public class JormungandrAttack : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject projectilePrefab;
-    public Transform player;
+    private GameObject player;
+    [SerializeField] private float projectileSpeed;
 
-    public void FireAtPlayer()
+    private void Start()
     {
-        if (player == null) return;
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("Player");
+        }
 
-        // Spawn projectile
-        GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        
+    }
+    public void RangedAttack()
+    {
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
-        // Aim projectile toward the player
-        proj.GetComponent<ProjectileJorm>().Init(player.position);
+        Vector3 direction = (player.transform.position - firePoint.position).normalized;
+        projectile.transform.forward = direction;
+
+        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        Vector3 force = direction * projectileSpeed;
+        rb.AddForce(force,ForceMode.Impulse);
     }
 }
