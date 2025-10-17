@@ -40,10 +40,6 @@ public class Attack : MonoBehaviour
     private float lastClickedTime = 0f;
     private int nOfClicks = 0;
 
-    private bool bufferedInput = false;
-    [SerializeField] private float inputBufferTime = 0.3f; 
-    private Coroutine bufferCoroutine;
-
     [SerializeField] private float maxComboDelay;
 
     public bool Hit3;
@@ -69,34 +65,30 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
+
+       print(nOfClicks);
         if (Time.time - lastClickedTime > maxComboDelay)
         {
             nOfClicks = 0;
+            anim.ResetTrigger("Hit2");
+            anim.ResetTrigger("Hit3");
             isAttacking = false;
             
         }
-
 
         if (Input.GetMouseButtonDown(1))
         {
             CalculateParry();
         }
 
-        if (Input.GetMouseButtonDown(0) /*&& !isAttacking*/)
+        if (Input.GetMouseButtonDown(0))
         {
+            lastClickedTime = Time.time;
+            nOfClicks++;
+            nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);
+
             if (Time.time > nextFireTime)
-            {
-              
-                bufferedInput = true;
-
-                
-                if (bufferCoroutine != null)
-                {
-                    StopCoroutine(bufferCoroutine);
-                    bufferCoroutine = StartCoroutine(ClearBufferedInput());
-                }
-
-               
+            {      
                 if (!isAttacking)
                 {
                     HandleAttack();
@@ -126,8 +118,9 @@ public class Attack : MonoBehaviour
             playerScript.speed = playerScript.originalSpeed;
         }
 
-       
 
+        ComboTransition1();
+        ComboTransition2(); 
         attackCollider.gameObject.SetActive(colliderActive);
 
   
@@ -238,8 +231,8 @@ public class Attack : MonoBehaviour
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
             
-            lastClickedTime = Time.time;
-            nOfClicks++;
+          
+            
 
             if (nOfClicks == 1)
             {
@@ -247,7 +240,7 @@ public class Attack : MonoBehaviour
                 anim.SetTrigger("Hit1");
             }
 
-            nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);
+          
 
             playerScript.lastMovement.x = animDir.x;
             playerScript.lastMovement.z = animDir.y;
@@ -255,11 +248,7 @@ public class Attack : MonoBehaviour
             StartCoroutine(CanAttack());
         }
     }
-    private IEnumerator ClearBufferedInput()
-    {
-        yield return new WaitForSeconds(inputBufferTime);
-        bufferedInput = false;
-    }
+   
     void RandomPitchAttack()
     {
         hitnoise.pitch = Random.Range(1.2f, 1.3f);
@@ -268,9 +257,8 @@ public class Attack : MonoBehaviour
 
      public void ComboTransition1()
 {
-    if (bufferedInput)
-    {
-        bufferedInput = false;
+    if (nOfClicks == 2)
+    { 
         RandomPitchAttack();
         anim.SetTrigger("Hit2");
     }
@@ -282,25 +270,17 @@ public class Attack : MonoBehaviour
 
 public void ComboTransition2()
 {
-    if (bufferedInput)
+    if (nOfClicks == 3)
     {
-        bufferedInput = false;
         RandomPitchAttack();
         anim.SetTrigger("Hit3");
-    }
+        nOfClicks = 0;
+     }
     else
     {
         isAttacking = false;
     }
 }
-
-
-
-    //private IEnumerator returnSpeed ()
-    //{
-    //    yield return new WaitForSeconds(0.5f);
-    //    playerScript.originalSpeed = 25f;
-    //}
 
     Vector2 GetDirection(float angle)
     {
@@ -325,8 +305,6 @@ public void ComboTransition2()
         yield return new WaitForSeconds(attackCooldown);
         nextFireTime = Time.time + attackCooldown;
     }
-
-
 
     IEnumerator CanParry()
     {
