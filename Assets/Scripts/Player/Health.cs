@@ -217,6 +217,11 @@ public class Health : MonoBehaviour
             canTakeDamage = true;
             StartCoroutine(TakeWorldDamage(5f));
         }
+        if (other.tag == "Rock")
+        {
+            TakeDamage(20f);
+            
+        }
     }
     private void OnTriggerExit(Collider other)
     {

@@ -17,12 +17,12 @@ public class Jormungandr : MonoBehaviour
     [SerializeField] private float hitDuration;
     private Color originalColor;
     private SpriteRenderer spriteRenderer;
-
-    private float horizontalMovement;
-    private float verticalMovement;
+    public JormungandrAttack JormAttack;
+   
     private Animator anim;
     public Vector3 animDirection;
     public bool isHit = false;
+    public bool canspawnRocks;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,9 +32,18 @@ public class Jormungandr : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         playerAttack = player.GetComponent<Attack>();
         anim = GetComponent<Animator>();
+        JormAttack = GetComponent<JormungandrAttack>();
     }
-   
-    
+
+    private void Update()
+    {
+        if(canspawnRocks) 
+        {
+            JormAttack.StartCoroutine(JormAttack.StartFalling());
+            canspawnRocks = false;
+        }
+       
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
@@ -48,6 +57,12 @@ public class Jormungandr : MonoBehaviour
 
 
         }
+    }
+
+    public void healthstarters() 
+    {
+        if(currentHealth <= 450)
+            canspawnRocks= true;
     }
 
     IEnumerator DamageWindow()
@@ -67,5 +82,6 @@ public class Jormungandr : MonoBehaviour
         spriteRenderer.color = originalColor;
 
     }
+
 
 }

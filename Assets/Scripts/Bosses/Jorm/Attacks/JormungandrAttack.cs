@@ -1,11 +1,20 @@
+using System.Collections;
 using UnityEngine;
 
 public class JormungandrAttack : MonoBehaviour
 {
+    [Header("Spit attack")]
     public Transform firePoint;
     public GameObject projectilePrefab;
     private GameObject player;
     [SerializeField] private float projectileSpeed;
+
+
+    [Header("Rock Fall")]
+    public GameObject rockPrefab;
+    public Transform[] spawnLocations;
+    private float minSpawn = 0.2f;
+    private float maxSpawn = 0.7f;
 
     private void Start()
     {
@@ -26,5 +35,15 @@ public class JormungandrAttack : MonoBehaviour
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         Vector3 force = direction * projectileSpeed;
         rb.AddForce(force,ForceMode.Impulse);
+    }
+    
+   public IEnumerator StartFalling() 
+    {
+        for (int i = 0; i <= 45; i++)
+        {
+            Transform points = spawnLocations[Random.Range(0, spawnLocations.Length)];
+            Instantiate(rockPrefab, points.position, points.rotation);
+            yield return new WaitForSeconds(Random.Range(minSpawn, maxSpawn));
+        }
     }
 }

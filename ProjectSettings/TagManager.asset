@@ -23,6 +23,7 @@ TagManager:
   - EnemyDrop
   - Ground
   - Poison
+  - Rock
   layers:
   - Default
   - TransparentFX
