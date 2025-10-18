@@ -37,6 +37,7 @@ public class Jormungandr : MonoBehaviour
 
     private void Update()
     {
+     
         if(canspawnRocks) 
         {
             JormAttack.StartCoroutine(JormAttack.StartFalling());
@@ -63,6 +64,7 @@ public class Jormungandr : MonoBehaviour
     {
         if(currentHealth <= 450)
             canspawnRocks= true;
+
     }
 
     IEnumerator DamageWindow()
