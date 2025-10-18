@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] public float maxHealth;
     [SerializeField] private float healthDecreaseSpeed;
     [SerializeField] private Image healthBar;
-      public bool canTakeDamage;
+    public bool canTakeDamage;
 
     public float currentHealth;
     
@@ -19,13 +19,16 @@ public class Health : MonoBehaviour
     [SerializeField] private float hitStopDuration;
     private CameraFollow cameraScript;
 
-     public bool isParrying = false;
-    [SerializeField] private float parryDuration;
-    [SerializeField] private bool canParry = true;
-    [SerializeField] private float parryCoolDown;
+    public bool canBlock;
+    public bool isBlocking = false;
+    [SerializeField] private float blockStrength;
+    [SerializeField] private float blockRegenSpeed;
+    private bool blockCoolDown;
+    public AudioSource block;
+
 
     private AttackMelee enemyAttack;
-    private EnemyMovement enemyMovement;
+
     [SerializeField] private float knockbackDuration;
     [SerializeField] private float knockbackPower;
     [SerializeField] private float stunDuration;
@@ -34,27 +37,14 @@ public class Health : MonoBehaviour
     private float originalDamage;
     [SerializeField] private float EnemyDamage;
     [SerializeField] private float projectileDamage;
-     private float stunnedDamage;
+
     private Animator anim;
-    private bool attemptedParry = false;
-    public GameObject parryVFX;
-
-    private Color parryColor = Color.green;
-    private Color missParryColor = Color.red;
-    private Color originalColor;
-    private SpriteRenderer spriteRenderer;
-
-    public AudioSource parrySuccesful;
-    public AudioSource parryUnsuccesful;
-    public AudioSource block;
-
 
     private GameObject gameManager;
 
-
     public float originalMaxHealth;
-    public float originalParryDuration;
     public float originalKnockBackPower;
+    public float originalBlockStrength;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -67,14 +57,12 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
         cameraScript = FindAnyObjectByType<CameraFollow>();
         originalDamage = EnemyDamage;
-        stunnedDamage = EnemyDamage * 2;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalColor = spriteRenderer.color;
+
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
 
         
         originalMaxHealth = maxHealth;
-        originalParryDuration = parryDuration;
+        originalBlockStrength = blockStrength;
         originalKnockBackPower = knockbackPower;
 
         
@@ -83,7 +71,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Block();
         healthBar.fillAmount = currentHealth / maxHealth;
 
         if (currentHealth <= 0 )
@@ -92,18 +80,14 @@ public class Health : MonoBehaviour
             currentHealth = maxHealth;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1) && canParry)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && canBlock)
         {
-            if (!isParrying)
+            if (isBlocking)
             {
                 block.pitch = Random.Range(1.5f, 1.6f);
                 block.Play();
             }
-          
-            anim.SetTrigger("Parry");
-            StartCoroutine(CheckParry());
         }
-
         
     }
 
@@ -111,8 +95,8 @@ public class Health : MonoBehaviour
     {
         maxHealth = originalMaxHealth;
         currentHealth = maxHealth;
-        parryDuration = originalParryDuration;
         knockbackPower = originalKnockBackPower;
+        blockStrength = originalBlockStrength;
     }
 
     
@@ -128,7 +112,7 @@ public class Health : MonoBehaviour
         }
         else if (boon.GetBoonName() == "Parry Window")
         {
-            parryDuration = parryDuration * (1 + boon.GetValue());
+           blockStrength = blockStrength * (1 + boon.GetValue());
         }
         else if (boon.GetBoonName() == "Parry Knockback")
         {
@@ -137,25 +121,6 @@ public class Health : MonoBehaviour
     }
 
 
-
-
-
-    
-   
-
-    IEnumerator ParryColor()
-    {
-        spriteRenderer.color = parryColor;
-        yield return new WaitForSeconds(parryDuration);
-        spriteRenderer.color = originalColor;   
-    }
-
-    IEnumerator MissParryColor()
-    {
-        spriteRenderer.color = missParryColor;
-        yield return new WaitForSeconds(parryDuration);
-        spriteRenderer.color = originalColor;
-    }
     public void TakeDamage (float damage)
     {
        
@@ -164,38 +129,60 @@ public class Health : MonoBehaviour
 
     }
 
+    void Block()
+    {
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
+            anim.SetBool("isBlocking", true);
+            isBlocking = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            anim.SetBool("isBlocking", false);
+            isBlocking = false;
+            BlockRegen();
+        }
+
+        if (blockStrength <= 0)
+        {
+            anim.SetBool("isBlocking", false);
+            isBlocking = false;
+            blockCoolDown = true;
+            BlockRegen();
+        }    
+    }
+
+    void BlockRegen()
+    {
+        if (!isBlocking)
+        {
+            blockStrength += blockRegenSpeed * Time.deltaTime;
+            blockStrength = Mathf.Clamp(blockStrength, 0, originalBlockStrength);
+
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("JotunnCollider"))
         {
             enemyAttack = other.GetComponentInParent<AttackMelee>();
-            enemyMovement = other.GetComponentInParent<EnemyMovement>();
 
             if (enemyAttack != null && enemyAttack.hasAttacked && !hasBeenAttacked)
-            {
-                if (attemptedParry && !isParrying)
-                {
-                    parryUnsuccesful.pitch = Random.Range(1.5f, 1.6f);
-                    parryUnsuccesful.Play();
-                    StartCoroutine(PunishPlayer());
-                    StartCoroutine(MissParryColor());
-                }
+            {     
 
-                if (!isParrying)
+                if (!isBlocking)
                 {
                     TakeDamage(enemyAttack.damage);
                     hasBeenAttacked = true;
                     StartCoroutine(AttackWindow());
                 }
-
-                if (isParrying)
+                else if (isBlocking)
                 {
-                    parrySuccesful.pitch = Random.Range(1.5f, 1.6f);
-                    parrySuccesful.Play();
-                    StartCoroutine(ParryKnockBack());
-                   StartCoroutine(ParryColor());
-
+                    blockStrength -= enemyAttack.damage;
+                    blockStrength = Mathf.Clamp(blockStrength, 0 , originalBlockStrength);
                 }
+
                 cameraScript.Shake();   
               
                 enemyAttack.hasAttacked = false;
@@ -242,45 +229,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    IEnumerator PunishPlayer()
-    {
-       movementScript.canMove = false;
-       EnemyDamage = stunnedDamage;
-       anim.enabled = false;
-       yield return new WaitForSeconds(stunDuration);
-       movementScript.canMove = true;
-       EnemyDamage = originalDamage;
-       anim.enabled = true;
-    }
-    IEnumerator ParryKnockBack()
-    {
-        float elapsedTime = 0f;
-        while (elapsedTime < knockbackDuration)
-        {
-            enemyMovement.transform.position += -enemyMovement.animDirection * knockbackPower * Time.deltaTime;
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-        
-    }
-
-
-    IEnumerator CheckParry()
-    {
-        attemptedParry = true;
-        isParrying = true;
-        canParry = false;
-        parryVFX.SetActive(true);
-        yield return new WaitForSeconds(parryDuration);
-        
-        isParrying = false;
-
-        yield return new WaitForSeconds(parryCoolDown);
-        canParry = true;
-        attemptedParry = false;
-        parryVFX.SetActive(false);
-    }
-
+   
     IEnumerator AttackWindow()
     {
         yield return new WaitForSeconds(0.1f);
