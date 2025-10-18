@@ -23,6 +23,7 @@ public class Jormungandr : MonoBehaviour
     public Vector3 animDirection;
     public bool isHit = false;
     public bool canspawnRocks;
+    public bool rockshathfallen;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,6 +44,7 @@ public class Jormungandr : MonoBehaviour
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             canspawnRocks = false;
         }
+        healthstarters();
        
     }
     private void OnTriggerStay(Collider other)
@@ -62,9 +64,9 @@ public class Jormungandr : MonoBehaviour
 
     public void healthstarters() 
     {
-        if(currentHealth <= 450)
+        if(currentHealth <= 450 && !rockshathfallen)
             canspawnRocks= true;
-
+            rockshathfallen = true;
     }
 
     IEnumerator DamageWindow()
