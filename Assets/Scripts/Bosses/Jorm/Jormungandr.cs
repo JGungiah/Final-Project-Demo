@@ -38,13 +38,9 @@ public class Jormungandr : MonoBehaviour
 
     private void Update()
     {
-     
-        if(canspawnRocks) 
-        {
-            JormAttack.StartCoroutine(JormAttack.StartFalling());
-            canspawnRocks = false;
-        }
-        healthstarters();
+       healthstarters();
+       
+      
        
     }
     private void OnTriggerStay(Collider other)
@@ -64,9 +60,11 @@ public class Jormungandr : MonoBehaviour
 
     public void healthstarters() 
     {
-        if(currentHealth <= 450 && !rockshathfallen)
-            canspawnRocks= true;
+        if (currentHealth <= 450 && !rockshathfallen)
+        {
+            JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen = true;
+        }
     }
 
     IEnumerator DamageWindow()

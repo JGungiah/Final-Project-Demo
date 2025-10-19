@@ -13,8 +13,9 @@ public class JormungandrAttack : MonoBehaviour
     [Header("Rock Fall")]
     public GameObject rockPrefab;
     public Transform[] spawnLocations;
-    private float minSpawn = 0.2f;
-    private float maxSpawn = 0.7f;
+    [SerializeField] private float numrocks;
+    [SerializeField]private float minSpawn = 0.2f;
+    [SerializeField]private float maxSpawn = 0.7f;
 
     private void Start()
     {
@@ -46,4 +47,12 @@ public class JormungandrAttack : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(minSpawn, maxSpawn));
         }
     }
+
+    public void TailSwipe() 
+    {
+
+    }
+
+   
+
 }
