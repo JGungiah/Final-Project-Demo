@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     [SerializeField] public float maxHealth;
     [SerializeField] private float healthDecreaseSpeed;
     [SerializeField] private Image healthBar;
+    public Image shieldSlider;
+    public Image brokenShield;
     public bool canTakeDamage;
 
     public float currentHealth;
@@ -57,7 +59,7 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
         cameraScript = FindAnyObjectByType<CameraFollow>();
         originalDamage = EnemyDamage;
-
+        canBlock = true;
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
 
         
@@ -71,8 +73,19 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        shieldSlider.fillAmount = blockStrength / originalBlockStrength;
         Block();
+        StartCoroutine(BlockRegen());
         healthBar.fillAmount = currentHealth / maxHealth;
+
+        if (!canBlock)
+        {
+            brokenShield.gameObject.SetActive(true);
+        }
+        else
+        {
+            brokenShield.gameObject.SetActive(false);
+        }
 
         if (currentHealth <= 0 )
         {
@@ -122,16 +135,13 @@ public class Health : MonoBehaviour
 
 
     public void TakeDamage (float damage)
-    {
-       
+    {   
         currentHealth -= damage ;
- 
-
     }
 
     void Block()
     {
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && canBlock)
         {
             anim.SetBool("isBlocking", true);
             isBlocking = true;
@@ -140,22 +150,38 @@ public class Health : MonoBehaviour
         {
             anim.SetBool("isBlocking", false);
             isBlocking = false;
-            BlockRegen();
+            
         }
 
         if (blockStrength <= 0)
         {
             anim.SetBool("isBlocking", false);
+            canBlock = false;
             isBlocking = false;
             blockCoolDown = true;
             BlockRegen();
         }    
+
+        if (blockStrength == originalBlockStrength)
+        {
+            canBlock = true;
+        }
+
+        if (isBlocking && canBlock)
+        {
+            movementScript.speed = 0;
+        }
+        else
+        {
+            movementScript.speed = 25f;
+        }
     }
 
-    void BlockRegen()
+    IEnumerator BlockRegen()
     {
         if (!isBlocking)
         {
+            yield return new WaitForSeconds(2f);
             blockStrength += blockRegenSpeed * Time.deltaTime;
             blockStrength = Mathf.Clamp(blockStrength, 0, originalBlockStrength);
 
@@ -179,7 +205,7 @@ public class Health : MonoBehaviour
                 }
                 else if (isBlocking)
                 {
-                    blockStrength -= enemyAttack.damage;
+                    blockStrength -= enemyAttack.damage / 4;
                     blockStrength = Mathf.Clamp(blockStrength, 0 , originalBlockStrength);
                 }
 

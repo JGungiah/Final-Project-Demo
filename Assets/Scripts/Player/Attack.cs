@@ -14,7 +14,7 @@ public class Attack : MonoBehaviour
     private Animator anim;
     private Transform player;
     public bool isAttacking = false;
-    public bool isParrying = false;
+
     public bool colliderActive = false;
    
     public Vector3 knockbackDirection; 
@@ -66,7 +66,6 @@ public class Attack : MonoBehaviour
     void Update()
     {
 
-       print(nOfClicks);
         if (Time.time - lastClickedTime > maxComboDelay)
         {
             nOfClicks = 0;
@@ -107,16 +106,7 @@ public class Attack : MonoBehaviour
         //{
         //    //StartCoroutine(returnSpeed());
         //    playerScript.originalSpeed = 25f;
-        //}
-
-        if (isParrying)
-        {
-            playerScript.speed = 0;
-        }
-        else if (!isParrying)
-        {
-            playerScript.speed = playerScript.originalSpeed;
-        }
+        //
 
 
         ComboTransition1();
@@ -174,13 +164,9 @@ public class Attack : MonoBehaviour
 
             knockbackDirection = dir.normalized;
 
-
             if (attackCollider != null)
             {
-
-    
                 attackCollider.rotation = Quaternion.LookRotation(dir, Vector3.up);
-
             }
 
             Vector2 dir2D = new Vector2(dir.x, dir.z);
@@ -193,10 +179,7 @@ public class Attack : MonoBehaviour
             anim.SetFloat("AttackVertical", animDir.y);
 
             playerScript.lastMovement.x = animDir.x;
-            playerScript.lastMovement.z = animDir.y;
-
-            isParrying = true;
-            StartCoroutine(CanParry());
+            playerScript.lastMovement.z = animDir.y;         
         }
 
     }
@@ -301,17 +284,10 @@ public void ComboTransition2()
 
     IEnumerator CanAttack()
     {
-
         yield return new WaitForSeconds(attackCooldown);
         nextFireTime = Time.time + attackCooldown;
     }
 
-    IEnumerator CanParry()
-    {
-
-        yield return new WaitForSeconds(parryCooldown);
-        isParrying = false;
-    }
 
 }
 
