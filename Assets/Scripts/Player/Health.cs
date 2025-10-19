@@ -8,13 +8,14 @@ public class Health : MonoBehaviour
 {
    
     [SerializeField] public float maxHealth;
+    public float currentHealth;
     [SerializeField] private float healthDecreaseSpeed;
     [SerializeField] private Image healthBar;
     public Image shieldSlider;
     public Image brokenShield;
     public bool canTakeDamage;
 
-    public float currentHealth;
+    
     
 
     public bool hasBeenAttacked = false;

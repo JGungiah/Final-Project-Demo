@@ -3,13 +3,15 @@ using UnityEngine;
 
 public class TailCollider : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     private Health HealthScript;
     public bool isIncollider;
     private void Start()
     {
+        player = GameObject.FindWithTag("Player");
         HealthScript = player.GetComponent<Health>();
     }
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,16 +25,18 @@ public class TailCollider : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            
             isIncollider = false;
         }
         }
-    public IEnumerator SwipeAttack()
+    IEnumerator SwipeAttack()
     {
         while (isIncollider)
         {
             Debug.Log("start");
             yield return new WaitForSeconds(3f);
-            HealthScript.TakeDamage(40f);
+            if (!isIncollider) yield break;
+            HealthScript.currentHealth -= 40f;
             Debug.Log("end");
         }
     }
