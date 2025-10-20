@@ -41,7 +41,6 @@ public class AttackRanged : MonoBehaviour
 
     void Update()
     {
-      
         agent.updateRotation = false;
 
         CalculateDistanceToPlayer();
@@ -62,15 +61,25 @@ public class AttackRanged : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             playerInsideTrigger = true;
+        }
+            
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             playerInsideTrigger = false;
+        }
+           
     }
 
+    void CalculateDistanceToPlayer()
+    {
+        distanceToPlayer = transform.position - player.transform.position;
+    }
     void HandleEnemyLogic()
     {
         float distance = distanceToPlayer.magnitude;
@@ -78,33 +87,36 @@ public class AttackRanged : MonoBehaviour
         if (!playerInsideTrigger)
         {
             if (canAttack)
-                StartCoroutine(EnemyAttack()); 
-            attackCooldown = originalAttackCooldown;
-            healthScript.isInvunrable = true;
+            {
+                StartCoroutine(EnemyAttack());
+                attackCooldown = originalAttackCooldown;
+                healthScript.isInvunrable = true;
+            }
+               
         }
 
-        else if (distance > attackRadius)
+        if (distance < attackRadius)
         {
-
+            agent.isStopped = false;
             agent.destination = transform.position + distanceToPlayer.normalized * 1.5f;
             healthScript.isInvunrable = true;
         }
 
-        else if (distance <= attackRadius )
+        if (playerInsideTrigger)
         {
             healthScript.isInvunrable = false;
             if (canAttack)
             {
+                print(2);
+               agent.isStopped = true;
                 attackCooldown = 2;
                 StartCoroutine(EnemyAttack());
             }
         }
+
     }
 
-    void CalculateDistanceToPlayer()
-    {
-        distanceToPlayer = transform.position - player.transform.position;
-    }
+ 
 
   
     void EnemyAnimations()
@@ -115,10 +127,10 @@ public class AttackRanged : MonoBehaviour
 
         if (agent.remainingDistance < agent.stoppingDistance)
         {
-            anim.SetTrigger("Idle");
+            //anim.SetTrigger("Idle");
             anim.SetFloat("horizontalMovement", animDirection.x);
             anim.SetFloat("verticalMovement", animDirection.z);
-            //anim.SetTrigger("attack");
+
         }
         else if (agent.remainingDistance > agent.stoppingDistance)
         {
@@ -128,9 +140,9 @@ public class AttackRanged : MonoBehaviour
     }
 
 
-    void RangedAttack()
+    public void RangedAttack()
     {
-       
+        
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
         Vector3 direction = (player.transform.position - firePoint.position).normalized;
@@ -148,8 +160,8 @@ public class AttackRanged : MonoBehaviour
 
         agent.destination = transform.position;
 
-        
-        RangedAttack();
+
+        anim.SetTrigger("attack");
 
         yield return new WaitForSeconds(attackDuration);
 
