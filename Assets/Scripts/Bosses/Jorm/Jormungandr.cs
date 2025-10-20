@@ -22,8 +22,18 @@ public class Jormungandr : MonoBehaviour
     private Animator anim;
     public Vector3 animDirection;
     public bool isHit = false;
-    public bool canspawnRocks;
+
+
+    [Header("Rock Attacks")]
     public bool rockshathfallen;
+
+    [Header("Spit Attacks")]
+    public bool spitshot;
+
+   
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,8 +48,8 @@ public class Jormungandr : MonoBehaviour
 
     private void Update()
     {
-       healthstarters();
-       
+        Rockstarters();
+        JormAttack.EnemySpawner();
       
        
     }
@@ -58,10 +68,11 @@ public class Jormungandr : MonoBehaviour
         }
     }
 
-    public void healthstarters() 
+    public void Rockstarters() 
     {
         if (currentHealth <= 450 && !rockshathfallen)
         {
+            isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen = true;
         }
