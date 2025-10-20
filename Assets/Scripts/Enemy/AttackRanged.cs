@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class AttackRanged : MonoBehaviour
 {
@@ -63,6 +64,7 @@ public class AttackRanged : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInsideTrigger = true;
+            print(2);
         }
             
     }
@@ -105,10 +107,9 @@ public class AttackRanged : MonoBehaviour
         if (playerInsideTrigger)
         {
             healthScript.isInvunrable = false;
+            agent.isStopped = true;
             if (canAttack)
             {
-                print(2);
-               agent.isStopped = true;
                 attackCooldown = 2;
                 StartCoroutine(EnemyAttack());
             }
@@ -125,14 +126,20 @@ public class AttackRanged : MonoBehaviour
         animDirection.y = 0;
         anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
 
-        if (agent.remainingDistance < agent.stoppingDistance)
+        if (playerInsideTrigger)
         {
-            //anim.SetTrigger("Idle");
+            
             anim.SetFloat("horizontalMovement", animDirection.x);
             anim.SetFloat("verticalMovement", animDirection.z);
-
         }
-        else if (agent.remainingDistance > agent.stoppingDistance)
+
+        if (distanceToPlayer.magnitude > attackRadius)
+        {
+            anim.SetFloat("horizontalMovement", animDirection.x);
+            anim.SetFloat("verticalMovement", animDirection.z);
+        }
+
+        if (agent.remainingDistance > agent.stoppingDistance)
         {
             anim.SetFloat("horizontalMovement", -animDirection.x);
             anim.SetFloat("verticalMovement", -animDirection.z);
