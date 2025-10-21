@@ -124,25 +124,24 @@ public class AttackRanged : MonoBehaviour
     {
         animDirection = (player.transform.position - transform.position).normalized;
         animDirection.y = 0;
-        anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
 
-        if (playerInsideTrigger)
+        anim.SetFloat("animMoveMagnitude", agent.velocity.magnitude);
+
+        bool isMoving = agent.velocity.magnitude > 0.1f;
+
+        if (!isMoving && !isAttacking)
         {
-            
-            anim.SetFloat("horizontalMovement", animDirection.x);
-            anim.SetFloat("verticalMovement", animDirection.z);
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            {
+                anim.ResetTrigger("attack");
+                anim.SetTrigger("Idle");
+            }
         }
 
-        if (distanceToPlayer.magnitude > attackRadius)
+        if (playerInsideTrigger || distanceToPlayer.magnitude > attackRadius)
         {
             anim.SetFloat("horizontalMovement", animDirection.x);
             anim.SetFloat("verticalMovement", animDirection.z);
-        }
-
-        if (agent.remainingDistance > agent.stoppingDistance)
-        {
-            anim.SetFloat("horizontalMovement", -animDirection.x);
-            anim.SetFloat("verticalMovement", -animDirection.z);
         }
     }
 
@@ -162,20 +161,22 @@ public class AttackRanged : MonoBehaviour
 
     private IEnumerator EnemyAttack()
     {
+        anim.ResetTrigger("Idle");
+
         isAttacking = true;
         canAttack = false;
 
-        agent.destination = transform.position;
-
+        agent.destination = transform.position; 
+        agent.isStopped = true;
 
         anim.SetTrigger("attack");
 
         yield return new WaitForSeconds(attackDuration);
 
- 
         isAttacking = false;
+        agent.isStopped = false;
 
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
     }
-}
+    }

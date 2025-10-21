@@ -97,16 +97,15 @@ public class Attack : MonoBehaviour
 
         }
 
-        //if (isAttacking)
-        //{
-        //    playerScript.originalSpeed = 0;
-        //}
+        if (isAttacking)
+        {
+            playerScript.speed = 0;
+        }
 
-        //else if (!isAttacking)
-        //{
-        //    //StartCoroutine(returnSpeed());
-        //    playerScript.originalSpeed = 25f;
-        //
+        else if (!isAttacking)
+        {
+            playerScript.speed = 25f;
+        }
 
 
         ComboTransition1();
