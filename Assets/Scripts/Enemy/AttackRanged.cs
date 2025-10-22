@@ -133,17 +133,25 @@ public class AttackRanged : MonoBehaviour
         {
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
             {
-                anim.ResetTrigger("attack");
                 anim.SetTrigger("Idle");
             }
         }
 
-        if (playerInsideTrigger || distanceToPlayer.magnitude > attackRadius)
+        if (playerInsideTrigger )
         {
             anim.SetFloat("horizontalMovement", animDirection.x);
             anim.SetFloat("verticalMovement", animDirection.z);
         }
+
+        if (distanceToPlayer.magnitude > attackRadius && !playerInsideTrigger)
+        {
+            anim.SetFloat("horizontalMovement", -animDirection.x);
+            anim.SetFloat("verticalMovement", -animDirection.z);
+        }
+  
+
     }
+
 
 
     public void RangedAttack()
@@ -161,7 +169,7 @@ public class AttackRanged : MonoBehaviour
 
     private IEnumerator EnemyAttack()
     {
-        anim.ResetTrigger("Idle");
+        //anim.ResetTrigger("Idle");
 
         isAttacking = true;
         canAttack = false;
