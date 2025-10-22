@@ -29,7 +29,7 @@ public class Jormungandr : MonoBehaviour
 
     [Header("Spit Attacks")]
     public bool spitshot;
-
+    public PlayerTooFar playerToofar;
    
 
 
@@ -44,6 +44,7 @@ public class Jormungandr : MonoBehaviour
         playerAttack = player.GetComponent<Attack>();
         anim = GetComponent<Animator>();
         JormAttack = GetComponent<JormungandrAttack>();
+        playerToofar = GetComponent<PlayerTooFar>();
     }
 
     private void Update()
@@ -59,6 +60,7 @@ public class Jormungandr : MonoBehaviour
         {
             print(1);
             currentHealth -= playerAttack.playerDamage;
+            playerToofar.hasAttacked = true;
             canTakeDamage = true;
             bloodVFX.SetActive(true);
             StartCoroutine(HitColour());

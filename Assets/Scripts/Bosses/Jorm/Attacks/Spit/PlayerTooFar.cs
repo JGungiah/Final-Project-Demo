@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerTooFar : MonoBehaviour
@@ -5,9 +6,8 @@ public class PlayerTooFar : MonoBehaviour
     public JormungandrAttack FireProj;
     public GameObject Jorm;
     public Jormungandr JormHealth;
-    public float enemyhealth;
-    public float timer;
-    public float intervaltimer = 10f;
+   public float timer = 15f;
+    public bool hasAttacked;
     private void Start()
     {
         FireProj = Jorm.GetComponent<JormungandrAttack>();
@@ -23,18 +23,26 @@ public class PlayerTooFar : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) 
         {
-            FireProj.RangedAttack();
+            StartCoroutine(waitToattack());
+            
         }
     }
-    public void PlayerAttack() 
+    public IEnumerator waitToattack() 
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        if (JormHealth.currentHealth == enemyhealth)
+        if (!hasAttacked)
         {
-            FireProj.RangedAttack();
+            yield return new WaitForSeconds(timer);
+            if (hasAttacked) 
+            {
+                yield break;
+            }
+            else 
+            {
+                FireProj.RangedAttack();
+                hasAttacked = false;
+            }
+
         }
-        enemyhealth = JormHealth.currentHealth;
-        timer = intervaltimer;
     }
+    
 }
