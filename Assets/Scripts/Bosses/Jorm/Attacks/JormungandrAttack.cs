@@ -47,6 +47,8 @@ public class JormungandrAttack : MonoBehaviour
         Vector3 force = direction * projectileSpeed;
         rb.AddForce(force,ForceMode.Impulse);
     }
+
+    
     
    public IEnumerator StartFalling() 
     {
