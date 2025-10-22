@@ -16,7 +16,7 @@ public class PlayerTooFar : MonoBehaviour
 
     private void Update()
     {
-        PlayerAttack();
+     
     }
 
     private void OnTriggerExit(Collider other)
