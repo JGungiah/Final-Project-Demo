@@ -55,11 +55,11 @@ public class TailCollider : MonoBehaviour
     {
         while (isIncollider)
         {
-            Debug.Log("start");
+          
             yield return new WaitForSeconds(3f);
             if (!isIncollider) yield break;
             HealthScript.currentHealth -= 40f;
-            Debug.Log("end");
+            
         }
     }
 }
