@@ -13,6 +13,8 @@ public class Attack : MonoBehaviour
     [SerializeField] private float hit1Damage;
     [SerializeField] private float hit2Damage;
     [SerializeField] private float hit3Damage;
+    private float criticalDamage;
+    public bool canCrit;
     public float bleedingDamage;
     public bool canBleed;
     private float originalDamage;
@@ -116,7 +118,7 @@ public class Attack : MonoBehaviour
         ComboTransition2(); 
         attackCollider.gameObject.SetActive(colliderActive);
 
-  
+        
 
 
     }
@@ -156,11 +158,8 @@ public class Attack : MonoBehaviour
 
         else if (boon.GetBoonName() == "Critical Damage")
         {
-            if (nOfClicks == 3)
-            {
-                playerDamage = playerDamage * (1 + boon.GetValue());
-            }
-            
+            canCrit = true;
+            criticalDamage = hit3Damage * (1 + boon.GetValue());
         }
 
         else if (boon.GetBoonName() == "Bleed")
@@ -276,7 +275,17 @@ public void ComboTransition2()
     if (nOfClicks == 3)
     {
         RandomPitchAttack();
-        playerDamage = hit3Damage;  
+
+        if (!canCrit)
+            {
+                playerDamage = hit3Damage;
+            }
+       
+        if (canCrit)
+            {
+                playerDamage = criticalDamage;
+            }
+
         anim.SetTrigger("Hit3");
         nOfClicks = 0;
      }

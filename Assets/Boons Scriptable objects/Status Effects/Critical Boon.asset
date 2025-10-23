@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Critical Boon
   m_EditorClassIdentifier: 
   boonName: Critical Damage
-  boonDescription: If player's do not take damage during a combo, the third attack
-    is critical
+  boonDescription: The third attack is critical and deals 50% more damage
   boonImage: {fileID: 0}
   value: 0.5
-  weighting: 1
+  weighting: 100
