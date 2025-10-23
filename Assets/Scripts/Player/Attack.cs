@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
+using TMPro;
 public class Attack : MonoBehaviour
 {
     public Camera cam;
@@ -52,6 +53,9 @@ public class Attack : MonoBehaviour
     public bool Hit3;
 
     public AudioSource hitnoise;
+
+    public TMP_Text floatingText;
+    
     //public bool attackSound;
 
     void Start()
@@ -67,7 +71,7 @@ public class Attack : MonoBehaviour
         originalDamage = playerDamage;
         originalAttackCooldown = attackCooldown;
         originalAttackSpeed = attackSpeed;
-        
+       
     }
 
     void Update()
@@ -88,6 +92,7 @@ public class Attack : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            Instantiate(floatingText, transform.position, Quaternion.identity);
             lastClickedTime = Time.time;
             nOfClicks++;
             nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);
@@ -236,8 +241,10 @@ public class Attack : MonoBehaviour
 
             if (nOfClicks == 1)
             {
+                maxComboDelay = 1;
                 RandomPitchAttack();
                 playerDamage = hit1Damage;
+                floatingText.text = playerDamage.ToString();
                 anim.SetTrigger("Hit1");
             }
 
@@ -261,7 +268,8 @@ public class Attack : MonoBehaviour
     if (nOfClicks == 2)
     { 
         RandomPitchAttack();
-            playerDamage = hit2Damage;
+        playerDamage = hit2Damage;
+        floatingText.text = playerDamage.ToString();
         anim.SetTrigger("Hit2");
     }
     else
@@ -278,15 +286,18 @@ public void ComboTransition2()
 
         if (!canCrit)
             {
+                floatingText.text = playerDamage.ToString();
                 playerDamage = hit3Damage;
             }
        
         if (canCrit)
             {
+                floatingText.text = playerDamage.ToString();
                 playerDamage = criticalDamage;
             }
 
         anim.SetTrigger("Hit3");
+            maxComboDelay = 0.3f;
         nOfClicks = 0;
      }
     else
