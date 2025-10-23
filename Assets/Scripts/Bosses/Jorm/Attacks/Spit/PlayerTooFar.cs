@@ -16,7 +16,7 @@ public class PlayerTooFar : MonoBehaviour
 
     private void Update()
     {
-     
+        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -33,7 +33,7 @@ public class PlayerTooFar : MonoBehaviour
         {
             hasAttacked = false;
             StartCoroutine(waitToattack());
-            
+
         }
     }
     public IEnumerator waitToattack() 
@@ -51,7 +51,7 @@ public class PlayerTooFar : MonoBehaviour
                 
             }
             hasAttacked = false;
-
+            StartCoroutine(waitToattack());
         }
     }
     
