@@ -58,6 +58,7 @@ public class AttackMelee : MonoBehaviour
         {
             attackCollider.gameObject.SetActive(false);
             agent.isStopped = false;
+            agent.speed = 7;
         }
 
         attackDistance = Vector3.Distance(transform.position, player.transform.position);
@@ -72,6 +73,7 @@ public class AttackMelee : MonoBehaviour
 
                 attackCollider.rotation = Quaternion.LookRotation(-movementScript.animDirection, Vector3.up);
                 agent.isStopped = true;
+                agent.speed = 0;
             }
         }
 
