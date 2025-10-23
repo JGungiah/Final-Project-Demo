@@ -18,11 +18,20 @@ public class PlayerTooFar : MonoBehaviour
     {
      
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            hasAttacked = true;
+         
 
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player")) 
         {
+            hasAttacked = false;
             StartCoroutine(waitToattack());
             
         }
@@ -39,8 +48,9 @@ public class PlayerTooFar : MonoBehaviour
             else 
             {
                 FireProj.RangedAttack();
-                hasAttacked = false;
+                
             }
+            hasAttacked = false;
 
         }
     }

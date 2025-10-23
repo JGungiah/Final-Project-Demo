@@ -60,7 +60,7 @@ public class Jormungandr : MonoBehaviour
         {
             print(1);
             currentHealth -= playerAttack.playerDamage;
-            playerToofar.hasAttacked = true;
+            
             canTakeDamage = true;
             bloodVFX.SetActive(true);
             StartCoroutine(HitColour());

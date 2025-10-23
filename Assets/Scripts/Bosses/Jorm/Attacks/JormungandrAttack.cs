@@ -6,6 +6,7 @@ public class JormungandrAttack : MonoBehaviour
   private Jormungandr JormHealth;
   public GameObject GameManager;
   private JormenemySpawner Enemies;
+    private PlayerTooFar spit;
 
     [Header("Spit attack")]
     public Transform firePoint;
@@ -34,6 +35,7 @@ public class JormungandrAttack : MonoBehaviour
         JormHealth = GetComponent<Jormungandr>();
         GameManager = GameObject.FindWithTag("RuneManager");
         Enemies = GameManager.GetComponent<JormenemySpawner>();
+        spit = GetComponent<PlayerTooFar>();
         
     }
     public void RangedAttack()
@@ -58,6 +60,7 @@ public class JormungandrAttack : MonoBehaviour
             Transform points = spawnLocations[Random.Range(0, spawnLocations.Length)];
             Instantiate(rockPrefab, points.position, points.rotation);
             yield return new WaitForSeconds(Random.Range(minSpawn, maxSpawn));
+           spit.StopCoroutine(spit.waitToattack());
         }
         JormHealth.isInvunrable = false;
     }
