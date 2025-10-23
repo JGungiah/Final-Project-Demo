@@ -124,13 +124,9 @@ public class Health : MonoBehaviour
             maxHealth = maxHealth * (1 + boon.GetValue());
             currentHealth = maxHealth;
         }
-        else if (boon.GetBoonName() == "Parry Window")
+        else if (boon.GetBoonName() == "Block Strength")
         {
            blockStrength = blockStrength * (1 + boon.GetValue());
-        }
-        else if (boon.GetBoonName() == "Parry Knockback")
-        {
-            knockbackPower = knockbackPower * (1 + boon.GetValue());
         }
     }
 

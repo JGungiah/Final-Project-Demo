@@ -10,6 +10,11 @@ public class Attack : MonoBehaviour
     private Player playerScript;
 
     public float playerDamage;
+    [SerializeField] private float hit1Damage;
+    [SerializeField] private float hit2Damage;
+    [SerializeField] private float hit3Damage;
+    public float bleedingDamage;
+    public bool canBleed;
     private float originalDamage;
     private Animator anim;
     private Transform player;
@@ -65,7 +70,6 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-
         if (Time.time - lastClickedTime > maxComboDelay)
         {
             nOfClicks = 0;
@@ -132,7 +136,7 @@ public class Attack : MonoBehaviour
 
         if (boon.GetBoonName() == "Damage Increase")
         {
-            playerDamage = playerDamage * (1 - boon.GetValue());
+            playerDamage = playerDamage * (1 + boon.GetValue());
 
         }
         else if (boon.GetBoonName() == "Attack Cooldown")
@@ -148,6 +152,21 @@ public class Attack : MonoBehaviour
         {
             isSlowed = true;
             slowedSpeed = boon.GetValue();
+        }
+
+        else if (boon.GetBoonName() == "Critical Damage")
+        {
+            if (nOfClicks == 3)
+            {
+                playerDamage = playerDamage * (1 + boon.GetValue());
+            }
+            
+        }
+
+        else if (boon.GetBoonName() == "Bleed")
+        {
+            canBleed = true;
+            bleedingDamage = playerDamage * (boon.GetValue());
         }
     }
   
@@ -219,6 +238,7 @@ public class Attack : MonoBehaviour
             if (nOfClicks == 1)
             {
                 RandomPitchAttack();
+                playerDamage = hit1Damage;
                 anim.SetTrigger("Hit1");
             }
 
@@ -242,6 +262,7 @@ public class Attack : MonoBehaviour
     if (nOfClicks == 2)
     { 
         RandomPitchAttack();
+            playerDamage = hit2Damage;
         anim.SetTrigger("Hit2");
     }
     else
@@ -255,6 +276,7 @@ public void ComboTransition2()
     if (nOfClicks == 3)
     {
         RandomPitchAttack();
+        playerDamage = hit3Damage;  
         anim.SetTrigger("Hit3");
         nOfClicks = 0;
      }

@@ -16,4 +16,4 @@ MonoBehaviour:
   boonDescription: The player's third attack deals 15% bleed damage over 5s
   boonImage: {fileID: 0}
   value: 0.15
-  weighting: 2
+  weighting: 200

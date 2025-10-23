@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     
     [SerializeField] private float maxHealth;
     public float currentHealth;
+    private float bleedDamage;
 
     private GameObject player;
     private Attack playerAttack;
@@ -75,9 +76,36 @@ public class EnemyHealth : MonoBehaviour
                 slowed = true;
                 StartCoroutine(ResetSpeed());
             }
+
+            if (playerAttack.canBleed)
+            {
+                StartCoroutine(BleedEffect());
+            }
         }
     }
+    IEnumerator BleedEffect()
+    {
+        float bleedDuration = 5f;  
+        float tickInterval = 1f;   
+        float elapsed = 0f;
 
+        bleedDamage = playerAttack.bleedingDamage; 
+
+        while (elapsed < bleedDuration)
+        {
+            currentHealth -= bleedDamage;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+            bloodVFX.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            bloodVFX.SetActive(false);
+
+            yield return new WaitForSeconds(tickInterval);
+
+            elapsed += tickInterval;
+        }
+
+    }
     IEnumerator ResetSpeed()
     {
         yield return new WaitForSeconds(5f);
@@ -89,7 +117,11 @@ public class EnemyHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         canTakeDamage = false;
-        bloodVFX.SetActive(false);
+        if (!playerAttack.canBleed)
+        {
+            bloodVFX.SetActive(false);
+        }
+        
     }
 
     IEnumerator HitColour()
