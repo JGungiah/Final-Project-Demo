@@ -46,6 +46,7 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        floatingText.text = playerAttack.playerDamage.ToString();
         if (currentHealth == 0)
         {
             if (!hasDropped)
@@ -66,7 +67,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
         {
-            floatingText.text = playerAttack.playerDamage.ToString();
+            
             randomValue = Random.Range(transform.position.x - 1, transform.position.x + 1);
             Instantiate(floatingText, new Vector3(randomValue, transform.position.y - 5, transform.position.z - 2), Quaternion.identity);
             currentHealth -= playerAttack.playerDamage;

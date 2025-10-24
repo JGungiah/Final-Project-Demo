@@ -7,6 +7,8 @@ public class Jormungandr : MonoBehaviour
     [SerializeField] private float maxHealth;
     public float currentHealth;
 
+    private Vector3 distToPlayer;
+
     private GameObject player;
     private Attack playerAttack;
     public bool canTakeDamage = false;
@@ -52,14 +54,13 @@ public class Jormungandr : MonoBehaviour
     {
         Rockstarters();
         JormAttack.EnemySpawner();
-      
+        distToPlayer = transform.position - player.transform.position;
        
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
-        {
-            print(1);
+        if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable /*&& damageRadius < distToPlayer.magnitude*/)
+        {        
             currentHealth -= playerAttack.playerDamage;
             
             canTakeDamage = true;
@@ -70,6 +71,8 @@ public class Jormungandr : MonoBehaviour
 
         }
     }
+
+
 
     public void Rockstarters() 
     {
