@@ -42,7 +42,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Maps/Tutorial.unity
     guid: 40381f1772cfab649be1e8a7d42a2543
   - enabled: 1
-    path: Assets/Scenes/Maps/Yggdrasil Levels/YGG LVL 1.unity
+    path: Assets/Scenes/Maps/Yggdrasil Levels/Yggdrasil Boss.unity
     guid: 1afb4423f68788d4fb07da950ce51cd4
   - enabled: 1
     path: Assets/Scenes/Maps/Yggdrasil Levels/YGG LVL 2.unity
