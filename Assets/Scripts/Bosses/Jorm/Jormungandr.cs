@@ -26,12 +26,13 @@ public class Jormungandr : MonoBehaviour
 
     [Header("Rock Attacks")]
     public bool rockshathfallen;
+    [SerializeField] private float rockDamageThreshold;
 
     [Header("Spit Attacks")]
     public bool spitshot;
     public PlayerTooFar playerToofar;
-   
 
+    
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -72,7 +73,7 @@ public class Jormungandr : MonoBehaviour
 
     public void Rockstarters() 
     {
-        if (currentHealth <= 450 && !rockshathfallen)
+        if (currentHealth <= rockDamageThreshold && !rockshathfallen)
         {
             isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());

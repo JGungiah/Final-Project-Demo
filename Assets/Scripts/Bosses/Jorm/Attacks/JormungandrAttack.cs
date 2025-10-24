@@ -19,8 +19,8 @@ public class JormungandrAttack : MonoBehaviour
     public GameObject rockPrefab;
     public Transform[] spawnLocations;
     [SerializeField] private float numrocks;
-    [SerializeField]private float minSpawn = 0.2f;
-    [SerializeField]private float maxSpawn = 0.7f;
+    [SerializeField]private float minSpawn = 0.1f;
+    [SerializeField]private float maxSpawn = 0.3f;
 
 
     [Header("Enemies Spawning")]
@@ -60,7 +60,7 @@ public class JormungandrAttack : MonoBehaviour
             Transform points = spawnLocations[Random.Range(0, spawnLocations.Length)];
             Instantiate(rockPrefab, points.position, points.rotation);
             yield return new WaitForSeconds(Random.Range(minSpawn, maxSpawn));
-           spit.StopCoroutine(spit.waitToattack());
+           //spit.StopCoroutine(spit.waitToattack());
         }
         JormHealth.isInvunrable = false;
     }

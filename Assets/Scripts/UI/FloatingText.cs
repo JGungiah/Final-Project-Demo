@@ -7,7 +7,7 @@ public class FloatingText : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Destroy(this.gameObject, 0.3f);
+        Destroy(this.gameObject, lifetime);
     }
 
     // Update is called once per frame

@@ -52,6 +52,8 @@ public class playerInteract : MonoBehaviour
 
     public float fadeDuration = 2f; 
     private Coroutine fadeCoroutine;
+
+    public Camera mainCamera;
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -91,6 +93,15 @@ public class playerInteract : MonoBehaviour
         {
             NormRooms = false;
             YggdrasilRooms = true;
+        }
+
+        if (currentScene.name == "BossYorm")
+        {
+            mainCamera.orthographicSize = 25;
+        }
+        else
+        {
+            mainCamera.orthographicSize = 11;
         }
 
         loadanim = GameObject.FindWithTag("Load");

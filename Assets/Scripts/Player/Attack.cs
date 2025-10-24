@@ -54,8 +54,10 @@ public class Attack : MonoBehaviour
 
     public AudioSource hitnoise;
 
-    public TMP_Text floatingText;
-    
+
+
+
+
     //public bool attackSound;
 
     void Start()
@@ -71,6 +73,8 @@ public class Attack : MonoBehaviour
         originalDamage = playerDamage;
         originalAttackCooldown = attackCooldown;
         originalAttackSpeed = attackSpeed;
+
+       
        
     }
 
@@ -92,7 +96,7 @@ public class Attack : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(floatingText, transform.position, Quaternion.identity);
+
             lastClickedTime = Time.time;
             nOfClicks++;
             nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);
@@ -111,11 +115,13 @@ public class Attack : MonoBehaviour
         if (isAttacking)
         {
             playerScript.speed = 0;
+            playerScript.originalSpeed = 0;
         }
 
         else if (!isAttacking)
         {
             playerScript.speed = 25f;
+            playerScript.originalSpeed = 25f;
         }
 
 
@@ -177,7 +183,7 @@ public class Attack : MonoBehaviour
     void CalculateParry()
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit, 100f))
+        if (Physics.Raycast(ray, out RaycastHit hit, 10000f))
         {
             Vector3 targetPoint = hit.point;
             Vector3 dir = (targetPoint - player.position);
@@ -207,8 +213,9 @@ public class Attack : MonoBehaviour
     }
     void HandleAttack()
     {
-   
+
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        ray.origin = cam.transform.position + cam.transform.forward * 0.1f;
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
             Vector3 targetPoint = hit.point;
@@ -244,7 +251,6 @@ public class Attack : MonoBehaviour
                 maxComboDelay = 1;
                 RandomPitchAttack();
                 playerDamage = hit1Damage;
-                floatingText.text = playerDamage.ToString();
                 anim.SetTrigger("Hit1");
             }
 
@@ -269,7 +275,7 @@ public class Attack : MonoBehaviour
     { 
         RandomPitchAttack();
         playerDamage = hit2Damage;
-        floatingText.text = playerDamage.ToString();
+     
         anim.SetTrigger("Hit2");
     }
     else
@@ -286,13 +292,11 @@ public void ComboTransition2()
 
         if (!canCrit)
             {
-                floatingText.text = playerDamage.ToString();
                 playerDamage = hit3Damage;
             }
        
         if (canCrit)
             {
-                floatingText.text = playerDamage.ToString();
                 playerDamage = criticalDamage;
             }
 

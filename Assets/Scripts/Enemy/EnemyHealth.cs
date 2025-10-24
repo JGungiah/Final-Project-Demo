@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -26,6 +27,9 @@ public class EnemyHealth : MonoBehaviour
 
     public GameObject enemyDrop;
     private bool hasDropped;
+
+    private float randomValue;
+    public TMP_Text floatingText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -62,6 +66,9 @@ public class EnemyHealth : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
         {
+            floatingText.text = playerAttack.playerDamage.ToString();
+            randomValue = Random.Range(transform.position.x - 1, transform.position.x + 1);
+            Instantiate(floatingText, new Vector3(randomValue, transform.position.y - 5, transform.position.z - 2), Quaternion.identity);
             currentHealth -= playerAttack.playerDamage;
             currentHealth = Mathf.Clamp(currentHealth, 0 , maxHealth);
             canTakeDamage = true;
