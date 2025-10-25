@@ -5,7 +5,7 @@ public class JormungandrAttack : MonoBehaviour
 {
   private Jormungandr JormHealth;
   public GameObject GameManager;
-  private JormenemySpawner Enemies;
+  private JormEnemySpawner Enemies;
     private PlayerTooFar spit;
 
     [Header("Spit attack")]
@@ -34,7 +34,7 @@ public class JormungandrAttack : MonoBehaviour
         }
         JormHealth = GetComponent<Jormungandr>();
         GameManager = GameObject.FindWithTag("RuneManager");
-        Enemies = GameManager.GetComponent<JormenemySpawner>();
+        Enemies = GameManager.GetComponent<JormEnemySpawner>();
         spit = GetComponent<PlayerTooFar>();
         
     }

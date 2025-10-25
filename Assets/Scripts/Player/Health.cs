@@ -232,6 +232,11 @@ public class Health : MonoBehaviour
             TakeDamage(20f);
             
         }
+        if (other.tag == "Root")
+        {
+            canTakeDamage = true;
+            StartCoroutine(TakeWorldDamage(10f));
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -239,6 +244,11 @@ public class Health : MonoBehaviour
         {
             canTakeDamage = false;
           
+        }
+        if (other.tag == "Root")
+        {
+            canTakeDamage = false;
+
         }
     }
 

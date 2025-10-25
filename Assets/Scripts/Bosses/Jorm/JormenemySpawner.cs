@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class JormenemySpawner : MonoBehaviour
+public class JormEnemySpawner : MonoBehaviour
 {
     public Transform[] SpawnLocations;
     public GameObject[] Enemies;

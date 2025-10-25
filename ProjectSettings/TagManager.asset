@@ -25,6 +25,7 @@ TagManager:
   - Poison
   - Rock
   - Jormungandr
+  - Root
   layers:
   - Default
   - TransparentFX
