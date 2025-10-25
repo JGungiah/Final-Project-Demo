@@ -55,16 +55,16 @@ public class EnemyHealth : MonoBehaviour
         {
             EnemyDrop();
             hasDropped = true;
-            dissolveMat = new Material(dissolveMat);
-            spriteRenderer.material = dissolveMat;
-            StartCoroutine(DissolveEffect());
+            //dissolveMat = new Material(dissolveMat);
+            //spriteRenderer.material = dissolveMat;
+            //StartCoroutine(DissolveEffect());
         }
 
-        //Destroy(this.gameObject, 0.1f);
-   
-        
+        Destroy(this.gameObject, 0.1f);
 
-       
+
+
+
 
 
     }
@@ -98,28 +98,28 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    private IEnumerator DissolveEffect()
-    {
-        float dissolveTime = 2f;
-        float elapsedTime = 0f;
-        float startValue = 1f; 
-        float endValue = 0f;   
+    //private IEnumerator DissolveEffect()
+    //{
+    //    float dissolveTime = 2f;
+    //    float elapsedTime = 0f;
+    //    float startValue = 1f; 
+    //    float endValue = 0f;   
 
-        string dissolveProperty = "_DissolveAmount";
+    //    string dissolveProperty = "_DissolveAmount";
 
-        while (elapsedTime < dissolveTime)
-        {
-            float dissolveValue = Mathf.Lerp(startValue, endValue, elapsedTime / dissolveTime);
-            dissolveMat.SetFloat(dissolveProperty, dissolveValue);
+    //    while (elapsedTime < dissolveTime)
+    //    {
+    //        float dissolveValue = Mathf.Lerp(startValue, endValue, elapsedTime / dissolveTime);
+    //        dissolveMat.SetFloat(dissolveProperty, dissolveValue);
 
-            elapsedTime += Time.deltaTime;
-            yield return null; 
-        }
+    //        elapsedTime += Time.deltaTime;
+    //        yield return null; 
+    //    }
 
-        dissolveMat.SetFloat(dissolveProperty, endValue);
+    //    dissolveMat.SetFloat(dissolveProperty, endValue);
 
-        Destroy(gameObject);
-    }
+    //    Destroy(gameObject);
+    //}
     IEnumerator BleedEffect()
     {
         float bleedDuration = 5f;  
