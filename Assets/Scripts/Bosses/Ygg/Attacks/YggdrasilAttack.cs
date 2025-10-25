@@ -30,6 +30,7 @@ public class YggdrasilAttack : MonoBehaviour
     void Start()
     {
         yggdrasilHealth = GetComponent<Yggdrasil>();
+        Enemies = GameManager.GetComponent<YggEnemySpawner>();
     }
 
     // Update is called once per frame
