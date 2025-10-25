@@ -39,6 +39,7 @@ public class Yggdrasil : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
         {
+            print(1);
             currentHealth -= playerAttack.playerDamage;
             canTakeDamage = true;
             bloodVFX.SetActive(true);
