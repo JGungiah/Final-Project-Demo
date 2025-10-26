@@ -10,6 +10,8 @@ public class playerInteract : MonoBehaviour
 {
     public List<string> sceneNames;
     public List<string> YggdrasilScenes;
+    public string Boss1 = "BossYorm";
+    public string Boss2 = "Yggdrasil Boss";
    
     public GameObject interactImage;
     private bool hasBeenPressed;
@@ -309,29 +311,39 @@ public class playerInteract : MonoBehaviour
     }
     public void SceneGenerator() 
     {
-
-        int RandIndex = Random.Range(0, sceneNames.Count);
-        
-        string scenetoload = sceneNames[RandIndex];
-
-        
+        if(numberOfRoomsCompleted == 5) 
+        {
+            SceneManager.LoadScene(Boss1);
+        }
+        else
+        {
+        int RandIndex = Random.Range(0, sceneNames.Count);       
+        string scenetoload = sceneNames[RandIndex];       
         SceneManager.LoadScene(scenetoload);
         boonScript.RandomizeStatBoons();
         boonScript.AssignUIValues();
         numberOfRoomsCompleted ++;
+        }
     }
     public void SceneGeneratorYggdrasil()
     {
 
-        int RandIndex = Random.Range(0, YggdrasilScenes.Count);
+        if (numberOfRoomsCompleted == 10)
+        {
+            SceneManager.LoadScene(Boss2);
+        }
+        else
+        {
+            int RandIndex = Random.Range(0, YggdrasilScenes.Count);
 
-        string scenetoload = YggdrasilScenes[RandIndex];
+            string scenetoload = YggdrasilScenes[RandIndex];
 
 
-        SceneManager.LoadScene(scenetoload);
-        boonScript.RandomizeStatBoons();
-        boonScript.AssignUIValues();
-        numberOfRoomsCompleted++;
+            SceneManager.LoadScene(scenetoload);
+            boonScript.RandomizeStatBoons();
+            boonScript.AssignUIValues();
+            numberOfRoomsCompleted++;
+        }
     }
 
     private void OnTriggerStay(Collider other)
