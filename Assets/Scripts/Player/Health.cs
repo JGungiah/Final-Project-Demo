@@ -92,6 +92,7 @@ public class Health : MonoBehaviour
         {
             SceneManager.LoadScene("LobbyRoom");
             currentHealth = maxHealth;
+            canTakeDamage = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && canBlock)
@@ -104,7 +105,17 @@ public class Health : MonoBehaviour
         }
         
     }
+    void OnEnable()
+    {
+       
+        canTakeDamage = false;
+        StopAllCoroutines();
+    }
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
     public void ClearHealthBoons()
     {
         maxHealth = originalMaxHealth;
@@ -234,8 +245,11 @@ public class Health : MonoBehaviour
         }
         if (other.tag == "Root")
         {
-            canTakeDamage = true;
-            StartCoroutine(TakeWorldDamage(10f));
+            if (!canTakeDamage)
+            {
+                canTakeDamage = true;
+                StartCoroutine(TakeWorldDamage(10f));
+            }
         }
     }
     private void OnTriggerExit(Collider other)
@@ -247,6 +261,7 @@ public class Health : MonoBehaviour
         }
         if (other.tag == "Root")
         {
+
             canTakeDamage = false;
 
         }
