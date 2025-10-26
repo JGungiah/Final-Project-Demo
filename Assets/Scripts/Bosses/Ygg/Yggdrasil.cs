@@ -133,7 +133,7 @@ public class Yggdrasil : MonoBehaviour
 
             yield return new WaitForSeconds(3f);
             if (!isIncollider) yield break;
-            HealthScript.currentHealth -= 40f;
+            HealthScript.currentHealth -= 20f;
 
         }
     }
