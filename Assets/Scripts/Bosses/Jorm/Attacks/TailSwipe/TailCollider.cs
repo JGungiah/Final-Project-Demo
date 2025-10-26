@@ -4,6 +4,7 @@ using UnityEngine;
 public class TailCollider : MonoBehaviour
 {
     private GameObject player;
+    private CharacterController characterController;
     private Health HealthScript;
     public bool isIncollider;
     public Jormungandr Jorm;
@@ -11,12 +12,17 @@ public class TailCollider : MonoBehaviour
 
     private bool isMidhealth;
     private bool isLowhealth;
+
+    [SerializeField] private float tailSwipeDamage;
+    [SerializeField] private float knockbackDuration;
+    [SerializeField] private float knockbackPower;
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
         HealthScript = player.GetComponent<Health>();
         JormBody = GameObject.FindWithTag("Jormungandr");
         Jorm = JormBody.GetComponent<Jormungandr>();
+        characterController = player.GetComponent<CharacterController>();
     }
 
     private void Update()
@@ -55,11 +61,28 @@ public class TailCollider : MonoBehaviour
     {
         while (isIncollider)
         {
-          
+           
             yield return new WaitForSeconds(3f);
             if (!isIncollider) yield break;
-            HealthScript.currentHealth -= 40f;
+            StartCoroutine(KnockBack());
+            HealthScript.currentHealth -= tailSwipeDamage;
             
         }
+    }
+
+    private IEnumerator KnockBack()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < knockbackDuration)
+        {
+            characterController.enabled = false;
+            print(1);
+            player.transform.position += new Vector3(-1, 0, -1) * knockbackPower * Time.deltaTime;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        characterController.enabled = true;
+
+
     }
 }
