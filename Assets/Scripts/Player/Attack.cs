@@ -80,6 +80,7 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
+        //print(animDir);
         if (Time.time - lastClickedTime > maxComboDelay)
         {
             nOfClicks = 0;
@@ -215,8 +216,8 @@ public class Attack : MonoBehaviour
     {
 
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        ray.origin = cam.transform.position + cam.transform.forward * 0.1f;
-        if (Physics.Raycast(ray, out RaycastHit hit, 100f))
+        //ray.origin = cam.transform.position + cam.transform.forward * 0.1f;
+        if (Physics.Raycast(ray, out RaycastHit hit, 10000f))
         {
             Vector3 targetPoint = hit.point;
             Vector3 dir = (targetPoint - player.position);
@@ -225,13 +226,10 @@ public class Attack : MonoBehaviour
 
             knockbackDirection = dir.normalized;
 
-
             if (attackCollider != null)
             {
-              
 
-                attackCollider.rotation = Quaternion.LookRotation(dir, Vector3.up);
-               
+                attackCollider.rotation = Quaternion.LookRotation(dir, Vector3.up);  
             }
 
             Vector2 dir2D = new Vector2(dir.x, dir.z);
@@ -243,9 +241,6 @@ public class Attack : MonoBehaviour
             anim.SetFloat("AttackHorizontal", animDir.x);
             anim.SetFloat("AttackVertical", animDir.y);
             
-          
-            
-
             if (nOfClicks == 1)
             {
                 maxComboDelay = 1;

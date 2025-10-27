@@ -32,7 +32,6 @@ public class EnemyHealth : MonoBehaviour
     public TMP_Text floatingText;
 
     [SerializeField] private Material dissolveMat;
-    private Shader shader;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,16 +52,15 @@ public class EnemyHealth : MonoBehaviour
         floatingText.text = playerAttack.playerDamage.ToString();
         if (currentHealth <= 0 && !hasDropped)
         {
-            EnemyDrop();
+           
             hasDropped = true;
-            //dissolveMat = new Material(dissolveMat);
-            //spriteRenderer.material = dissolveMat;
-            //StartCoroutine(DissolveEffect());
 
-            Destroy(this.gameObject, 0.1f);
+            StartCoroutine(DissolveEffect());
+            EnemyDrop();
+            agent.enabled = false;  
+           
         }
 
-        //Destroy(this.gameObject, 0.1f);
 
 
 
@@ -106,22 +104,24 @@ public class EnemyHealth : MonoBehaviour
         float elapsedTime = 0f;
         float startValue = 1f;
         float endValue = 0f;
-
-        string dissolveProperty = "_DissolveAmount";
+        Animator anim = GetComponent<Animator>();
+        string dissolveProperty = "_Dissolve_Amount";
 
         while (elapsedTime < dissolveTime)
         {
-            float dissolveValue = Mathf.Lerp(startValue, endValue, elapsedTime / dissolveTime);
-            dissolveMat.SetFloat(dissolveProperty, dissolveValue);
+            anim.enabled = false;
+            float dissolveValue = Mathf.Lerp(endValue, startValue, elapsedTime / dissolveTime);
+           spriteRenderer.material.SetFloat(dissolveProperty, dissolveValue);
 
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        dissolveMat.SetFloat(dissolveProperty, endValue);
+        //spriteRenderer.material.SetFloat(dissolveProperty, endValue);
 
         Destroy(gameObject);
     }
+
     IEnumerator BleedEffect()
     {
         float bleedDuration = 5f;  
