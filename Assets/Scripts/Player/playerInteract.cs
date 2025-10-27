@@ -56,6 +56,7 @@ public class playerInteract : MonoBehaviour
     private Coroutine fadeCoroutine;
 
     public Camera mainCamera;
+    private Animator anim;
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -68,7 +69,8 @@ public class playerInteract : MonoBehaviour
         healthScript = GetComponent<Health>();
         movementScript = GetComponent<Player>();
         attackScript = GetComponent<Attack>();
-
+        loadanim = GameObject.FindWithTag("Load");
+        anim = loadanim.GetComponent<Animator>();
         NormRooms = true;
     }
 
@@ -383,8 +385,8 @@ public class playerInteract : MonoBehaviour
 
     private IEnumerator SceneChangeDelay()
     {
-
-        loadanim.GetComponent<Animator>().SetBool("FadeIn", true);
+       
+        anim.SetBool("FadeIn", true);
         isChangingScene = true; 
       
         yield return new WaitForSeconds(4f);
@@ -397,7 +399,8 @@ public class playerInteract : MonoBehaviour
     }
     private IEnumerator SceneChangeDelayYggdrasil()
     {
-        loadanim.GetComponent<Animator>().SetBool("FadeIn", true);
+      
+        anim.SetBool("FadeIn", true);
         isChangingScene = true;
 
         yield return new WaitForSeconds(4f);

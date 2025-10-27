@@ -58,6 +58,8 @@ public class EnemyHealth : MonoBehaviour
             //dissolveMat = new Material(dissolveMat);
             //spriteRenderer.material = dissolveMat;
             //StartCoroutine(DissolveEffect());
+
+            Destroy(this.gameObject, 0.1f);
         }
 
         //Destroy(this.gameObject, 0.1f);
