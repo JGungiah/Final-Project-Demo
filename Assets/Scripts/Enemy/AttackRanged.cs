@@ -129,6 +129,9 @@ public class AttackRanged : MonoBehaviour
 
         bool isMoving = agent.velocity.magnitude > 0.1f;
 
+        anim.SetFloat("AttackHorizontal", animDirection.x);
+        anim.SetFloat("AttackVertical", animDirection.z);
+
         if (!isMoving && !isAttacking)
         {
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
@@ -148,7 +151,7 @@ public class AttackRanged : MonoBehaviour
             anim.SetFloat("horizontalMovement", -animDirection.x);
             anim.SetFloat("verticalMovement", -animDirection.z);
         }
-  
+
 
     }
 

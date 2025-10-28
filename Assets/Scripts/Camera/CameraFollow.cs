@@ -7,9 +7,10 @@ public class CameraFollow : MonoBehaviour
     private Player player;
     [SerializeField] private Vector3 offset = new Vector3(-5f, 5.5f, -5f);
 
-    [SerializeField] private float shakeDuration = 0.5f;
+    public float shakeDuration;
     [SerializeField] private AnimationCurve shakeCurve;
 
+    public float shakeStrength;
     private float elapsedTime;
     private bool isShaking;
 
@@ -39,7 +40,7 @@ public class CameraFollow : MonoBehaviour
             float strength = shakeCurve.Evaluate(elapsedTime / shakeDuration);
 
             
-            transform.position = player.transform.position + offset + (Vector3)Random.insideUnitCircle * strength;
+            transform.position = player.transform.position + offset + (Vector3)Random.insideUnitCircle * strength * shakeStrength;
 
             yield return null;
         }

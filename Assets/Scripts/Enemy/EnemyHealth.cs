@@ -32,6 +32,9 @@ public class EnemyHealth : MonoBehaviour
     public TMP_Text floatingText;
 
     [SerializeField] private Material dissolveMat;
+
+    private GameObject mainCamera;
+    private CameraFollow cameraScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,12 +46,15 @@ public class EnemyHealth : MonoBehaviour
         playerAttack = player.GetComponent<Attack>();
         agent = GetComponent<NavMeshAgent>();
         originalSpeed = agent.speed;
+        mainCamera = GameObject.FindWithTag("MainCamera");
+        cameraScript = mainCamera.GetComponent<CameraFollow>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
+
         floatingText.text = playerAttack.playerDamage.ToString();
         if (currentHealth <= 0 && !hasDropped)
         {
@@ -76,6 +82,8 @@ public class EnemyHealth : MonoBehaviour
             
             randomValue = Random.Range(transform.position.x - 1, transform.position.x + 1);
             Instantiate(floatingText, new Vector3(randomValue, transform.position.y - 5, transform.position.z - 2), Quaternion.identity);
+            cameraScript.shakeStrength = playerAttack.playerDamage / 2.5f;
+            cameraScript.shakeDuration = playerAttack.playerDamage / 10f;
             currentHealth -= playerAttack.playerDamage;
             currentHealth = Mathf.Clamp(currentHealth, 0 , maxHealth);
             canTakeDamage = true;

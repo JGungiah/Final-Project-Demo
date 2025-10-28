@@ -210,6 +210,9 @@ public class Health : MonoBehaviour
                     TakeDamage(enemyAttack.damage);
                     hasBeenAttacked = true;
                     StartCoroutine(AttackWindow());
+                    cameraScript.shakeStrength = enemyAttack.damage / 2.5f;
+                    cameraScript.shakeDuration = enemyAttack.damage / 10f;
+                    cameraScript.Shake();
                 }
                 else if (isBlocking)
                 {
@@ -217,7 +220,7 @@ public class Health : MonoBehaviour
                     blockStrength = Mathf.Clamp(blockStrength, 0 , originalBlockStrength);
                 }
 
-                cameraScript.Shake();   
+                
               
                 enemyAttack.hasAttacked = false;
             }
