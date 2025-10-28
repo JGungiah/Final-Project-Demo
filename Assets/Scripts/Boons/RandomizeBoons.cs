@@ -28,7 +28,6 @@ public class RandomizeBoons : MonoBehaviour
 
     public bool isActive = false;
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -49,8 +48,9 @@ public class RandomizeBoons : MonoBehaviour
     void Update()
     {
         if (boonCanvas.activeSelf)
-        {
-            canvas.gameObject.SetActive(false);
+        {  
+                canvas.gameObject.SetActive(false);
+              
         }
     }
 
@@ -116,7 +116,6 @@ public class RandomizeBoons : MonoBehaviour
     {
         selectedBoon = chosenBoons[boonIndex];
 
-        print(selectedBoon);
 
         Health playerHealth = player.GetComponent<Health>();
         Player playerMovement = player.GetComponent<Player>();

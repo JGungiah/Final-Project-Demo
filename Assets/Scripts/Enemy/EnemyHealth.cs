@@ -117,8 +117,6 @@ public class EnemyHealth : MonoBehaviour
             yield return null;
         }
 
-        //spriteRenderer.material.SetFloat(dissolveProperty, endValue);
-
         Destroy(gameObject);
     }
 

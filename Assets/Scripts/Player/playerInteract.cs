@@ -57,6 +57,12 @@ public class playerInteract : MonoBehaviour
 
     public Camera mainCamera;
     private Animator anim;
+
+    private SpriteRenderer spriteRenderer;
+    public bool canChooseBoon;
+
+    private Animator animator;
+
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -72,6 +78,8 @@ public class playerInteract : MonoBehaviour
         loadanim = GameObject.FindWithTag("Load");
         anim = loadanim.GetComponent<Animator>();
         NormRooms = true;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
 
@@ -313,6 +321,8 @@ public class playerInteract : MonoBehaviour
     }
     public void SceneGenerator() 
     {
+        StartCoroutine(UnDissolveEffect());
+        canChooseBoon = false;
         if(numberOfRoomsCompleted == 5) 
         {
             SceneManager.LoadScene(Boss1);
@@ -329,7 +339,8 @@ public class playerInteract : MonoBehaviour
     }
     public void SceneGeneratorYggdrasil()
     {
-
+        StartCoroutine(UnDissolveEffect());
+        canChooseBoon = false;
         if (numberOfRoomsCompleted == 10)
         {
             SceneManager.LoadScene(Boss2);
@@ -364,18 +375,18 @@ public class playerInteract : MonoBehaviour
         {
             interactImage.gameObject.SetActive(true);
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.E) && !canChooseBoon)
             {
                 interactImage.gameObject.SetActive(true);
-              
+                
                 for (int i = 0; i < boonCanvas.transform.childCount; i++)
                 {
                     Transform child = boonCanvas.transform.GetChild(i);
                     child.gameObject.SetActive(true);
- 
+                    canChooseBoon = true;
                 }
-               
-               
+
+ 
                 hasBeenPressed = true;
             }
         }
@@ -385,7 +396,8 @@ public class playerInteract : MonoBehaviour
 
     private IEnumerator SceneChangeDelay()
     {
-       
+        StartCoroutine(DissolveEffect());
+
         anim.SetBool("FadeIn", true);
         isChangingScene = true; 
       
@@ -418,4 +430,47 @@ public class playerInteract : MonoBehaviour
             interactImage.gameObject.SetActive(false);
         }
     }
+
+        private IEnumerator DissolveEffect()
+    {
+        float dissolveTime = 1f;
+        float elapsedTime = 0f;
+        float startValue = 1f;
+        float endValue = 0f;
+      
+        string dissolveProperty = "_Dissolve_Amount";
+
+        while (elapsedTime < dissolveTime)
+        {
+
+            float dissolveValue = Mathf.Lerp(endValue, startValue, elapsedTime / dissolveTime);
+            spriteRenderer.material.SetFloat(dissolveProperty, dissolveValue);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+    }
+
+    private IEnumerator UnDissolveEffect()
+    {
+        float dissolveTime = 2f;
+        float elapsedTime = 0f;
+        float startValue = 1f;
+        float endValue = 0f;
+
+        string dissolveProperty = "_Dissolve_Amount";
+
+        while (elapsedTime < dissolveTime)
+        {
+
+            float dissolveValue = Mathf.Lerp(startValue, endValue, elapsedTime / dissolveTime);
+            spriteRenderer.material.SetFloat(dissolveProperty, dissolveValue);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+    }
 }
+
