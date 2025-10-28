@@ -433,7 +433,7 @@ public class playerInteract : MonoBehaviour
 
         private IEnumerator DissolveEffect()
     {
-        float dissolveTime = 1f;
+        float dissolveTime = 1.5f;
         float elapsedTime = 0f;
         float startValue = 1f;
         float endValue = 0f;
