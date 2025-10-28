@@ -10,8 +10,7 @@ public class enemySpawner : MonoBehaviour
     public int Count;
     public GameObject[] enemyCount;
     public GameObject gate;
-
-
+   
     public bool wave1;
     public bool wave2;
     public bool wavescomplete;
@@ -42,7 +41,6 @@ public class enemySpawner : MonoBehaviour
     }
     public void Wave1Spawn() 
     {
-        
         for (int i = 0; i < SpawnLocations.Length; i++) 
         {
         int randomIndex = Random.Range(0, Enemies.Length);
@@ -57,19 +55,19 @@ public class enemySpawner : MonoBehaviour
 
     public void Wave2Spawn()
     {
-
+        
         for (int i = 0; i < SpawnLocations.Length; i++)
         {
             int randomIndex = Random.Range(0, Enemies.Length);
             GameObject chosenEnemy = Enemies[randomIndex];
             Instantiate(chosenEnemy, SpawnLocations[i].position, spawnRotation);
-
+           
         }
        wave2 = true;
         numberOfWavesCompleted++;
     }
 
-
+ 
     public void countenemies() 
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy");

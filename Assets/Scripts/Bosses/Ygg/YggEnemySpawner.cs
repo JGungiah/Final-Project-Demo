@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class YggEnemySpawner : MonoBehaviour
@@ -6,9 +7,9 @@ public class YggEnemySpawner : MonoBehaviour
     public GameObject[] Enemies;
     private Quaternion spawnRotation = Quaternion.Euler(0f, 45f, 0f);
 
+   
     public void EnemySpawn()
     {
-
         for (int i = 0; i < SpawnLocations.Length; i++)
         {
             int randomIndex = Random.Range(0, Enemies.Length);
@@ -17,4 +18,5 @@ public class YggEnemySpawner : MonoBehaviour
         }
 
     }
+   
 }

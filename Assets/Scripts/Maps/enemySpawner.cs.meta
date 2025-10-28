@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: a96dc26605d153d47966141e22763100
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gate: {instanceID: 0}
+  - runespawn: {fileID: 6416130673686583388, guid: 971a5c674183e0a49a8355f34e16524a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
