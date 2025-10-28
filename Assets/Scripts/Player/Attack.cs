@@ -80,13 +80,13 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-        //print(animDir);
+
         if (Time.time - lastClickedTime > maxComboDelay)
         {
             nOfClicks = 0;
             anim.ResetTrigger("Hit2");
             anim.ResetTrigger("Hit3");
-            isAttacking = false;
+            //isAttacking = false;
             
         }
 
@@ -268,6 +268,7 @@ public class Attack : MonoBehaviour
 {
     if (nOfClicks == 2)
     { 
+            HandleAttack();
         RandomPitchAttack();
         playerDamage = hit2Damage;
      
@@ -295,16 +296,25 @@ public void ComboTransition2()
                 playerDamage = criticalDamage;
             }
 
+        HandleAttack();
         anim.SetTrigger("Hit3");
-            maxComboDelay = 0.3f;
+        maxComboDelay = 0.3f;
         nOfClicks = 0;
      }
-    else
-    {
-        isAttacking = false;
+        else
+        {
+            StartCoroutine(resetSpeed());
+        }
+       
     }
-}
 
+
+    IEnumerator resetSpeed()
+    {
+        yield return new WaitForSeconds(4);
+            isAttacking = false;
+        
+    }
     Vector2 GetDirection(float angle)
     {
       
