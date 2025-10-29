@@ -76,13 +76,12 @@ public class TailCollider : MonoBehaviour
         while (elapsedTime < knockbackDuration)
         {
             characterController.enabled = false;
-            print(1);
             player.transform.position += new Vector3(-1, 0, -1) * knockbackPower * Time.deltaTime;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
         characterController.enabled = true;
 
-
+        isIncollider = false;
     }
 }

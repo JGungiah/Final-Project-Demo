@@ -111,12 +111,8 @@ public class AttackMelee : MonoBehaviour
         isAttacking = true;
         canAttack = false;
 
-
-            attackSound.pitch = Random.Range(minPitch, maxPitch);
-            attackSound.PlayOneShot(attackSound.clip);
-        
-
-
+        attackSound.pitch = Random.Range(minPitch, maxPitch);
+        attackSound.PlayOneShot(attackSound.clip);
 
         anim.SetFloat("AttackHorizontal", movementScript.animDirection.x);
         anim.SetFloat("AttackVertical", movementScript.animDirection.z);
@@ -124,13 +120,11 @@ public class AttackMelee : MonoBehaviour
 
         yield return new WaitForSeconds(attackDuration);
 
-
         isAttacking = false;
         attackCollider.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
-        
     }
 
    public IEnumerator KnockBack()

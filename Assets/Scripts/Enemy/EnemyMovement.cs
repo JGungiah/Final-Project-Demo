@@ -208,7 +208,16 @@ public class EnemyMovement : MonoBehaviour
 
         anim.SetFloat("horizontalMovement", horizontalMovement);
         anim.SetFloat("verticalMovement", verticalMovement);
-        anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
+
+        if (attackMeleeScript.isAttacking)
+        {
+            anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
+        }
+        else
+        {
+            anim.SetFloat("animMoveMagnitude", 0);
+        }
+       
 
        
     }
