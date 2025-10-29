@@ -38,6 +38,7 @@ public class AttackMelee : MonoBehaviour
     [SerializeField] private float minPitch;
     [SerializeField] private float maxPitch;
 
+    public float originalSpeed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,6 +49,7 @@ public class AttackMelee : MonoBehaviour
         attackScript = player.GetComponent<Attack>();
        
         movementScript = GetComponent<EnemyMovement>();
+        originalSpeed = agent.speed;
     }
 
     // Update is called once per frame
@@ -56,9 +58,9 @@ public class AttackMelee : MonoBehaviour
        
         if (!isAttacking)
         {
-            attackCollider.gameObject.SetActive(false);
+            //attackCollider.gameObject.SetActive(false);
             agent.isStopped = false;
-            agent.speed = 7;
+            agent.speed = originalSpeed;
         }
 
         attackDistance = Vector3.Distance(transform.position, player.transform.position);
@@ -66,10 +68,9 @@ public class AttackMelee : MonoBehaviour
         if (attackDistance <= attackRadius && !isAttacking && canAttack)
         {
             StartCoroutine(EnemyAttack());
-
             if (isAttacking)
             {
-                attackCollider.gameObject.SetActive(true);
+                
 
                 attackCollider.rotation = Quaternion.LookRotation(-movementScript.animDirection, Vector3.up);
                 agent.isStopped = true;
@@ -110,7 +111,7 @@ public class AttackMelee : MonoBehaviour
     {
         isAttacking = true;
         canAttack = false;
-
+        attackCollider.gameObject.SetActive(true);
         attackSound.pitch = Random.Range(minPitch, maxPitch);
         attackSound.PlayOneShot(attackSound.clip);
 
@@ -121,7 +122,6 @@ public class AttackMelee : MonoBehaviour
         yield return new WaitForSeconds(attackDuration);
 
         isAttacking = false;
-        attackCollider.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;

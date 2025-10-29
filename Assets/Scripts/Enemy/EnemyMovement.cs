@@ -41,6 +41,7 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private float patrolCoolDown;
     private bool canCheck = true;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -52,7 +53,14 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-       
+   
+        //if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attacks") || anim.GetCurrentAnimatorStateInfo(0).IsName("Run"))
+        //{
+        //    agent.speed = 5;
+        //} 
+
+        
+
         if (!canChase)
         {
             agent.destination = transform.position;

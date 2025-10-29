@@ -1,0 +1,682 @@
+fileFormatVersion: 2
+guid: eaad5d9ca5da8504d982d1f828ddae47
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_0
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 3466
+        width: 271
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4ed12876041d74d893b461625fc8e4
+      internalID: 1905831097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_1
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 3468
+        width: 275
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09f8655d7332f2468e3b1412b779d5e
+      internalID: 1163956078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_2
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 3474
+        width: 275
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f095b3df181b37f41a5d5ed75acf90c8
+      internalID: -268230118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_3
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 3022
+        width: 209
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c12f25e17845c74fad12f7e056b6fe0
+      internalID: 1969243961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_4
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 3026
+        width: 207
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59bbc7d234da2f45981473e19d7456e
+      internalID: 496258092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_5
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 3036
+        width: 219
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5290de34b9fd9468230279aac3048f
+      internalID: -199959272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_6
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 2497
+        width: 320
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd488fb9f6488d48a40b4140d02bd3a
+      internalID: -760305071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_7
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 2507
+        width: 336
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531aa107a336d1d41bb12cdb3ffc5c13
+      internalID: -1765074091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_8
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 2515
+        width: 310
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875b0689133cb95498b1fdc1d3f52608
+      internalID: 551553105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_9
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1999
+        width: 319
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f083ff938f25dd45b0901444027d327
+      internalID: 1798088765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_10
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 2003
+        width: 336
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5402e6e0471a66340a14e7e877ad9948
+      internalID: 333101162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_11
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 2022
+        width: 355
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e5bc248d08d9941b42ce46bafb9983
+      internalID: -2131627272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_12
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1515
+        width: 310
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14cc4e74d8bb1f43a5a1dedd2f5c752
+      internalID: -1598658728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_13
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1511
+        width: 315
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e557935dcaff8d4a9f4eadf68ebfeb7
+      internalID: 1047631537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_14
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 1524
+        width: 316
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90026a97902f0e44f908d22447c82206
+      internalID: -2129786429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_15
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1013
+        width: 326
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed5d58330f64ec449bfca1230e5f94e
+      internalID: 737873867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_16
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1011
+        width: 343
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9b40573304b6e4e8552841130d9452
+      internalID: 596478204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_17
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1007
+        width: 361
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74835094e93c084458289eea0f810763
+      internalID: 1744945156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_18
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 554
+        width: 317
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f65e99f4a7903d4a974611a4f6b4c6b
+      internalID: 1922759335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_19
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 532
+        width: 332
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c03c1a3152d524dbc8f5f27033c43f
+      internalID: 1120228329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_20
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 534
+        width: 307
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb73f058dcd52743a0307b61c920a26
+      internalID: 1141260352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_21
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 77
+        width: 219
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826eecfc8c0470e4fa5bcf5fec100c14
+      internalID: -1986740755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_22
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 93
+        width: 213
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9699f3fad7511c946b4e2a8da6322b2f
+      internalID: -1399774900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whorshipper_Idle_new_23
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 77
+        width: 229
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6009089b2812ab4682464fee1a57a71
+      internalID: 905032215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ea3f63d85ee67244ab0daeeea28c5349
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Whorshipper_Idle_new_0: 1905831097
+      Whorshipper_Idle_new_1: 1163956078
+      Whorshipper_Idle_new_10: 333101162
+      Whorshipper_Idle_new_11: -2131627272
+      Whorshipper_Idle_new_12: -1598658728
+      Whorshipper_Idle_new_13: 1047631537
+      Whorshipper_Idle_new_14: -2129786429
+      Whorshipper_Idle_new_15: 737873867
+      Whorshipper_Idle_new_16: 596478204
+      Whorshipper_Idle_new_17: 1744945156
+      Whorshipper_Idle_new_18: 1922759335
+      Whorshipper_Idle_new_19: 1120228329
+      Whorshipper_Idle_new_2: -268230118
+      Whorshipper_Idle_new_20: 1141260352
+      Whorshipper_Idle_new_21: -1986740755
+      Whorshipper_Idle_new_22: -1399774900
+      Whorshipper_Idle_new_23: 905032215
+      Whorshipper_Idle_new_3: 1969243961
+      Whorshipper_Idle_new_4: 496258092
+      Whorshipper_Idle_new_5: -199959272
+      Whorshipper_Idle_new_6: -760305071
+      Whorshipper_Idle_new_7: -1765074091
+      Whorshipper_Idle_new_8: 551553105
+      Whorshipper_Idle_new_9: 1798088765
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -35,6 +35,9 @@ public class EnemyHealth : MonoBehaviour
 
     private GameObject mainCamera;
     private CameraFollow cameraScript;
+
+    private Animator anim;
+    [SerializeField] private float stopTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,6 +51,7 @@ public class EnemyHealth : MonoBehaviour
         originalSpeed = agent.speed;
         mainCamera = GameObject.FindWithTag("MainCamera");
         cameraScript = mainCamera.GetComponent<CameraFollow>();
+        anim= GetComponent<Animator>();
         
     }
 
@@ -67,12 +71,13 @@ public class EnemyHealth : MonoBehaviour
            
         }
 
+    }
 
-
-
-
-
-
+    private IEnumerator enemyFreeze()
+    {
+        anim.enabled = false;
+        yield return new WaitForSeconds(stopTime);
+        anim.enabled = true;
     }
 
     private void OnTriggerStay(Collider other)
@@ -82,8 +87,17 @@ public class EnemyHealth : MonoBehaviour
             
             randomValue = Random.Range(transform.position.x - 1, transform.position.x + 1);
             Instantiate(floatingText, new Vector3(randomValue, transform.position.y - 5, transform.position.z - 2), Quaternion.identity);
-            cameraScript.shakeStrength = playerAttack.playerDamage / 2.5f;
-            cameraScript.shakeDuration = playerAttack.playerDamage / 10f;
+            cameraScript.shakeStrength = playerAttack.playerDamage / 10f;
+            cameraScript.shakeDuration = playerAttack.playerDamage / 20f;
+            if (playerAttack.Hit3)
+            {
+                cameraScript.shakeStrength = playerAttack.playerDamage / 8f;
+                cameraScript.shakeDuration = playerAttack.playerDamage / 10f;
+                cameraScript.Shake();
+            }
+
+            cameraScript.Shake();
+            StartCoroutine(enemyFreeze());
             currentHealth -= playerAttack.playerDamage;
             currentHealth = Mathf.Clamp(currentHealth, 0 , maxHealth);
             canTakeDamage = true;
