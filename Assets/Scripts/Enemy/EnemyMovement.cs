@@ -55,22 +55,18 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && attackMeleeScript.isAttacking)
         {
-            agent.speed = 0;
+                //agent.isStopped = true;
+              StartCoroutine(Idle());
         }
-
         else
         {
+            
+            agent.isStopped = false;
             agent.speed = attackMeleeScript.originalSpeed;
+            
         }
-
-
-        if (!canChase)
-        {
-            agent.destination = transform.position;
-        }
-       
 
         DistanceToPlayer();
       
@@ -111,7 +107,7 @@ public class EnemyMovement : MonoBehaviour
             }
         }
 
-        if (agent.hasPath)
+        if (!agent.isStopped && agent.hasPath)
         {
             velocity = agent.desiredVelocity.normalized * agent.speed;
             agent.Move(velocity * Time.deltaTime);
@@ -128,7 +124,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (!walkPointSet)
         {
-            RandomWaypoint();
+            ClosestWaypoint();
         }
 
         if (walkPointSet)
@@ -157,36 +153,27 @@ public class EnemyMovement : MonoBehaviour
         canCheck = true;
     }
 
-    bool RandomPoint(Vector3 center, float range, out Vector3 result)
-    {
-        for (int i = 0; i < 30; i++)
-        {
 
-            
-            Vector3 randomPoint = center + Random.insideUnitSphere * range;
-            NavMeshHit hit;
-            if (NavMesh.SamplePosition(randomPoint, out hit, 10.0f, NavMesh.AllAreas))
+    void ClosestWaypoint()
+    {
+        if (waypoints == null || waypoints.Length == 0)
+            return;
+
+        GameObject closest = waypoints[0];
+        float closestDistance = Vector3.Distance(transform.position, closest.transform.position);
+
+        foreach (GameObject waypoint in waypoints)
+        {
+            float distance = Vector3.Distance(transform.position, waypoint.transform.position);
+            if (distance < closestDistance)
             {
-                result = hit.position;
-                return true;
+                closestDistance = distance;
+                closest = waypoint;
             }
         }
-        result = Vector3.zero;
-        return false;
-    }
-        void RandomWaypoint()
-    {
-        Vector3 point;
-        if (RandomPoint(transform.position, range, out point))
-        {
-            range = Random.Range(30, 40);
 
-            walkPoint = new Vector3( point.x, transform.position.y,point.z);
-            walkPointSet = true;
-
-        }
-
-
+        walkPoint = new Vector3(closest.transform.position.x, transform.position.y, closest.transform.position.z);
+        walkPointSet = true;
     }
 
     void DistanceToPlayer()
@@ -238,8 +225,9 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator Idle()
     {
         anim.SetFloat("animMoveMagnitude", 0);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
+        agent.isStopped = false;
     }
 
     void PatrolAnimations()
