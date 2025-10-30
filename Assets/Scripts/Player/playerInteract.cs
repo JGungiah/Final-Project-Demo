@@ -164,7 +164,7 @@ public class playerInteract : MonoBehaviour
             roomNumberText.gameObject.SetActive(false);
             roomNumber.gameObject.SetActive(false);
             canvas.SetActive(false);
-
+            anim = loadanim.GetComponent<Animator>();
             enemySpawner.numberOfWavesCompleted = 0;
             numberOfRoomsCompleted = 0;
             count = 0;
@@ -323,19 +323,19 @@ public class playerInteract : MonoBehaviour
     {
         StartCoroutine(UnDissolveEffect());
         canChooseBoon = false;
-        if(numberOfRoomsCompleted == 5) 
-        {
-            SceneManager.LoadScene(Boss1);
-        }
-        else
-        {
+        //if(numberOfRoomsCompleted == 5) 
+        //{
+        //    SceneManager.LoadScene(Boss1);
+        //}
+        //else
+        //{
         int RandIndex = Random.Range(0, sceneNames.Count);       
         string scenetoload = sceneNames[RandIndex];       
         SceneManager.LoadScene(scenetoload);
         boonScript.RandomizeStatBoons();
         boonScript.AssignUIValues();
         numberOfRoomsCompleted ++;
-        }
+        //}
     }
     public void SceneGeneratorYggdrasil()
     {
@@ -397,6 +397,7 @@ public class playerInteract : MonoBehaviour
     private IEnumerator SceneChangeDelay()
     {
         StartCoroutine(DissolveEffect());
+        print("wa");
 
         anim.SetBool("FadeIn", true);
         isChangingScene = true; 
