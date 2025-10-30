@@ -38,7 +38,7 @@ public class EnemyMovement : MonoBehaviour
     private bool walkPointSet = false;
     private bool hasBeenDetected = false;
 
-    [SerializeField] private float range;
+    private float range;
 
     [SerializeField] private float patrolCoolDown;
     private bool canCheck = true;
@@ -196,7 +196,7 @@ public class EnemyMovement : MonoBehaviour
         Vector3 point;
         if (RandomPoint(transform.position, range, out point))
         {
-            range = Random.Range(30, 40);
+            range = Random.Range(walkPointRange - 2, walkPointRange +2);
 
             walkPoint = new Vector3(point.x, transform.position.y, point.z);
             walkPointSet = true;
