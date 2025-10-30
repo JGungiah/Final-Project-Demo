@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: fd47969eae0347340987e7b1f96c6927
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_0
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3287
+        width: 218
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a6c28d16ef21047b2278c1212e0f4e
+      internalID: -1320788798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_1
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 3274
+        width: 236
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7fa94befdad934db865fd11223c29f
+      internalID: -1073492340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_2
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 3317
+        width: 234
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74d526b2feb45241b2616350c909e0b
+      internalID: -601481268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_3
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 3311
+        width: 245
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2cddf9b0f701547b2fceb3080fb64d
+      internalID: -650736453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_4
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 3311
+        width: 302
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7cf4a22e6e5614c852213cc7b07fa6
+      internalID: -2084628618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_5
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 2823
+        width: 307
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1458c4f1045eb8345a85f86cedf79809
+      internalID: 1432687426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_6
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 2819
+        width: 324
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5b3f3a848a5aa4793f62287ea1944e
+      internalID: -958597783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_7
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 2845
+        width: 334
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc8b9dc2cd1d7d418564fb4b980bd13
+      internalID: 1758017599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_8
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 2858
+        width: 230
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1600829bd9520854889ffc646c9503e2
+      internalID: 1222131358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_9
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 2856
+        width: 297
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89d77b478b1d964ea1082b11bdebadf
+      internalID: -1608987457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2357
+        width: 300
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabc1e65288995a409a15510e3835f18
+      internalID: 496032590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_11
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 2378
+        width: 350
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e86e4eb8db15b4a8dd50d5a126cf37
+      internalID: 1848175407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_12
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 2383
+        width: 362
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340c295c7c866464fbfcf3d1364dd93f
+      internalID: -805291152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_13
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 2374
+        width: 291
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3d405d5baffa746816fe430bc2dffc
+      internalID: -1958122898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_14
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 2363
+        width: 299
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8971893f848143c448d88f5a9184577f
+      internalID: -133965251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_15
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1962
+        width: 310
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843791349d178684f9ce0f2589ab783d
+      internalID: 809182114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_16
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1968
+        width: 353
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf7a87f621163b4585aa073a9826c71
+      internalID: -45391358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_17
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1964
+        width: 262
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41473793ab12981418a65a337d630923
+      internalID: -861402964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_18
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1945
+        width: 258
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd3fbc48a39db548be833b973ec661a
+      internalID: 161535167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_19
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1949
+        width: 336
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e87349c860d3b14cbfd31ee61e1d77f
+      internalID: -74187448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_20
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1541
+        width: 310
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f107c560e7e3a429bb86e3458b5cf3
+      internalID: -962943245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_21
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1539
+        width: 352
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfb29955a7289e4596378ac1baaaa3a
+      internalID: 394571483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_22
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1519
+        width: 261
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577eaa5031008714fbae1496c1962771
+      internalID: -1869259491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_23
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1507
+        width: 256
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7a5b4c427b85c4ab0899d2a4f999b4
+      internalID: -1810052053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_24
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1511
+        width: 336
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517194e700e581149a7a021241fc091b
+      internalID: -470688016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_25
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1072
+        width: 304
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbacaf73264a4da45851600da77d0509
+      internalID: -1451965043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_26
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1086
+        width: 306
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487e92d2b215cba418e045087f22f0f7
+      internalID: 1543147293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_27
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1077
+        width: 295
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0a23d9b51ce1842aa199bca7964814
+      internalID: -1098198456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_28
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1040
+        width: 221
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09566f8682509c94fb2909673e261fb7
+      internalID: 547009816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_29
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1045
+        width: 266
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c294b59fcf729f5438b5287d0780bc78
+      internalID: -1896643689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 563
+        width: 293
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f66039480708b4c84a9080ba807c11
+      internalID: -831578546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_31
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 593
+        width: 278
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3815d5cedcc2afc4d812a8cfde50d2f9
+      internalID: -977528114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_32
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 597
+        width: 265
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb85560074d1ca141b132ca4c6d07a0e
+      internalID: 1797444029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_33
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 595
+        width: 230
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172c48346868a3142adfd6eb54b59065
+      internalID: 1391890044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_34
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 554
+        width: 292
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c094eea107471446bbb62e077069af5
+      internalID: -144125597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_35
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 110
+        width: 289
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d722c2f2fb52cd42b4079ff2ea75692
+      internalID: -219836793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_36
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 96
+        width: 221
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96e6afff6f2d174890418b296160d46
+      internalID: -1828452774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_37
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 118
+        width: 249
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a77222df0105d5478f5be0114c47a2a
+      internalID: 1497580025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_38
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 107
+        width: 250
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b55fdb62f3cbb846b154ce81caac613
+      internalID: -313893968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet for Draugr attack_39
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 73
+        width: 276
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4ade2759d28f044a80bea0c6fe43f5
+      internalID: -1471933209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 234d869823ec69a4985871888bcdce26
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Spritesheet for Draugr attack_0: -1320788798
+      Spritesheet for Draugr attack_1: -1073492340
+      Spritesheet for Draugr attack_10: 496032590
+      Spritesheet for Draugr attack_11: 1848175407
+      Spritesheet for Draugr attack_12: -805291152
+      Spritesheet for Draugr attack_13: -1958122898
+      Spritesheet for Draugr attack_14: -133965251
+      Spritesheet for Draugr attack_15: 809182114
+      Spritesheet for Draugr attack_16: -45391358
+      Spritesheet for Draugr attack_17: -861402964
+      Spritesheet for Draugr attack_18: 161535167
+      Spritesheet for Draugr attack_19: -74187448
+      Spritesheet for Draugr attack_2: -601481268
+      Spritesheet for Draugr attack_20: -962943245
+      Spritesheet for Draugr attack_21: 394571483
+      Spritesheet for Draugr attack_22: -1869259491
+      Spritesheet for Draugr attack_23: -1810052053
+      Spritesheet for Draugr attack_24: -470688016
+      Spritesheet for Draugr attack_25: -1451965043
+      Spritesheet for Draugr attack_26: 1543147293
+      Spritesheet for Draugr attack_27: -1098198456
+      Spritesheet for Draugr attack_28: 547009816
+      Spritesheet for Draugr attack_29: -1896643689
+      Spritesheet for Draugr attack_3: -650736453
+      Spritesheet for Draugr attack_30: -831578546
+      Spritesheet for Draugr attack_31: -977528114
+      Spritesheet for Draugr attack_32: 1797444029
+      Spritesheet for Draugr attack_33: 1391890044
+      Spritesheet for Draugr attack_34: -144125597
+      Spritesheet for Draugr attack_35: -219836793
+      Spritesheet for Draugr attack_36: -1828452774
+      Spritesheet for Draugr attack_37: 1497580025
+      Spritesheet for Draugr attack_38: -313893968
+      Spritesheet for Draugr attack_39: -1471933209
+      Spritesheet for Draugr attack_4: -2084628618
+      Spritesheet for Draugr attack_5: 1432687426
+      Spritesheet for Draugr attack_6: -958597783
+      Spritesheet for Draugr attack_7: 1758017599
+      Spritesheet for Draugr attack_8: 1222131358
+      Spritesheet for Draugr attack_9: -1608987457
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

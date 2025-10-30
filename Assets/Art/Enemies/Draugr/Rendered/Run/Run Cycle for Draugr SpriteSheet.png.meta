@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: 069e8956e6e62a942b5bb1c4ff3d3137
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 3233
+        width: 308
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9049dd0ef1269449bd339baf9b3728
+      internalID: -881449357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 3244
+        width: 264
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1b613a84b49514bb0f470337329c1d
+      internalID: 1071385706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 3228
+        width: 230
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c15ab8dfce5185478f5566667db331a
+      internalID: -630602297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 3220
+        width: 260
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522a9ca46b6b7fa48be7c4f5becee4a4
+      internalID: 1221712860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 3266
+        width: 236
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eba755fdc25c53419e6f70336a88c26
+      internalID: -122812557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2823
+        width: 221
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73fa67e1457a2544cbf0788a5dcfc220
+      internalID: 226891702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 2852
+        width: 224
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754647a5db4fceb48aa55dc5f7c150fc
+      internalID: -1695263231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 2836
+        width: 381
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2c844b6fee26b49a34be3a0f195ffc
+      internalID: -542318420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 2837
+        width: 246
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b22b70dec15fc647b3ac4153a923dc0
+      internalID: 282314589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 2854
+        width: 204
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc328843b10bff4d9c7ca3f002f5399
+      internalID: -28123117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2348
+        width: 286
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc671b508a6ccc4d89203001641e9c4
+      internalID: 412210312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 2447
+        width: 213
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f7db630ba3db142961645c170a9e7d
+      internalID: 1209724915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 2446
+        width: 242
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb993e43c423ca4190a93d5f2f9284f
+      internalID: 713078592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 2447
+        width: 327
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33054019d10d244989f2e153c2201cd
+      internalID: 1171071480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 2483
+        width: 195
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8862ad43efa1e964ba6f847dea31d621
+      internalID: -585637601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1907
+        width: 235
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed88648c976f3a84faf351fa422de3aa
+      internalID: -637757112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 1968
+        width: 204
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3eb7ea42b74524aa8ce79e8c120e86
+      internalID: 1926584814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 1943
+        width: 258
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1e7d2de166c67418a3d045ab27ff79
+      internalID: 16407803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1950
+        width: 227
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2a5143e6b1f334ea827f649fdac040
+      internalID: 877227454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 1957
+        width: 257
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d74c3a2cb848a4782424ddbf95d381
+      internalID: -503003210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1390
+        width: 297
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406f48474d1393d429e3a78779a76d84
+      internalID: 1345420253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 1430
+        width: 239
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1542fe02ac4e03b489e9593c2048e4e3
+      internalID: -1800322219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1455
+        width: 287
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07adc73cf94a8e74591ec731e7e7c096
+      internalID: 1367063168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1466
+        width: 390
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aef3798ef51f6a4da6c1909b4afaf3b
+      internalID: 785439228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1448
+        width: 342
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851771999f2601a4b84535b4109e4569
+      internalID: 819729359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 917
+        width: 262
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413bb733713a71b4087d98725081a859
+      internalID: 66665486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 942
+        width: 212
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54232d1cd2cf22c4fb708befe62005b9
+      internalID: 1741419337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 940
+        width: 276
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee87be8dd1efd6d438a86cfe3343d7d2
+      internalID: 1221509935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 942
+        width: 352
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49eed50e42e1fa048bc951123b5f7645
+      internalID: 307812619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 944
+        width: 338
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54ef1213d3307542a0ff6f08f06dfc7
+      internalID: -1858664674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 471
+        width: 322
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8c9ecd4f235bb46be4ba6cfa9d0c0e
+      internalID: 424076830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 510
+        width: 358
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78f24c63d8f94844971b60ebae3a754
+      internalID: 413687754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 523
+        width: 312
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300d7a30d8d82e142ae66aa7db49312d
+      internalID: -1906468291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 496
+        width: 224
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86b4d42e9cae2c4b927284eb3057d59
+      internalID: 11954096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 478
+        width: 182
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17db688214c4ada43a2ae589908041aa
+      internalID: 1112365226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 70
+        width: 401
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9e449aedd53474c8659ed9b012b0ca
+      internalID: 518572116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 53
+        width: 387
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7975fe9dccc2e1e4cbf1fd0a3aa6c38e
+      internalID: 423772152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 57
+        width: 293
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d4496dc06bd894d8b0067a9b780953
+      internalID: -194945520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 8
+        width: 228
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f395cb75b12584dbf76bedd0982542
+      internalID: -2051079478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Draugr SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 33
+        width: 416
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e043d665c1d3a940b02260edaa5c9f5
+      internalID: 742981770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 55bc6084d454db04caf1f66e22183c28
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Run Cycle for Draugr SpriteSheet_0: -881449357
+      Run Cycle for Draugr SpriteSheet_1: 1071385706
+      Run Cycle for Draugr SpriteSheet_10: 412210312
+      Run Cycle for Draugr SpriteSheet_11: 1209724915
+      Run Cycle for Draugr SpriteSheet_12: 713078592
+      Run Cycle for Draugr SpriteSheet_13: 1171071480
+      Run Cycle for Draugr SpriteSheet_14: -585637601
+      Run Cycle for Draugr SpriteSheet_16: -637757112
+      Run Cycle for Draugr SpriteSheet_17: 1926584814
+      Run Cycle for Draugr SpriteSheet_18: 16407803
+      Run Cycle for Draugr SpriteSheet_19: 877227454
+      Run Cycle for Draugr SpriteSheet_2: -630602297
+      Run Cycle for Draugr SpriteSheet_20: -503003210
+      Run Cycle for Draugr SpriteSheet_21: 1345420253
+      Run Cycle for Draugr SpriteSheet_22: -1800322219
+      Run Cycle for Draugr SpriteSheet_23: 1367063168
+      Run Cycle for Draugr SpriteSheet_24: 785439228
+      Run Cycle for Draugr SpriteSheet_25: 819729359
+      Run Cycle for Draugr SpriteSheet_26: 66665486
+      Run Cycle for Draugr SpriteSheet_27: 1741419337
+      Run Cycle for Draugr SpriteSheet_28: 1221509935
+      Run Cycle for Draugr SpriteSheet_29: 307812619
+      Run Cycle for Draugr SpriteSheet_3: 1221712860
+      Run Cycle for Draugr SpriteSheet_30: -1858664674
+      Run Cycle for Draugr SpriteSheet_31: 424076830
+      Run Cycle for Draugr SpriteSheet_32: 413687754
+      Run Cycle for Draugr SpriteSheet_33: -1906468291
+      Run Cycle for Draugr SpriteSheet_34: 11954096
+      Run Cycle for Draugr SpriteSheet_35: 1112365226
+      Run Cycle for Draugr SpriteSheet_36: 518572116
+      Run Cycle for Draugr SpriteSheet_37: 423772152
+      Run Cycle for Draugr SpriteSheet_38: -194945520
+      Run Cycle for Draugr SpriteSheet_39: -2051079478
+      Run Cycle for Draugr SpriteSheet_4: -122812557
+      Run Cycle for Draugr SpriteSheet_40: 742981770
+      Run Cycle for Draugr SpriteSheet_5: 226891702
+      Run Cycle for Draugr SpriteSheet_6: -1695263231
+      Run Cycle for Draugr SpriteSheet_7: -542318420
+      Run Cycle for Draugr SpriteSheet_8: 282314589
+      Run Cycle for Draugr SpriteSheet_9: -28123117
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
