@@ -1,12 +1,13 @@
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
 
 public class EnemyMovement : MonoBehaviour
 {
-       
+
     private float horizontalMovement;
     private float verticalMovement;
     private Animator anim;
@@ -20,9 +21,9 @@ public class EnemyMovement : MonoBehaviour
     private AttackMelee attackMeleeScript;
     private GameObject player;
     private NavMeshAgent agent;
-   
+
     private Health healthScript;
-   
+
     public AudioSource footStepsSound;
 
     [SerializeField] private float stepInterval = 0.5f;
@@ -37,7 +38,7 @@ public class EnemyMovement : MonoBehaviour
     private bool walkPointSet = false;
     private bool hasBeenDetected = false;
 
-   [SerializeField] private float range;
+    [SerializeField] private float range;
 
     [SerializeField] private float patrolCoolDown;
     private bool canCheck = true;
@@ -49,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         attackMeleeScript = GetComponent<AttackMelee>();
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
-        
+
     }
 
     void Update()
@@ -57,24 +58,24 @@ public class EnemyMovement : MonoBehaviour
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && attackMeleeScript.isAttacking)
         {
-                //agent.isStopped = true;
-              StartCoroutine(Idle());
+            //agent.isStopped = true;
+            StartCoroutine(Idle());
         }
         else
         {
-            
+
             agent.isStopped = false;
             agent.speed = attackMeleeScript.originalSpeed;
-            
+
         }
 
         DistanceToPlayer();
-      
+
         agent.updateRotation = false;
 
         if (player != null && !attackMeleeScript.isBeingKnockedBack)
         {
-            if (!attackMeleeScript.isAttacking) 
+            if (!attackMeleeScript.isAttacking)
             {
                 if (canChase || hasBeenDetected)
                 {
@@ -101,7 +102,7 @@ public class EnemyMovement : MonoBehaviour
                     {
                         footStepsSound.Stop();
                     }
-           
+
                     stepTimer = 0f;
                 }
             }
@@ -124,25 +125,25 @@ public class EnemyMovement : MonoBehaviour
     {
         if (!walkPointSet)
         {
-            ClosestWaypoint();
+            RandomWaypoint();
         }
 
         if (walkPointSet)
         {
             agent.destination = walkPoint;
-            
+
 
         }
 
-       Vector3 distanceToWalkPoint = transform.position - walkPoint;
+        Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
         if (distanceToWalkPoint.magnitude < 1 && canCheck)
         {
             canCheck = false;
-           StartCoroutine(PatrolCoolDown());
+            StartCoroutine(PatrolCoolDown());
         }
 
-       
+
     }
 
     IEnumerator PatrolCoolDown()
@@ -152,8 +153,6 @@ public class EnemyMovement : MonoBehaviour
         walkPointSet = false;
         canCheck = true;
     }
-
-
     void ClosestWaypoint()
     {
         if (waypoints == null || waypoints.Length == 0)
@@ -175,34 +174,61 @@ public class EnemyMovement : MonoBehaviour
         walkPoint = new Vector3(closest.transform.position.x, transform.position.y, closest.transform.position.z);
         walkPointSet = true;
     }
+    bool RandomPoint(Vector3 center, float range, out Vector3 result)
+    {
+        for (int i = 0; i < 30; i++)
+        {
+
+
+            Vector3 randomPoint = center + Random.insideUnitSphere * range;
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(randomPoint, out hit, 10.0f, NavMesh.AllAreas))
+            {
+                result = hit.position;
+                return true;
+            }
+        }
+        result = Vector3.zero;
+        return false;
+    }
+    void RandomWaypoint()
+    {
+        Vector3 point;
+        if (RandomPoint(transform.position, range, out point))
+        {
+            range = Random.Range(30, 40);
+
+            walkPoint = new Vector3(point.x, transform.position.y, point.z);
+            walkPointSet = true;
+
+        }
+
+
+    }
 
     void DistanceToPlayer()
     {
         canChase = Physics.CheckSphere(transform.position, chaseRadius, playerMask);
     }
-    
+
     void Chase()
     {
         if (!hasWaypoint)
         {
-            foreach (GameObject waypoint in waypoints)
-            {
-               
-                hasWaypoint = true;
-            }
+            ClosestWaypoint();
         }
-       
-       
-        if (agent.isActiveAndEnabled) 
-        { 
-         
-           agent.destination = waypoints[randomWaypoint].transform.position; 
+
+
+        if (agent.isActiveAndEnabled)
+        {
+
+            agent.destination = walkPoint;
         }
     }
 
     void EnemyAnimations()
     {
-        
+
         animDirection = (player.transform.position - transform.position).normalized;
         animDirection.y = 0;
 
@@ -216,6 +242,10 @@ public class EnemyMovement : MonoBehaviour
         {
             anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
         }
+
+
+
+
     }
 
     IEnumerator Idle()
@@ -228,7 +258,7 @@ public class EnemyMovement : MonoBehaviour
 
     void PatrolAnimations()
     {
-       
+
         Vector3 moveDir = agent.velocity.normalized;
         moveDir.y = 0;
 
@@ -248,3 +278,4 @@ public class EnemyMovement : MonoBehaviour
     }
 
 }
+

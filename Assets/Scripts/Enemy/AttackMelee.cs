@@ -73,19 +73,19 @@ public class AttackMelee : MonoBehaviour
             }
         }
 
-        if (anim.GetBool("attack"))
-        {
-            StartCoroutine(StopEnemy());
-        }
+        //if (anim.GetBool("attack"))
+        //{
+        //    StartCoroutine(StopEnemy());
+        //}
     }
 
-    private IEnumerator StopEnemy()
-    {
-        movementScript.canChase = false;
-        agent.destination = transform.position;
-        yield return new WaitForSeconds(5);
-        movementScript.canChase = true;
-    }
+    //private IEnumerator StopEnemy()
+    //{
+    //    movementScript.canChase = false;
+    //    agent.destination = transform.position;
+    //    yield return new WaitForSeconds(5);
+    //    movementScript.canChase = true;
+    //}
 
    
     private void OnTriggerStay(Collider other)
