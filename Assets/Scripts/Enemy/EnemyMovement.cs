@@ -187,7 +187,7 @@ public class EnemyMovement : MonoBehaviour
         {
             foreach (GameObject waypoint in waypoints)
             {
-                randomWaypoint = Random.Range(0, waypoints.Length);
+               
                 hasWaypoint = true;
             }
         }
@@ -216,10 +216,6 @@ public class EnemyMovement : MonoBehaviour
         {
             anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
         }
-       
-       
-
-       
     }
 
     IEnumerator Idle()
