@@ -49,17 +49,22 @@ public class EnemyMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         attackMeleeScript = GetComponent<AttackMelee>();
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+        
     }
 
     void Update()
     {
-   
-        //if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attacks") || anim.GetCurrentAnimatorStateInfo(0).IsName("Run"))
-        //{
-        //    agent.speed = 5;
-        //} 
 
-        
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            agent.speed = 0;
+        }
+
+        else
+        {
+            agent.speed = attackMeleeScript.originalSpeed;
+        }
+
 
         if (!canChase)
         {
@@ -112,7 +117,10 @@ public class EnemyMovement : MonoBehaviour
             agent.Move(velocity * Time.deltaTime);
         }
 
-
+        if (attackMeleeScript.hasAttacked)
+        {
+            StartCoroutine(Idle());
+        }
     }
 
 
@@ -221,13 +229,17 @@ public class EnemyMovement : MonoBehaviour
         {
             anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
         }
-        else
-        {
-            anim.SetFloat("animMoveMagnitude", 0);
-        }
+       
        
 
        
+    }
+
+    IEnumerator Idle()
+    {
+        anim.SetFloat("animMoveMagnitude", 0);
+        yield return new WaitForSeconds(2);
+        anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
     }
 
     void PatrolAnimations()

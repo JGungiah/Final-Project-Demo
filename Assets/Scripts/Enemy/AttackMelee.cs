@@ -56,12 +56,7 @@ public class AttackMelee : MonoBehaviour
     void Update()
     {
        
-        if (!isAttacking)
-        {
-            //attackCollider.gameObject.SetActive(false);
-            agent.isStopped = false;
-            agent.speed = originalSpeed;
-        }
+
 
         attackDistance = Vector3.Distance(transform.position, player.transform.position);
 
