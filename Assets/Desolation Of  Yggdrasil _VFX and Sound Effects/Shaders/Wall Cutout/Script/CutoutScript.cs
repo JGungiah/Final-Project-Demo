@@ -31,7 +31,7 @@ public class CutoutScript : MonoBehaviour
         Vector2 cutoutPos = mainCam.WorldToViewportPoint(targetObject.position);
 
         // Optional aspect ratio correction (may be shader-dependent)
-        cutoutPos.y /= (Screen.width / Screen.height);
+        //cutoutPos.y /= (Screen.width / Screen.height) ;
 
         // Calculate direction and distance from camera to target
         Vector3 offSet = targetObject.position - transform.position ;
