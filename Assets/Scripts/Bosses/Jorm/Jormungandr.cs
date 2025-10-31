@@ -20,7 +20,7 @@ public class Jormungandr : MonoBehaviour
     private Color originalColor;
     private SpriteRenderer spriteRenderer;
     public JormungandrAttack JormAttack;
-   
+    public GameObject Gate;
     private Animator anim;
     public Vector3 animDirection;
     public bool isHit = false;
@@ -55,7 +55,10 @@ public class Jormungandr : MonoBehaviour
         Rockstarters();
         JormAttack.EnemySpawner();
         distToPlayer = transform.position - player.transform.position;
-       
+       if(currentHealth <= 0) 
+        {
+            Gate.SetActive(true);
+        }
     }
     private void OnTriggerStay(Collider other)
     {

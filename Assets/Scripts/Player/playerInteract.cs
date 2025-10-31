@@ -323,19 +323,19 @@ public class playerInteract : MonoBehaviour
     {
         StartCoroutine(UnDissolveEffect());
         canChooseBoon = false;
-        //if(numberOfRoomsCompleted == 5) 
-        //{
-        //    SceneManager.LoadScene(Boss1);
-        //}
-        //else
-        //{
-        int RandIndex = Random.Range(0, sceneNames.Count);       
+        if (numberOfRoomsCompleted == 5)
+        {
+            SceneManager.LoadScene(Boss1);
+        }
+        else
+        {
+            int RandIndex = Random.Range(0, sceneNames.Count);       
         string scenetoload = sceneNames[RandIndex];       
         SceneManager.LoadScene(scenetoload);
         boonScript.RandomizeStatBoons();
         boonScript.AssignUIValues();
         numberOfRoomsCompleted ++;
-        //}
+        }
     }
     public void SceneGeneratorYggdrasil()
     {
