@@ -87,12 +87,12 @@ public class EnemyHealth : MonoBehaviour
             
             randomValue = Random.Range(transform.position.x - 1, transform.position.x + 1);
             Instantiate(floatingText, new Vector3(randomValue, transform.position.y - 5, transform.position.z - 2), Quaternion.identity);
-            cameraScript.shakeStrength = playerAttack.playerDamage / 10f;
-            cameraScript.shakeDuration = playerAttack.playerDamage / 20f;
+            cameraScript.shakeStrength = playerAttack.playerDamage / 5f;
+            cameraScript.shakeDuration = playerAttack.playerDamage / 3f;
             if (playerAttack.Hit3)
             {
-                cameraScript.shakeStrength = playerAttack.playerDamage / 8f;
-                cameraScript.shakeDuration = playerAttack.playerDamage / 10f;
+                cameraScript.shakeStrength = playerAttack.playerDamage / 3f;
+                cameraScript.shakeDuration = playerAttack.playerDamage /1f;
                 cameraScript.Shake();
             }
 
