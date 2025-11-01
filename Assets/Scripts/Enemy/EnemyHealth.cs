@@ -2,6 +2,8 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -38,6 +40,9 @@ public class EnemyHealth : MonoBehaviour
 
     private Animator anim;
     [SerializeField] private float stopTime;
+
+    public VisualEffect vfx;
+    public GameObject impactVFX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,7 +63,7 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        vfx.SetVector3("Flash Position", transform.position);
         floatingText.text = playerAttack.playerDamage.ToString();
         if (currentHealth <= 0 && !hasDropped)
         {
@@ -72,6 +77,12 @@ public class EnemyHealth : MonoBehaviour
         }
 
     }
+    private IEnumerator VFX()
+    {
+        impactVFX.SetActive(true);
+        yield return new WaitForEndOfFrame();
+        impactVFX.SetActive(false);
+    }
 
     private IEnumerator enemyFreeze()
     {
@@ -84,7 +95,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
         {
-            
+            StartCoroutine(VFX());  
             randomValue = Random.Range(transform.position.x - 1, transform.position.x + 1);
             Instantiate(floatingText, new Vector3(randomValue, transform.position.y - 5, transform.position.z - 2), Quaternion.identity);
             cameraScript.shakeStrength = playerAttack.playerDamage / 5f;
@@ -92,7 +103,7 @@ public class EnemyHealth : MonoBehaviour
             if (playerAttack.Hit3)
             {
                 cameraScript.shakeStrength = playerAttack.playerDamage / 3f;
-                cameraScript.shakeDuration = playerAttack.playerDamage /1f;
+                cameraScript.shakeDuration = playerAttack.playerDamage /5f;
                 cameraScript.Shake();
             }
 

@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using static UnityEngine.GraphicsBuffer;
+using UnityEngine.VFX;
+using System.Drawing;
 public class Attack : MonoBehaviour
 {
     public Camera cam;
@@ -54,9 +57,12 @@ public class Attack : MonoBehaviour
 
     public AudioSource hitnoise;
 
+    public GameObject whiteFlash;
+
+    public bool isActive;
 
 
-
+    
 
     //public bool attackSound;
 
@@ -73,13 +79,20 @@ public class Attack : MonoBehaviour
         originalDamage = playerDamage;
         originalAttackCooldown = attackCooldown;
         originalAttackSpeed = attackSpeed;
-
-       
-       
     }
 
     void Update()
     {
+       
+        if (isActive)
+        {
+            whiteFlash.SetActive(true);
+            StartCoroutine(WhiteFlashImage());
+        }
+        else
+        {
+            whiteFlash.SetActive(false);
+        }
 
         if (Time.time - lastClickedTime > maxComboDelay)
         {
@@ -135,6 +148,7 @@ public class Attack : MonoBehaviour
 
     }
 
+  
     public void ClearAttackBoons()
     {
         playerDamage = originalDamage;
@@ -286,6 +300,7 @@ public void ComboTransition2()
     {
         RandomPitchAttack();
 
+
         if (!canCrit)
             {
                 playerDamage = hit3Damage;
@@ -308,6 +323,14 @@ public void ComboTransition2()
        
     }
 
+
+    private IEnumerator WhiteFlashImage()
+    {
+        cam.orthographicSize = 11.5f;
+        yield return new WaitForSeconds(0.05f);
+        whiteFlash.SetActive(false);
+        cam.orthographicSize = 11;
+    }
 
     IEnumerator resetSpeed()
     {
