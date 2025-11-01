@@ -1,10 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
-using TMPro;
-using static UnityEngine.GraphicsBuffer;
-using UnityEngine.VFX;
-using System.Drawing;
+
 public class Attack : MonoBehaviour
 {
     public Camera cam;
@@ -83,16 +79,16 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-       
-        if (isActive)
-        {
-            whiteFlash.SetActive(true);
-            StartCoroutine(WhiteFlashImage());
-        }
-        else
-        {
-            whiteFlash.SetActive(false);
-        }
+
+        //if (isActive)
+        //{
+        //    whiteFlash.SetActive(true);
+        //    StartCoroutine(WhiteFlashImage());
+        //}
+        //else
+        //{
+        //    whiteFlash.SetActive(false);
+        //}
 
         if (Time.time - lastClickedTime > maxComboDelay)
         {
