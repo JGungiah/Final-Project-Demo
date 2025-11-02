@@ -56,7 +56,7 @@ public class Attack : MonoBehaviour
     public GameObject whiteFlash;
 
     public bool isActive;
-
+    private CharacterController controller;
 
     
 
@@ -75,6 +75,7 @@ public class Attack : MonoBehaviour
         originalDamage = playerDamage;
         originalAttackCooldown = attackCooldown;
         originalAttackSpeed = attackSpeed;
+        controller = GetComponent<CharacterController>();
     }
 
     void Update()
@@ -95,7 +96,7 @@ public class Attack : MonoBehaviour
             nOfClicks = 0;
             anim.ResetTrigger("Hit2");
             anim.ResetTrigger("Hit3");
-            //isAttacking = false;
+
             
         }
 
@@ -124,14 +125,14 @@ public class Attack : MonoBehaviour
 
         if (isAttacking)
         {
-            playerScript.speed = 0;
-            playerScript.originalSpeed = 0;
+    
+            controller.enabled = false;
         }
 
         else if (!isAttacking)
         {
-            playerScript.speed = 25f;
-            playerScript.originalSpeed = 25f;
+           
+            controller.enabled = true;
         }
 
 

@@ -64,7 +64,7 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         vfx.SetVector3("Flash Position", transform.position);
-        floatingText.text = playerAttack.playerDamage.ToString();
+  
         if (currentHealth <= 0 && !hasDropped)
         {
            
@@ -97,6 +97,7 @@ public class EnemyHealth : MonoBehaviour
         {
             StartCoroutine(VFX());  
             randomValue = Random.Range(transform.position.x - 1, transform.position.x + 1);
+            floatingText.text = playerAttack.playerDamage.ToString();
             Instantiate(floatingText, new Vector3(randomValue, transform.position.y - 5, transform.position.z - 2), Quaternion.identity);
             cameraScript.shakeStrength = playerAttack.playerDamage / 5f;
             cameraScript.shakeDuration = playerAttack.playerDamage / 3f;

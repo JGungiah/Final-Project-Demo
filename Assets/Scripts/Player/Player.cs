@@ -230,6 +230,7 @@ public class Player : MonoBehaviour
             }
 
             controller.Move(Movement * speed * Time.deltaTime);
+        
         }
 
         void Animations()
