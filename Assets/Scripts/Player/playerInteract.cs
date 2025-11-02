@@ -75,8 +75,6 @@ public class playerInteract : MonoBehaviour
         healthScript = GetComponent<Health>();
         movementScript = GetComponent<Player>();
         attackScript = GetComponent<Attack>();
-        loadanim = GameObject.FindWithTag("Load");
-        anim = loadanim.GetComponent<Animator>();
         NormRooms = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -85,6 +83,8 @@ public class playerInteract : MonoBehaviour
 
     void Update()
     {
+        loadanim = GameObject.FindWithTag("Load");
+        anim = loadanim.GetComponent<Animator>();
         if (!sceneLoadManager.isLoading)
         {
             canvas.SetActive(true);
@@ -101,11 +101,7 @@ public class playerInteract : MonoBehaviour
             midgardNoCombat.Stop();
         }
 
-        if (count == 4)
-        {
-            NormRooms = false;
-            YggdrasilRooms = true;
-        }
+     
 
         if (currentScene.name == "BossYorm")
         {
@@ -323,9 +319,11 @@ public class playerInteract : MonoBehaviour
     {
         StartCoroutine(UnDissolveEffect());
         canChooseBoon = false;
-        if (numberOfRoomsCompleted == 5)
+        if (numberOfRoomsCompleted == 4)
         {
             SceneManager.LoadScene(Boss1);
+            NormRooms = false;
+            YggdrasilRooms = true;
         }
         else
         {
