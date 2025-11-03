@@ -58,12 +58,15 @@ public class Attack : MonoBehaviour
     public bool isActive;
     private CharacterController controller;
 
-    
+    private GameObject RuneManager;
+    private TeleportRune runeScript;
 
     //public bool attackSound;
 
     void Start()
     {
+        RuneManager = GameObject.FindWithTag("RuneManager");
+        runeScript = RuneManager.GetComponent<TeleportRune>();
         anim = GetComponent<Animator>();
         player = transform;
         playerScript = GetComponent<Player>();
@@ -125,13 +128,13 @@ public class Attack : MonoBehaviour
 
         if (isAttacking)
         {
-    
+
             controller.enabled = false;
         }
 
-        else if (!isAttacking)
+        else if (!isAttacking && !runeScript.isTeleporting)
         {
-           
+
             controller.enabled = true;
         }
 

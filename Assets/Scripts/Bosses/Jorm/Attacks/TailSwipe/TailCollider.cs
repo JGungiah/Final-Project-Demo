@@ -16,6 +16,7 @@ public class TailCollider : MonoBehaviour
     [SerializeField] private float tailSwipeDamage;
     [SerializeField] private float knockbackDuration;
     [SerializeField] private float knockbackPower;
+    public Animator tail;
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -61,7 +62,8 @@ public class TailCollider : MonoBehaviour
     {
         while (isIncollider)
         {
-           
+            tail.SetBool("Attack", true);
+            tail.SetBool("Attack", false);
             yield return new WaitForSeconds(3f);
             if (!isIncollider) yield break;
             StartCoroutine(KnockBack());

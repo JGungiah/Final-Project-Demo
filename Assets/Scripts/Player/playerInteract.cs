@@ -209,7 +209,7 @@ public class playerInteract : MonoBehaviour
     }
     public void UIsetActive() 
     {
-        if (currentScene.name == "LobbyRoom")
+        if (currentScene.name == "LobbyRoom" || currentScene.name == "Tutorial" && isTutorial)
         {
             waveText.gameObject.SetActive(false);
             roomNumberText.gameObject.SetActive(false);
@@ -223,7 +223,7 @@ public class playerInteract : MonoBehaviour
             movementScript.ClearPlayerBoons();
             attackScript.ClearAttackBoons();
         }
-        else if(currentScene.name != "LobbyRoom")
+        else if(currentScene.name != "LobbyRoom" || currentScene.name != "Tutorial" && !isTutorial)
         {
 
             waveText.gameObject.SetActive(true);

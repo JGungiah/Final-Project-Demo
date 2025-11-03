@@ -25,38 +25,38 @@ public class PlayerTooFar : MonoBehaviour
     {
         DistanceToPlayer();
 
-        if (distanceToPlayer.magnitude < distance) // Enter
+        //if (distanceToPlayer.magnitude < distance) // Enter
+        //{
+        //    hasattacked2 = true;
+        //    hasAttacked = true;
+
+        //}
+        // if (distanceToPlayer.magnitude > distance && hasattacked2) //Exit
+        //{
+        //    hasAttacked = false;
+        //    StartCoroutine(waitToattack());
+        //}
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
-            hasattacked2 = true;
             hasAttacked = true;
 
-        }
-         if (distanceToPlayer.magnitude > distance && hasattacked2) //Exit
-        {
-            hasAttacked = false;
-            StartCoroutine(waitToattack());
+
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Player"))
-    //    {
-    //        hasAttacked = true;
-         
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            hasAttacked = false;
+            StartCoroutine(waitToattack());
 
-    //    }
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Player")) 
-    //    {
-    //        hasAttacked = false;
-    //        StartCoroutine(waitToattack());
-
-    //    }
-    //}
+        }
+    }
 
     void DistanceToPlayer()
     {

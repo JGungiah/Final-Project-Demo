@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Jormungandr : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Jormungandr : MonoBehaviour
     private Animator anim;
     public Vector3 animDirection;
     public bool isHit = false;
-
+    public Image healthbar;
 
     [Header("Rock Attacks")]
     public bool rockshathfallen;
@@ -52,6 +53,7 @@ public class Jormungandr : MonoBehaviour
 
     private void Update()
     {
+        health();
         Rockstarters();
         JormAttack.EnemySpawner();
         distToPlayer = transform.position - player.transform.position;
@@ -103,6 +105,10 @@ public class Jormungandr : MonoBehaviour
         yield return new WaitForSeconds(hitDuration);
         spriteRenderer.color = originalColor;
 
+    }
+    public void health() 
+    {
+        healthbar.fillAmount = currentHealth/ maxHealth;
     }
 
 
