@@ -1,9 +1,6 @@
 using System.Collections;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Rendering;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -238,9 +235,13 @@ public class EnemyMovement : MonoBehaviour
         anim.SetFloat("horizontalMovement", horizontalMovement);
         anim.SetFloat("verticalMovement", verticalMovement);
 
-        if (attackMeleeScript.isAttacking)
+        if (!attackMeleeScript.isAttacking)
         {
-            anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
+            anim.SetFloat("animMoveMagnitude", agent.velocity.magnitude);
+        }
+        else
+        {
+            anim.SetFloat("animMoveMagnitude", 0);
         }
 
 

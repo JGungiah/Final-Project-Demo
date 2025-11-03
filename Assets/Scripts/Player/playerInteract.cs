@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
-using Unity.VisualScripting;
 
 public class playerInteract : MonoBehaviour
 {

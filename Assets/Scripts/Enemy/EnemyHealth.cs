@@ -3,7 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.VFX;
-using static UnityEngine.GraphicsBuffer;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -72,7 +71,7 @@ public class EnemyHealth : MonoBehaviour
 
             StartCoroutine(DissolveEffect());
             EnemyDrop();
-            agent.enabled = false;  
+            
            
         }
 
@@ -134,7 +133,8 @@ public class EnemyHealth : MonoBehaviour
 
     private IEnumerator DissolveEffect()
     {
-        float dissolveTime = 2f;
+        agent.enabled = false;
+        float dissolveTime = 1.5f;
         float elapsedTime = 0f;
         float startValue = 1f;
         float endValue = 0f;

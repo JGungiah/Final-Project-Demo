@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
 using TMPro;
 
 public class PlayerCollect : MonoBehaviour
