@@ -83,6 +83,7 @@ public class playerInteract : MonoBehaviour
 
     void Update()
     {
+        UIsetActive();
         loadanim = GameObject.FindWithTag("Load");
         anim = loadanim.GetComponent<Animator>();
         if (!sceneLoadManager.isLoading)
@@ -154,27 +155,7 @@ public class playerInteract : MonoBehaviour
 
         CheckScene();
 
-        if (currentScene.name == "LobbyRoom")
-        {
-            waveText.gameObject.SetActive(false);
-            roomNumberText.gameObject.SetActive(false);
-            roomNumber.gameObject.SetActive(false);
-            canvas.SetActive(false);
-            anim = loadanim.GetComponent<Animator>();
-            enemySpawner.numberOfWavesCompleted = 0;
-            numberOfRoomsCompleted = 0;
-            count = 0;
-            healthScript.ClearHealthBoons();
-            movementScript.ClearPlayerBoons();
-            attackScript.ClearAttackBoons();
-        }
-        else
-        {
-            waveText.gameObject.SetActive(true);
-            roomNumberText.gameObject.SetActive(true);
-            roomNumber.gameObject.SetActive(true);
-
-        }
+      
 
 
 
@@ -226,7 +207,31 @@ public class playerInteract : MonoBehaviour
 
       
     }
+    public void UIsetActive() 
+    {
+        if (currentScene.name == "LobbyRoom")
+        {
+            waveText.gameObject.SetActive(false);
+            roomNumberText.gameObject.SetActive(false);
+            roomNumber.gameObject.SetActive(false);
+            canvas.SetActive(false);
+            anim = loadanim.GetComponent<Animator>();
+            enemySpawner.numberOfWavesCompleted = 0;
+            numberOfRoomsCompleted = 0;
+            count = 0;
+            healthScript.ClearHealthBoons();
+            movementScript.ClearPlayerBoons();
+            attackScript.ClearAttackBoons();
+        }
+        else if(currentScene.name != "LobbyRoom")
+        {
 
+            waveText.gameObject.SetActive(true);
+            roomNumberText.gameObject.SetActive(true);
+            roomNumber.gameObject.SetActive(true);
+
+        }
+    }
     private IEnumerator FadeToNoCombat()
     {
         float elapsed = 0f;

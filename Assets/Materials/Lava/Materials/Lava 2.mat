@@ -67,7 +67,7 @@ Material:
     - _SimpleNoiseAmount: 0.7
     - _SimpleNoisePower: 1.5
     - _SimpleNoiseScale: 50
-    - _Smoothness: 0.5
+    - _Smoothness: 0
     - _VoronoiAmount: 0.05
     - _VoronoiAngleoffset: 0.5
     - _VoronoiScale: 20
