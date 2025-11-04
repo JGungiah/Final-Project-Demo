@@ -42,6 +42,7 @@ public class EnemyHealth : MonoBehaviour
 
     public VisualEffect vfx;
     public GameObject impactVFX;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -105,9 +106,8 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= playerAttack.playerDamage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         StartCoroutine(VFX());
-        Vector3 spawnPos = transform.position + new Vector3(Random.Range(-0.25f, 0.25f), 0, 0f);
         floatingText.text = playerAttack.playerDamage.ToString();
-        Instantiate(floatingText, spawnPos, Quaternion.identity);
+        Instantiate(floatingText,  new Vector3 (this.transform.position.x + 3, this.transform.position.y + 5, this.transform.position.z), Quaternion.identity);
         cameraScript.shakeStrength = playerAttack.playerDamage / 5f;
         cameraScript.shakeDuration = playerAttack.playerDamage / 3f;
         if (playerAttack.Hit3)
