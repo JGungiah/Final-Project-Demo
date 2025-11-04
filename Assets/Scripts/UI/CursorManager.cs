@@ -1,7 +1,8 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CursorManager : MonoBehaviour
+public class CursorManager : MonoBehaviour 
 {
     public Texture2D tex;
     public Vector2 size = new Vector2(64, 64);
@@ -22,4 +23,6 @@ public class CursorManager : MonoBehaviour
 
         GUI.DrawTexture(rect, tex);
     }
+
+   
 }

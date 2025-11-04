@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boonName: Bleed
   boonDescription: The player's third attack deals 15% bleed damage over 5s
-  boonImage: {fileID: 21300000, guid: e4ab9bfe69e85f747b7081a872a88fde, type: 3}
+  boonImage: {fileID: 21300000, guid: 90cf7f67cb109ac43b5f0b8a7f7f679d, type: 3}
   value: 0.15
   weighting: 1
