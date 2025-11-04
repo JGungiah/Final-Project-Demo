@@ -56,12 +56,14 @@ public class EnemyHealth : MonoBehaviour
         mainCamera = GameObject.FindWithTag("MainCamera");
         cameraScript = mainCamera.GetComponent<CameraFollow>();
         anim= GetComponent<Animator>();
-        
+
+        canTakeDamage = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         vfx.SetVector3("Flash Position", transform.position);
   
         if (currentHealth <= 0 && !hasDropped)
@@ -92,42 +94,48 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
+        if (other.gameObject.CompareTag("PlayerAttack") && canTakeDamage && !isInvunrable)
         {
-            StartCoroutine(VFX());  
-            randomValue = Random.Range(transform.position.x - 1, transform.position.x + 1);
-            floatingText.text = playerAttack.playerDamage.ToString();
-            Instantiate(floatingText, new Vector3(randomValue, transform.position.y - 5, transform.position.z - 2), Quaternion.identity);
-            cameraScript.shakeStrength = playerAttack.playerDamage / 5f;
-            cameraScript.shakeDuration = playerAttack.playerDamage / 3f;
-            if (playerAttack.Hit3)
-            {
-                cameraScript.shakeStrength = playerAttack.playerDamage / 3f;
-                cameraScript.shakeDuration = playerAttack.playerDamage /5f;
-                cameraScript.Shake();
-            }
+            TakeDamage();
+        }
+    }
 
+    private void TakeDamage()
+    {
+        currentHealth -= playerAttack.playerDamage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        StartCoroutine(VFX());
+        Vector3 spawnPos = transform.position + new Vector3(Random.Range(-0.25f, 0.25f), 0, 0f);
+        floatingText.text = playerAttack.playerDamage.ToString();
+        Instantiate(floatingText, spawnPos, Quaternion.identity);
+        cameraScript.shakeStrength = playerAttack.playerDamage / 5f;
+        cameraScript.shakeDuration = playerAttack.playerDamage / 3f;
+        if (playerAttack.Hit3)
+        {
+            cameraScript.shakeStrength = playerAttack.playerDamage / 3f;
+            cameraScript.shakeDuration = playerAttack.playerDamage / 5f;
             cameraScript.Shake();
-            StartCoroutine(enemyFreeze());
-            currentHealth -= playerAttack.playerDamage;
-            currentHealth = Mathf.Clamp(currentHealth, 0 , maxHealth);
-            canTakeDamage = true;
-            
-            bloodVFX.SetActive(true);
-            StartCoroutine(HitColour());
-            StartCoroutine(DamageWindow());
+        }
 
-            if (playerAttack.isSlowed && !slowed)
-            {
-                agent.speed = agent.speed * (1 - playerAttack.slowedSpeed); 
-                slowed = true;
-                StartCoroutine(ResetSpeed());
-            }
+        cameraScript.Shake();
+        StartCoroutine(enemyFreeze());
+        
+        canTakeDamage = true;
 
-            if (playerAttack.canBleed)
-            {
-                StartCoroutine(BleedEffect());
-            }
+        bloodVFX.SetActive(true);
+        StartCoroutine(HitColour());
+        StartCoroutine(DamageWindow());
+
+        if (playerAttack.isSlowed && !slowed)
+        {
+            agent.speed = agent.speed * (1 - playerAttack.slowedSpeed);
+            slowed = true;
+            StartCoroutine(ResetSpeed());
+        }
+
+        if (playerAttack.canBleed)
+        {
+            StartCoroutine(BleedEffect());
         }
     }
 
@@ -186,8 +194,9 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator DamageWindow()
     {
+        canTakeDamage = false; 
         yield return new WaitForSeconds(0.1f);
-        canTakeDamage = false;
+        canTakeDamage = true; 
         if (!playerAttack.canBleed)
         {
             bloodVFX.SetActive(false);

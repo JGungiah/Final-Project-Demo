@@ -55,8 +55,8 @@ public class EnemyMovement : MonoBehaviour
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") && attackMeleeScript.isAttacking)
         {
-            //agent.isStopped = true;
-            StartCoroutine(Idle());
+            ////agent.isStopped = true;
+            //StartCoroutine(Idle());
         }
         else
         {
@@ -113,7 +113,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (attackMeleeScript.hasAttacked)
         {
-            StartCoroutine(Idle());
+            //StartCoroutine(Idle());
         }
     }
 
@@ -249,13 +249,13 @@ public class EnemyMovement : MonoBehaviour
 
     }
 
-    IEnumerator Idle()
-    {
-        anim.SetFloat("animMoveMagnitude", 0);
-        yield return new WaitForSeconds(1);
-        anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
-        agent.isStopped = false;
-    }
+    //IEnumerator Idle()
+    //{
+    //    anim.SetFloat("animMoveMagnitude", 0);
+    //    yield return new WaitForSeconds(1);
+    //    anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
+    //    agent.isStopped = false;
+    //}
 
     void PatrolAnimations()
     {
