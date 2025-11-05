@@ -29,8 +29,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject enemyDrop;
     private bool hasDropped;
 
-    private float randomValue;
-    public TMP_Text floatingText;
+    public GameObject numbers;
 
     [SerializeField] private Material dissolveMat;
 
@@ -43,6 +42,7 @@ public class EnemyHealth : MonoBehaviour
     public VisualEffect vfx;
     public GameObject impactVFX;
 
+    public Transform spawnPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -106,8 +106,8 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= playerAttack.playerDamage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         StartCoroutine(VFX());
-        floatingText.text = playerAttack.playerDamage.ToString();
-        Instantiate(floatingText,  new Vector3 (this.transform.position.x + 3, this.transform.position.y + 5, this.transform.position.z), Quaternion.identity);
+ 
+        Instantiate(numbers, spawnPoint.position , Quaternion.identity);
         cameraScript.shakeStrength = playerAttack.playerDamage / 5f;
         cameraScript.shakeDuration = playerAttack.playerDamage / 3f;
         if (playerAttack.Hit3)
