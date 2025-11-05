@@ -48,9 +48,9 @@ public class RandomizeBoons : MonoBehaviour
     void Update()
     {
         if (boonCanvas.activeSelf)
-        {  
-                canvas.gameObject.SetActive(false);
-              
+        {
+            canvas.gameObject.SetActive(false);
+
         }
     }
 
@@ -127,7 +127,7 @@ public class RandomizeBoons : MonoBehaviour
      
 
         boonCanvas.SetActive(false);
-        canvas.gameObject.SetActive(true);
+        //canvas.gameObject.SetActive(true);
         isActive = true;
     }
 

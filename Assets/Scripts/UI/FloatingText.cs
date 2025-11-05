@@ -7,13 +7,14 @@ public class FloatingText : MonoBehaviour
     private GameObject player;
     private Attack playerAttack;
     private TMP_Text text;
+    public GameObject numbers;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         playerAttack = player.GetComponent<Attack>();
         text = GetComponent<TMP_Text>();
-        Destroy(this.gameObject, lifetime);
+        Destroy(numbers, lifetime);
     }
 
     // Update is called once per frame

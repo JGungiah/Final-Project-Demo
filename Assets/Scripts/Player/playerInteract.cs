@@ -85,9 +85,10 @@ public class playerInteract : MonoBehaviour
         UIsetActive();
         loadanim = GameObject.FindWithTag("Load");
         anim = loadanim.GetComponent<Animator>();
-        if (!sceneLoadManager.isLoading)
+        if (!sceneLoadManager.isLoading )
         {
             canvas.SetActive(true);
+            //StartCoroutine(ReturnUI());
         }
 
         else if (sceneLoadManager.isLoading)
@@ -101,6 +102,11 @@ public class playerInteract : MonoBehaviour
             midgardNoCombat.Stop();
         }
 
+       //IEnumerator ReturnUI()
+       // {
+       //     yield return new WaitForSeconds(2);
+       //     canvas.SetActive(true);
+       // }
      
 
         if (currentScene.name == "BossYorm")

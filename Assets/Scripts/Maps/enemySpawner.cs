@@ -54,8 +54,8 @@ public class enemySpawner : MonoBehaviour
     }
     IEnumerator waitabit() 
     {
-        //yield return new WaitForSeconds(1f);
-        yield return null;
+        yield return new WaitForSeconds(1f);
+        //yield return null;
         print("fuck you");
         gate.SetActive(true);
         wavescompletecheck = true;
