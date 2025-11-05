@@ -126,16 +126,16 @@ public class Attack : MonoBehaviour
 
         }
 
-        if (isAttacking)
+        if (isAttacking )
         {
 
-            controller.enabled = false;
+            playerScript.canMove = false;
         }
 
-        else if (!isAttacking && !runeScript.isTeleporting)
+        else if (!isAttacking )
         {
 
-            controller.enabled = true;
+            playerScript.canMove = true;
         }
 
 

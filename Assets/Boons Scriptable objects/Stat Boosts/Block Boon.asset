@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boonName: Block Strength
   boonDescription: Increase your shield strength by 15%
-  boonImage: {fileID: 21300000, guid: 99eb047238ae165459be4fe9ed3dfea1, type: 3}
+  boonImage: {fileID: 21300000, guid: 9b5a7251a68e64e44bccd82b5faf122d, type: 3}
   value: 0.15
   weighting: 3
