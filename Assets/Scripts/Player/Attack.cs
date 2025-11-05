@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.VFX;
 
 public class Attack : MonoBehaviour
 {
@@ -61,6 +62,8 @@ public class Attack : MonoBehaviour
     private GameObject RuneManager;
     private TeleportRune runeScript;
 
+
+    public VisualEffect rockVFX;
     //public bool attackSound;
 
     void Start()
@@ -299,7 +302,8 @@ public void ComboTransition2()
     if (nOfClicks == 3)
     {
         RandomPitchAttack();
-
+           
+       
 
         if (!canCrit)
             {
@@ -323,6 +327,14 @@ public void ComboTransition2()
        
     }
 
+
+    public IEnumerator RockVFX()
+    {
+        Instantiate(rockVFX, attackCollider.position , attackCollider.rotation);
+        rockVFX.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.7f);
+        Destroy(this.rockVFX );
+    }
 
     private IEnumerator WhiteFlashImage()
     {
