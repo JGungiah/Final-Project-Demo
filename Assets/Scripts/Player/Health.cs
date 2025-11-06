@@ -151,12 +151,11 @@ public class Health : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1) && canBlock)
         {
             anim.SetBool("isBlocking", true);
-            isBlocking = true;
+            //isBlocking = true;
         }
         else if (Input.GetKeyUp(KeyCode.Mouse1))
         {
             anim.SetBool("isBlocking", false);
-            isBlocking = false;
             
         }
 
