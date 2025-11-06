@@ -1,0 +1,1235 @@
+fileFormatVersion: 2
+guid: d06444cb1679b2042b1b5a891149e885
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_0
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 2012
+        width: 139
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8449173545d5a449e63a18d1c05d4a
+      internalID: 815883942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_1
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1979
+        width: 134
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aebf54f135cc064f9db898a8bffbc46
+      internalID: 1674204132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_2
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1999
+        width: 141
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826d6447d529f714c9c8b46757e44009
+      internalID: 2077550108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_3
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 1972
+        width: 140
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b51d9caadf75e41a59c82153ae07e4
+      internalID: 1541740254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_4
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1961
+        width: 141
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ff766ca30a82f4e9077ce7475b3a6f
+      internalID: 412764809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_5
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 1948
+        width: 140
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5995390bc713ca147991d6b6a6d4a9fd
+      internalID: 1353906540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_6
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1750
+        width: 204
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f67bb946a888b4dbbe7dd37998ff95
+      internalID: -52118305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_7
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 1723
+        width: 225
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c1f50e2dcf74a4fb99e0953564e56b
+      internalID: 2017292524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_8
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1722
+        width: 183
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d464ba64358ee9344a452431b1151258
+      internalID: 1606980165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_9
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 1708
+        width: 159
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e25e0e0ff879c4cb1bd7d93bfa08ae
+      internalID: 1695705981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_10
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 1701
+        width: 209
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7457c4590f6e95b4987347bee458eacb
+      internalID: -1627809824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_12
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1501
+        width: 210
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1089dae0ba9c024f9ff8dadad64b2ec
+      internalID: -1622972074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_13
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1470
+        width: 234
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50b8fa4ad7fb9b4082ece4c346834b2
+      internalID: -879952347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_14
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1469
+        width: 175
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6b11c79b7e80645ad4523051f6a35e
+      internalID: -1857379977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_15
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1458
+        width: 160
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438398ce97adaf740bb1f996e0a4b786
+      internalID: 877414139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_16
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 1452
+        width: 177
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcf0ffd59be3ee46a9b17e1fa832706
+      internalID: 1315088592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_11
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 1682
+        width: 188
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25bbd841f9f6ae4597332d4183cbfa6
+      internalID: -229588110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1215
+        width: 272
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db55315cf9c054f419897a128308cb94
+      internalID: -1486038933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_19
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1192
+        width: 243
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a494c9e8029da0748ba8f75188997fe6
+      internalID: 419281746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_20
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 1191
+        width: 134
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a38229ce295bb1488f95fe5c7a84da6
+      internalID: -542153900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_22
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1171
+        width: 243
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67cf7cd70bbb9d46bbfb30572bb2640
+      internalID: 2098588711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_17
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1430
+        width: 193
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbfde517a1141794692acbfce8fd0e97
+      internalID: -464870359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_24
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 981
+        width: 177
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42eca21b19fc864ab06f2fb1648faba
+      internalID: 443437430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_25
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 974
+        width: 199
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c289161cd347ba499d465a7c4afcb12
+      internalID: -311333355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_21
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 1175
+        width: 238
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb9274e43cde954089808f853a99705
+      internalID: 1511988611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_23
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 1142
+        width: 141
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b2ac690502e954bbb591f4f48488eb
+      internalID: -1791485623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_26
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 965
+        width: 175
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3251a19d1f29de4e81afe0be205455c
+      internalID: -1520550966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_27
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 932
+        width: 164
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b1383b16a283746acecee9fb524444
+      internalID: -2073080773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_28
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 964
+        width: 210
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991349df538eda34a8497876a63c32c4
+      internalID: -1434201192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_29
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 927
+        width: 135
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2bee9892be83849b6ed110bc08dc85
+      internalID: 245591928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_30
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 716
+        width: 142
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032bd903fb4d4ce42b8a34e0035615e0
+      internalID: -1350073779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_31
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 716
+        width: 144
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4165dd2f9de0c1d46a876e7d3e614d38
+      internalID: 84776944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_32
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 720
+        width: 180
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0635f59b77b3c054e91911a318cdcedc
+      internalID: 137493296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_33
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 676
+        width: 135
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c76b0e0db78f7e4192a217ff1167dc5
+      internalID: -364130223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_34
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 693
+        width: 138
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c760f8cc5befd47b041c0f93875090
+      internalID: 924031586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_35
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 661
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d49e81b246b51428c01f648ddbea4a
+      internalID: 2028505877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_36
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 458
+        width: 195
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4fe5734073f2a140a7f4a6211292995
+      internalID: -1631718531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_37
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 471
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d096196239ac0b48a061e1d0f4227b1
+      internalID: 2116615187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_38
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 460
+        width: 177
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a961136fa2030448c9cfad76060f9e
+      internalID: 1226237072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_39
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 434
+        width: 177
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d583d2bb12cbc8649b9f9f55145c5907
+      internalID: 1189567820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_40
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 457
+        width: 210
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2fd6c0af498e043bc4e89075046fe5
+      internalID: -1746174654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_41
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 423
+        width: 132
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565f85e27d6f1c54083306eb62556c7c
+      internalID: 1987773504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 206
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a01b1527be9df469cac255a052fc14
+      internalID: -2037052686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_43
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 180
+        width: 234
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85961911cc5f3ac4cb141f07df43efa7
+      internalID: 428606789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_44
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 183
+        width: 132
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdea548b49f22284392e414eca37856d
+      internalID: -1374707101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_45
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 169
+        width: 243
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec04e42839923446b1677ce335dcade
+      internalID: 469973353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_46
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 162
+        width: 235
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2acaf7e9029d647b69af0a91ce2999
+      internalID: -1032314729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running Sprite Sheet FULL_47
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 133
+        width: 128
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6f559da1cfc074882bae9d6f49fcc8
+      internalID: 997611452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d6dd95e5fa282cd4e8c4c789b38299d2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Running Sprite Sheet FULL_0: 815883942
+      Running Sprite Sheet FULL_1: 1674204132
+      Running Sprite Sheet FULL_10: -1627809824
+      Running Sprite Sheet FULL_11: -229588110
+      Running Sprite Sheet FULL_12: -1622972074
+      Running Sprite Sheet FULL_13: -879952347
+      Running Sprite Sheet FULL_14: -1857379977
+      Running Sprite Sheet FULL_15: 877414139
+      Running Sprite Sheet FULL_16: 1315088592
+      Running Sprite Sheet FULL_17: -464870359
+      Running Sprite Sheet FULL_18: -1486038933
+      Running Sprite Sheet FULL_19: 419281746
+      Running Sprite Sheet FULL_2: 2077550108
+      Running Sprite Sheet FULL_20: -542153900
+      Running Sprite Sheet FULL_21: 1511988611
+      Running Sprite Sheet FULL_22: 2098588711
+      Running Sprite Sheet FULL_23: -1791485623
+      Running Sprite Sheet FULL_24: 443437430
+      Running Sprite Sheet FULL_25: -311333355
+      Running Sprite Sheet FULL_26: -1520550966
+      Running Sprite Sheet FULL_27: -2073080773
+      Running Sprite Sheet FULL_28: -1434201192
+      Running Sprite Sheet FULL_29: 245591928
+      Running Sprite Sheet FULL_3: 1541740254
+      Running Sprite Sheet FULL_30: -1350073779
+      Running Sprite Sheet FULL_31: 84776944
+      Running Sprite Sheet FULL_32: 137493296
+      Running Sprite Sheet FULL_33: -364130223
+      Running Sprite Sheet FULL_34: 924031586
+      Running Sprite Sheet FULL_35: 2028505877
+      Running Sprite Sheet FULL_36: -1631718531
+      Running Sprite Sheet FULL_37: 2116615187
+      Running Sprite Sheet FULL_38: 1226237072
+      Running Sprite Sheet FULL_39: 1189567820
+      Running Sprite Sheet FULL_4: 412764809
+      Running Sprite Sheet FULL_40: -1746174654
+      Running Sprite Sheet FULL_41: 1987773504
+      Running Sprite Sheet FULL_42: -2037052686
+      Running Sprite Sheet FULL_43: 428606789
+      Running Sprite Sheet FULL_44: -1374707101
+      Running Sprite Sheet FULL_45: 469973353
+      Running Sprite Sheet FULL_46: -1032314729
+      Running Sprite Sheet FULL_47: 997611452
+      Running Sprite Sheet FULL_49: -1793036423
+      Running Sprite Sheet FULL_5: 1353906540
+      Running Sprite Sheet FULL_6: -52118305
+      Running Sprite Sheet FULL_7: 2017292524
+      Running Sprite Sheet FULL_8: 1606980165
+      Running Sprite Sheet FULL_9: 1695705981
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
