@@ -64,6 +64,8 @@ public class Attack : MonoBehaviour
 
 
     public VisualEffect rockVFX;
+
+    public Transform vfxSpawn;
     //public bool attackSound;
 
     void Start()
@@ -330,9 +332,9 @@ public void ComboTransition2()
 
     public IEnumerator RockVFX()
     {
-        Instantiate(rockVFX, attackCollider.position , attackCollider.rotation);
+        Instantiate(rockVFX, vfxSpawn.position , attackCollider.rotation);
         rockVFX.gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(1f);
         Destroy(this.rockVFX );
     }
 
