@@ -62,15 +62,19 @@ public class playerInteract : MonoBehaviour
 
     private Animator animator;
 
+    public bool canvasActive;
+    private PauseMenu pauseMenu;
+
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         gate = GameObject.FindGameObjectWithTag("InteractDoor");
         boonCanvas = GameObject.FindWithTag("Boon UI");
         gameManager = GameObject.FindWithTag("GameManager");
-        runeManager = GameObject.FindWithTag("RuneManager");
+        pauseMenu = gameManager.GetComponent<PauseMenu>();
+      
         boonScript = gameManager.GetComponent<RandomizeBoons>();    
-        sceneLoadManager = runeManager.GetComponent<SceneLoadManager>();
+     
         healthScript = GetComponent<Health>();
         movementScript = GetComponent<Player>();
         attackScript = GetComponent<Attack>();
@@ -82,18 +86,32 @@ public class playerInteract : MonoBehaviour
 
     void Update()
     {
+
+        if (canvasActive)
+        {
+            canvas.SetActive(true);
+        }
+
+        if (!canvasActive)
+        {
+            canvas.SetActive(false);
+        }
+
         UIsetActive();
         loadanim = GameObject.FindWithTag("Load");
         anim = loadanim.GetComponent<Animator>();
-        if (!sceneLoadManager.isLoading )
+        if (!sceneLoadManager.isLoading && currentScene.name != "LobbyRoom" && !boonScript.boonActive && !isChangingScene )
         {
-            canvas.SetActive(true);
-            //StartCoroutine(ReturnUI());
-        }
 
-        else if (sceneLoadManager.isLoading)
+            //canvas.SetActive(true);
+            StartCoroutine(ReturnUI());
+        }
+       
+
+         if (sceneLoadManager.isLoading)
         {
-            canvas.SetActive(false);
+            canvasActive = false;
+            //canvas.SetActive(false);
         }
 
         if (currentScene.name == "LobbyRoom")
@@ -102,12 +120,21 @@ public class playerInteract : MonoBehaviour
             midgardNoCombat.Stop();
         }
 
-       //IEnumerator ReturnUI()
-       // {
-       //     yield return new WaitForSeconds(2);
-       //     canvas.SetActive(true);
-       // }
-     
+        IEnumerator ReturnUI()
+        {
+            yield return new WaitForSeconds(1f);
+            if (boonScript.boonActive)
+            {
+                canvasActive = false;
+            }
+            else
+            {
+                canvasActive = true;
+            }
+
+           
+        }
+
 
         if (currentScene.name == "BossYorm")
         {
@@ -214,12 +241,13 @@ public class playerInteract : MonoBehaviour
     }
     public void UIsetActive() 
     {
-        if (currentScene.name == "LobbyRoom" || currentScene.name == "Tutorial" && isTutorial)
+        if (currentScene.name == "LobbyRoom" || currentScene.name == "Tutorial" /*&& isTutorial*/)
         {
             waveText.gameObject.SetActive(false);
             roomNumberText.gameObject.SetActive(false);
             roomNumber.gameObject.SetActive(false);
-            canvas.SetActive(false);
+            canvasActive = false;
+            //canvas.SetActive(false);
             anim = loadanim.GetComponent<Animator>();
             enemySpawner.numberOfWavesCompleted = 0;
             numberOfRoomsCompleted = 0;
@@ -291,6 +319,8 @@ public class playerInteract : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        runeManager = GameObject.FindWithTag("RuneManager");
+        sceneLoadManager = runeManager.GetComponent<SceneLoadManager>();
         FindGateInScene();
         combatMusicPlaying = false;
         noCombatMusicPlaying = false;

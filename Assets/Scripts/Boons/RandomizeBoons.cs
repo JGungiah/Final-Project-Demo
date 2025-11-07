@@ -22,22 +22,20 @@ public class RandomizeBoons : MonoBehaviour
     [SerializeField] GameObject boonCanvas;
 
     private GameObject player;
-    private Transform canvas;
+    private playerInteract playerInteract;
+    //private Transform canvas;
 
     public UpgradeScriptableObjects selectedBoon;
 
     public bool isActive = false;
-
+    public bool boonActive;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
        
         player = GameObject.FindGameObjectWithTag("Player");
-     
-        if (player != null)
-        {
-            canvas = player.transform.Find("Canvas");
-        }
+        playerInteract = player.GetComponent<playerInteract>();
+
 
         RandomizeStatBoons();
         AssignUIValues();
@@ -49,7 +47,13 @@ public class RandomizeBoons : MonoBehaviour
     {
         if (boonCanvas.activeSelf)
         {
-            canvas.gameObject.SetActive(false);
+            playerInteract.canvasActive = false;
+            boonActive = true;
+          
+        }
+        else if (!boonCanvas.activeSelf)
+        {
+            boonActive = false; 
 
         }
     }

@@ -1,14 +1,22 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject controlsMenu;
     public GameObject audioMenu;
+    private GameObject player;
+    private playerInteract interact;
+    private Scene currentScene;
+
+    public bool isPaused;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
+        interact = player.GetComponent<playerInteract>();
         
     }
 
@@ -17,8 +25,12 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeSelf && !controlsMenu.activeSelf && !audioMenu.activeSelf)
         {
+            interact.canvasActive = false;
+            isPaused = true;
+            
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
+            
 
         }
         //else if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf || Input.GetKey(KeyCode.Escape) && controlsMenu.activeSelf || Input.GetKey(KeyCode.Escape) && audioMenu.activeSelf)
@@ -29,10 +41,16 @@ public class PauseMenu : MonoBehaviour
 
     public void resume()
     {
+        isPaused = false;
         pauseMenu.SetActive(false);
         audioMenu.SetActive(false);
         controlsMenu.SetActive(false);
         Time.timeScale = 1;
+        //if (currentScene.name != "LobbyRoom")
+        //{
+        //    interact.canvasActive = true;
+        //}
+
     }
 
     public void ControlsMenu()
