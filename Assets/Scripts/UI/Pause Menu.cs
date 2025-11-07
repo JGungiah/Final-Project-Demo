@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
     private playerInteract interact;
     private Scene currentScene;
 
-    public bool isPaused;
+    //public bool isPaused;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeSelf && !controlsMenu.activeSelf && !audioMenu.activeSelf)
         {
             interact.canvasActive = false;
-            isPaused = true;
+            //isPaused = true;
             
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
@@ -41,7 +41,7 @@ public class PauseMenu : MonoBehaviour
 
     public void resume()
     {
-        isPaused = false;
+        //isPaused = false;
         pauseMenu.SetActive(false);
         audioMenu.SetActive(false);
         controlsMenu.SetActive(false);

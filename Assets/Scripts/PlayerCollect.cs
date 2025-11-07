@@ -7,6 +7,8 @@ public class PlayerCollect : MonoBehaviour
     [SerializeField] public int totalCurrency;
     private int currentCurrency = 0;
     private bool hasCollected;
+    [SerializeField] private int minCurrency;
+    [SerializeField] private int maxCurrency;
 
     [SerializeField] private TextMeshProUGUI coinsText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,7 +28,7 @@ public class PlayerCollect : MonoBehaviour
         if (other.gameObject.CompareTag("EnemyDrop") && !hasCollected)
         {
             hasCollected = true;
-            currentCurrency = Random.Range(10, 20);
+            currentCurrency = Random.Range(minCurrency, maxCurrency);
             totalCurrency += currentCurrency;
             currentCurrency = 0;
             StartCoroutine(delay());
