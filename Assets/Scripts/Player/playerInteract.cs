@@ -100,7 +100,7 @@ public class playerInteract : MonoBehaviour
         UIsetActive();
         loadanim = GameObject.FindWithTag("Load");
         anim = loadanim.GetComponent<Animator>();
-        if (!sceneLoadManager.isLoading && currentScene.name != "LobbyRoom" && !boonScript.boonActive && !isChangingScene )
+        if (!sceneLoadManager.isLoading && currentScene.name != "LobbyRoom" && !boonScript.boonActive && !isChangingScene && currentScene.name != "Tutorial")
         {
 
             //canvas.SetActive(true);

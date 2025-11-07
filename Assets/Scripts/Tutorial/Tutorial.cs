@@ -16,6 +16,10 @@ public class Tutorial : MonoBehaviour
     public int count;
 
     public AudioSource completeSound;
+    public GameObject dashImage;
+    public GameObject blockImage;
+    public GameObject[] teleportImage;
+    public GameObject arrow;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,13 +48,20 @@ public class Tutorial : MonoBehaviour
         yield return StartCoroutine(WaitForDashInput());
         completeSound.Play();
 
-        tutorialText.text = "Press Right Click to Parry";
+        dashImage.SetActive(false);
+        tutorialText.text = "Press and hold right click to block";
         yield return StartCoroutine(WaitForParryInput());
         completeSound.Play();
 
+        blockImage.SetActive(false);
         tutorialText.text = "Use runes to teleport";
         yield return StartCoroutine(WaitForteleportInput());
         completeSound.Play();
+
+        foreach (GameObject obj in teleportImage)
+        {
+            obj.SetActive(false);
+        }
 
         tutorialText.text = "Press left click to attack";
         yield return StartCoroutine(WaitForAttackInput());
@@ -64,6 +75,7 @@ public class Tutorial : MonoBehaviour
         yield return StartCoroutine(WaitForEnemyInput());
         completeSound.Play();
 
+        arrow.SetActive(true);
         tutorialText.text = "Follow the arrow and press E on the gate to leave";
     }
     IEnumerator WaitForMovementInput()
@@ -76,16 +88,20 @@ public class Tutorial : MonoBehaviour
 
     IEnumerator WaitForDashInput()
     {
-    
+        dashImage.SetActive(true);
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
     }
     IEnumerator WaitForParryInput()
     {
-
+        blockImage.SetActive(true);
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse1));
     }
     IEnumerator WaitForteleportInput()
     {
+        foreach (GameObject obj in teleportImage)
+        {
+            obj.SetActive(true);
+        }
 
         yield return new WaitUntil(() => teleportRune.isTeleporting is true);
     }
