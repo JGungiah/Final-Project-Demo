@@ -16,9 +16,10 @@ public class TailCollider : MonoBehaviour
     [SerializeField] private float tailSwipeDamage;
     [SerializeField] private float knockbackDuration;
     [SerializeField] private float knockbackPower;
-    public Animator tail;
+    private Animator anim;
     private void Start()
     {
+        anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         HealthScript = player.GetComponent<Health>();
         JormBody = GameObject.FindWithTag("Jormungandr");
@@ -35,11 +36,13 @@ public class TailCollider : MonoBehaviour
     {
         if(Jorm.currentHealth <= 450 && isIncollider && !isMidhealth)
         {
+            anim.SetTrigger("Tail Swipe");
             StartCoroutine(SwipeAttack());
             isMidhealth = true;
         }
         if (Jorm.currentHealth <= 300 && isIncollider && !isLowhealth)
         {
+            anim.SetTrigger("Tail Swipe");
             StartCoroutine(SwipeAttack());
             isLowhealth = true;
         }

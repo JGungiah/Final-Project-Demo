@@ -45,7 +45,7 @@ public class Jormungandr : MonoBehaviour
     public TailCollider Tailscript;
     public GameObject tailbody;
 
-
+    public Animator wallAnim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -70,6 +70,7 @@ public class Jormungandr : MonoBehaviour
         distToPlayer = transform.position - player.transform.position;
        if(currentHealth <= 0) 
         {
+            anim.SetTrigger("Death");
             Gate.SetActive(true);
         }
     }
@@ -94,23 +95,32 @@ public class Jormungandr : MonoBehaviour
     {
         if (currentHealth <= rockDamageThreshold && !rockshathfallen)
         {
+            anim.SetTrigger("WallHit");
+            anim.SetBool("wallup", true);
             isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen = true;
+            anim.SetBool("wallup", false);
             Tailscript.KnockBack();
         }
         if (currentHealth <= rockDamageThreshold2 && !rockshathfallen2)
         {
+            anim.SetTrigger("WallHit");
+            anim.SetBool("wallup", true);
             isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen2 = true;
+            anim.SetBool("wallup", false);
             Tailscript.KnockBack();
         }
         if (currentHealth <= rockDamageThreshold3 && !rockshathfallen3)
         {
+            anim.SetTrigger("WallHit");
+            anim.SetBool("wallup", true);
             isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen3 = true;
+            anim.SetBool("wallup", false);
             Tailscript.KnockBack();
         }
 
