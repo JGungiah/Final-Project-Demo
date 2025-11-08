@@ -27,6 +27,7 @@ TagManager:
   - Jormungandr
   - Root
   - LoadCanvas
+  - Tail
   layers:
   - Default
   - TransparentFX

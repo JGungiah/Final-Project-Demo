@@ -35,11 +35,15 @@ public class Jormungandr : MonoBehaviour
     [SerializeField] private float rockDamageThreshold2;
     [SerializeField] private float rockDamageThreshold3;
 
+    [SerializeField] private float knockbackDuration;
+    [SerializeField] private float knockbackPower;
+
     [Header("Spit Attacks")]
     public bool spitshot;
     public PlayerTooFar playerToofar;
 
-    
+    public TailCollider Tailscript;
+    public GameObject tailbody;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,6 +57,9 @@ public class Jormungandr : MonoBehaviour
         anim = GetComponent<Animator>();
         JormAttack = GetComponent<JormungandrAttack>();
         playerToofar = GetComponent<PlayerTooFar>();
+
+        tailbody = GameObject.FindWithTag("Tail");
+        Tailscript = tailbody.GetComponent<TailCollider>();
     }
 
     private void Update()
@@ -90,18 +97,21 @@ public class Jormungandr : MonoBehaviour
             isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen = true;
+            Tailscript.KnockBack();
         }
         if (currentHealth <= rockDamageThreshold2 && !rockshathfallen2)
         {
             isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen2 = true;
+            Tailscript.KnockBack();
         }
         if (currentHealth <= rockDamageThreshold3 && !rockshathfallen3)
         {
             isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen3 = true;
+            Tailscript.KnockBack();
         }
 
     }
@@ -127,6 +137,6 @@ public class Jormungandr : MonoBehaviour
     {
         healthbar.fillAmount = currentHealth/ maxHealth;
     }
-
+   
 
 }

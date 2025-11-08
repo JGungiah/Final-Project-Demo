@@ -9,7 +9,7 @@ public class TailCollider : MonoBehaviour
     public bool isIncollider;
     public Jormungandr Jorm;
     public GameObject JormBody;
-
+   
     private bool isMidhealth;
     private bool isLowhealth;
 
@@ -24,6 +24,7 @@ public class TailCollider : MonoBehaviour
         JormBody = GameObject.FindWithTag("Jormungandr");
         Jorm = JormBody.GetComponent<Jormungandr>();
         characterController = player.GetComponent<CharacterController>();
+        
     }
 
     private void Update()
@@ -70,7 +71,7 @@ public class TailCollider : MonoBehaviour
         }
     }
 
-    private IEnumerator KnockBack()
+    public IEnumerator KnockBack()
     {
         float elapsedTime = 0f;
         while (elapsedTime < knockbackDuration)
