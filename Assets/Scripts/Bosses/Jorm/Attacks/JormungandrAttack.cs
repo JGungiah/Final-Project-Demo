@@ -16,7 +16,7 @@ public class JormungandrAttack : MonoBehaviour
 
 
     [Header("Rock Fall")]
-    public GameObject rockPrefab;
+    public GameObject[] rockPrefab;
     public Transform[] spawnLocations;
     [SerializeField] private float numrocks;
     [SerializeField]private float minSpawn = 0.1f;
@@ -58,7 +58,10 @@ public class JormungandrAttack : MonoBehaviour
         {
 
             Transform points = spawnLocations[Random.Range(0, spawnLocations.Length)];
-            Instantiate(rockPrefab, points.position, points.rotation);
+            int randomIndex = Random.Range(0, rockPrefab.Length);
+            GameObject chosenEnemy = rockPrefab[randomIndex];
+            Instantiate(chosenEnemy, points.position, points.rotation);
+            
             yield return new WaitForSeconds(Random.Range(minSpawn, maxSpawn));
            //spit.StopCoroutine(spit.waitToattack());
         }
