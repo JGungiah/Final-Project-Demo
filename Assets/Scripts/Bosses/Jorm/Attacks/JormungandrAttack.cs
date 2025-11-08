@@ -67,12 +67,12 @@ public class JormungandrAttack : MonoBehaviour
 
     public void EnemySpawner() 
     {
-        if(JormHealth.currentHealth <= 600 && !enemywave1) 
+        if(JormHealth.currentHealth <= 300 && !enemywave1) 
         {
             Enemies.EnemySpawn();
             enemywave1 = true;
         }
-        if(JormHealth.currentHealth <= 300 && !enemywave2) 
+        if(JormHealth.currentHealth <= 150 && !enemywave2) 
         {
             Enemies.EnemySpawn();
             enemywave2 = true;

@@ -81,7 +81,8 @@ public class PlayerTooFar : MonoBehaviour
             else 
             {
                 FireProj.RangedAttack();
-                
+                FireProj.RangedAttack();
+
             }
             hasAttacked = false;
             StartCoroutine(waitToattack());

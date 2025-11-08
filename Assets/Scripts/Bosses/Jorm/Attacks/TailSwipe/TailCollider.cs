@@ -32,12 +32,12 @@ public class TailCollider : MonoBehaviour
     }
     public void Swipe() 
     {
-        if(Jorm.currentHealth <= 700 && isIncollider && !isMidhealth)
+        if(Jorm.currentHealth <= 450 && isIncollider && !isMidhealth)
         {
             StartCoroutine(SwipeAttack());
             isMidhealth = true;
         }
-        if (Jorm.currentHealth <= 400 && isIncollider && !isLowhealth)
+        if (Jorm.currentHealth <= 300 && isIncollider && !isLowhealth)
         {
             StartCoroutine(SwipeAttack());
             isLowhealth = true;
@@ -60,15 +60,13 @@ public class TailCollider : MonoBehaviour
         }
     IEnumerator SwipeAttack()
     {
-        while (isIncollider)
+        if (isIncollider)
         {
-            tail.SetBool("Attack", true);
-            tail.SetBool("Attack", false);
             yield return new WaitForSeconds(3f);
             if (!isIncollider) yield break;
             StartCoroutine(KnockBack());
             HealthScript.currentHealth -= tailSwipeDamage;
-            
+
         }
     }
 

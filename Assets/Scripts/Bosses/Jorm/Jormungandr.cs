@@ -29,7 +29,11 @@ public class Jormungandr : MonoBehaviour
 
     [Header("Rock Attacks")]
     public bool rockshathfallen;
+    public bool rockshathfallen2;
+    public bool rockshathfallen3;
     [SerializeField] private float rockDamageThreshold;
+    [SerializeField] private float rockDamageThreshold2;
+    [SerializeField] private float rockDamageThreshold3;
 
     [Header("Spit Attacks")]
     public bool spitshot;
@@ -87,6 +91,19 @@ public class Jormungandr : MonoBehaviour
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen = true;
         }
+        if (currentHealth <= rockDamageThreshold2 && !rockshathfallen2)
+        {
+            isInvunrable = true;
+            JormAttack.StartCoroutine(JormAttack.StartFalling());
+            rockshathfallen2 = true;
+        }
+        if (currentHealth <= rockDamageThreshold3 && !rockshathfallen3)
+        {
+            isInvunrable = true;
+            JormAttack.StartCoroutine(JormAttack.StartFalling());
+            rockshathfallen3 = true;
+        }
+
     }
 
     IEnumerator DamageWindow()
