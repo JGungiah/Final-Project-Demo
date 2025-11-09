@@ -28,6 +28,7 @@ TagManager:
   - Root
   - LoadCanvas
   - Tail
+  - AudioManager
   layers:
   - Default
   - TransparentFX
