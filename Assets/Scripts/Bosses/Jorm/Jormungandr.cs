@@ -45,7 +45,13 @@ public class Jormungandr : MonoBehaviour
     public TailCollider Tailscript;
     public GameObject tailbody;
 
+
+    private GameObject mainCam;
+    private CameraFollow camScript;
     public Animator wallAnim;
+    [SerializeField] private float shakeStrength;
+    [SerializeField] private float shakeDuration;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,6 +64,8 @@ public class Jormungandr : MonoBehaviour
         JormAttack = GetComponent<JormungandrAttack>();
         playerToofar = GetComponent<PlayerTooFar>();
 
+        mainCam = GameObject.FindWithTag("MainCamera");
+        camScript = mainCam.GetComponent<CameraFollow>();
         tailbody = GameObject.FindWithTag("Tail");
         Tailscript = tailbody.GetComponent<TailCollider>();
     }
@@ -89,6 +97,12 @@ public class Jormungandr : MonoBehaviour
         }
     }
 
+    public void CamShake()
+    {
+        camScript.shakeStrength = shakeStrength;
+        camScript.shakeDuration = shakeDuration;
+        camScript.Shake();
+    }
 
 
     public void Rockstarters() 
@@ -96,6 +110,7 @@ public class Jormungandr : MonoBehaviour
         if (currentHealth <= rockDamageThreshold && !rockshathfallen)
         {
             anim.SetTrigger("WallHit");
+ 
             anim.SetBool("wallup", true);
             isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());
@@ -106,6 +121,7 @@ public class Jormungandr : MonoBehaviour
         if (currentHealth <= rockDamageThreshold2 && !rockshathfallen2)
         {
             anim.SetTrigger("WallHit");
+
             anim.SetBool("wallup", true);
             isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());
@@ -116,6 +132,7 @@ public class Jormungandr : MonoBehaviour
         if (currentHealth <= rockDamageThreshold3 && !rockshathfallen3)
         {
             anim.SetTrigger("WallHit");
+
             anim.SetBool("wallup", true);
             isInvunrable = true;
             JormAttack.StartCoroutine(JormAttack.StartFalling());

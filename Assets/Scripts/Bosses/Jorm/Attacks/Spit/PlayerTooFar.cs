@@ -9,14 +9,13 @@ public class PlayerTooFar : MonoBehaviour
    public float timer = 15f;
     public bool hasAttacked;
     [SerializeField] private float distance;
-    private Animator anim;
+    public Animator anim;
     private GameObject player;
     private bool hasattacked2;
     private Vector3 distanceToPlayer;
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
         FireProj = Jorm.GetComponent<JormungandrAttack>();
         JormHealth = Jorm.GetComponent<Jormungandr>();
         player = GameObject.FindWithTag("Player");
@@ -71,7 +70,7 @@ public class PlayerTooFar : MonoBehaviour
             else 
             {
                 anim.SetTrigger("Spit");
-                FireProj.RangedAttack();
+                //FireProj.RangedAttack();
                 //FireProj.RangedAttack();
 
             }
