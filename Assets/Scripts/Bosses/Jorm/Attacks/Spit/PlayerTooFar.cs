@@ -6,7 +6,7 @@ public class PlayerTooFar : MonoBehaviour
     public JormungandrAttack FireProj;
     public GameObject Jorm;
     public Jormungandr JormHealth;
-   public float timer = 15f;
+    public float timer = 15f;
     public bool hasAttacked;
     [SerializeField] private float distance;
     public Animator anim;

@@ -66,7 +66,7 @@ public class Jormungandr : MonoBehaviour
 
         mainCam = GameObject.FindWithTag("MainCamera");
         camScript = mainCam.GetComponent<CameraFollow>();
-        tailbody = GameObject.FindWithTag("Tail");
+        //tailbody = GameObject.FindWithTag("Tail");
         Tailscript = tailbody.GetComponent<TailCollider>();
     }
 
@@ -116,7 +116,9 @@ public class Jormungandr : MonoBehaviour
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen = true;
             anim.SetBool("wallup", false);
-            Tailscript.KnockBack();
+
+            
+            Tailscript.StartCoroutine(Tailscript.KnockBack());
         }
         if (currentHealth <= rockDamageThreshold2 && !rockshathfallen2)
         {
@@ -127,7 +129,7 @@ public class Jormungandr : MonoBehaviour
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen2 = true;
             anim.SetBool("wallup", false);
-            Tailscript.KnockBack();
+            Tailscript.StartCoroutine(Tailscript.KnockBack());
         }
         if (currentHealth <= rockDamageThreshold3 && !rockshathfallen3)
         {
@@ -138,7 +140,7 @@ public class Jormungandr : MonoBehaviour
             JormAttack.StartCoroutine(JormAttack.StartFalling());
             rockshathfallen3 = true;
             anim.SetBool("wallup", false);
-            Tailscript.KnockBack();
+            Tailscript.StartCoroutine(Tailscript.KnockBack());
         }
 
     }

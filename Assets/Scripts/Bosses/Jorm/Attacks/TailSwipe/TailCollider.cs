@@ -15,7 +15,7 @@ public class TailCollider : MonoBehaviour
 
     [SerializeField] private float tailSwipeDamage;
     [SerializeField] private float knockbackDuration;
-    [SerializeField] private float knockbackPower;
+    public float knockbackPower;
     private Animator anim;
     private void Start()
     {

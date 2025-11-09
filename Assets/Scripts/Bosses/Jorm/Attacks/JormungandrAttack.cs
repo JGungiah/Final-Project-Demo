@@ -26,6 +26,8 @@ public class JormungandrAttack : MonoBehaviour
     [Header("Enemies Spawning")]
     private bool enemywave1;
     private bool enemywave2;
+
+    public Animator wallsAnim;
     private void Start()
     {
         if (player == null)
@@ -54,6 +56,7 @@ public class JormungandrAttack : MonoBehaviour
     
    public IEnumerator StartFalling() 
     {
+        wallsAnim.SetBool("wallup", true);
         for (int i = 0; i <= 45; i++)
         {
 
@@ -65,6 +68,8 @@ public class JormungandrAttack : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(minSpawn, maxSpawn));
            //spit.StopCoroutine(spit.waitToattack());
         }
+        wallsAnim.SetBool("wallup", false);
+
         JormHealth.isInvunrable = false;
     }
 
