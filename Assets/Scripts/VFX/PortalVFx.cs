@@ -9,6 +9,7 @@ public class PortalVFx : MonoBehaviour
     void Update()
     {    
             vfx.SetVector3("TargetPosition", target.position);
+        vfx.Reinit();
         
     }
 }
