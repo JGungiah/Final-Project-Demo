@@ -232,7 +232,7 @@ public class Health : MonoBehaviour
         if (other.gameObject.CompareTag("Projectile") && !isBlocking)
         {
             TakeDamage(projectileDamage);
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
         if (other.tag == "Poison")
         {

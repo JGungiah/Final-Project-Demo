@@ -34,15 +34,15 @@ public class TailCollider : MonoBehaviour
     }
     public void Swipe() 
     {
-        if(Jorm.currentHealth <= 450 && isIncollider && !isMidhealth)
+        if(Jorm.currentHealth <= 600 && isIncollider && !isMidhealth)
         {
-            anim.SetTrigger("Tail Swipe");
+            
             StartCoroutine(SwipeAttack());
             isMidhealth = true;
         }
         if (Jorm.currentHealth <= 300 && isIncollider && !isLowhealth)
         {
-            anim.SetTrigger("Tail Swipe");
+        
             StartCoroutine(SwipeAttack());
             isLowhealth = true;
         }
