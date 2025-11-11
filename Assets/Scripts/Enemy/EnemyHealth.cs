@@ -43,6 +43,12 @@ public class EnemyHealth : MonoBehaviour
     public GameObject impactVFX;
 
     public Transform spawnPoint;
+
+    public GameObject healthBar;
+    private float originalBarScaleX;
+
+    public Animator healthBarAnim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,7 +63,7 @@ public class EnemyHealth : MonoBehaviour
         mainCamera = GameObject.FindWithTag("MainCamera");
         cameraScript = mainCamera.GetComponent<CameraFollow>();
         anim= GetComponent<Animator>();
-
+        originalBarScaleX = healthBar.transform.localScale.x;
         canTakeDamage = true;
     }
 
@@ -69,15 +75,18 @@ public class EnemyHealth : MonoBehaviour
   
         if (currentHealth <= 0 && !hasDropped)
         {
-           
-            hasDropped = true;
-
+            healthBarAnim.SetTrigger("Dissapear");
+            hasDropped = true;  
             StartCoroutine(DissolveEffect());
             EnemyDrop();
             
            
         }
 
+        Vector3 scale = healthBar.transform.localScale;
+        float healthPercent = Mathf.Clamp01(currentHealth / maxHealth);
+        scale.x = originalBarScaleX * healthPercent;
+        healthBar.transform.localScale = scale;
     }
     private IEnumerator VFX()
     {
@@ -108,12 +117,12 @@ public class EnemyHealth : MonoBehaviour
         StartCoroutine(VFX());
  
         Instantiate(numbers, spawnPoint.position , Quaternion.identity);
-        cameraScript.shakeStrength = playerAttack.playerDamage / 5f;
-        cameraScript.shakeDuration = playerAttack.playerDamage / 3f;
+        cameraScript.shakeStrength = playerAttack.playerDamage / 9f;
+        cameraScript.shakeDuration = playerAttack.playerDamage / 15f;
         if (playerAttack.Hit3)
         {
-            cameraScript.shakeStrength = playerAttack.playerDamage / 3f;
-            cameraScript.shakeDuration = playerAttack.playerDamage / 5f;
+            cameraScript.shakeStrength = playerAttack.playerDamage / 4f;
+            cameraScript.shakeDuration = playerAttack.playerDamage / 8f;
             cameraScript.Shake();
         }
 
@@ -141,6 +150,7 @@ public class EnemyHealth : MonoBehaviour
 
     private IEnumerator DissolveEffect()
     {
+       
         agent.enabled = false;
         float dissolveTime = 1.5f;
         float elapsedTime = 0f;
