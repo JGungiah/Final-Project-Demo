@@ -24,17 +24,26 @@ public class Yggdrasil : MonoBehaviour
 
     [Header("RootAttack")]
     public bool rootshathattacked;
+    public bool rootshathattacked2;
+    public bool rootshathattacked3;
     public float rootDamageThreshold;
-
-
+    public float rootDamageThreshold2;
+    public float rootDamageThreshold3;
     [Header("RockAttack")]
     public bool rockshathfallen;
+    public bool rockshathfallen2;
+    public bool rockshathfallen3;
     public float rockDamageThreshold;
+    public float rockDamageThreshold2;
+    public float rockDamageThreshold3;
 
     [Header("CloseRangeAttack")]
-
+    private bool ishighhealth;
     private bool isMidhealth;
     private bool isLowhealth;
+    public float swipeDamageThreshold;
+    public float swipeDamageThreshold2;
+    public float swipeDamageThreshold3;
     public bool isIncollider;
 
     [SerializeField] private float knockbackDuration;
@@ -93,10 +102,34 @@ public class Yggdrasil : MonoBehaviour
             Yggattack.StartCoroutine(Yggattack.StartFalling());
             rockshathfallen = true;
         }
+        if (currentHealth <= rockDamageThreshold2 && !rockshathfallen2)
+        {
+            isInvunrable = true;
+            Yggattack.StartCoroutine(Yggattack.StartFalling());
+            rockshathfallen = true;
+        }
+        if (currentHealth <= rockDamageThreshold3 && !rockshathfallen3)
+        {
+            isInvunrable = true;
+            Yggattack.StartCoroutine(Yggattack.StartFalling());
+            rockshathfallen = true;
+        }
     }
     public void Rootstarters()
     {
         if (currentHealth <= rootDamageThreshold && !rootshathattacked)
+        {
+            isInvunrable = true;
+            Yggattack.StartCoroutine(Yggattack.RootAttack());
+            rootshathattacked = true;
+        }
+        if (currentHealth <= rootDamageThreshold2 && !rootshathattacked2)
+        {
+            isInvunrable = true;
+            Yggattack.StartCoroutine(Yggattack.RootAttack());
+            rootshathattacked = true;
+        }
+        if (currentHealth <= rootDamageThreshold3 && !rootshathattacked3)
         {
             isInvunrable = true;
             Yggattack.StartCoroutine(Yggattack.RootAttack());
@@ -112,12 +145,17 @@ public class Yggdrasil : MonoBehaviour
     }
     public void Swipe()
     {
-        if (currentHealth <= 700 && isIncollider && !isMidhealth)
+        if (currentHealth <= swipeDamageThreshold && isIncollider && !ishighhealth)
         {
             StartCoroutine(closeAttack());
             isMidhealth = true;
         }
-        if (currentHealth <= 400 && isIncollider && !isLowhealth)
+        if (currentHealth <= swipeDamageThreshold2 && isIncollider && !isMidhealth)
+        {
+            StartCoroutine(closeAttack());
+            isLowhealth = true;
+        }
+        if (currentHealth <= swipeDamageThreshold3 && isIncollider && !isLowhealth)
         {
             StartCoroutine(closeAttack());
             isLowhealth = true;
