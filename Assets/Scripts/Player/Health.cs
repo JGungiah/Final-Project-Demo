@@ -47,6 +47,11 @@ public class Health : MonoBehaviour
     public float originalMaxHealth;
     public float originalKnockBackPower;
     public float originalBlockStrength;
+
+    public Animator vignetteAnim;
+
+
+    private bool hasDied;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -61,7 +66,6 @@ public class Health : MonoBehaviour
         originalDamage = EnemyDamage;
         canBlock = true;
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
-
         
         originalMaxHealth = maxHealth;
         originalBlockStrength = blockStrength;
@@ -87,12 +91,16 @@ public class Health : MonoBehaviour
             brokenShield.gameObject.SetActive(false);
         }
 
-        if (currentHealth <= 0 )
+        if (currentHealth <= 0  && !hasDied)
         {
-            SceneManager.LoadScene("LobbyRoom");
-            currentHealth = maxHealth;
-            canTakeDamage = false;
+            hasDied = true;
+            vignetteAnim.SetBool("HasDied", true);
+            //SceneManager.LoadScene("LobbyRoom");
+            //currentHealth = maxHealth;
+            //canTakeDamage = false;
         }
+
+     
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && canBlock)
         {
@@ -104,6 +112,9 @@ public class Health : MonoBehaviour
         }
         
     }
+
+   
+
     void OnEnable()
     {
        
@@ -208,8 +219,8 @@ public class Health : MonoBehaviour
                     TakeDamage(enemyAttack.damage);
                     hasBeenAttacked = true;
                     StartCoroutine(AttackWindow());
-                    cameraScript.shakeStrength = enemyAttack.damage / 2.5f;
-                    cameraScript.shakeDuration = enemyAttack.damage / 10f;
+                    cameraScript.shakeStrength = enemyAttack.damage / 5f;
+                    cameraScript.shakeDuration = enemyAttack.damage / 20f;
                     cameraScript.Shake();
                 }
                 else if (isBlocking)

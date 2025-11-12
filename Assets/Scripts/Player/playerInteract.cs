@@ -361,6 +361,7 @@ public class playerInteract : MonoBehaviour
     private void CheckScene()
     {
          currentScene = SceneManager.GetActiveScene();
+         mainCamera.gameObject.SetActive( true );
 
     }
     public void SceneGenerator() 
