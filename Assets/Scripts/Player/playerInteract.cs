@@ -138,7 +138,7 @@ public class playerInteract : MonoBehaviour
 
         if (currentScene.name == "BossYorm")
         {
-            mainCamera.orthographicSize = 25;
+            mainCamera.orthographicSize = 18;
         }
         else
         {
@@ -256,14 +256,22 @@ public class playerInteract : MonoBehaviour
             movementScript.ClearPlayerBoons();
             attackScript.ClearAttackBoons();
         }
-        else if(currentScene.name != "LobbyRoom" || currentScene.name != "Tutorial" && !isTutorial)
+        else if(currentScene.name != "LobbyRoom" || currentScene.name != "Tutorial" && !isTutorial || currentScene.name != "BossYorm" || currentScene.name != "Yggdrasil Boss")
         {
 
             waveText.gameObject.SetActive(true);
             roomNumberText.gameObject.SetActive(true);
             roomNumber.gameObject.SetActive(true);
 
+            if (currentScene.name == "BossYorm" || currentScene.name == "Yggdrasil Boss")
+            {
+                waveText.gameObject.SetActive(false);
+                roomNumberText.gameObject.SetActive(false);
+                roomNumber.gameObject.SetActive(false);
+            }
         }
+
+        
     }
     private IEnumerator FadeToNoCombat()
     {

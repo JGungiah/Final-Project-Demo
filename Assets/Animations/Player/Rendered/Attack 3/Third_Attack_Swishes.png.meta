@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: 326705390e8af0b42930808a5c3f9624
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_0
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2305
+        width: 173
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace3b16611b0aad4e8f4a8c0d1f325c0
+      internalID: -1379936136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_1
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 2295
+        width: 138
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e7b055ec2432a40b7c3db5faad65a5
+      internalID: -2076856066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_2
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 2272
+        width: 135
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7fb596c55623b4b89e9105d50d3c8a
+      internalID: 1613417188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_3
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 2288
+        width: 184
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b69c8b09f26c63469452596384a3187
+      internalID: -664905046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_4
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 2293
+        width: 127
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00df4403c3a54d84f8be0991972ce2d9
+      internalID: -322786210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_5
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1976
+        width: 144
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28b272d1ebcfec47966f2a9cd6775b4
+      internalID: -1140203953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1973
+        width: 132
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070cdd85f77923b4fbefcb02dc533763
+      internalID: -2072151743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_7
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1947
+        width: 165
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f77f49bc5024bb41ae3f8f4ab8e03f9
+      internalID: 712964216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_8
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 1957
+        width: 187
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d531c09125d5948a082cffdcfd577f
+      internalID: -1521226426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_9
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1981
+        width: 226
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a8d6c7d8ee56b4db4a488ca94397c1
+      internalID: -334395436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_10
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1627
+        width: 186
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49797851cacf9bd45b640dc2728437ba
+      internalID: 1775057214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_11
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1641
+        width: 257
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9593d36d1b1b9ae4ab02c612ba7cdaae
+      internalID: -2095412819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_13
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1641
+        width: 200
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39dd97231f0541d489ce54fb93a9cc42
+      internalID: 611212007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_14
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1669
+        width: 330
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c35bfab9e10b248bf925b18d7ee979
+      internalID: -1553078771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_15
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1294
+        width: 305
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e590a98b7167b29428eb0a9aafc42208
+      internalID: -1058245527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_16
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1310
+        width: 266
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2128d7befa5568346812aa771a66f220
+      internalID: -1316760070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_17
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1326
+        width: 224
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b203b57ecb32d084b8f671bf07a3d5ba
+      internalID: 1806871996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_18
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 1330
+        width: 205
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a642829bd1d170b4bb52a090ec04c24e
+      internalID: -1555959962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_19
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 1349
+        width: 182
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7eb4e783d1852641bb7d16e5398be3d
+      internalID: 919175055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_20
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 968
+        width: 288
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f473dcc7c8106474594cdd50d431e1d8
+      internalID: 407723411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_21
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 983
+        width: 226
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8e693ba6d7b20448e7c7934bb77bb4
+      internalID: -833542598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_22
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 982
+        width: 218
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf2b489cc8abf24886cc76020f58fe0
+      internalID: 1490471419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_23
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1010
+        width: 226
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f057b9151c418a43bc9ecb68923b93f
+      internalID: 555454183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_24
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 1025
+        width: 166
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907a12c9dc9801c4bbf57a484c967805
+      internalID: 870829123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_25
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 638
+        width: 164
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f94871172818443b8f14e926c54f80
+      internalID: -371375584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_26
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 644
+        width: 153
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7abbc4d8e33b14d833e137b87050c2
+      internalID: 884312105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_27
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 667
+        width: 168
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e95af40daf860c478e2db775570983b
+      internalID: -526986444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_28
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 670
+        width: 206
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5591b801d015cbe4cbf347cb0dcf4f29
+      internalID: -1032536960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_29
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 700
+        width: 219
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224c640df19811945be2f9dfd604ad07
+      internalID: -1837212631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_30
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 345
+        width: 233
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247b733267c54394db8a059f8db5f8bb
+      internalID: 1818014421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_31
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 351
+        width: 245
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a0a66a46971c045a3d2c88742eaac1
+      internalID: -1621075220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_32
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 374
+        width: 210
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76d68fa12cbd5b46a697031f90e5dc5
+      internalID: 1611825087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_33
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 346
+        width: 152
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b327eb16682539a469e94675f500e5cb
+      internalID: -612823864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_34
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 347
+        width: 287
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26611e060a7d5804989393babef91134
+      internalID: 1929062964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_35
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 54
+        width: 204
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a95b8f69981abb459b656616ba1d4f9
+      internalID: -331986493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_36
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 68
+        width: 214
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3900ba080c2a804aa6b7faa4961d366
+      internalID: -1872867553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_37
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 73
+        width: 200
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc7d27d9f6d17043877b005adffc48a
+      internalID: 1765515415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_38
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 0
+        width: 176
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a364ee958cf08b419f2a97ca0c1648b
+      internalID: 1030054124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_39
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 51
+        width: 207
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b950c8dfcfee2429cdde9dc4dd8843
+      internalID: 2131103224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Third_Attack_Swishes_12
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1636
+        width: 221
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37a088d9ed77c343ac7924cb49ab43a
+      internalID: 741509329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0dad762519e733e43a178dd106da0e6d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Third_Attack_Swishes_0: -1379936136
+      Third_Attack_Swishes_1: -2076856066
+      Third_Attack_Swishes_10: 1775057214
+      Third_Attack_Swishes_11: -2095412819
+      Third_Attack_Swishes_12: 741509329
+      Third_Attack_Swishes_13: 611212007
+      Third_Attack_Swishes_14: -1553078771
+      Third_Attack_Swishes_15: -1058245527
+      Third_Attack_Swishes_16: -1316760070
+      Third_Attack_Swishes_17: 1806871996
+      Third_Attack_Swishes_18: -1555959962
+      Third_Attack_Swishes_19: 919175055
+      Third_Attack_Swishes_2: 1613417188
+      Third_Attack_Swishes_20: 407723411
+      Third_Attack_Swishes_21: -833542598
+      Third_Attack_Swishes_22: 1490471419
+      Third_Attack_Swishes_23: 555454183
+      Third_Attack_Swishes_24: 870829123
+      Third_Attack_Swishes_25: -371375584
+      Third_Attack_Swishes_26: 884312105
+      Third_Attack_Swishes_27: -526986444
+      Third_Attack_Swishes_28: -1032536960
+      Third_Attack_Swishes_29: -1837212631
+      Third_Attack_Swishes_3: -664905046
+      Third_Attack_Swishes_30: 1818014421
+      Third_Attack_Swishes_31: -1621075220
+      Third_Attack_Swishes_32: 1611825087
+      Third_Attack_Swishes_33: -612823864
+      Third_Attack_Swishes_34: 1929062964
+      Third_Attack_Swishes_35: -331986493
+      Third_Attack_Swishes_36: -1872867553
+      Third_Attack_Swishes_37: 1765515415
+      Third_Attack_Swishes_38: 1030054124
+      Third_Attack_Swishes_39: 2131103224
+      Third_Attack_Swishes_4: -322786210
+      Third_Attack_Swishes_5: -1140203953
+      Third_Attack_Swishes_6: -2072151743
+      Third_Attack_Swishes_7: 712964216
+      Third_Attack_Swishes_8: -1521226426
+      Third_Attack_Swishes_9: -334395436
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

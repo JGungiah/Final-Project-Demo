@@ -68,6 +68,8 @@ public class Player : MonoBehaviour
 
     private float originalDashCooldown;
     private float preBoonSpeed;
+
+    public Animator dashAnim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -116,6 +118,14 @@ public class Player : MonoBehaviour
             StartCoroutine(Dash());
         }
 
+        if (hasDashed)
+        {
+            dashAnim.SetBool("isCharging" , true);
+        }
+        else
+        {
+            dashAnim.SetBool("isCharging", false);
+        }
 
     }
 

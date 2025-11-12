@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: 38d13528c02a7014695693ce57ea0d27
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 4401
+        width: 420
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c666e77665c594d4f8a4d41aee618976
+      internalID: 296734375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 4435
+        width: 337
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f58877ea19f600419b3124421253c90
+      internalID: 1969075700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 4435
+        width: 417
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3266f2c3314374f8c44206523e7d1d
+      internalID: -90144034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 4462
+        width: 376
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aaff00b4efbd2d40b246455da902459
+      internalID: -724202511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 4458
+        width: 461
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdbcfee963827349ad78d007e069e29
+      internalID: -705511054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 3849
+        width: 427
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356cdeb51cd423e44b073dd9eaae7180
+      internalID: -303001236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 3873
+        width: 341
+        height: 525
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a101a99aae54954994b8bf4d3121738
+      internalID: 2031672941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 3851
+        width: 427
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cdd655580c98f42ad9fc88ea5fe5bc
+      internalID: -1017627971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 3910
+        width: 386
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023a9fd50bd14984ca7409cfa7b7f497
+      internalID: 506944822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 3881
+        width: 469
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9548c7069909c740a6e3752185e3025
+      internalID: 1495027728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 3261
+        width: 471
+        height: 529
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98dbc0c976bad7245aec44571e128530
+      internalID: 1517556834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 3234
+        width: 393
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c35689c706f4c4c91bed8745aab4eb
+      internalID: -594769888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 3214
+        width: 398
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3b079f2a4093844af2b9fddb88db2c
+      internalID: -918266873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 3258
+        width: 388
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9598fc589d2f404e9b3ec5de7342030
+      internalID: -1000912174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 3280
+        width: 378
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59bb2a117fcc4f4b92dc3bfaae49787
+      internalID: 862202045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 2626
+        width: 486
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065561b6bfc00fb449fb944f7a87ef19
+      internalID: 2119711208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 2594
+        width: 407
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669daa856149f33428bec81de899715e
+      internalID: 160060444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 2572
+        width: 412
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0941885f406264799ecbfd55271655
+      internalID: -7093537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 2609
+        width: 402
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5edeacf2f646247bb9bf947d442c79
+      internalID: -2033454547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 2081
+        y: 2631
+        width: 393
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970ad1be4d09d014999c62eeb57f1c9c
+      internalID: -1119502833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1906
+        width: 466
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa7b14bd219d9341ae66fc3582aefae
+      internalID: 2136915756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1925
+        width: 491
+        height: 635
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded65591752a4d14699327b1aa06b348
+      internalID: 860789050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 1954
+        width: 355
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d8e543471b36845a97b9831a47fb93
+      internalID: 550417997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 1935
+        width: 332
+        height: 639
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6b5d89329fdc443a5898f25f30ae43
+      internalID: 1514419538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 1954
+        width: 332
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa55613a3fb2824b936243ba5665226
+      internalID: 298278104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1268
+        width: 479
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089b0a261fe9446408d1488cf74d9058
+      internalID: -980178330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1232
+        width: 508
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc65d9ab99a3f3640b161051e9071d01
+      internalID: 561236835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 1273
+        width: 366
+        height: 615
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3928d3dc421807946a97d942990570e1
+      internalID: 1167594052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1239
+        width: 343
+        height: 669
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94990fc133ef0784c95061ad73396d46
+      internalID: -612828515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 1293
+        width: 340
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9261b1462fe2bc54f849393386a52e2b
+      internalID: -575598388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 624
+        width: 410
+        height: 635
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fe442656022a74ea407060b4f22497
+      internalID: 766218688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 663
+        width: 383
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc67e666ea6561d43be264b97bcedceb
+      internalID: -2073518351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 643
+        width: 339
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d901aad736d267f4c95ae8afee4e627a
+      internalID: 1720941208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 668
+        width: 373
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb93b87b4531ce459314a8fc6ceca1c
+      internalID: 1807155542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 599
+        width: 386
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad2be553dc7e1d499622d5e53ad2d21
+      internalID: 1381767656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 43
+        width: 466
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dfd1bc9183da0743bfbc6862b02b21c
+      internalID: -1930284555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 94
+        width: 388
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8d09909663f144dabed536049d809f
+      internalID: -1127448466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 1
+        width: 373
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fb3e54c3e16d143a404c4d232e44fb
+      internalID: 1291096445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 99
+        width: 405
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004e1e1cdae1e2d4eb52ada7db12f5c7
+      internalID: 1913786294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worshipper Run SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 89
+        width: 427
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d01998b840e65746a968d49d23c4270
+      internalID: 353883562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d70ed3c47af66c3489a382d133d510ce
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Worshipper Run SpriteSheet_0: 296734375
+      Worshipper Run SpriteSheet_1: 1969075700
+      Worshipper Run SpriteSheet_10: 1517556834
+      Worshipper Run SpriteSheet_11: -594769888
+      Worshipper Run SpriteSheet_12: -918266873
+      Worshipper Run SpriteSheet_13: -1000912174
+      Worshipper Run SpriteSheet_14: 862202045
+      Worshipper Run SpriteSheet_15: 2119711208
+      Worshipper Run SpriteSheet_16: 160060444
+      Worshipper Run SpriteSheet_17: -7093537
+      Worshipper Run SpriteSheet_18: -2033454547
+      Worshipper Run SpriteSheet_19: -1119502833
+      Worshipper Run SpriteSheet_2: -90144034
+      Worshipper Run SpriteSheet_20: 2136915756
+      Worshipper Run SpriteSheet_21: 860789050
+      Worshipper Run SpriteSheet_22: 550417997
+      Worshipper Run SpriteSheet_23: 1514419538
+      Worshipper Run SpriteSheet_24: 298278104
+      Worshipper Run SpriteSheet_25: -980178330
+      Worshipper Run SpriteSheet_26: 561236835
+      Worshipper Run SpriteSheet_27: 1167594052
+      Worshipper Run SpriteSheet_28: -612828515
+      Worshipper Run SpriteSheet_29: -575598388
+      Worshipper Run SpriteSheet_3: -724202511
+      Worshipper Run SpriteSheet_30: 766218688
+      Worshipper Run SpriteSheet_31: -2073518351
+      Worshipper Run SpriteSheet_32: 1720941208
+      Worshipper Run SpriteSheet_33: 1807155542
+      Worshipper Run SpriteSheet_34: 1381767656
+      Worshipper Run SpriteSheet_35: -1930284555
+      Worshipper Run SpriteSheet_36: -1127448466
+      Worshipper Run SpriteSheet_37: 1291096445
+      Worshipper Run SpriteSheet_38: 1913786294
+      Worshipper Run SpriteSheet_39: 353883562
+      Worshipper Run SpriteSheet_4: -705511054
+      Worshipper Run SpriteSheet_5: -303001236
+      Worshipper Run SpriteSheet_6: 2031672941
+      Worshipper Run SpriteSheet_7: -1017627971
+      Worshipper Run SpriteSheet_8: 506944822
+      Worshipper Run SpriteSheet_9: 1495027728
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
