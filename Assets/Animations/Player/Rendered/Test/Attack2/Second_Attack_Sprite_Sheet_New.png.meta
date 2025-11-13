@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60b3a364600e8f549950e2da44fe186c
+guid: 1f83e232381068b4d93a2e52f7a1b616
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,12 +84,12 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 20
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -110,78 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: First_attack_Swish_0
+      name: Second_Attack_Sprite_Sheet_New_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 1835
-        width: 143
-        height: 257
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 098cafc506014b4499d8b0278148d5d9
-      internalID: 1224410445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_1
-      rect:
-        serializedVersion: 2
-        x: 238
-        y: 1837
-        width: 215
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 564d88115b94fd745930b51b29972b27
-      internalID: 778097231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_2
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 1851
-        width: 212
-        height: 214
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef72055596f6f73448bfb9935834450e
-      internalID: 913963678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_3
-      rect:
-        serializedVersion: 2
-        x: 739
-        y: 1850
-        width: 201
+        x: 137
+        y: 2187
+        width: 112
         height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -191,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c3cd76d51efe7c448a7957d744f4f65
-      internalID: -125231982
+      spriteID: e3f62a77ff79df6468ca6c869d2f822d
+      internalID: -1261605250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_4
+      name: Second_Attack_Sprite_Sheet_New_1
       rect:
         serializedVersion: 2
-        x: 994
-        y: 1844
-        width: 206
-        height: 200
+        x: 336
+        y: 2200
+        width: 130
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,327 +147,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e97c8047651cd2242a86fe1ab8250de6
-      internalID: -747830399
+      spriteID: eeb95df8965a6e640865db31de9c15c1
+      internalID: 1546973370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_5
+      name: Second_Attack_Sprite_Sheet_New_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 1594
-        width: 149
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8be6ff7cfd6a9cd4abd4812a0fc3c503
-      internalID: 1049756445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_6
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 1600
-        width: 198
-        height: 228
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c46993ff656178d489d6cddc4a992326
-      internalID: 1858287990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_7
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 1618
-        width: 208
-        height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8290d242ad89bb14eab6cab3f1bbbc3a
-      internalID: -2087083477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_8
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 1626
-        width: 165
-        height: 176
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8061db52fe65174cbc9bbc2ed27cc62
-      internalID: -1063282669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_9
-      rect:
-        serializedVersion: 2
-        x: 973
-        y: 1625
-        width: 209
-        height: 175
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f76b5649a9e54174ebe09c043f3299f4
-      internalID: -533674468
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_10
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 1317
-        width: 106
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b4f3ea09b260f74ba2df8c9e8aba9b3
-      internalID: -352562432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_11
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 1332
-        width: 139
-        height: 261
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edc3908023a4af04e86cd019d8174c8f
-      internalID: -1231694097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_12
-      rect:
-        serializedVersion: 2
-        x: 552
-        y: 1352
-        width: 185
-        height: 235
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 316e6aaa3f148984493e58feaa633c0f
-      internalID: 1576913930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_13
-      rect:
-        serializedVersion: 2
-        x: 774
-        y: 1361
-        width: 150
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2c9c700a18a7b94585697f73cb24876
-      internalID: 1681408713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_14
-      rect:
-        serializedVersion: 2
-        x: 997
-        y: 1352
-        width: 155
-        height: 220
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa2d4086dd0d1b64aadf7d1d5aed54f3
-      internalID: 1073494176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_15
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 1088
-        width: 168
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90d25b04640238145837473b7a0a6e43
-      internalID: 761060173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_16
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 1101
-        width: 146
-        height: 218
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65e1b81b7a6bdf44fb2be9e3a4470514
-      internalID: -26740840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_17
-      rect:
-        serializedVersion: 2
-        x: 566
-        y: 1114
-        width: 127
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e07edcff53c42544bff791f340146b3
-      internalID: 1452814518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_18
-      rect:
-        serializedVersion: 2
-        x: 770
-        y: 1132
-        width: 198
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21da3b11c16aaad4ea08a7fc25c76a34
-      internalID: 2130039234
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_19
-      rect:
-        serializedVersion: 2
-        x: 1002
-        y: 1138
-        width: 160
+        x: 511
+        y: 2198
+        width: 172
         height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -543,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9ce21135341841498ed1fbf0795b949
-      internalID: 1121458412
+      spriteID: a668f5f953431b94a940576cb0c01f83
+      internalID: -1717406922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_20
+      name: Second_Attack_Sprite_Sheet_New_3
       rect:
         serializedVersion: 2
-        x: 40
-        y: 813
-        width: 188
-        height: 240
+        x: 705
+        y: 2197
+        width: 179
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 755f244a458d6ba488b551861da404c6
-      internalID: 975502126
+      spriteID: 31fafcbe49977ba4eaaf0ddd49586c88
+      internalID: 405765249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_21
+      name: Second_Attack_Sprite_Sheet_New_4
       rect:
         serializedVersion: 2
-        x: 288
-        y: 822
-        width: 216
-        height: 236
+        x: 922
+        y: 2202
+        width: 226
+        height: 206
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33a478daeb9889e449180711cf8918a5
-      internalID: -1546263567
+      spriteID: 2a236fb2936712c43a510fc043b3f305
+      internalID: -3979520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_22
+      name: Second_Attack_Sprite_Sheet_New_5
       rect:
         serializedVersion: 2
-        x: 552
-        y: 831
-        width: 175
-        height: 245
+        x: 115
+        y: 1961
+        width: 141
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 926da3124bc7cff44b8231a6f37f9c3e
-      internalID: 932389498
+      spriteID: 9b2a198b2f940594eae00f699306ce44
+      internalID: -350003720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_23
+      name: Second_Attack_Sprite_Sheet_New_6
       rect:
         serializedVersion: 2
-        x: 764
-        y: 834
-        width: 175
-        height: 256
+        x: 311
+        y: 1961
+        width: 147
+        height: 178
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3471afde7323854f863330352db4e89
-      internalID: 1509590273
+      spriteID: 755078d7897cfbb4f8b0b57392bee1a8
+      internalID: -42799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_24
+      name: Second_Attack_Sprite_Sheet_New_7
       rect:
         serializedVersion: 2
-        x: 966
-        y: 844
-        width: 193
-        height: 218
+        x: 488
+        y: 1968
+        width: 172
+        height: 191
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -653,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 173e63ab69a33454abc5328f1acc7636
-      internalID: -515161936
+      spriteID: 9f8236fd4c08ad14ca53efc7699182a7
+      internalID: -919680421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_25
+      name: Second_Attack_Sprite_Sheet_New_8
       rect:
         serializedVersion: 2
-        x: 25
-        y: 569
-        width: 168
-        height: 218
+        x: 698
+        y: 1964
+        width: 183
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,261 +301,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71005df11ecc2394aa05cdccd90a54ae
-      internalID: -1893989675
+      spriteID: 00b6bb518770f2742ac71202af95e528
+      internalID: 993484680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_26
+      name: Second_Attack_Sprite_Sheet_New_9
       rect:
         serializedVersion: 2
-        x: 292
-        y: 568
-        width: 157
-        height: 227
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a66ccf2219492ff4aa6e67bd6dbdfc9d
-      internalID: -1561224689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_27
-      rect:
-        serializedVersion: 2
-        x: 530
-        y: 578
-        width: 195
-        height: 221
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b696526eeaac634ab2a4b93faa2fa3e
-      internalID: 466192582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_28
-      rect:
-        serializedVersion: 2
-        x: 788
-        y: 589
-        width: 146
-        height: 211
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50c7f4ae6e5010845a25672ea070efd8
-      internalID: 364021580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_29
-      rect:
-        serializedVersion: 2
-        x: 971
-        y: 580
-        width: 165
-        height: 211
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 560d126ae0190444493aa6a17407ae82
-      internalID: -1504739764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_30
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 319
-        width: 157
-        height: 225
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a945b5e5b5f9464394d079625d43881
-      internalID: 219473358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_31
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 330
-        width: 170
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64b985ee3a7a53f4f892c62a412cb06b
-      internalID: -1030752614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_32
-      rect:
-        serializedVersion: 2
-        x: 527
-        y: 342
-        width: 235
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd437f78fe5a97945a23aac4cadc9dd3
-      internalID: -450676362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_33
-      rect:
-        serializedVersion: 2
-        x: 783
-        y: 350
-        width: 185
-        height: 208
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 278e355a6d2cd114d907f3eee4ccb8a0
-      internalID: 330969843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_34
-      rect:
-        serializedVersion: 2
-        x: 976
-        y: 353
-        width: 200
-        height: 220
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a74ee89387e05344aca68a081a174a7
-      internalID: 48711121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_35
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 53
-        width: 211
-        height: 228
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00bbfbb28f12592428a5a103b65f69c1
-      internalID: -2031558343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_36
-      rect:
-        serializedVersion: 2
-        x: 247
-        y: 84
-        width: 190
-        height: 188
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df8e6f6b0166aef4e98d9e9c2b7e1879
-      internalID: 914748317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_37
-      rect:
-        serializedVersion: 2
-        x: 526
-        y: 70
-        width: 169
+        x: 921
+        y: 1976
+        width: 172
         height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -939,20 +323,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66c6d2e08d6e1374ea334824faac9cc7
-      internalID: -548159937
+      spriteID: 25f076735e724534ebdf14fc9e19f044
+      internalID: 205597168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_38
+      name: Second_Attack_Sprite_Sheet_New_10
       rect:
         serializedVersion: 2
-        x: 759
-        y: 86
-        width: 235
-        height: 184
+        x: 112
+        y: 1701
+        width: 131
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -961,19 +345,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3bb1223fbfcfc741b301a6597648591
-      internalID: -1554709072
+      spriteID: 25f692e6723fdc84bb8a94c420444ef3
+      internalID: 106161000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_39
+      name: Second_Attack_Sprite_Sheet_New_11
       rect:
         serializedVersion: 2
-        x: 1044
-        y: 73
-        width: 143
+        x: 316
+        y: 1717
+        width: 125
         height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -983,8 +367,624 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7608d9be22889041b057f38cb9bc4e0
-      internalID: -1767273280
+      spriteID: 5adf66f50917ca04e94cf1f6e3548a85
+      internalID: 1198471673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_12
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1678
+        width: 135
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96114269a4ac5f641938b46f96aa22fe
+      internalID: -931005069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_13
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 1700
+        width: 162
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3263a520c3251614ab4cb936c9cf7ac6
+      internalID: 228012893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_14
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 1714
+        width: 180
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de079e55e129b342bc68acc7c86802d
+      internalID: 1909823577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_15
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1403
+        width: 126
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f39c4f31bf918443b16145fcc3ba0a4
+      internalID: 1894941487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_16
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1414
+        width: 159
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7276a0861de3c54598ea59b1f76dd6d
+      internalID: -1066261393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_17
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1390
+        width: 142
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e70e170db0779f4bb175a8ee2c2c68e
+      internalID: -702924748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_18
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1408
+        width: 267
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcc89c7e9700b74caf05647f395f636
+      internalID: 1500223028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_19
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1430
+        width: 133
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6db60eaf50e67d459574ddf5c75afad
+      internalID: 1578523503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1098
+        width: 131
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a2b843293c79d47a70a9a76f3e1585
+      internalID: -1860251869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_21
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1093
+        width: 171
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103581284d4673d4c9cd5826cddc3f97
+      internalID: 988643993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_22
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1088
+        width: 188
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9e9a6f1cc9f27449d818da140bdd72
+      internalID: -1889275359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_23
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 1098
+        width: 300
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1af3d3f1c09a640a46ca8b9b5d37c3
+      internalID: 978814852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_24
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1107
+        width: 139
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94a197352a3eee43ae344be9c04f115
+      internalID: -2098373494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_25
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 816
+        width: 190
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c3599aef18c7a42ace8f2bd123a829
+      internalID: 666470040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_26
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 831
+        width: 247
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9be143d1f520ef4cb1738dfadc27883
+      internalID: 918009528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_27
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 836
+        width: 249
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbf776bde7c81247a51e78fe6ef3d8b
+      internalID: -1943754850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_28
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 840
+        width: 317
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e32abfea6538345b97a39190798f1c
+      internalID: 334563310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_29
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 849
+        width: 188
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d7e6e3493fe9943af82aed2f993da4
+      internalID: 528253077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_30
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 485
+        width: 179
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3f705db5daf034d9842bfc049e3a65
+      internalID: 1638531827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_31
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 507
+        width: 154
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2279a025eec074dab84bf55abfca2a
+      internalID: 246201153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_32
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 511
+        width: 157
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8685b4ef47af16c449ce38f78d889661
+      internalID: 378035040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_33
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 515
+        width: 131
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81df2dc4dcd929943b4fc712d4adfa82
+      internalID: -1816150505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_34
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 510
+        width: 247
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4556600fec942c64cb1539c5d02fafc2
+      internalID: 88213931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_35
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 167
+        width: 159
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f310ee5ca6766ac4797c33b23082568a
+      internalID: -1475011095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_36
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 176
+        width: 214
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea683975d36c4804b9c02d9c6c6f9fb2
+      internalID: -2067351134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_37
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 170
+        width: 181
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c72728163bd764d9e53195863d1327
+      internalID: -461620903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_38
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 184
+        width: 290
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc99396659fd594b92c9d14d509710e
+      internalID: -1512552771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Second_Attack_Sprite_Sheet_New_39
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 168
+        width: 136
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826ead10aaeb58f4cbd0ac3112fbebc1
+      internalID: -368482065
       vertices: []
       indices: 
       edges: []
@@ -993,7 +993,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 73005f648139bef418577b9205d10888
+    spriteID: 72a583f9d7fca1740afb5bb34f7255f4
     internalID: 0
     vertices: []
     indices: 
@@ -1003,46 +1003,46 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      First_attack_Swish_0: 1224410445
-      First_attack_Swish_1: 778097231
-      First_attack_Swish_10: -352562432
-      First_attack_Swish_11: -1231694097
-      First_attack_Swish_12: 1576913930
-      First_attack_Swish_13: 1681408713
-      First_attack_Swish_14: 1073494176
-      First_attack_Swish_15: 761060173
-      First_attack_Swish_16: -26740840
-      First_attack_Swish_17: 1452814518
-      First_attack_Swish_18: 2130039234
-      First_attack_Swish_19: 1121458412
-      First_attack_Swish_2: 913963678
-      First_attack_Swish_20: 975502126
-      First_attack_Swish_21: -1546263567
-      First_attack_Swish_22: 932389498
-      First_attack_Swish_23: 1509590273
-      First_attack_Swish_24: -515161936
-      First_attack_Swish_25: -1893989675
-      First_attack_Swish_26: -1561224689
-      First_attack_Swish_27: 466192582
-      First_attack_Swish_28: 364021580
-      First_attack_Swish_29: -1504739764
-      First_attack_Swish_3: -125231982
-      First_attack_Swish_30: 219473358
-      First_attack_Swish_31: -1030752614
-      First_attack_Swish_32: -450676362
-      First_attack_Swish_33: 330969843
-      First_attack_Swish_34: 48711121
-      First_attack_Swish_35: -2031558343
-      First_attack_Swish_36: 914748317
-      First_attack_Swish_37: -548159937
-      First_attack_Swish_38: -1554709072
-      First_attack_Swish_39: -1767273280
-      First_attack_Swish_4: -747830399
-      First_attack_Swish_5: 1049756445
-      First_attack_Swish_6: 1858287990
-      First_attack_Swish_7: -2087083477
-      First_attack_Swish_8: -1063282669
-      First_attack_Swish_9: -533674468
+      Second_Attack_Sprite_Sheet_New_0: -1261605250
+      Second_Attack_Sprite_Sheet_New_1: 1546973370
+      Second_Attack_Sprite_Sheet_New_10: 106161000
+      Second_Attack_Sprite_Sheet_New_11: 1198471673
+      Second_Attack_Sprite_Sheet_New_12: -931005069
+      Second_Attack_Sprite_Sheet_New_13: 228012893
+      Second_Attack_Sprite_Sheet_New_14: 1909823577
+      Second_Attack_Sprite_Sheet_New_15: 1894941487
+      Second_Attack_Sprite_Sheet_New_16: -1066261393
+      Second_Attack_Sprite_Sheet_New_17: -702924748
+      Second_Attack_Sprite_Sheet_New_18: 1500223028
+      Second_Attack_Sprite_Sheet_New_19: 1578523503
+      Second_Attack_Sprite_Sheet_New_2: -1717406922
+      Second_Attack_Sprite_Sheet_New_20: -1860251869
+      Second_Attack_Sprite_Sheet_New_21: 988643993
+      Second_Attack_Sprite_Sheet_New_22: -1889275359
+      Second_Attack_Sprite_Sheet_New_23: 978814852
+      Second_Attack_Sprite_Sheet_New_24: -2098373494
+      Second_Attack_Sprite_Sheet_New_25: 666470040
+      Second_Attack_Sprite_Sheet_New_26: 918009528
+      Second_Attack_Sprite_Sheet_New_27: -1943754850
+      Second_Attack_Sprite_Sheet_New_28: 334563310
+      Second_Attack_Sprite_Sheet_New_29: 528253077
+      Second_Attack_Sprite_Sheet_New_3: 405765249
+      Second_Attack_Sprite_Sheet_New_30: 1638531827
+      Second_Attack_Sprite_Sheet_New_31: 246201153
+      Second_Attack_Sprite_Sheet_New_32: 378035040
+      Second_Attack_Sprite_Sheet_New_33: -1816150505
+      Second_Attack_Sprite_Sheet_New_34: 88213931
+      Second_Attack_Sprite_Sheet_New_35: -1475011095
+      Second_Attack_Sprite_Sheet_New_36: -2067351134
+      Second_Attack_Sprite_Sheet_New_37: -461620903
+      Second_Attack_Sprite_Sheet_New_38: -1512552771
+      Second_Attack_Sprite_Sheet_New_39: -368482065
+      Second_Attack_Sprite_Sheet_New_4: -3979520
+      Second_Attack_Sprite_Sheet_New_5: -350003720
+      Second_Attack_Sprite_Sheet_New_6: -42799
+      Second_Attack_Sprite_Sheet_New_7: -919680421
+      Second_Attack_Sprite_Sheet_New_8: 993484680
+      Second_Attack_Sprite_Sheet_New_9: 205597168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

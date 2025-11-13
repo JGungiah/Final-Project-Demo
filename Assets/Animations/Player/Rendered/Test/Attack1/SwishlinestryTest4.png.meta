@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60b3a364600e8f549950e2da44fe186c
+guid: c4301b2b30808de4eb37fa2aa70b11d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,12 +84,12 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 20
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: First_attack_Swish_0
+      name: SwishlinestryTest4_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 1835
-        width: 143
-        height: 257
+        x: 66
+        y: 1834
+        width: 140
+        height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 098cafc506014b4499d8b0278148d5d9
-      internalID: 1224410445
+      spriteID: 8d54583e7db86cb42b489f02f07b9b5f
+      internalID: -76389742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_1
+      name: SwishlinestryTest4_1
       rect:
         serializedVersion: 2
         x: 238
         y: 1837
-        width: 215
-        height: 242
+        width: 214
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 564d88115b94fd745930b51b29972b27
-      internalID: 778097231
+      spriteID: 559c7d9ba0b9f8a43a9f53fcc0c3956a
+      internalID: -537241600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_2
+      name: SwishlinestryTest4_2
       rect:
         serializedVersion: 2
-        x: 496
-        y: 1851
-        width: 212
-        height: 214
+        x: 500
+        y: 1853
+        width: 207
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef72055596f6f73448bfb9935834450e
-      internalID: 913963678
+      spriteID: 43d6649b0adcdfb4dbca9fde5b69897d
+      internalID: -1793502016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_3
+      name: SwishlinestryTest4_3
       rect:
         serializedVersion: 2
-        x: 739
-        y: 1850
-        width: 201
-        height: 205
+        x: 742
+        y: 1853
+        width: 197
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c3cd76d51efe7c448a7957d744f4f65
-      internalID: -125231982
+      spriteID: 2b935e43d0fc25742ac65f81901686dd
+      internalID: -708055380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_4
+      name: SwishlinestryTest4_4
       rect:
         serializedVersion: 2
-        x: 994
-        y: 1844
+        x: 995
+        y: 1846
         width: 206
-        height: 200
+        height: 195
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e97c8047651cd2242a86fe1ab8250de6
-      internalID: -747830399
+      spriteID: 8f9cc532534c1de41922435197968b4e
+      internalID: -1082403711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_5
+      name: SwishlinestryTest4_5
       rect:
         serializedVersion: 2
-        x: 80
+        x: 82
         y: 1594
-        width: 149
-        height: 236
+        width: 147
+        height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8be6ff7cfd6a9cd4abd4812a0fc3c503
-      internalID: 1049756445
+      spriteID: b46c5b14fae647840b38ceaa7adc9164
+      internalID: -1474770121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_6
+      name: SwishlinestryTest4_6
       rect:
         serializedVersion: 2
-        x: 264
-        y: 1600
-        width: 198
-        height: 228
+        x: 266
+        y: 1601
+        width: 197
+        height: 223
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c46993ff656178d489d6cddc4a992326
-      internalID: 1858287990
+      spriteID: 4914343f73502e14680b050652fee855
+      internalID: -1439120008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_7
+      name: SwishlinestryTest4_7
       rect:
         serializedVersion: 2
         x: 512
         y: 1618
-        width: 208
-        height: 184
+        width: 209
+        height: 189
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8290d242ad89bb14eab6cab3f1bbbc3a
-      internalID: -2087083477
+      spriteID: 6874bc79e1cf1e24d9b4c72f40a5b4ee
+      internalID: 1218861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_8
+      name: SwishlinestryTest4_8
       rect:
         serializedVersion: 2
         x: 768
-        y: 1626
+        y: 1625
         width: 165
-        height: 176
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,20 +301,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8061db52fe65174cbc9bbc2ed27cc62
-      internalID: -1063282669
+      spriteID: bd0aa498d3d9eea4fb07bc157c7b8ab2
+      internalID: -1026061178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_9
+      name: SwishlinestryTest4_9
       rect:
         serializedVersion: 2
         x: 973
-        y: 1625
-        width: 209
-        height: 175
+        y: 1624
+        width: 208
+        height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,20 +323,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f76b5649a9e54174ebe09c043f3299f4
-      internalID: -533674468
+      spriteID: a4e5dbf9bdda7ac48b261345779b308e
+      internalID: -1282593874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_10
+      name: SwishlinestryTest4_10
       rect:
         serializedVersion: 2
-        x: 90
+        x: 92
         y: 1317
-        width: 106
-        height: 256
+        width: 102
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,20 +345,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b4f3ea09b260f74ba2df8c9e8aba9b3
-      internalID: -352562432
+      spriteID: 500bc23c0ac994241a135c9de9fe1ef7
+      internalID: -390885438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_11
+      name: SwishlinestryTest4_11
       rect:
         serializedVersion: 2
         x: 318
         y: 1332
-        width: 139
-        height: 261
+        width: 141
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,18 +367,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edc3908023a4af04e86cd019d8174c8f
-      internalID: -1231694097
+      spriteID: 0eb98813a28dd2944a1b1bc0c261ac34
+      internalID: 1275740418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_12
+      name: SwishlinestryTest4_12
       rect:
         serializedVersion: 2
         x: 552
-        y: 1352
+        y: 1350
         width: 185
         height: 235
       alignment: 0
@@ -389,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 316e6aaa3f148984493e58feaa633c0f
-      internalID: 1576913930
+      spriteID: ee4d98eb0035512449904d40de6b68f0
+      internalID: -1266127377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_13
+      name: SwishlinestryTest4_13
       rect:
         serializedVersion: 2
-        x: 774
-        y: 1361
-        width: 150
-        height: 200
+        x: 777
+        y: 1360
+        width: 147
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,20 +411,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2c9c700a18a7b94585697f73cb24876
-      internalID: 1681408713
+      spriteID: 9f2a65e2cac92a3468b1b28707505b45
+      internalID: 405773991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_14
+      name: SwishlinestryTest4_14
       rect:
         serializedVersion: 2
-        x: 997
-        y: 1352
-        width: 155
-        height: 220
+        x: 999
+        y: 1355
+        width: 148
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,20 +433,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa2d4086dd0d1b64aadf7d1d5aed54f3
-      internalID: 1073494176
+      spriteID: 74b20653d98c39d4db0a7aeaecd9b05e
+      internalID: -793202791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_15
+      name: SwishlinestryTest4_15
       rect:
         serializedVersion: 2
         x: 60
-        y: 1088
-        width: 168
-        height: 212
+        y: 1090
+        width: 164
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,20 +455,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90d25b04640238145837473b7a0a6e43
-      internalID: 761060173
+      spriteID: 84cf98badc5174842a90f5d1eab842d1
+      internalID: 846120969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_16
+      name: SwishlinestryTest4_16
       rect:
         serializedVersion: 2
-        x: 318
+        x: 321
         y: 1101
-        width: 146
-        height: 218
+        width: 142
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,20 +477,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65e1b81b7a6bdf44fb2be9e3a4470514
-      internalID: -26740840
+      spriteID: afb1d1c26162fa54dab9d13e51a3d50f
+      internalID: 1654910256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_17
+      name: SwishlinestryTest4_17
       rect:
         serializedVersion: 2
-        x: 566
-        y: 1114
-        width: 127
-        height: 212
+        x: 564
+        y: 1116
+        width: 130
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,20 +499,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e07edcff53c42544bff791f340146b3
-      internalID: 1452814518
+      spriteID: 30b505c0301b6ec4799dbafdd49cb046
+      internalID: 1594057258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_18
+      name: SwishlinestryTest4_18
       rect:
         serializedVersion: 2
-        x: 770
+        x: 769
         y: 1132
-        width: 198
-        height: 202
+        width: 199
+        height: 203
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,20 +521,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21da3b11c16aaad4ea08a7fc25c76a34
-      internalID: 2130039234
+      spriteID: d42d366a1cf06cd49b7de21789c029c4
+      internalID: 267253861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_19
+      name: SwishlinestryTest4_19
       rect:
         serializedVersion: 2
-        x: 1002
-        y: 1138
-        width: 160
-        height: 194
+        x: 1004
+        y: 1137
+        width: 159
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,41 +543,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9ce21135341841498ed1fbf0795b949
-      internalID: 1121458412
+      spriteID: dcec9607a23b68443a2f39245a0a4306
+      internalID: 74578769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_20
+      name: SwishlinestryTest4_20
       rect:
         serializedVersion: 2
-        x: 40
+        x: 42
         y: 813
-        width: 188
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 755f244a458d6ba488b551861da404c6
-      internalID: 975502126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_21
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 822
-        width: 216
+        width: 182
         height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -587,20 +565,64 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33a478daeb9889e449180711cf8918a5
-      internalID: -1546263567
+      spriteID: 851951430cc7fb4498db803fd556e6f5
+      internalID: 581104192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_22
+      name: SwishlinestryTest4_21
       rect:
         serializedVersion: 2
-        x: 552
-        y: 831
+        x: 288
+        y: 822
+        width: 221
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a7de9ad0bc9bf4c9bbf66e6d700d9a
+      internalID: -1214064177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwishlinestryTest4_22
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 832
+        width: 171
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d6bc884010c6a4888c95fa9bafb09a
+      internalID: -673946394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwishlinestryTest4_23
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 832
         width: 175
-        height: 245
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,20 +631,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 926da3124bc7cff44b8231a6f37f9c3e
-      internalID: 932389498
+      spriteID: 76f0305e2bf0a704e84dc355ad4db839
+      internalID: 2100415589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_23
+      name: SwishlinestryTest4_24
       rect:
         serializedVersion: 2
-        x: 764
-        y: 834
-        width: 175
-        height: 256
+        x: 967
+        y: 845
+        width: 192
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,42 +653,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3471afde7323854f863330352db4e89
-      internalID: 1509590273
+      spriteID: d014e8103efa9c743908242a49060a85
+      internalID: 2093467529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_24
-      rect:
-        serializedVersion: 2
-        x: 966
-        y: 844
-        width: 193
-        height: 218
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 173e63ab69a33454abc5328f1acc7636
-      internalID: -515161936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_25
+      name: SwishlinestryTest4_25
       rect:
         serializedVersion: 2
         x: 25
-        y: 569
-        width: 168
-        height: 218
+        y: 571
+        width: 165
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,20 +675,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71005df11ecc2394aa05cdccd90a54ae
-      internalID: -1893989675
+      spriteID: 4373ec2f1b27a4746a9d99d646df9e20
+      internalID: -1622676433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_26
+      name: SwishlinestryTest4_26
       rect:
         serializedVersion: 2
         x: 292
-        y: 568
-        width: 157
-        height: 227
+        y: 571
+        width: 154
+        height: 221
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -697,18 +697,172 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a66ccf2219492ff4aa6e67bd6dbdfc9d
-      internalID: -1561224689
+      spriteID: e7e09b95bc27b0c4b99b949ce566ba6d
+      internalID: 245373428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_27
+      name: SwishlinestryTest4_27
       rect:
         serializedVersion: 2
-        x: 530
-        y: 578
+        x: 531
+        y: 583
+        width: 193
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863ca782aea86fa4a92ca64438576312
+      internalID: 1881970339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwishlinestryTest4_28
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 589
+        width: 140
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe6b3bf8b0def841a97e8eef5acb7ad
+      internalID: -1496538274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwishlinestryTest4_29
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 580
+        width: 154
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab45bd7e227f0bc4aa7a9d5a4b0cad21
+      internalID: -1666308922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwishlinestryTest4_30
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 324
+        width: 154
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ce719a827b67843a0570d2c40315a2
+      internalID: -469482824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwishlinestryTest4_31
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 332
+        width: 161
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51eb315c6227675499405d90ab119946
+      internalID: 421326736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwishlinestryTest4_32
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 346
+        width: 236
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff75fb996cf2ecf4aa3b310d42ea4d58
+      internalID: 593777147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwishlinestryTest4_33
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 348
+        width: 181
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9361c5ace197eb4e85d67b443f6e573
+      internalID: 1070017521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwishlinestryTest4_34
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 353
         width: 195
         height: 221
       alignment: 0
@@ -719,20 +873,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b696526eeaac634ab2a4b93faa2fa3e
-      internalID: 466192582
+      spriteID: 3e178caf465ed9b418733eb3d3aab2ab
+      internalID: -999522957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_28
+      name: SwishlinestryTest4_35
       rect:
         serializedVersion: 2
-        x: 788
-        y: 589
-        width: 146
-        height: 211
+        x: 18
+        y: 55
+        width: 208
+        height: 221
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,174 +895,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50c7f4ae6e5010845a25672ea070efd8
-      internalID: 364021580
+      spriteID: c278d8707da190348811cd5d7b477381
+      internalID: -639531380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_29
-      rect:
-        serializedVersion: 2
-        x: 971
-        y: 580
-        width: 165
-        height: 211
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 560d126ae0190444493aa6a17407ae82
-      internalID: -1504739764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_30
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 319
-        width: 157
-        height: 225
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a945b5e5b5f9464394d079625d43881
-      internalID: 219473358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_31
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 330
-        width: 170
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64b985ee3a7a53f4f892c62a412cb06b
-      internalID: -1030752614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_32
-      rect:
-        serializedVersion: 2
-        x: 527
-        y: 342
-        width: 235
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd437f78fe5a97945a23aac4cadc9dd3
-      internalID: -450676362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_33
-      rect:
-        serializedVersion: 2
-        x: 783
-        y: 350
-        width: 185
-        height: 208
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 278e355a6d2cd114d907f3eee4ccb8a0
-      internalID: 330969843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_34
-      rect:
-        serializedVersion: 2
-        x: 976
-        y: 353
-        width: 200
-        height: 220
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a74ee89387e05344aca68a081a174a7
-      internalID: 48711121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_35
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 53
-        width: 211
-        height: 228
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00bbfbb28f12592428a5a103b65f69c1
-      internalID: -2031558343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: First_attack_Swish_36
+      name: SwishlinestryTest4_36
       rect:
         serializedVersion: 2
         x: 247
-        y: 84
-        width: 190
-        height: 188
+        y: 83
+        width: 189
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -917,20 +917,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df8e6f6b0166aef4e98d9e9c2b7e1879
-      internalID: 914748317
+      spriteID: f28fa546b3946ef42ab6fef6ac6eef23
+      internalID: -2143414952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_37
+      name: SwishlinestryTest4_37
       rect:
         serializedVersion: 2
         x: 526
-        y: 70
+        y: 72
         width: 169
-        height: 200
+        height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -939,20 +939,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66c6d2e08d6e1374ea334824faac9cc7
-      internalID: -548159937
+      spriteID: ede79e31cc4f05c4a92ae76fa90cddd8
+      internalID: -1511711454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_38
+      name: SwishlinestryTest4_38
       rect:
         serializedVersion: 2
-        x: 759
+        x: 762
         y: 86
-        width: 235
-        height: 184
+        width: 231
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -961,20 +961,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3bb1223fbfcfc741b301a6597648591
-      internalID: -1554709072
+      spriteID: 66d06380cd700ae4e878513f7f11baf4
+      internalID: -1227289085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: First_attack_Swish_39
+      name: SwishlinestryTest4_39
       rect:
         serializedVersion: 2
-        x: 1044
-        y: 73
-        width: 143
-        height: 210
+        x: 1043
+        y: 71
+        width: 144
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -983,8 +983,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7608d9be22889041b057f38cb9bc4e0
-      internalID: -1767273280
+      spriteID: 8ab885a7e5c77ea458e3dae92f1d4510
+      internalID: 1483656429
       vertices: []
       indices: 
       edges: []
@@ -993,7 +993,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 73005f648139bef418577b9205d10888
+    spriteID: 0810566aaa7308448809cfa389db3933
     internalID: 0
     vertices: []
     indices: 
@@ -1003,46 +1003,48 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      First_attack_Swish_0: 1224410445
-      First_attack_Swish_1: 778097231
-      First_attack_Swish_10: -352562432
-      First_attack_Swish_11: -1231694097
-      First_attack_Swish_12: 1576913930
-      First_attack_Swish_13: 1681408713
-      First_attack_Swish_14: 1073494176
-      First_attack_Swish_15: 761060173
-      First_attack_Swish_16: -26740840
-      First_attack_Swish_17: 1452814518
-      First_attack_Swish_18: 2130039234
-      First_attack_Swish_19: 1121458412
-      First_attack_Swish_2: 913963678
-      First_attack_Swish_20: 975502126
-      First_attack_Swish_21: -1546263567
-      First_attack_Swish_22: 932389498
-      First_attack_Swish_23: 1509590273
-      First_attack_Swish_24: -515161936
-      First_attack_Swish_25: -1893989675
-      First_attack_Swish_26: -1561224689
-      First_attack_Swish_27: 466192582
-      First_attack_Swish_28: 364021580
-      First_attack_Swish_29: -1504739764
-      First_attack_Swish_3: -125231982
-      First_attack_Swish_30: 219473358
-      First_attack_Swish_31: -1030752614
-      First_attack_Swish_32: -450676362
-      First_attack_Swish_33: 330969843
-      First_attack_Swish_34: 48711121
-      First_attack_Swish_35: -2031558343
-      First_attack_Swish_36: 914748317
-      First_attack_Swish_37: -548159937
-      First_attack_Swish_38: -1554709072
-      First_attack_Swish_39: -1767273280
-      First_attack_Swish_4: -747830399
-      First_attack_Swish_5: 1049756445
-      First_attack_Swish_6: 1858287990
-      First_attack_Swish_7: -2087083477
-      First_attack_Swish_8: -1063282669
-      First_attack_Swish_9: -533674468
+      SwishlinestryTest4_0: -76389742
+      SwishlinestryTest4_1: -537241600
+      SwishlinestryTest4_10: -390885438
+      SwishlinestryTest4_11: 1275740418
+      SwishlinestryTest4_12: -1266127377
+      SwishlinestryTest4_13: 405773991
+      SwishlinestryTest4_14: -793202791
+      SwishlinestryTest4_15: 846120969
+      SwishlinestryTest4_16: 1654910256
+      SwishlinestryTest4_17: 1594057258
+      SwishlinestryTest4_18: 267253861
+      SwishlinestryTest4_19: 74578769
+      SwishlinestryTest4_2: -1793502016
+      SwishlinestryTest4_20: 581104192
+      SwishlinestryTest4_21: -1214064177
+      SwishlinestryTest4_22: -673946394
+      SwishlinestryTest4_23: 2100415589
+      SwishlinestryTest4_24: 2093467529
+      SwishlinestryTest4_25: -1622676433
+      SwishlinestryTest4_26: 245373428
+      SwishlinestryTest4_27: 1881970339
+      SwishlinestryTest4_28: -1496538274
+      SwishlinestryTest4_29: -1666308922
+      SwishlinestryTest4_3: -708055380
+      SwishlinestryTest4_30: -469482824
+      SwishlinestryTest4_31: 421326736
+      SwishlinestryTest4_32: 593777147
+      SwishlinestryTest4_33: 1070017521
+      SwishlinestryTest4_34: -999522957
+      SwishlinestryTest4_35: -639531380
+      SwishlinestryTest4_36: -2143414952
+      SwishlinestryTest4_37: -1511711454
+      SwishlinestryTest4_38: -1227289085
+      SwishlinestryTest4_39: 1483656429
+      SwishlinestryTest4_4: -1082403711
+      SwishlinestryTest4_45: 97915790
+      SwishlinestryTest4_46: -2112142674
+      SwishlinestryTest4_5: -1474770121
+      SwishlinestryTest4_6: -1439120008
+      SwishlinestryTest4_7: 1218861
+      SwishlinestryTest4_8: -1026061178
+      SwishlinestryTest4_9: -1282593874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
