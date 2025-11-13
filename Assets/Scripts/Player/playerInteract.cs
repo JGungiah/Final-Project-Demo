@@ -64,7 +64,7 @@ public class playerInteract : MonoBehaviour
 
     public bool canvasActive;
     private PauseMenu pauseMenu;
-
+   
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;

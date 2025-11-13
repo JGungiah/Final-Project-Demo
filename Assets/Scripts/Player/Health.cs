@@ -95,9 +95,9 @@ public class Health : MonoBehaviour
         {
             hasDied = true;
             vignetteAnim.SetBool("HasDied", true);
-            //SceneManager.LoadScene("LobbyRoom");
-            //currentHealth = maxHealth;
-            //canTakeDamage = false;
+            SceneManager.LoadScene("LobbyRoom");
+            currentHealth = maxHealth;
+            canTakeDamage = false;
         }
 
      
