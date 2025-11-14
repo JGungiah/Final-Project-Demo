@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: dcbbbfd34ce4460488755e25d12e4cd9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 3304
+        width: 238
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0954b3d54684a5e45b0ee573312cfa5b
+      internalID: -1101582258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_1
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 3328
+        width: 268
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92c73018f224ef4eacb8138733841fe
+      internalID: -514549510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_2
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 3345
+        width: 116
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03fbbc045c7745f43812fb72c0a65630
+      internalID: -32561530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_3
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 3331
+        width: 226
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7f7373e90ca374a884563940fd89de
+      internalID: -1170866322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_4
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 3314
+        width: 183
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e359c03b241e3174eba7e231e053ecec
+      internalID: -90123860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_5
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 2840
+        width: 166
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e90d17c6abab3468fb6c971b37b105
+      internalID: -1798864993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_6
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 2856
+        width: 212
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c6a9295491629458cb43493767fdbd
+      internalID: 5783482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_7
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 2891
+        width: 291
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bf28ca116adfd4c9ebafa4705abcdf
+      internalID: -1555142279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_8
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 2856
+        width: 146
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f086b22b58d44f47984561192d6b80a
+      internalID: 909011314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_9
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 2871
+        width: 257
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a46ff1fa3701254087bf1e7ec8fb5a1
+      internalID: 1982984009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_10
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 2395
+        width: 191
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f79c40fb5e82ba48912db9b40a56ef0
+      internalID: -1920890335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_11
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 2417
+        width: 193
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20142a345ac87a347960efa38c3a8e11
+      internalID: -769651812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_12
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 2437
+        width: 304
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a477065eb10cbd348aac614a8149a4fa
+      internalID: 2047613137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_13
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 2433
+        width: 212
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22507e3bf9a348b4881d165dd909d831
+      internalID: 1347117768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_14
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 2453
+        width: 253
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733f64fb83a4b2848918a6fa0ba0a694
+      internalID: -2031246157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_15
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2012
+        width: 215
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b54fbfc34078946b50a05a889c02b7
+      internalID: 1082505285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_16
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 2028
+        width: 168
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee31092ea9632a24fbd93f6ef513dea7
+      internalID: 1706403736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_17
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 2033
+        width: 274
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c57401d802b5df41a847612ed2c4e4b
+      internalID: 1791447424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_18
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2029
+        width: 305
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c398d599e45ca43429da14051f158772
+      internalID: -2131586087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_19
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 2020
+        width: 181
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0867d60ef98a1c843aa9c277c7ec92e4
+      internalID: 866451596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_20
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1593
+        width: 185
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3f6c8d0a11da845a798d9db79473f2
+      internalID: -1277369814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_21
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1593
+        width: 232
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a387d34b1e63ccc48962e8edc94cca6e
+      internalID: 1465793599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_22
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1614
+        width: 137
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd75bdbfabe115541ba17c73611ddf7b
+      internalID: 1979694581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_23
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1606
+        width: 266
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebc94b33ae85724489ad549a240390b
+      internalID: -1613061209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_24
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1568
+        width: 139
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b88362415e8ed34399e7431b5d03af1
+      internalID: -530342516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_25
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1190
+        width: 215
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832906e33225d5a4e96afcbad326f2e6
+      internalID: 1551387792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_26
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1201
+        width: 158
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a0cee0865873748a74ee7d2157b557
+      internalID: -1861350714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_27
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1201
+        width: 276
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e3d6c22775b8d4eb4922e704328426
+      internalID: -343498484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_28
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 1233
+        width: 306
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bab7d7e97457ee419b1a6dff1a88144
+      internalID: -2099592175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_29
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 1197
+        width: 181
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6764ede99dd2249aa57d0eaf4012c7
+      internalID: 1474865451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_30
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 765
+        width: 190
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6d84b4a79c4214fa512118cb14f05d
+      internalID: 1358595213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_31
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 764
+        width: 193
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92830a7793d4f4c4db500e8de1118afb
+      internalID: -670476397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_32
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 791
+        width: 305
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e22c97dfb281d34e9cf4bc5b3371cd4
+      internalID: 637501465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_33
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 801
+        width: 209
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefc3d61a2faf2448a4f8b2e1ef3675c
+      internalID: 1232102753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_34
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 810
+        width: 254
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4237de079129654c9adfb441eae08e1
+      internalID: 621451097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_35
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 311
+        width: 171
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70a70f4a6ccfe546a541b50077a7f4e
+      internalID: 285216141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_36
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 336
+        width: 212
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7143cb4c20dee548b3898ce75faf009
+      internalID: -1947217617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_37
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 338
+        width: 291
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776596cceebbda34cba09d8fcd93afeb
+      internalID: 1926493733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_38
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 344
+        width: 146
+        height: 411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fedd8e45c0d56940a100baaa70aa282
+      internalID: -806848471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack sprite Sheet Skrogras_39
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 332
+        width: 257
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c167c54516ae264d871503ea9e06b42
+      internalID: -1446001709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d368cfa80d3666445b6973f26581513f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Attack sprite Sheet Skrogras_0: -1101582258
+      Attack sprite Sheet Skrogras_1: -514549510
+      Attack sprite Sheet Skrogras_10: -1920890335
+      Attack sprite Sheet Skrogras_11: -769651812
+      Attack sprite Sheet Skrogras_12: 2047613137
+      Attack sprite Sheet Skrogras_13: 1347117768
+      Attack sprite Sheet Skrogras_14: -2031246157
+      Attack sprite Sheet Skrogras_15: 1082505285
+      Attack sprite Sheet Skrogras_16: 1706403736
+      Attack sprite Sheet Skrogras_17: 1791447424
+      Attack sprite Sheet Skrogras_18: -2131586087
+      Attack sprite Sheet Skrogras_19: 866451596
+      Attack sprite Sheet Skrogras_2: -32561530
+      Attack sprite Sheet Skrogras_20: -1277369814
+      Attack sprite Sheet Skrogras_21: 1465793599
+      Attack sprite Sheet Skrogras_22: 1979694581
+      Attack sprite Sheet Skrogras_23: -1613061209
+      Attack sprite Sheet Skrogras_24: -530342516
+      Attack sprite Sheet Skrogras_25: 1551387792
+      Attack sprite Sheet Skrogras_26: -1861350714
+      Attack sprite Sheet Skrogras_27: -343498484
+      Attack sprite Sheet Skrogras_28: -2099592175
+      Attack sprite Sheet Skrogras_29: 1474865451
+      Attack sprite Sheet Skrogras_3: -1170866322
+      Attack sprite Sheet Skrogras_30: 1358595213
+      Attack sprite Sheet Skrogras_31: -670476397
+      Attack sprite Sheet Skrogras_32: 637501465
+      Attack sprite Sheet Skrogras_33: 1232102753
+      Attack sprite Sheet Skrogras_34: 621451097
+      Attack sprite Sheet Skrogras_35: 285216141
+      Attack sprite Sheet Skrogras_36: -1947217617
+      Attack sprite Sheet Skrogras_37: 1926493733
+      Attack sprite Sheet Skrogras_38: -806848471
+      Attack sprite Sheet Skrogras_39: -1446001709
+      Attack sprite Sheet Skrogras_4: -90123860
+      Attack sprite Sheet Skrogras_5: -1798864993
+      Attack sprite Sheet Skrogras_6: 5783482
+      Attack sprite Sheet Skrogras_7: -1555142279
+      Attack sprite Sheet Skrogras_8: 909011314
+      Attack sprite Sheet Skrogras_9: 1982984009
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: 9669c9b77f11dc544809db87d722059a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_0
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 3193
+        width: 265
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04b4d9984aa53849b306d16970a8598
+      internalID: -831411040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_1
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 3193
+        width: 272
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341b2d067c4194144ba0c74fdc55d08f
+      internalID: 2070305737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_2
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 3212
+        width: 269
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5009af649b87705438f5ed6b33315181
+      internalID: -494413460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_3
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 3238
+        width: 251
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 417a9428258ddca4b984280dcf1863ad
+      internalID: 1260805501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_4
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 3231
+        width: 243
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b08fab8ced5b1409ea49fc76c0f4ff
+      internalID: -1512336145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_5
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 2768
+        width: 241
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a17b73c2d4fd345bc00e9965972c5e
+      internalID: 646408397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_6
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 2766
+        width: 313
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddc2de20ee5c8b40865206234479599
+      internalID: 615625838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2791
+        width: 270
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d439d48a61f274485d0c29ca2f3a0b
+      internalID: 975513306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_8
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 2806
+        width: 179
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0725afc9a206a340b5ab3d910438805
+      internalID: -1778607162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_9
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 2827
+        width: 198
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43000b31d647842498f67dbde70eac92
+      internalID: 1206096242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 2343
+        width: 245
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965217fe7666bb441a7daa69a26ec5fa
+      internalID: 1913447685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_11
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 2341
+        width: 265
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae223691eb8f98469bbe6315d661609
+      internalID: -594729141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_12
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 2355
+        width: 216
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9488c03bb6b86134cbf95a957e7fe8d0
+      internalID: 746317525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_13
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 2368
+        width: 158
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6a145529011ae4eb256ecddb807a66
+      internalID: 805438534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_14
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 2372
+        width: 250
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36359c65853ab594a9f879bc98e21392
+      internalID: 1998424764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_15
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1953
+        width: 213
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed1bbb50fe24a25498e926a50f4f4041
+      internalID: -726032356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_16
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1943
+        width: 179
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd2c8d94807fb84d86c619a5a3460c0
+      internalID: -494912647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_17
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1940
+        width: 186
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1b9c2fbd9918140b3f78bfc9464cf1
+      internalID: -1916247591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_18
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 1978
+        width: 200
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50346040ff781144a86e411ca7f5288
+      internalID: -138818005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_19
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 2000
+        width: 305
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5410ab8224bf15a4ba4af44e10ce99e4
+      internalID: -106824739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_20
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1568
+        width: 236
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a273d6e360b62e64aacdcde8a003fc3a
+      internalID: 1353427308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_21
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1599
+        width: 222
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48e3d01d2973ef45bf196d44e7f409c
+      internalID: 981533865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_22
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1646
+        width: 210
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf631a827f90aff41ab2a9d9cd86b2bc
+      internalID: -1196452966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_23
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1616
+        width: 207
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044785449473a1c40b170128c0cc4315
+      internalID: 667880205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_24
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1690
+        width: 250
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcfc550d36902c42a2c787f76397446
+      internalID: 45143346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_25
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1187
+        width: 210
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6817196b546d146bc8b0f2e0c0386c
+      internalID: 1187547306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_26
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1199
+        width: 177
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a215684a9cc35ca4886b3c453f44251f
+      internalID: -242666808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_27
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1164
+        width: 185
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828fb4c0a4d46bb4f88bd5f9dd87b585
+      internalID: 196107148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_28
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 1208
+        width: 198
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577fcc3bb55ec47469b348e26e4297d6
+      internalID: 842496194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_29
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1235
+        width: 301
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acb3c495ade0a94fb751eac44f74d0a
+      internalID: 840275130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_30
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 787
+        width: 244
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6854d2854a8fee54fb31dd6a7ebca7ec
+      internalID: -391626146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_31
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 793
+        width: 266
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0714eea7d1fcc034da2f3bfb10628c60
+      internalID: -1796291947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_32
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 806
+        width: 215
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37771cae7fc671448fd833a54f5f9a2
+      internalID: 945219702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_33
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 789
+        width: 160
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413d269d7a36adb41b7638d30e26677c
+      internalID: -553248226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_34
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 789
+        width: 250
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b15d5b8111ab964b96408daaec0aebc
+      internalID: 859514684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_35
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 333
+        width: 241
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc4b0c85488ae841a6c46c21ce71937
+      internalID: -1305792506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_36
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 346
+        width: 312
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0837e6132330877478a021574cc30734
+      internalID: 1886787181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_37
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 363
+        width: 272
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc01afaf220b32643b5e4721e615fe74
+      internalID: 1232125247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_38
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 370
+        width: 178
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea169937287e064899ef4a47141dfa8
+      internalID: -994492727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run Cycle for Skrogras New_39
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 389
+        width: 182
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f17e0c12cc193f4eb690314ef78ce4b
+      internalID: 2040257009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5b64e5377e0629a4e89aa4bbed9e9802
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Run Cycle for Skrogras New_0: -831411040
+      Run Cycle for Skrogras New_1: 2070305737
+      Run Cycle for Skrogras New_10: 1913447685
+      Run Cycle for Skrogras New_11: -594729141
+      Run Cycle for Skrogras New_12: 746317525
+      Run Cycle for Skrogras New_13: 805438534
+      Run Cycle for Skrogras New_14: 1998424764
+      Run Cycle for Skrogras New_15: -726032356
+      Run Cycle for Skrogras New_16: -494912647
+      Run Cycle for Skrogras New_17: -1916247591
+      Run Cycle for Skrogras New_18: -138818005
+      Run Cycle for Skrogras New_19: -106824739
+      Run Cycle for Skrogras New_2: -494413460
+      Run Cycle for Skrogras New_20: 1353427308
+      Run Cycle for Skrogras New_21: 981533865
+      Run Cycle for Skrogras New_22: -1196452966
+      Run Cycle for Skrogras New_23: 667880205
+      Run Cycle for Skrogras New_24: 45143346
+      Run Cycle for Skrogras New_25: 1187547306
+      Run Cycle for Skrogras New_26: -242666808
+      Run Cycle for Skrogras New_27: 196107148
+      Run Cycle for Skrogras New_28: 842496194
+      Run Cycle for Skrogras New_29: 840275130
+      Run Cycle for Skrogras New_3: 1260805501
+      Run Cycle for Skrogras New_30: -391626146
+      Run Cycle for Skrogras New_31: -1796291947
+      Run Cycle for Skrogras New_32: 945219702
+      Run Cycle for Skrogras New_33: -553248226
+      Run Cycle for Skrogras New_34: 859514684
+      Run Cycle for Skrogras New_35: -1305792506
+      Run Cycle for Skrogras New_36: 1886787181
+      Run Cycle for Skrogras New_37: 1232125247
+      Run Cycle for Skrogras New_38: -994492727
+      Run Cycle for Skrogras New_39: 2040257009
+      Run Cycle for Skrogras New_4: -1512336145
+      Run Cycle for Skrogras New_5: 646408397
+      Run Cycle for Skrogras New_6: 615625838
+      Run Cycle for Skrogras New_7: 975513306
+      Run Cycle for Skrogras New_8: -1778607162
+      Run Cycle for Skrogras New_9: 1206096242
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
