@@ -29,6 +29,8 @@ public class RandomizeBoons : MonoBehaviour
 
     public bool isActive = false;
     public bool boonActive;
+    public AudioSource selectSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -119,7 +121,7 @@ public class RandomizeBoons : MonoBehaviour
     public void SelectBoon(int boonIndex)
     {
         selectedBoon = chosenBoons[boonIndex];
-
+        selectSound.Play();
 
         Health playerHealth = player.GetComponent<Health>();
         Player playerMovement = player.GetComponent<Player>();

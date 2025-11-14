@@ -249,14 +249,6 @@ public class EnemyMovement : MonoBehaviour
 
     }
 
-    //IEnumerator Idle()
-    //{
-    //    anim.SetFloat("animMoveMagnitude", 0);
-    //    yield return new WaitForSeconds(1);
-    //    anim.SetFloat("animMoveMagnitude", animDirection.magnitude);
-    //    agent.isStopped = false;
-    //}
-
     void PatrolAnimations()
     {
 

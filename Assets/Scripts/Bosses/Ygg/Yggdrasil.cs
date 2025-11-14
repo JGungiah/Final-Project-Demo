@@ -38,9 +38,9 @@ public class Yggdrasil : MonoBehaviour
     public float rockDamageThreshold3;
 
     [Header("CloseRangeAttack")]
-    private bool ishighhealth;
-    private bool isMidhealth;
-    private bool isLowhealth;
+    public bool ishighhealth;
+    public bool isMidhealth;
+    public bool isLowhealth;
     public float swipeDamageThreshold;
     public float swipeDamageThreshold2;
     public float swipeDamageThreshold3;
@@ -148,12 +148,12 @@ public class Yggdrasil : MonoBehaviour
         if (currentHealth <= swipeDamageThreshold && isIncollider && !ishighhealth)
         {
             StartCoroutine(closeAttack());
-            isMidhealth = true;
+            ishighhealth = true;
         }
         if (currentHealth <= swipeDamageThreshold2 && isIncollider && !isMidhealth)
         {
             StartCoroutine(closeAttack());
-            isLowhealth = true;
+            isMidhealth = true;
         }
         if (currentHealth <= swipeDamageThreshold3 && isIncollider && !isLowhealth)
         {

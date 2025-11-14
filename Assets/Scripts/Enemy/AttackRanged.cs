@@ -29,6 +29,8 @@ public class AttackRanged : MonoBehaviour
 
     private bool playerInsideTrigger = false;
 
+    public AudioSource shootSound;
+
     public bool attack;
     void Start()
     {
@@ -64,7 +66,6 @@ public class AttackRanged : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInsideTrigger = true;
-            print(2);
         }
             
     }
@@ -159,7 +160,7 @@ public class AttackRanged : MonoBehaviour
 
     public void RangedAttack()
     {
-        
+        shootSound.Play();
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
         Vector3 direction = (player.transform.position - firePoint.position).normalized;

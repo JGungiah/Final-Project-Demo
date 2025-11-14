@@ -444,7 +444,6 @@ public class playerInteract : MonoBehaviour
     private IEnumerator SceneChangeDelay()
     {
         StartCoroutine(DissolveEffect());
-        print("wa");
 
         anim.SetBool("FadeIn", true);
         isChangingScene = true; 

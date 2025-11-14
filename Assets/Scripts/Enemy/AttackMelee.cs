@@ -65,29 +65,16 @@ public class AttackMelee : MonoBehaviour
             StartCoroutine(EnemyAttack());
             if (isAttacking)
             {
-                
-
+                attackSound.pitch = Random.Range(minPitch, maxPitch);
+                attackSound.PlayOneShot(attackSound.clip);
                 attackCollider.rotation = Quaternion.LookRotation(-movementScript.animDirection, Vector3.up);
                 agent.isStopped = true;
                 agent.speed = 0;
             }
         }
 
-        //if (anim.GetBool("attack"))
-        //{
-        //    StartCoroutine(StopEnemy());
-        //}
     }
-
-    //private IEnumerator StopEnemy()
-    //{
-    //    movementScript.canChase = false;
-    //    agent.destination = transform.position;
-    //    yield return new WaitForSeconds(5);
-    //    movementScript.canChase = true;
-    //}
-
-   
+    
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("PlayerAttack") /*&& attackScript.isAttacking*/ && !isBeingKnockedBack && canBeKnockedBack && attackScript.Hit3 )
@@ -107,8 +94,6 @@ public class AttackMelee : MonoBehaviour
         isAttacking = true;
         canAttack = false;
         attackCollider.gameObject.SetActive(true);
-        attackSound.pitch = Random.Range(minPitch, maxPitch);
-        attackSound.PlayOneShot(attackSound.clip);
 
         anim.SetFloat("AttackHorizontal", movementScript.animDirection.x);
         anim.SetFloat("AttackVertical", movementScript.animDirection.z);

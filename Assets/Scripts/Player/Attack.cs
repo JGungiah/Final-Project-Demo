@@ -131,17 +131,7 @@ public class Attack : MonoBehaviour
 
         }
 
-        if (isAttacking )
-        {
-
-            playerScript.canMove = false;
-        }
-
-        else if (!isAttacking )
-        {
-
-            playerScript.canMove = true;
-        }
+       
 
 
         ComboTransition1();
