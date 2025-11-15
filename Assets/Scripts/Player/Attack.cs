@@ -115,15 +115,22 @@ public class Attack : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-
+           
+           
             lastClickedTime = Time.time;
             nOfClicks++;
             nOfClicks = Mathf.Clamp(nOfClicks, 0, 3);
+
+            if (isAttacking)
+            {
+                RandomPitchAttack();
+            }
 
             if (Time.time > nextFireTime)
             {      
                 if (!isAttacking)
                 {
+                   
                     HandleAttack();
                 }
                  
@@ -253,7 +260,7 @@ public class Attack : MonoBehaviour
             if (nOfClicks == 1)
             {
                 maxComboDelay = 1;
-                RandomPitchAttack();
+                //RandomPitchAttack();
                 playerDamage = hit1Damage;
                 anim.SetTrigger("Hit1");
             }
@@ -270,7 +277,7 @@ public class Attack : MonoBehaviour
     void RandomPitchAttack()
     {
         hitnoise.pitch = Random.Range(1.2f, 1.3f);
-        hitnoise.Play();
+        hitnoise.PlayOneShot(hitnoise.clip);
     }
 
      public void ComboTransition1()
@@ -278,7 +285,7 @@ public class Attack : MonoBehaviour
     if (nOfClicks == 2)
     { 
             HandleAttack();
-        RandomPitchAttack();
+        //RandomPitchAttack();
         playerDamage = hit2Damage;
      
         anim.SetTrigger("Hit2");
@@ -293,7 +300,7 @@ public void ComboTransition2()
 {
     if (nOfClicks == 3)
     {
-        RandomPitchAttack();
+        //RandomPitchAttack();
            
        
 

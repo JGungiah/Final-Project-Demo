@@ -104,11 +104,11 @@ public class Health : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && canBlock)
         {
-            if (isBlocking)
-            {
+            
+            
                 block.pitch = Random.Range(1.5f, 1.6f);
                 block.Play();
-            }
+            
         }
         
     }

@@ -7,9 +7,12 @@ public class BoonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Button button;
     private Vector3 originalSize;
     public Image borderImage;
+    private AudioSource hoverSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+         hoverSound = GetComponent<AudioSource>();
          originalSize = button.transform.localScale ;
     }
 
@@ -21,7 +24,7 @@ public class BoonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-
+        hoverSound.PlayOneShot(hoverSound.clip);
         button.transform.localScale = originalSize * 1.2f;
         borderImage.gameObject.SetActive(true);
     }
