@@ -9,7 +9,7 @@ public class Jormungandr : MonoBehaviour
     public float currentHealth;
 
     private Vector3 distToPlayer;
-
+    public Animator healthShake;
     private GameObject player;
     private Attack playerAttack;
     public bool canTakeDamage = false;
@@ -155,12 +155,12 @@ public class Jormungandr : MonoBehaviour
 
     IEnumerator HitColour()
     {
-
+        healthShake.SetBool("IsHit", true);
         spriteRenderer.color = enemyHitColour;
         isHit = true;
         yield return new WaitForSeconds(hitDuration);
         spriteRenderer.color = originalColor;
-
+        healthShake.SetBool("IsHit", false);
     }
     public void health() 
     {
