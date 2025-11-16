@@ -49,6 +49,7 @@ public class EnemyHealth : MonoBehaviour
 
     public Animator healthBarAnim;
 
+    public AudioSource hitSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -112,6 +113,8 @@ public class EnemyHealth : MonoBehaviour
 
     private void TakeDamage()
     {
+        hitSound.pitch = Random.Range(1.2f, 1.3f);
+        hitSound.PlayOneShot(hitSound.clip);
         currentHealth -= playerAttack.playerDamage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         StartCoroutine(VFX());

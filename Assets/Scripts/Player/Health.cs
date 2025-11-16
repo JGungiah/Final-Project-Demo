@@ -50,8 +50,10 @@ public class Health : MonoBehaviour
 
     public Animator vignetteAnim;
 
-
+    public AudioSource shieldBreak;
     private bool hasDied;
+    public AudioSource hurtSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -153,7 +155,7 @@ public class Health : MonoBehaviour
 
 
     public void TakeDamage (float damage)
-    {   
+    {
         currentHealth -= damage ;
     }
 
@@ -172,6 +174,11 @@ public class Health : MonoBehaviour
 
         if (blockStrength <= 0)
         {
+            if (canBlock)
+            {
+                shieldBreak.Play();
+            }
+           
             anim.SetBool("isBlocking", false);
             canBlock = false;
             isBlocking = false;
@@ -213,15 +220,17 @@ public class Health : MonoBehaviour
 
             if (enemyAttack != null && enemyAttack.hasAttacked && !hasBeenAttacked)
             {     
-
+               
                 if (!isBlocking)
-                {
+                {    
+                 
                     TakeDamage(enemyAttack.damage);
                     hasBeenAttacked = true;
                     StartCoroutine(AttackWindow());
                     cameraScript.shakeStrength = enemyAttack.damage / 5f;
                     cameraScript.shakeDuration = enemyAttack.damage / 20f;
                     cameraScript.Shake();
+   
                 }
                 else if (isBlocking)
                 {

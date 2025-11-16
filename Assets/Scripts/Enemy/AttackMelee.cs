@@ -65,8 +65,7 @@ public class AttackMelee : MonoBehaviour
             StartCoroutine(EnemyAttack());
             if (isAttacking)
             {
-                attackSound.pitch = Random.Range(minPitch, maxPitch);
-                attackSound.PlayOneShot(attackSound.clip);
+             
                 attackCollider.rotation = Quaternion.LookRotation(-movementScript.animDirection, Vector3.up);
                 agent.isStopped = true;
                 agent.speed = 0;
@@ -94,7 +93,8 @@ public class AttackMelee : MonoBehaviour
         isAttacking = true;
         canAttack = false;
         attackCollider.gameObject.SetActive(true);
-
+        attackSound.pitch = Random.Range(minPitch, maxPitch);
+        attackSound.PlayOneShot(attackSound.clip);
         anim.SetFloat("AttackHorizontal", movementScript.animDirection.x);
         anim.SetFloat("AttackVertical", movementScript.animDirection.z);
         anim.SetTrigger("attack");
