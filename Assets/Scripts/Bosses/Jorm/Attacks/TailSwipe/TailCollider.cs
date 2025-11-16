@@ -17,6 +17,7 @@ public class TailCollider : MonoBehaviour
     [SerializeField] private float knockbackDuration;
     public float knockbackPower;
     private Animator anim;
+    
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -36,14 +37,14 @@ public class TailCollider : MonoBehaviour
     {
         if(Jorm.currentHealth <= 600 && isIncollider && !isMidhealth)
         {
-            
-            StartCoroutine(SwipeAttack());
+            anim.SetTrigger("TailSwipe");
+            //StartCoroutine(SwipeAttack());
             isMidhealth = true;
         }
         if (Jorm.currentHealth <= 300 && isIncollider && !isLowhealth)
         {
-        
-            StartCoroutine(SwipeAttack());
+            anim.SetTrigger("TailSwipe");
+            //StartCoroutine(SwipeAttack());
             isLowhealth = true;
         }
     }
@@ -62,11 +63,13 @@ public class TailCollider : MonoBehaviour
             isIncollider = false;
         }
         }
-    IEnumerator SwipeAttack()
+  
+    public IEnumerator SwipeAttack()
     {
+       
         if (isIncollider)
         {
-            yield return new WaitForSeconds(3f);
+            //yield return new WaitForSeconds(3f);
             if (!isIncollider) yield break;
             StartCoroutine(KnockBack());
             HealthScript.currentHealth -= tailSwipeDamage;
