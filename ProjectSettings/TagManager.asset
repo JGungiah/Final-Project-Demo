@@ -29,6 +29,7 @@ TagManager:
   - LoadCanvas
   - Tail
   - AudioManager
+  - WaveText
   layers:
   - Default
   - TransparentFX

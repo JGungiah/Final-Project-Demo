@@ -234,7 +234,7 @@ public class Health : MonoBehaviour
                 }
                 else if (isBlocking)
                 {
-                    blockStrength -= enemyAttack.damage / 4;
+                    blockStrength -= enemyAttack.damage ;
                     blockStrength = Mathf.Clamp(blockStrength, 0 , originalBlockStrength);
                 }
 
@@ -253,6 +253,11 @@ public class Health : MonoBehaviour
         {
             TakeDamage(projectileDamage);
             //Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Projectile") && isBlocking)
+        {
+            blockStrength -= enemyAttack.damage * 2;
         }
         if (other.tag == "Poison")
         {

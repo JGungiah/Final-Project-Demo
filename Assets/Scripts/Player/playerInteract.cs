@@ -64,7 +64,11 @@ public class playerInteract : MonoBehaviour
 
     public bool canvasActive;
     private PauseMenu pauseMenu;
-   
+
+    public Animator waveAnim;
+
+    private enemySpawner spawnerScript;
+    private bool hasBeenTriggered;
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -81,11 +85,15 @@ public class playerInteract : MonoBehaviour
         NormRooms = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        //runeManager = GameObject.FindWithTag("RuneManager");
+
     }
 
 
     void Update()
     {
+
 
         if (canvasActive)
         {
@@ -96,6 +104,14 @@ public class playerInteract : MonoBehaviour
         {
             canvas.SetActive(false);
         }
+        if (spawnerScript != null)
+        {
+            if (spawnerScript.WaveEnded && !hasBeenTriggered)
+            {
+                StartCoroutine(waveEndAnimation());
+            }
+        }
+            
 
         UIsetActive();
         loadanim = GameObject.FindWithTag("Load");
@@ -239,6 +255,16 @@ public class playerInteract : MonoBehaviour
 
       
     }
+
+    private IEnumerator waveEndAnimation()
+    {
+        waveAnim.SetBool("HasEnded", true);
+
+        yield return new WaitForSeconds(5);
+
+        waveAnim.SetBool("HasEnded", false);
+        hasBeenTriggered = true;
+    }
     public void UIsetActive() 
     {
         if (currentScene.name == "LobbyRoom" || currentScene.name == "Tutorial" /*&& isTutorial*/)
@@ -327,7 +353,9 @@ public class playerInteract : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        hasBeenTriggered = false;
         runeManager = GameObject.FindWithTag("RuneManager");
+        spawnerScript = runeManager.GetComponent<enemySpawner>();
         sceneLoadManager = runeManager.GetComponent<SceneLoadManager>();
         FindGateInScene();
         combatMusicPlaying = false;
