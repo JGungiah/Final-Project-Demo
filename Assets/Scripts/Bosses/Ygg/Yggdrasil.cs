@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Yggdrasil : MonoBehaviour
 {
@@ -15,12 +16,13 @@ public class Yggdrasil : MonoBehaviour
     public bool isInvunrable = false;
 
     public GameObject bloodVFX;
-    private Color enemyHitColour = Color.red;
+ 
     [SerializeField] private float hitDuration;
     private Color originalColor;
     private SpriteRenderer spriteRenderer;
     public bool isHit = false;
-
+    public Animator healthShake;
+    public Image healthbar;
 
     [Header("RootAttack")]
     public bool rootshathattacked;
@@ -77,13 +79,14 @@ public class Yggdrasil : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
         {
-            print(1);
+
+            healthShake.SetBool("IsHit", true);
             currentHealth -= playerAttack.playerDamage;
             canTakeDamage = true;
             bloodVFX.SetActive(true);
             //StartCoroutine(HitColour());
             StartCoroutine(DamageWindow());
-
+            healthShake.SetBool("IsHit", false);
 
         }
 
@@ -248,7 +251,10 @@ public class Yggdrasil : MonoBehaviour
 
 
     }
-
+    public void health()
+    {
+        healthbar.fillAmount = currentHealth / maxHealth;
+    }
 
 
 
