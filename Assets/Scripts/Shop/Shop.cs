@@ -2,16 +2,20 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private float fullHealthCost;
-    [SerializeField] private float smallhealthCost;
-    [SerializeField] private float boonCost;
+    [SerializeField] private int fullHealthCost;
+    [SerializeField] private int smallhealthCost;
+    [SerializeField] private int boonCost;
 
     private GameObject player;
     private PlayerCollect collectScript;
+    private Health healthScript;
+
+    [SerializeField] private float smallHealthAmount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        healthScript = player.GetComponent<Health>();
         collectScript = player.GetComponent<PlayerCollect>();
     }
 
@@ -25,7 +29,8 @@ public class Shop : MonoBehaviour
     {
         if (collectScript.totalCurrency > fullHealthCost)
         {
-            print(1);
+           healthScript.currentHealth = healthScript.originalMaxHealth;
+            collectScript.totalCurrency -= fullHealthCost;
         }
         else
         {
@@ -37,7 +42,8 @@ public class Shop : MonoBehaviour
     {
         if (collectScript.totalCurrency > smallhealthCost)
         {
-            print(2);
+            healthScript.currentHealth += smallHealthAmount;
+            collectScript.totalCurrency -= smallhealthCost;
         }
         else
         {
@@ -49,7 +55,7 @@ public class Shop : MonoBehaviour
     {
         if (collectScript.totalCurrency > boonCost)
         {
-            print(3);
+            collectScript.totalCurrency -= boonCost;
         }
         else
         {

@@ -116,7 +116,7 @@ public class playerInteract : MonoBehaviour
         UIsetActive();
         loadanim = GameObject.FindWithTag("Load");
         anim = loadanim.GetComponent<Animator>();
-        if (!sceneLoadManager.isLoading && currentScene.name != "LobbyRoom" && !boonScript.boonActive && !isChangingScene && currentScene.name != "Tutorial")
+        if (!sceneLoadManager.isLoading && currentScene.name != "LobbyRoom" && !boonScript.boonActive && !isChangingScene && currentScene.name != "Tutorial" && currentScene.name != "Shop")
         {
 
             //canvas.SetActive(true);
@@ -216,7 +216,7 @@ public class playerInteract : MonoBehaviour
             isTutorial = false;
         }
 
-        if (currentScene.name != "Tutorial" && currentScene.name != "LobbyRoom")
+        if (currentScene.name != "Tutorial" && currentScene.name != "LobbyRoom" && currentScene.name != "Shop")
         {
             if (!combatMusicPlaying)
             {
@@ -235,7 +235,7 @@ public class playerInteract : MonoBehaviour
 
         if (gate != null)
         {
-            if (gate.activeSelf && currentScene.name != "LobbyRoom" && currentScene.name != "Tutorial")
+            if (gate.activeSelf && currentScene.name != "LobbyRoom" && currentScene.name != "Tutorial" && currentScene.name != "Shop")
             {
                 if (!noCombatMusicPlaying)
                 {
@@ -267,7 +267,7 @@ public class playerInteract : MonoBehaviour
     }
     public void UIsetActive() 
     {
-        if (currentScene.name == "LobbyRoom" || currentScene.name == "Tutorial" /*&& isTutorial*/)
+        if (currentScene.name == "LobbyRoom" || currentScene.name == "Tutorial" )
         {
             waveText.gameObject.SetActive(false);
             roomNumberText.gameObject.SetActive(false);
