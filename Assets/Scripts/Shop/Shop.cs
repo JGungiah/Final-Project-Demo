@@ -22,14 +22,17 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (collectScript == null)
+        {
+            print("null script");
+        }
     }
 
     public void fullHealth()
     {
-        if (collectScript.totalCurrency > fullHealthCost)
+        if (collectScript.totalCurrency > fullHealthCost && healthScript.currentHealth <= healthScript.maxHealth)
         {
-           healthScript.currentHealth = healthScript.originalMaxHealth;
+           healthScript.currentHealth = healthScript.maxHealth;
             collectScript.totalCurrency -= fullHealthCost;
         }
         else
@@ -40,8 +43,9 @@ public class Shop : MonoBehaviour
 
     public void smallHealth()
     {
-        if (collectScript.totalCurrency > smallhealthCost)
+        if (collectScript.totalCurrency > smallhealthCost && healthScript.currentHealth <= healthScript.maxHealth)
         {
+           
             healthScript.currentHealth += smallHealthAmount;
             collectScript.totalCurrency -= smallhealthCost;
         }

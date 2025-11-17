@@ -79,6 +79,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Mathf.Clamp(currentHealth, 0 , maxHealth);
         shieldSlider.fillAmount = blockStrength / originalBlockStrength;
         Block();
         StartCoroutine(BlockRegen());
