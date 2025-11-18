@@ -6,7 +6,7 @@ public class Yggdrasil : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     public float currentHealth;
-
+    public float FollowHealth;
     private YggdrasilAttack Yggattack;
 
     private GameObject player;
@@ -62,17 +62,28 @@ public class Yggdrasil : MonoBehaviour
         playerAttack = player.GetComponent<Attack>();
         Yggattack = GetComponent<YggdrasilAttack>();
         HealthScript = player.GetComponent<Health>();
-        characterController = player.GetComponent<CharacterController>();   
-
+        characterController = player.GetComponent<CharacterController>();
+        FollowHealth = currentHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        health();
       Rockstarters();
         Rootstarters();
         Swipe();
+
+        if (currentHealth != FollowHealth) 
+        {
+            healthShake.SetBool("IsHit", true);
+            healthShake.SetBool("IsHit", false);
+
+
+            FollowHealth = currentHealth;
+          
+        }
+
     }
 
     public void OnTriggerEnter(Collider other)
@@ -80,13 +91,14 @@ public class Yggdrasil : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
         {
 
-            healthShake.SetBool("IsHit", true);
+           
             currentHealth -= playerAttack.playerDamage;
+          
             canTakeDamage = true;
             bloodVFX.SetActive(true);
-            //StartCoroutine(HitColour());
             StartCoroutine(DamageWindow());
-            healthShake.SetBool("IsHit", false);
+           
+
 
         }
 
@@ -142,8 +154,10 @@ public class Yggdrasil : MonoBehaviour
     IEnumerator DamageWindow()
     {
         yield return new WaitForSeconds(0.5f);
+       
         canTakeDamage = false;
         bloodVFX.SetActive(false);
+       
 
     }
     public void Swipe()
@@ -268,10 +282,10 @@ public class Yggdrasil : MonoBehaviour
     //IEnumerator HitColour()
     //{
 
-    //    //spriteRenderer.color = enemyHitColour;
+    //    spriteRenderer.color = enemyHitColour;
     //    isHit = true;
     //    yield return new WaitForSeconds(hitDuration);
-    //    //spriteRenderer.color = originalColor;
+    //    spriteRenderer.color = originalColor;
 
     //}
 

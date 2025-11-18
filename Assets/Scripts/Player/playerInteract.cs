@@ -416,7 +416,7 @@ public class playerInteract : MonoBehaviour
     {
         StartCoroutine(UnDissolveEffect());
         canChooseBoon = false;
-        if (numberOfRoomsCompleted == 10)
+        if (numberOfRoomsCompleted == 8)
         {
             SceneManager.LoadScene(Boss2);
         }
@@ -489,7 +489,7 @@ public class playerInteract : MonoBehaviour
       
         anim.SetBool("FadeIn", true);
         isChangingScene = true;
-
+        count++;
         yield return new WaitForSeconds(4f);
 
         SceneGeneratorYggdrasil();
