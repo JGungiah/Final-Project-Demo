@@ -16,10 +16,11 @@ public class RockFallingJorm : MonoBehaviour
     public LayerMask Ground;              
     public GameObject animationPrefab;
     public bool groundhit;
-   
+
 
     private void Start()
     {
+
         mainCam = GameObject.FindWithTag("MainCamera");
         followScript = mainCam.GetComponent<CameraFollow>();
     }
@@ -40,6 +41,7 @@ public class RockFallingJorm : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground")) 
         {
+          
             followScript.shakeStrength = 3f;
             followScript.shakeDuration = 0.5f;
             followScript.Shake();

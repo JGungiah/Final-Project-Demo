@@ -22,7 +22,7 @@ public class JormungandrAttack : MonoBehaviour
     [SerializeField]private float minSpawn = 0.1f;
     [SerializeField]private float maxSpawn = 0.3f;
 
-
+    public AudioSource acidAttack;
     [Header("Enemies Spawning")]
     private bool enemywave1;
     private bool enemywave2;
@@ -42,6 +42,7 @@ public class JormungandrAttack : MonoBehaviour
     }
     public void RangedAttack()
     {
+        acidAttack.PlayOneShot(acidAttack.clip);
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
         Vector3 direction = (player.transform.position - firePoint.position).normalized;

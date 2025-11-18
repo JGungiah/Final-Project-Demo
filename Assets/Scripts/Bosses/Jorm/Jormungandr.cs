@@ -52,6 +52,7 @@ public class Jormungandr : MonoBehaviour
     [SerializeField] private float shakeStrength;
     [SerializeField] private float shakeDuration;
 
+    public AudioSource hitNoise;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -85,7 +86,8 @@ public class Jormungandr : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable /*&& damageRadius < distToPlayer.magnitude*/)
-        {        
+        {       
+            hitNoise.Play();
             currentHealth -= playerAttack.playerDamage;
             
             canTakeDamage = true;

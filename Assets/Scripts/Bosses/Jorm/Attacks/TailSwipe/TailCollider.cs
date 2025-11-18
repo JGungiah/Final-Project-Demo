@@ -17,9 +17,11 @@ public class TailCollider : MonoBehaviour
     [SerializeField] private float knockbackDuration;
     public float knockbackPower;
     private Animator anim;
+    private AudioSource whipSound;
     
     private void Start()
     {
+        whipSound = GetComponent<AudioSource>();    
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         HealthScript = player.GetComponent<Health>();
@@ -38,13 +40,14 @@ public class TailCollider : MonoBehaviour
         if(Jorm.currentHealth <= 600 && isIncollider && !isMidhealth)
         {
             anim.SetTrigger("TailSwipe");
-            //StartCoroutine(SwipeAttack());
+            whipSound.Play();
             isMidhealth = true;
         }
         if (Jorm.currentHealth <= 300 && isIncollider && !isLowhealth)
         {
+ 
             anim.SetTrigger("TailSwipe");
-            //StartCoroutine(SwipeAttack());
+            whipSound.Play();
             isLowhealth = true;
         }
     }

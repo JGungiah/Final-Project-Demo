@@ -4,7 +4,12 @@ public class ProjectileJorm : MonoBehaviour
 {
     public float speed = 10f;
     public GameObject poisonPoolPrefab;
+    private AudioSource acidImpact;
 
+    private void Start()
+    {
+        acidImpact = GetComponent<AudioSource>();   
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +23,7 @@ public class ProjectileJorm : MonoBehaviour
 
     void SpawnPool()
     {
+        acidImpact.Play();
         Instantiate(poisonPoolPrefab, transform.position, Quaternion.identity);
     }
 }

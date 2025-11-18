@@ -130,7 +130,7 @@ public class playerInteract : MonoBehaviour
             //canvas.SetActive(false);
         }
 
-        if (currentScene.name == "LobbyRoom")
+        if (currentScene.name == "LobbyRoom" || currentScene.name == "BossYorm" || currentScene.name == "Yggdrasil Boss")
         {
             midgardCombat.Stop();
             midgardNoCombat.Stop();

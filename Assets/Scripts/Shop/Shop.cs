@@ -11,6 +11,9 @@ public class Shop : MonoBehaviour
     private Health healthScript;
 
     [SerializeField] private float smallHealthAmount;
+    public AudioSource healthNoise;
+    public AudioSource clickNoise;
+    public AudioSource badSelect;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,10 +37,13 @@ public class Shop : MonoBehaviour
         {
            healthScript.currentHealth = healthScript.maxHealth;
             collectScript.totalCurrency -= fullHealthCost;
+            healthNoise.Play();
         }
+        
         else
         {
             print("You do not have enough currency");
+            badSelect.Play();
         }
     }
 
@@ -48,10 +54,12 @@ public class Shop : MonoBehaviour
            
             healthScript.currentHealth += smallHealthAmount;
             collectScript.totalCurrency -= smallhealthCost;
+            healthNoise.Play();
         }
         else
         {
             print("You do not have enough currency");
+            badSelect.Play();
         }
     }
 
@@ -64,6 +72,7 @@ public class Shop : MonoBehaviour
         else
         {
             print("You do not have enough currency");
+            badSelect.Play();
         }
     }
 
