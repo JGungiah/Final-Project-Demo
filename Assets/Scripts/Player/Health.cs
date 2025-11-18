@@ -272,11 +272,9 @@ public class Health : MonoBehaviour
         }
         if (other.tag == "Root")
         {
-            if (!canTakeDamage)
-            {
-                canTakeDamage = true;
-                StartCoroutine(TakeWorldDamage(10f));
-            }
+
+            currentHealth -= 3;
+            
         }
     }
     private void OnTriggerExit(Collider other)
@@ -286,12 +284,7 @@ public class Health : MonoBehaviour
             canTakeDamage = false;
           
         }
-        if (other.tag == "Root")
-        {
-
-            canTakeDamage = false;
-
-        }
+    
     }
 
     public IEnumerator TakeWorldDamage(float damagePerSecond)

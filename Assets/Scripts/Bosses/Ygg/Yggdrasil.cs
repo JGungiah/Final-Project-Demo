@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Yggdrasil : MonoBehaviour
 {
@@ -52,6 +53,11 @@ public class Yggdrasil : MonoBehaviour
     [SerializeField] private float knockbackPower;
 
     private CharacterController characterController;
+
+    public AudioSource hitNoise;
+    public AudioSource impactSound;
+
+    public GameObject[] deathVFX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -66,6 +72,11 @@ public class Yggdrasil : MonoBehaviour
         FollowHealth = currentHealth;
     }
 
+    public void Continue()
+    {
+        SceneManager.LoadScene("Outro");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -74,24 +85,39 @@ public class Yggdrasil : MonoBehaviour
         Rootstarters();
         Swipe();
 
-        if (currentHealth != FollowHealth) 
+        if (currentHealth <= 0)
         {
-            healthShake.SetBool("IsHit", true);
-            healthShake.SetBool("IsHit", false);
-
-
-            FollowHealth = currentHealth;
-          
+            StartCoroutine(Death());
         }
 
+    }
+
+    IEnumerator Death()
+    {
+        deathVFX[0].SetActive(true);
+
+        yield return new WaitForSeconds(3);
+
+        deathVFX[1].SetActive(true);
+
+
+        yield return new WaitForSeconds(1.5f);
+
+        deathVFX[2].SetActive(true);
+
+
+        yield return new WaitForSeconds(1.5f);
+
+        deathVFX[3].SetActive(true);
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("PlayerAttack") && !canTakeDamage && !isInvunrable)
         {
-
-           
+            hitNoise.pitch = Random.Range (0.8f, 1.1f);
+            hitNoise.PlayOneShot(hitNoise.clip);
+            healthShake.SetTrigger("isHit");
             currentHealth -= playerAttack.playerDamage;
           
             canTakeDamage = true;
@@ -121,13 +147,13 @@ public class Yggdrasil : MonoBehaviour
         {
             isInvunrable = true;
             Yggattack.StartCoroutine(Yggattack.StartFalling());
-            rockshathfallen = true;
+            rockshathfallen2 = true;
         }
         if (currentHealth <= rockDamageThreshold3 && !rockshathfallen3)
         {
             isInvunrable = true;
             Yggattack.StartCoroutine(Yggattack.StartFalling());
-            rockshathfallen = true;
+            rockshathfallen3 = true;
         }
     }
     public void Rootstarters()
@@ -135,20 +161,23 @@ public class Yggdrasil : MonoBehaviour
         if (currentHealth <= rootDamageThreshold && !rootshathattacked)
         {
             isInvunrable = true;
+            //KnockBack();
+        
             Yggattack.StartCoroutine(Yggattack.RootAttack());
             rootshathattacked = true;
+           
         }
         if (currentHealth <= rootDamageThreshold2 && !rootshathattacked2)
         {
             isInvunrable = true;
             Yggattack.StartCoroutine(Yggattack.RootAttack());
-            rootshathattacked = true;
+            rootshathattacked2 = true;
         }
         if (currentHealth <= rootDamageThreshold3 && !rootshathattacked3)
         {
             isInvunrable = true;
             Yggattack.StartCoroutine(Yggattack.RootAttack());
-            rootshathattacked = true;
+            rootshathattacked3 = true;
         }
     }
     IEnumerator DamageWindow()
@@ -188,17 +217,17 @@ public class Yggdrasil : MonoBehaviour
     IEnumerator closeAttack()
     {
         while (isIncollider)
-        {
-
+        {   
             yield return new WaitForSeconds(3f);
             if (!isIncollider) yield break;
             HealthScript.currentHealth -= 20f;
             StartCoroutine(KnockBack());
+           
             isIncollider = false;
         }
     }
 
-    private IEnumerator KnockBack()
+    public IEnumerator KnockBack()
     {
         Vector3 flatDirection = (player.transform.position - transform.position);
         flatDirection.y = 0f;
@@ -247,12 +276,17 @@ public class Yggdrasil : MonoBehaviour
         {
             knockbackDir = (Vector3.forward + Vector3.left).normalized; // North-West
         }
-           
 
-        Vector3 finalDir = (knockbackDir + Vector3.down * 0.2f).normalized;
+        knockbackDir.y = 0f;
+        knockbackDir.Normalize();
+
+
+
+        Vector3 finalDir = knockbackDir;
 
         characterController.enabled = false;
 
+        impactSound.Play();
         float elapsedTime = 0f;
         while (elapsedTime < knockbackDuration)
         {

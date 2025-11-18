@@ -16,8 +16,11 @@ public class FallingSphere : MonoBehaviour
     public GameObject animationPrefab;
     public bool groundhit;
 
+    private AudioSource hitNoise;
     private void Start()
     {
+       
+        hitNoise = GetComponent<AudioSource>();
         mainCam = GameObject.FindWithTag("MainCamera");
         followScript = mainCam.GetComponent<CameraFollow>();
     }
@@ -39,11 +42,13 @@ public class FallingSphere : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
+            hitNoise.pitch = Random.Range(0.9f, 1.1f);
+            hitNoise.Play();
             followScript.shakeStrength = 3f;
             followScript.shakeDuration = 0.5f;
             followScript.Shake();
             //Instantiate(debrisPrefab, this.transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+            Destroy(this.gameObject , 1f);
         }
     }
 }

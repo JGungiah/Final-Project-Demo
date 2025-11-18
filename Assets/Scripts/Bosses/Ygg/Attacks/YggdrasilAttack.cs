@@ -26,6 +26,11 @@ public class YggdrasilAttack : MonoBehaviour
     public GameObject Rootfourth;
     public float minspawnroot;
     public float maxspawnroot;
+
+    public Animator wallAnim;
+
+    public AudioSource vineSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -67,19 +72,26 @@ public class YggdrasilAttack : MonoBehaviour
 
     public IEnumerator RootAttack() 
     {
+        StartCoroutine(yggdrasilHealth.KnockBack());
+        wallAnim.SetBool("WallUp", true);
         Rootfirst.SetActive(true);
+        vineSound.Play();
         yield return new WaitForSeconds(Random.Range(minspawnroot, maxspawnroot));
         Rootfirst.SetActive(false);
         Rootsecond.SetActive(true);
+        vineSound.Play();
         yield return new WaitForSeconds(Random.Range(minspawnroot, maxspawnroot));
         Rootsecond.SetActive(false);
         Rootthird.SetActive(true);
+        vineSound.Play();
         yield return new WaitForSeconds(Random.Range(minspawnroot, maxspawnroot));
         Rootthird.SetActive(false);
         Rootfourth.SetActive(true);
+        vineSound.Play();
         yield return new WaitForSeconds(Random.Range(minspawnroot, maxspawnroot));
         Rootfourth.SetActive(false);
         yggdrasilHealth.isInvunrable = false;
+        wallAnim.SetBool("WallUp", false);
     }
    
 }
