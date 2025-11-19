@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class RandomizeBoons : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class RandomizeBoons : MonoBehaviour
     public bool isActive = false;
     public bool boonActive;
     public AudioSource selectSound;
+    private Scene currentScene;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -120,6 +122,7 @@ public class RandomizeBoons : MonoBehaviour
 
     public void SelectBoon(int boonIndex)
     {
+   
         selectedBoon = chosenBoons[boonIndex];
         selectSound.Play();
 

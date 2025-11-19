@@ -69,6 +69,8 @@ public class playerInteract : MonoBehaviour
 
     private enemySpawner spawnerScript;
     private bool hasBeenTriggered;
+
+    public bool canTeleport;
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -163,7 +165,7 @@ public class playerInteract : MonoBehaviour
 
         loadanim = GameObject.FindWithTag("Load");
 
-        if (boonScript.isActive && !isChangingScene && NormRooms && !isTutorial)
+        if (boonScript.isActive && !isChangingScene && NormRooms && !isTutorial  && currentScene.name != "Shop" ||  canTeleport)
         {
             StartCoroutine(SceneChangeDelay());
         }
@@ -469,7 +471,7 @@ public class playerInteract : MonoBehaviour
        
     }
 
-    private IEnumerator SceneChangeDelay()
+    public IEnumerator SceneChangeDelay()
     {
         StartCoroutine(DissolveEffect());
 
@@ -484,7 +486,7 @@ public class playerInteract : MonoBehaviour
         boonScript.isActive = false;
 
     }
-    private IEnumerator SceneChangeDelayYggdrasil()
+    public IEnumerator SceneChangeDelayYggdrasil()
     {
       
         anim.SetBool("FadeIn", true);

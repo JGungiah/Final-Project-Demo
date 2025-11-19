@@ -146,7 +146,7 @@ public class Health : MonoBehaviour
         if (boon.GetBoonName() == "Health Increase")
         {
             maxHealth = maxHealth * (1 + boon.GetValue());
-            currentHealth = maxHealth;
+            currentHealth *= (1 + boon.GetValue());
         }
         else if (boon.GetBoonName() == "Block Strength")
         {
