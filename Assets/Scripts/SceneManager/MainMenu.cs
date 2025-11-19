@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public AudioSource MenuSound;
     public Button Button;
     private Image buttonImage;
+    public GameObject pausePanel;
 
     void Start()
     {
@@ -33,5 +34,15 @@ public class MainMenu : MonoBehaviour
     public void OffHover()
     {
         buttonImage.color = originalColor;
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void Pause()
+    {
+        pausePanel.SetActive(true);
     }
 }
