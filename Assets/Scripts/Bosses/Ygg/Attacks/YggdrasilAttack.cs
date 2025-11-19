@@ -18,7 +18,7 @@ public class YggdrasilAttack : MonoBehaviour
     [Header("Enemies Spawning")]
     private bool enemywave1;
     private bool enemywave2;
-
+    private bool enemywave3;
     [Header("RootAttack")]
     public GameObject Rootfirst;
     public GameObject Rootsecond;
@@ -58,15 +58,20 @@ public class YggdrasilAttack : MonoBehaviour
 
     public void EnemySpawner()
     {
-        if (yggdrasilHealth.currentHealth <= 850 && !enemywave1)
+        if (yggdrasilHealth.currentHealth <= 530 && !enemywave1)
         {
             Enemies.EnemySpawn();
             enemywave1 = true;
         }
-        if (yggdrasilHealth.currentHealth <= 400 && !enemywave2)
+        if (yggdrasilHealth.currentHealth <= 100 && !enemywave2)
         {
             Enemies.EnemySpawn();
             enemywave2 = true;
+        }
+        if (yggdrasilHealth.currentHealth <= 50 && !enemywave3)
+        {
+            Enemies.EnemySpawn();
+            enemywave3 = true;
         }
     }
 
