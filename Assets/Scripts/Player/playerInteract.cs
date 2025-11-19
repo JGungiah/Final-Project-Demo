@@ -154,7 +154,7 @@ public class playerInteract : MonoBehaviour
         }
 
 
-        if (currentScene.name == "BossYorm")
+        if (currentScene.name == "BossYorm" || currentScene.name == "Ygdrassil Boss")
         {
             mainCamera.orthographicSize = 18;
         }
