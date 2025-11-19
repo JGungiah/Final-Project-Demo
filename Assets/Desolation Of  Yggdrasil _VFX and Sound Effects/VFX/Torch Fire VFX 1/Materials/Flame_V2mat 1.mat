@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Flame_V2mat
+  m_Name: Flame_V2mat 1
   m_Shader: {fileID: -6465566751694194690, guid: 77db40763a950ed448b996cf244646a8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -46,7 +46,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0.74901974, g: 0.74901974, b: 0.74901974, a: 1}
+    - _Color: {r: 511.99994, g: 112.57648, b: 10.722502, a: 1}
     - _Speed: {r: 0, g: -0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
