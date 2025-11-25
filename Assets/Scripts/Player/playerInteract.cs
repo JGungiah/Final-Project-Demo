@@ -71,6 +71,8 @@ public class playerInteract : MonoBehaviour
     private bool hasBeenTriggered;
 
     public bool canTeleport;
+
+    public TextMeshProUGUI enemiesRemaining;
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -95,8 +97,11 @@ public class playerInteract : MonoBehaviour
 
     void Update()
     {
-
-
+        if (spawnerScript != null)
+        {
+            enemiesRemaining.text = " Enemies Remaining" + ":" + spawnerScript.Count.ToString();
+        }
+     
         if (canvasActive)
         {
             canvas.SetActive(true);
@@ -264,8 +269,9 @@ public class playerInteract : MonoBehaviour
 
         yield return new WaitForSeconds(5);
 
-        waveAnim.SetBool("HasEnded", false);
         hasBeenTriggered = true;
+        waveAnim.SetBool("HasEnded", false);
+        
     }
     public void UIsetActive() 
     {

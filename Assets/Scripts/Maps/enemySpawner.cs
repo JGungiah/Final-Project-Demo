@@ -24,11 +24,16 @@ public class enemySpawner : MonoBehaviour
     private void Start()
     {
      
-        if (Count == 0 )
+       
+
+    }
+
+    private void Awake()
+    {
+        if (Count == 0)
         {
             Wave1Spawn();
         }
-
     }
 
     void Update()

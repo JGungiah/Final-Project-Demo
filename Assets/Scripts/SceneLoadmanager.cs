@@ -23,6 +23,9 @@ public class SceneLoadManager : MonoBehaviour
     private void Start()
     {
         controller = player.GetComponent<CharacterController>();
+        controller.enabled = false;
+        player.transform.position = spawnPoint.position;
+        controller.enabled = true;
     }
 
     void OnDisable()
