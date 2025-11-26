@@ -51,7 +51,7 @@ public class Health : MonoBehaviour
     public Animator vignetteAnim;
 
     public AudioSource shieldBreak;
-    private bool hasDied;
+    //private bool hasDied;
     public AudioSource hurtSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -94,9 +94,9 @@ public class Health : MonoBehaviour
             brokenShield.gameObject.SetActive(false);
         }
 
-        if (currentHealth <= 0  && !hasDied)
+        if (currentHealth <= 0  /*&& !hasDied*/)
         {
-            hasDied = true;
+            //hasDied = true;
             vignetteAnim.SetBool("HasDied", true);
             SceneManager.LoadScene("LobbyRoom");
             currentHealth = maxHealth;

@@ -118,7 +118,11 @@ public class playerInteract : MonoBehaviour
                 StartCoroutine(waveEndAnimation());
             }
         }
-            
+         if(healthScript.currentHealth <= 0) 
+        {
+            NormRooms = true;
+            YggdrasilRooms = false;
+        }
 
         UIsetActive();
         loadanim = GameObject.FindWithTag("Load");
