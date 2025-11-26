@@ -61,7 +61,7 @@ public class ScrollingNumbers : MonoBehaviour
     public void SPIN()
     {
         canSpin = true;
-        button.SetActive(false);
+        //button.SetActive(false);
         PlayerCollect.totalCurrency -= 50;
     }
 
