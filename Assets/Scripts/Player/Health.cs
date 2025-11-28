@@ -60,7 +60,7 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        
+
         currentHealth = maxHealth;
         movementScript = GetComponent<Player>();
         anim = GetComponent<Animator>();

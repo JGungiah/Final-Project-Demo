@@ -332,7 +332,7 @@ public void ComboTransition2()
         Instantiate(rockVFX, vfxSpawn.position , attackCollider.rotation);
         rockVFX.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
-        DestroyImmediate(this.rockVFX );
+        DestroyImmediate(this.rockVFX, true );
     }
 
     private IEnumerator WhiteFlashImage()
